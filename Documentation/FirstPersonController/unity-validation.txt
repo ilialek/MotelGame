@@ -1,0 +1,7 @@
+2026-10-13T19:55:09.8956960Z
+PASS: Unity 6000.3.19f1 loaded scene and compiled FirstPersonController.
+PASS: Single enabled player/camera/listener, valid references, capsule 0.6 x 1.8m, eye 1.65m, near plane 0.03m, walk 4m/s.
+PASS: Native CharacterController.Move traversed lobby, right corridor, left turn and all four room entrances at 4m/s steps; floor collisions held.
+PASS: 6m/s motion into rear lobby wall stopped the capsule and kept camera behind wall.
+PASS: No error/exception/assert logs during these checks.
+NOT RUN: Play Mode keyboard/mouse input, cursor capture/focus transitions, subjective responsiveness, all-angle camera clipping and two-player test. These need manual Game view verification.
