@@ -1,0 +1,7 @@
+PASS: Saved scene opened from disk in Unity 6000.3.19f1 at 2026-10-13T19:40:30.6632250Z.
+Scene SHA256: a3fe3316941a0b1d8f765bc07113ff3b3416cdcc65032e2de8a87b47c69d9b5d
+PASS: 738 primitives, valid meshes/materials, positive dimensions, floor tops Y=0, no missing scripts.
+PASS: All saved primitive positions/scales/colliders agree with the layout specification.
+PASS: 22200 doorway rays blocked by architectural walls; two employee positions and +/-0.2m movement, eye Y=1.65m.
+PASS: Six inspection previews rendered from the saved scene.
+The user's open scenes were neither saved, reloaded nor modified.

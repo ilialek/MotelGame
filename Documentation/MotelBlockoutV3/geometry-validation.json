@@ -1,0 +1,30 @@
+{
+  "object_boxes": 768,
+  "structural_overlaps": 0,
+  "capsule_radius": 0.3,
+  "capsule_height": 1.8,
+  "grid_step": 0.1,
+  "walking_distance_from_computer_m": {
+    "Lobby entrance": 14.5,
+    "Waiting area": 11.7,
+    "Storage": 8.1,
+    "Room101": 20.0,
+    "Room102": 17.8,
+    "Room103": 27.1,
+    "Room104": 24.9,
+    "Bathroom101": 20.7,
+    "Bathroom102": 18.5,
+    "Bathroom103": 28.8,
+    "Bathroom104": 26.6
+  },
+  "parking_samples_occluded": "17/18",
+  "guest_door_samples_occluded": "4/4",
+  "window_openings": 9,
+  "notes": [
+    "Axis-aligned structural boxes have no positive-volume overlap.",
+    "All floors top at Y=0; ground beneath foundation is Y=-0.2.",
+    "Doors are static parked-open leaves; no gameplay components.",
+    "Walking distances are 0.1m four-neighbour grid routes, not timed playtests.",
+    "Panoramic lobby sill 0.45m, head 2.9m; glass includes colliders."
+  ]
+}

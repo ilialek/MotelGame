@@ -1,0 +1,1 @@
+Backup taken before guest-wing redesign. Outside Assets to avoid duplicate scene GUID import. Restore the scene and its meta to Assets/Game/Scenes, and the JSON/builder to Assets/Game/Editor/MotelBlockoutV3. Close the target scene before restoring.

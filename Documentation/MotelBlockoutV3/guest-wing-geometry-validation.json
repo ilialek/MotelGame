@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "source": "Actual installed Unity scene read back from project; transforms, colliders and hierarchy compared with updated JSON",
+  "primitives": 738,
+  "structural_volume_overlaps": [],
+  "floor_top_y": 0,
+  "clear_floor_and_ceiling_coverage": "All eight clear-space footprints covered without gaps at specified ceiling height",
+  "scene_hierarchy": "All parent/child references consistent",
+  "preservation": "All retained non-Transform documents unchanged; reception, lobby furniture/glazing/fixtures and parking unchanged",
+  "sightlines": {
+    "eye_height": 1.65,
+    "doorway_width": 1.1,
+    "continuous_uncovered_spans": {
+      "Computer": {
+        "101": [],
+        "102": [],
+        "103": [],
+        "104": []
+      },
+      "Second": {
+        "101": [],
+        "102": [],
+        "103": [],
+        "104": []
+      }
+    },
+    "neighbourhood": "50 viewpoints within +/-0.2m X/Z; all four full doorway spans hidden by architectural walls alone"
+  },
+  "navigation": {
+    "player_diameter": 0.6,
+    "player_height": 1.8,
+    "grid_step": 0.1,
+    "corridor_width": 2.8,
+    "entry_length": 9.4,
+    "centreline_to_turn": 8,
+    "side_by_side_samples": 204,
+    "walking_distances_m": {
+      "Computer": {
+        "Utility": 5.6,
+        "101": 18.1,
+        "102": 20.3,
+        "103": 24.9,
+        "104": 27.1,
+        "Bath101": 19.8,
+        "Bath102": 21.9,
+        "Bath103": 27.9,
+        "Bath104": 30.0,
+        "Entrance": 13.7
+      },
+      "Second": {
+        "Utility": 6.9,
+        "101": 16.0,
+        "102": 18.2,
+        "103": 22.8,
+        "104": 25.0,
+        "Bath101": 17.7,
+        "Bath102": 19.8,
+        "Bath103": 25.8,
+        "Bath104": 27.9,
+        "Entrance": 12.4
+      }
+    }
+  },
+  "manual": [
+    "Actual controller radius, step offset and head bob",
+    "Two-player comfort, doorways and furniture at eye height",
+    "Visual lighting at corridor corner and guest wing"
+  ],
+  "unity_runtime_validation": {
+    "status": "PASS",
+    "version": "6000.3.19f1",
+    "loaded_from_disk_in_isolated_preview_scene": true,
+    "scene_sha256": "a3fe3316941a0b1d8f765bc07113ff3b3416cdcc65032e2de8a87b47c69d9b5d",
+    "doorway_rays": 22200,
+    "renders": 6,
+    "report": "guest-wing-unity-validation.txt"
+  }
+}

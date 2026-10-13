@@ -1,0 +1,12 @@
+{
+  "pre_existing_files_checked": 68,
+  "changed": [],
+  "sample_scene_sha256": "1442498da492d9630799ff5fe4e2e53d55453e3651a5ec94d947cf6f63c696ee",
+  "serialized_scene_game_objects": 850,
+  "primitive_meshes": 768,
+  "box_colliders": 407,
+  "yaml_parse": "PASS",
+  "local_file_references": "PASS",
+  "editor_tool_compile_against_installed_Unity_assemblies": "PASS",
+  "Unity_scene_load": "PENDING_EDITOR_REFRESH"
+}
