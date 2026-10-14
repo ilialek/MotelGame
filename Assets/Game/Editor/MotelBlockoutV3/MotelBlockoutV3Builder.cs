@@ -245,8 +245,9 @@ namespace MotelBlockoutV3Tools
         }
         static void Validate(Scene scene,int expected)
         {
-            var roots=scene.GetRootGameObjects();
-            if(roots.Length!=1 || roots[0].name!="Motel")throw new Exception("Unexpected hierarchy roots");
+            // The environment stays under Motel; networking has its own root.
+            var roots=scene.GetRootGameObjects().Where(g=>g.name=="Motel").ToArray();
+            if(roots.Length!=1)throw new Exception("Expected one Motel environment root");
             var filters=roots[0].GetComponentsInChildren<MeshFilter>(true);
             if(filters.Length!=expected)throw new Exception("Primitive count mismatch: "+filters.Length);
             foreach(var t in roots[0].GetComponentsInChildren<Transform>(true))

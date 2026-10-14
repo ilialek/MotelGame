@@ -17,6 +17,9 @@ namespace MotelGame
         [SerializeField, Range(1f, 89f)] float pitchLimit = 85f;
         [SerializeField, Min(0.1f)] float gravity = 20f;
 
+        // Menus may suspend local input without disabling gravity.
+        public bool InputSuspended { get; set; }
+
         CharacterController controller;
         float verticalSpeed;
         float pitch;
@@ -50,7 +53,7 @@ namespace MotelGame
             bool released = keyboard != null && keyboard.escapeKey.wasPressedThisFrame;
             bool justCaptured = false;
             if (released) SetCursorCaptured(false);
-            else if (!cursorCaptured && Application.isFocused && mouse != null && mouse.leftButton.wasPressedThisFrame)
+            else if (!InputSuspended && !cursorCaptured && Application.isFocused && mouse != null && mouse.leftButton.wasPressedThisFrame)
             {
                 SetCursorCaptured(true);
                 justCaptured = true;
@@ -60,7 +63,7 @@ namespace MotelGame
 
             Vector2 move = Vector2.zero;
             float speed = walkingSpeed;
-            if (cursorCaptured && Application.isFocused)
+            if (!InputSuspended && cursorCaptured && Application.isFocused)
             {
                 if (keyboard != null)
                 {

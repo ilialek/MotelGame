@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "changed_existing_files": [
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity",
+    "Assets/Game/Scripts/FirstPersonController.cs",
+    "Assets/Game/Editor/FirstPersonControllerValidation.cs",
+    "Assets/Game/Editor/MotelBlockoutV3/MotelBlockoutV3Builder.cs",
+    "Packages/manifest.json",
+    "Packages/packages-lock.json"
+  ],
+  "added_files": [
+    "Assets/Game/Editor/LocalMultiplayerSetup.cs",
+    "Assets/Game/Editor/LocalMultiplayerSetup.cs.meta",
+    "Assets/Game/Prefabs/NetworkPlayer.prefab",
+    "Assets/Game/Prefabs/NetworkPlayer.prefab.meta",
+    "Assets/Game/Prefabs/NetworkPrefabs.asset",
+    "Assets/Game/Prefabs/NetworkPrefabs.asset.meta",
+    "Assets/Game/Scripts/Networking.meta",
+    "Assets/Game/Scripts/Networking/DevelopmentSession.cs",
+    "Assets/Game/Scripts/Networking/DevelopmentSession.cs.meta",
+    "Assets/Game/Scripts/Networking/LocalTransportSettings.cs",
+    "Assets/Game/Scripts/Networking/LocalTransportSettings.cs.meta",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs.meta",
+    "Assets/Game/Scripts/Networking/Tests.meta",
+    "Assets/Game/Scripts/Networking/Tests/LocalMultiplayerSmokeTest.cs",
+    "Assets/Game/Scripts/Networking/Tests/LocalMultiplayerSmokeTest.cs.meta"
+  ],
+  "scene_sha256": "383ba4a550114512349e9aeb6fc260ff5dbdb8385f0426f7ac1219ae8cc6626f",
+  "environment": {
+    "status": "PASS",
+    "unchanged_original_documents": 3524,
+    "changed_or_removed_player_camera_hierarchy_documents": [
+      "10091",
+      "18490",
+      "18491",
+      "18600",
+      "18601",
+      "18602",
+      "18603",
+      "18604",
+      "9223372036854775807"
+    ],
+    "added_network_session_documents": [
+      "365786485",
+      "365786486",
+      "365786487",
+      "365786488",
+      "365786489",
+      "365786490"
+    ]
+  },
+  "all_original_material_lighting_pipeline_settings_and_SampleScene_files_unchanged": true,
+  "restored_build_generated_changes": [
+    "ProjectSettings/ProjectSettings.asset",
+    "ProjectSettings/UnityConnectSettings.asset",
+    "Assets/Settings/DefaultVolumeProfile.asset",
+    "Assets/Settings/PC_RPAsset.asset",
+    "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "runtime_source_hashes": {
+    "Assets/Game/Scripts/FirstPersonController.cs": "eedf675b5691c1d8823d7edcded03e4936f2aa0aef35d010f013af5fecd86ae9",
+    "Assets/Game/Scripts/Networking/LocalTransportSettings.cs": "580f34f4acdefb46cd99e3b985e78769c990508abcb5d4b9ed232cb931b0ae39",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs": "92849f1fab2cb2d505a5f92fc0c2e66a8a7794a5d0e4ccd35faa9cba6f7d2245",
+    "Assets/Game/Scripts/Networking/DevelopmentSession.cs": "d7da2f798dbebb0ca9732455090909c845ad684c4c630a7e61c0cba851984977",
+    "Assets/Game/Scripts/Networking/Tests/LocalMultiplayerSmokeTest.cs": "5e4b46c509d9f99113678be7180318d014abf08e65edf70f82de7bf86a082c3a"
+  },
+  "two_instance_test": "PASS host and client; two standalone processes, UTP localhost 17777; see smoke-host.txt and smoke-client.txt"
+}

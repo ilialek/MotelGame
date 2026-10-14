@@ -27,6 +27,12 @@ namespace MotelGame.Editor
         [MenuItem("Tools/Motel/Validate First Person Controller")]
         public static void Validate()
         {
+            // Milestone 1 moved the offline player into a network prefab.
+            if (AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Prefabs/NetworkPlayer.prefab") != null)
+            {
+                LocalMultiplayerSetup.ValidateSavedConfiguration();
+                return;
+            }
             Scene preview = default;
             var lines = new List<string>();
             var errors = new List<string>();
