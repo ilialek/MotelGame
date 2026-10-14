@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "scene": "Only static Room101 door removed, new door prefab inserted, Room101 child list updated. Every other existing scene document is byte-identical.",
+  "protected_files_verified": 43,
+  "changed_existing_files": [
+    "Assets/DefaultNetworkPrefabs.asset",
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity",
+    "Assets/Game/Prefabs/NetworkPlayer.prefab",
+    "Assets/Game/Prefabs/NetworkPrefabs.asset",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs",
+    "Assets/Game/Editor/MotelBlockoutV3/MotelBlockoutV3Builder.cs",
+    "Assets/Game/Editor/MotelBlockoutV3/MotelBlockoutV3.json",
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "backup": "/Users/ilalekomtsev/MotelGame/Backups/BeforeNetworkedDoor_20261014_125906"
+}

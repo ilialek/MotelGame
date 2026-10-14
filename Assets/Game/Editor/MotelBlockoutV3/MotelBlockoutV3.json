@@ -2965,19 +2965,6 @@
       "kind": "Box"
     },
     {
-      "name": "Door_parked_open_90deg",
-      "group": "Rooms/Room101",
-      "x": 20.02,
-      "y": 1.075,
-      "z": 12.02,
-      "sx": 1.1,
-      "sy": 2.15,
-      "sz": 0.045,
-      "material": "Door",
-      "solid": true,
-      "kind": "Box"
-    },
-    {
       "name": "RoomNumberPlaque",
       "group": "Rooms/Room101",
       "x": 20.815,

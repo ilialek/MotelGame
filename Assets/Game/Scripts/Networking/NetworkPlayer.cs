@@ -1,4 +1,5 @@
 using Unity.Netcode;
+using MotelGame.Interactions;
 using UnityEngine;
 
 namespace MotelGame.Networking
@@ -11,11 +12,13 @@ namespace MotelGame.Networking
         [SerializeField] Renderer body;
         FirstPersonController movement;
         CharacterController capsule;
+        PlayerInteractor interactor;
 
         void Awake()
         {
             movement = GetComponent<FirstPersonController>();
             capsule = GetComponent<CharacterController>();
+            interactor = GetComponent<PlayerInteractor>();
             ApplyOwnership(false);
         }
 
@@ -29,6 +32,7 @@ namespace MotelGame.Networking
             // Remote transforms are driven by NGO; remote capsules do not simulate movement.
             capsule.enabled = local;
             movement.enabled = local;
+            if (interactor != null) interactor.enabled = local;
             playerCamera.enabled = local;
             playerListener.enabled = local;
             body.enabled = !local;
