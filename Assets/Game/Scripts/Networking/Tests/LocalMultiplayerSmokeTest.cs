@@ -113,7 +113,7 @@ namespace MotelGame.Networking.Tests
         {
             return player.IsOwner==local && player.GetComponent<FirstPersonController>().enabled==local &&
                 player.GetComponent<CharacterController>().enabled==local && player.GetComponentInChildren<Camera>(true).enabled==local &&
-                player.GetComponentInChildren<AudioListener>(true).enabled==local && player.GetComponentInChildren<Renderer>(true).enabled!=local;
+                player.GetComponentInChildren<AudioListener>(true).enabled==local && player.BodyVisible!=local;
         }
         void Finish(bool passed,string reason)
         {

@@ -1,6 +1,7 @@
 using System;
 using Unity.Netcode;
 using UnityEngine;
+using MotelGame.Service;
 
 namespace MotelGame.Interactions
 {
@@ -19,10 +20,11 @@ namespace MotelGame.Interactions
         public struct DoorState : INetworkSerializable, IEquatable<DoorState>
         {
             public bool Open;
+            public bool GuestPassage;
             public double StartedAt;
             public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
-            { serializer.SerializeValue(ref Open); serializer.SerializeValue(ref StartedAt); }
-            public bool Equals(DoorState other) => Open == other.Open && StartedAt == other.StartedAt;
+            { serializer.SerializeValue(ref Open); serializer.SerializeValue(ref GuestPassage); serializer.SerializeValue(ref StartedAt); }
+            public bool Equals(DoorState other) => Open == other.Open && GuestPassage == other.GuestPassage && StartedAt == other.StartedAt;
         }
         readonly NetworkVariable<DoorState> state = new NetworkVariable<DoorState>(default,
             NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
@@ -30,12 +32,26 @@ namespace MotelGame.Interactions
         public double TransitionStartedAt => state.Value.StartedAt;
         public bool IsMoving => IsSpawned && state.Value.StartedAt > 0 &&
             NetworkManager.ServerTime.Time < state.Value.StartedAt + animationDuration;
-        public bool CanInteract => IsSpawned && !IsMoving;
+        Collider passageGuest;
+        bool closeAfterGuest;
+        public bool GuestPassage => state.Value.GuestPassage;
+        public bool CanInteract => IsSpawned && !IsMoving && !GuestPassage;
+        public string Prompt => GuestPassage ? "Guest using door" : IsMoving ? "Door moving" : IsOpen ? "Close door" : "Open door";
         public float CurrentAngle { get; private set; }
         public Vector3 InteractionPoint => leaf.bounds.center;
 
-        public override void OnNetworkSpawn() => ApplyPose();
-        void Update() { if (IsSpawned) ApplyPose(); }
+        public override void OnNetworkSpawn()
+        {
+            if (IsServer) { var next=state.Value; next.GuestPassage=false; state.Value=next; }
+            ApplyPose();
+        }
+        void Update()
+        {
+            if (!IsSpawned) return;
+            ApplyPose();
+            if (IsServer && closeAfterGuest && !IsMoving && !GuestPassage && !SweepOccupied())
+            { closeAfterGuest=false; SetOpen(false); passageGuest=null; }
+        }
 
         void ApplyPose()
         {
@@ -54,7 +70,7 @@ namespace MotelGame.Interactions
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
         public void RequestToggleRpc(RpcParams rpcParams = default)
         {
-            if (!IsSpawned || !IsServer || IsMoving) return;
+            if (!IsSpawned || !IsServer || IsMoving || GuestPassage) return;
             ulong sender = rpcParams.Receive.SenderClientId;
             if (!NetworkManager.ConnectedClients.TryGetValue(sender, out var client) ||
                 client.PlayerObject == null || !client.PlayerObject.IsSpawned) return;
@@ -68,9 +84,33 @@ namespace MotelGame.Interactions
             if (Physics.Linecast(eye, closest, out var hit, ~0, QueryTriggerInteraction.Ignore) &&
                 !hit.collider.transform.IsChildOf(transform)) return;
             if (SweepOccupied()) return;
-            state.Value = new DoorState { Open = !state.Value.Open, StartedAt = NetworkManager.ServerTime.Time };
-            ApplyPose();
+            closeAfterGuest=false;
+            SetOpen(!IsOpen);
         }
+
+        void SetOpen(bool open)
+        {
+            if (IsOpen==open) return;
+            var next=state.Value; next.Open=open; next.StartedAt=NetworkManager.ServerTime.Time; state.Value=next; ApplyPose();
+        }
+        // Server-only passage reservation. Players keep the same RPC/state/animation mechanism;
+        // closing is temporarily unavailable while the guest crosses the physical doorway.
+        public bool TryBeginGuestPassage(Collider guest)
+        {
+            if (!IsServer || !IsSpawned || guest==null || !guest.enabled ||
+                Vector3.Distance(guest.bounds.center,transform.position)>3.5f || (passageGuest!=null && passageGuest!=guest)) return false;
+            passageGuest=guest; closeAfterGuest=false;
+            var next=state.Value; next.GuestPassage=true; state.Value=next;
+            if (!IsMoving && !IsOpen && !SweepOccupied()) SetOpen(true);
+            return true;
+        }
+        public void EndGuestPassage(Collider guest)
+        {
+            if (!IsServer || !IsSpawned || passageGuest!=guest) return;
+            var next=state.Value; next.GuestPassage=false; state.Value=next;
+            closeAfterGuest=true;
+        }
+        public override void OnNetworkDespawn() { passageGuest=null; closeAfterGuest=false; }
 
         bool SweepOccupied()
         {
@@ -86,6 +126,8 @@ namespace MotelGame.Interactions
                     Mathf.Abs(center.z - sweepCenter.z) < half.z + capsule.radius &&
                     Mathf.Abs(center.y - sweepCenter.y) < half.y + capsule.height * .5f) return true;
             }
+            foreach (var collider in Physics.OverlapBox(transform.TransformPoint(sweepCenter),sweepSize*.5f,transform.rotation,~0,QueryTriggerInteraction.Ignore))
+                if(collider.GetComponent<GuestLifecycle>()!=null) return true;
             return false;
         }
     }

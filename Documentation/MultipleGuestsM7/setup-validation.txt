@@ -1,0 +1,3 @@
+PASS: Saved scene reopened; 4 independent rooms, 5 configured server NPCs, one reception/service system; all references and network scene identities valid; no missing scripts.
+All four door sweeps and CharacterController passages clear.
+Scene SHA256: 408040011e5ddbaa3199739e1e2e6b312aebc2fd6ac65e403acd41464fb431b3

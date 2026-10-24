@@ -1,0 +1,5 @@
+System.Exception: Incomplete route: 103: RoomDoorOutside -> RoomDoorInside
+  at MotelGame.Editor.MultipleGuestsSetup.ValidatePath (UnityEngine.Transform a, UnityEngine.Transform b, System.Collections.Generic.List`1[T] lines, System.String prefix) [0x0014c] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MultipleGuestsSetup.cs:208 
+  at MotelGame.Editor.MultipleGuestsSetup.Validate () [0x002e4] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MultipleGuestsSetup.cs:193 
+  at MotelGame.Editor.MultipleGuestsSetup.Install (System.String expected) [0x0095d] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MultipleGuestsSetup.cs:139 
+  at MotelGame.Editor.MultipleGuestsSetup.Poll () [0x00098] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MultipleGuestsSetup.cs:35 

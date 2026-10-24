@@ -106,11 +106,13 @@ namespace MotelGame.Networking
             Vector2 point = mouse == null ? Vector2.zero : mouse.position.ReadValue();
             point.y = Screen.height - point.y;
             // Prevent a menu click from also recapturing the FPS cursor in the same frame.
-            movement.InputSuspended = Cursor.lockState != CursorLockMode.Locked && panel.Contains(point);
+            movement.InputSuspended = local.GetComponent<MotelGame.Interactions.PlayerInteractor>().MenuOpen || Cursor.lockState != CursorLockMode.Locked && panel.Contains(point);
         }
 
         void OnGUI()
         {
+            var localInteractor = manager.LocalClient?.PlayerObject?.GetComponent<MotelGame.Interactions.PlayerInteractor>();
+            if (localInteractor != null && localInteractor.MenuOpen) return;
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 GUI.Label(new Rect(12, 12, 430, 30), status + " | Esc: connection menu");

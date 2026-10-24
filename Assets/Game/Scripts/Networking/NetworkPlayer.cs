@@ -1,4 +1,5 @@
 using Unity.Netcode;
+using MotelGame.Characters;
 using MotelGame.Interactions;
 using UnityEngine;
 
@@ -9,7 +10,9 @@ namespace MotelGame.Networking
     {
         [SerializeField] Camera playerCamera;
         [SerializeField] AudioListener playerListener;
-        [SerializeField] Renderer body;
+        [SerializeField] Renderer body; // Legacy placeholder for older setup tools.
+        [SerializeField] CharacterVisuals characterVisuals;
+        public bool BodyVisible => characterVisuals != null ? characterVisuals.BodyVisible : body.enabled;
         FirstPersonController movement;
         CharacterController capsule;
         PlayerInteractor interactor;
@@ -35,7 +38,8 @@ namespace MotelGame.Networking
             if (interactor != null) interactor.enabled = local;
             playerCamera.enabled = local;
             playerListener.enabled = local;
-            body.enabled = !local;
+            if (body != null) body.enabled = characterVisuals == null && !local;
+            if (characterVisuals != null) characterVisuals.SetVisible(!local);
         }
     }
 }

@@ -1,0 +1,6 @@
+FAIL host
+Host/Client connected; ownership, camera and remote raycast isolation verified.
+Cycle 1: parallel actual raycast cleaning; duplicates harmless; Ready only after bed + all trash.
+System.Exception: Walk blocked toward (18.50, 0.00, 12.20) at (18.50, 0.03, 12.38)
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Walk>d__28.MoveNext () [0x00190] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:207 
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Start>d__13.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:42 

@@ -1,0 +1,7 @@
+PASS client 2026-10-24T20:10:01.3108380Z
+Two distinct player objects and lobby spawn points; one local owner.
+Owner input/camera/listener/capsule enabled; remote input/camera/listener/capsule disabled; only remote body visible.
+Walk 4 m/s, run 6 m/s, idle, reverse yaw. Observed remote movement via NGO: 3.69m and yaw 180.0deg.
+Disconnect completed and network player objects were removed.
+No critical error logs.
+

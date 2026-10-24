@@ -79,7 +79,7 @@ namespace MotelBlockoutV3Tools
         }
         static void ValidateLayout(Transform motel,Spec spec)
         {
-            var filters=motel.GetComponentsInChildren<MeshFilter>(true).Where(f=>f.GetComponentInParent<MotelGame.Interactions.NetworkDoor>()==null).ToList();
+            var filters=motel.GetComponentsInChildren<MeshFilter>(true).Where(f=>f.GetComponentInParent<MotelGame.Interactions.NetworkDoor>()==null && f.GetComponentInParent<MotelGame.Service.ServiceRoom>()==null).ToList();
             foreach(var b in spec.boxes)
             {
                 var parent=motel.Find(b.group);
@@ -248,7 +248,7 @@ namespace MotelBlockoutV3Tools
             // The environment stays under Motel; networking has its own root.
             var roots=scene.GetRootGameObjects().Where(g=>g.name=="Motel").ToArray();
             if(roots.Length!=1)throw new Exception("Expected one Motel environment root");
-            var filters=roots[0].GetComponentsInChildren<MeshFilter>(true).Where(f=>f.GetComponentInParent<MotelGame.Interactions.NetworkDoor>()==null).ToArray();
+            var filters=roots[0].GetComponentsInChildren<MeshFilter>(true).Where(f=>f.GetComponentInParent<MotelGame.Interactions.NetworkDoor>()==null && f.GetComponentInParent<MotelGame.Service.ServiceRoom>()==null).ToArray();
             if(filters.Length!=expected)throw new Exception("Primitive count mismatch: "+filters.Length);
             foreach(var t in roots[0].GetComponentsInChildren<Transform>(true))
             {

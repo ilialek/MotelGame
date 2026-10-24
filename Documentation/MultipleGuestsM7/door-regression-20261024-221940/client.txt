@@ -1,0 +1,8 @@
+PASS client
+Two players spawned; owner-only camera, movement and interaction; remote cannot raycast.
+Observed host movement and smooth door opening over NGO.
+Owner camera raycast/RPC closed door.
+Closed leaf blocks local CharacterController.
+20 rapid RPCs yielded one transition, stable replicated open state.
+Disconnect completed.
+Completed.

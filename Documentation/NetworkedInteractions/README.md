@@ -1,5 +1,6 @@
 # Milestone 2 — Room 101 Networked Door
 
+> С M7 используется один актуальный build: `Builds/Playtest/LaunchWindowed.command`. Это историческое описание milestone; текущие многокомнатный сценарий и тесты находятся в `Documentation/MultipleGuestsM7/README.md`. Оба участника должны запускать текущую версию. Старые M4–M6 single-guest тесты сохранены как история и не проверяют текущий M7 protocol.
 Unity 6000.3.19f1 · Netcode for GameObjects 2.13.3 · Unity Transport 2.6.0.
 Пакеты не менялись.
 
@@ -17,7 +18,7 @@ Unity 6000.3.19f1 · Netcode for GameObjects 2.13.3 · Unity Transport 2.6.0.
 ## Ручная проверка
 
 1. Открыть `Assets/Game/Scenes/Motel_Blockout_V3.unity`, включить Play Mode, нажать **Start Host**.
-2. Запустить `Builds/NetworkedInteractions/MotelGame.app`. Адрес `127.0.0.1`, порт `7777`, нажать **Start Client**. Для LAN указать IP компьютера хоста.
+2. Запустить `Builds/Playtest/MotelGame.app`. Адрес `127.0.0.1`, порт `7777`, нажать **Start Client**. Для LAN указать IP компьютера хоста.
 3. Щёлкнуть вне меню для захвата курсора. WASD / мышь / Left Shift; Esc освобождает курсор.
 4. Из лобби пройти прямо в коридор справа от reception, затем повернуть налево к номерам. Подойти к Room 101 со стороны коридора, навести центр камеры на полотно с расстояния примерно 1–2 м.
 5. Убедиться, что появилась **Press E**. Нажать E на хосте, проверить плавное открывание в обоих окнах. Пройти внутрь и отойти от зоны движения полотна.
@@ -66,7 +67,7 @@ Backup: `Backups/BeforeNetworkedDoor_20261014_125906/`. Содержит пре�
 - `Assets/Game/Scripts/Networking/Tests/NetworkDoorSmokeTest.cs`
 - `Assets/Game/Editor/Room101DoorSetup.cs`
 - `Assets/Game/Prefabs/NetworkDoor.prefab`
-- Соответствующие `.meta`, документация и отчёты в этой папке; build в `Builds/NetworkedInteractions/`.
+- Соответствующие `.meta`, документация и отчёты в этой папке; build в `Builds/Playtest/`.
 
 Изменены:
 - `Assets/Game/Scripts/Networking/NetworkPlayer.cs` — ownership interactor.

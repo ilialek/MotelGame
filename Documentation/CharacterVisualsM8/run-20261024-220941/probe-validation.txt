@@ -1,0 +1,1 @@
+PASS gameplay and visual observations for Host, Client and late observer; moving-animation checks apply to the full-lifecycle Host/Client roles.

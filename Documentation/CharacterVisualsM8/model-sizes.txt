@@ -1,0 +1,17 @@
+Casual bounds=Center: (169.62, 24011.89, 813.96), Extents: (7049.85, 24063.54, 4129.62) factor=3.74009796E-05
+LongSleeve bounds=Center: (169.62, 24011.90, 404.20), Extents: (7049.85, 24063.54, 4539.38) factor=3.7400976E-05
+Suit bounds=Center: (169.62, 24011.89, 280.61), Extents: (7049.85, 24063.53, 4662.97) factor=3.74009905E-05
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877
+LongSleeve bounds=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45) factor=0.374009818
+Suit bounds=Center: (0.02, 2.40, 0.03), Extents: (0.70, 2.41, 0.47) factor=0.374009967
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877
+LongSleeve bounds=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45) factor=0.374009818
+Suit bounds=Center: (0.02, 2.40, 0.03), Extents: (0.70, 2.41, 0.47) factor=0.374009967
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877
+LongSleeve bounds=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45) factor=0.374009818
+Suit bounds=Center: (0.02, 2.40, 0.03), Extents: (0.70, 2.41, 0.47) factor=0.374009967
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877
+LongSleeve bounds=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45) factor=0.374009818
+Suit bounds=Center: (0.02, 2.40, 0.03), Extents: (0.70, 2.41, 0.47) factor=0.374009967
+Casual bounds=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41) factor=0.374009877

@@ -1,0 +1,4 @@
+PASS observe-Leaving
+Late join Leaving: one server-owned NPC, correct assigned room/pose, remote agent disabled, no old guest visuals.
+Disconnect completed.
+Completed without critical runtime logs.

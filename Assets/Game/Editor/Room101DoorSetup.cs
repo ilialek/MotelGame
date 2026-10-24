@@ -96,12 +96,7 @@ namespace MotelGame.Editor
             }
         }
         [MenuItem("Tools/Motel/Validate Room101 Door Geometry")]
-        public static void ValidateSaved()
-        {
-            var scene=EditorSceneManager.OpenPreviewScene(ScenePath);
-            try{ValidateGeometry(scene);Debug.Log("Room101 door geometry validation passed.");}
-            finally{EditorSceneManager.ClosePreviewScene(scene);}
-        }
+        public static void ValidateSaved() => MultipleGuestsSetup.Validate();
         static void ValidateGeometry(Scene original)
         {
             // Work in a preview copy so the user's live scene remains unchanged.
@@ -133,19 +128,6 @@ namespace MotelGame.Editor
             finally{EditorSceneManager.ClosePreviewScene(scene);}
         }
         [MenuItem("Tools/Motel/Build Networked Interactions Development Player")]
-        public static void Build()
-        {
-            var snapshots=new Dictionary<string,byte[]>();
-            foreach(var path in new[]{"Assets/Settings/DefaultVolumeProfile.asset","Assets/Settings/PC_RPAsset.asset","Assets/Settings/UniversalRenderPipelineGlobalSettings.asset","ProjectSettings/ProjectSettings.asset","ProjectSettings/UnityConnectSettings.asset"})
-                if(File.Exists(path))snapshots[path]=File.ReadAllBytes(path);
-            try
-            {
-                var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{ScenePath},locationPathName="Builds/NetworkedInteractions/MotelGame.app",target=BuildTarget.StandaloneOSX,options=BuildOptions.Development});
-                File.WriteAllText(ReportDir+"/build-validation.txt",report.summary.result+"\nErrors: "+report.summary.totalErrors+"\nWarnings: "+report.summary.totalWarnings+"\n");
-                if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Build failed.");
-            }
-            catch(Exception e){File.WriteAllText(ReportDir+"/build-error.txt",e.ToString());Debug.LogException(e);}
-            finally{foreach(var s in snapshots)File.WriteAllBytes(s.Key,s.Value);AssetDatabase.Refresh();}
-        }
+        public static void Build() => PlaytestBuild.Build();
     }
 }

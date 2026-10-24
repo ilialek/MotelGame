@@ -64,7 +64,7 @@ namespace MotelGame.Networking.Tests
             Require(session.StartSession(role=="host"),"Start failed");
             yield return Wait(()=>session.Manager.IsConnectedClient && Players().Length==2,"two players");
             local=Players().Single(p=>p.IsOwner);
-            door=FindFirstObjectByType<NetworkDoor>();Require(door!=null && door.IsSpawned,"Door spawn");
+            door=FindObjectsByType<NetworkDoor>(FindObjectsSortMode.None).Single(d=>d.name=="Room101Door");Require(door!=null && door.IsSpawned,"Door spawn");
             var remote=Players().Single(p=>!p.IsOwner);
             Require(local.GetComponent<PlayerInteractor>().enabled && !remote.GetComponent<PlayerInteractor>().enabled,"Interactor ownership");
             Require(remote.GetComponent<PlayerInteractor>().FindTarget()==null,"Remote raycast allowed");

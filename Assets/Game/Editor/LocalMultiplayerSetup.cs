@@ -125,29 +125,6 @@ namespace MotelGame.Editor
             finally { if(preview.IsValid())EditorSceneManager.ClosePreviewScene(preview); }
         }
         [MenuItem("Tools/Motel/Build Local Multiplayer Development Player")]
-        public static void BuildDevelopmentPlayer()
-        {
-            // URP/build preparation can serialize unrelated pipeline and project settings.
-            // Preserve their bytes so a development build does not become a visual/settings edit.
-            var snapshots=new Dictionary<string,byte[]>();
-            foreach(var path in new[]{"Assets/Settings/DefaultVolumeProfile.asset", "Assets/Settings/PC_RPAsset.asset",
-                "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset", "ProjectSettings/ProjectSettings.asset",
-                "ProjectSettings/UnityConnectSettings.asset"})
-                if(File.Exists(path))snapshots[path]=File.ReadAllBytes(path);
-            try
-            {
-                var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions {
-                    scenes=new[]{ScenePath},locationPathName="Builds/LocalMultiplayer/MotelGame.app",
-                    target=BuildTarget.StandaloneOSX,options=BuildOptions.Development });
-                File.WriteAllText(ReportDir+"/build-validation.txt",report.summary.result+"\nErrors: "+report.summary.totalErrors+"\nWarnings: "+report.summary.totalWarnings+"\n");
-                if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Development build failed: "+report.summary.result);
-            }
-            catch(Exception e){File.WriteAllText(ReportDir+"/build-error.txt",e.ToString());Debug.LogException(e);}
-            finally
-            {
-                foreach(var item in snapshots)File.WriteAllBytes(item.Key,item.Value);
-                AssetDatabase.Refresh();
-            }
-        }
+        public static void BuildDevelopmentPlayer() => PlaytestBuild.Build();
     }
 }

@@ -1,0 +1,8 @@
+FAIL host
+Two players spawned; owner-only camera, movement and interaction; remote cannot raycast.
+Server rejected distant client's direct RPC.
+Closed leaf blocks local CharacterController.
+Owner camera raycast/RPC opened door.
+System.Exception: Walk blocked toward (19.10, 0.00, 12.65) at (20.94, 0.03, 12.65)
+  at MotelGame.Networking.Tests.NetworkDoorSmokeTest+<Walk>d__23.MoveNext () [0x00162] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NetworkDoorSmokeTest.cs:147 
+  at MotelGame.Networking.Tests.NetworkDoorSmokeTest+<Start>d__12.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NetworkDoorSmokeTest.cs:42 
