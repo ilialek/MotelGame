@@ -1,0 +1,6 @@
+FAIL client
+
+System.Exception: No active cleanup state at closing
+  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<ContestedOperations>d__46.MoveNext () [0x010eb] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:224 
+  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__39.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:66 
+NPC distance: 0m; max queue=0

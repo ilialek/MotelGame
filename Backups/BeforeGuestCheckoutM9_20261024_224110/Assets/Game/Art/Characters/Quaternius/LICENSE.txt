@@ -1,0 +1,23 @@
+Quaternius — Animated Men Pack (selected models and embedded animations)
+Author: Quaternius, https://quaternius.com/
+License: Creative Commons CC0 1.0 Universal (public-domain dedication)
+License text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Official pack: https://quaternius.com/packs/animatedmen.html
+Author's Poly Pizza profile: https://poly.pizza/u/Quaternius
+Pack listing: https://poly.pizza/bundle/Animated-Men-Pack-DAC9SDgMQT
+
+Downloaded 2026-10-24 from the author's CC0 listings on Poly Pizza:
+Casual (catalogue title: Man): https://poly.pizza/m/HMnuH5geEG
+  https://static.poly.pizza/3746be88-6799-4817-929b-6bc067c47caa.glb
+LongSleeve: https://poly.pizza/m/DLptRuewTn
+  https://static.poly.pizza/e6019b9f-aed0-400c-8df4-ce5b648e9b82.glb
+Suit: https://poly.pizza/m/mQnGoME1ez
+  https://static.poly.pizza/66b57880-bcb0-479a-8d72-5c3e88afaa39.glb
+
+The official Google Drive FBX download returned quota-exceeded HTML.
+The public GLB files include the actual rig, colored materials and animations.
+Only Idle, Walk and Run were retained during conversion to FBX with installed Blender.
+Unity setup normalizes the visual height to 1.8 m, creates URP/Lit materials,
+and excludes Blender's auxiliary Icosphere bone-display object from character prefabs.
+No purchased assets, subscription, external Unity importer or additional package is required.
+Attribution is retained for provenance even though CC0 does not require it.

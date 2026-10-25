@@ -20,14 +20,14 @@ namespace MotelGame.Service
         public Collider TargetCollider => targetCollider;
         public Vector3 AimPoint => targetCollider.bounds.center;
         TowelCarrier LocalCarrier => service.LocalCarrier;
-        public bool CanInteract => service != null && service.IsSpawned && LocalCarrier != null &&
+        public bool CanInteract => service != null && service.IsSpawned && service.AcceptingWork && LocalCarrier != null &&
             (action == GuestServiceAction.AnswerPhone ? service.Phase == GuestRequestPhase.Ringing :
-            service.Phase == GuestRequestPhase.PendingDelivery &&
-            (action == GuestServiceAction.TakeTowel ? !LocalCarrier.HasTowel :
+            service.Phase == GuestRequestPhase.PendingDelivery && service.State.Kind==GuestRequestKind.CleanTowel &&
+            (action == GuestServiceAction.TakeTowel ? !LocalCarrier.HasItem :
             deliveryRoom == service.Room && LocalCarrier.HasTowel));
-        public string Prompt => action == GuestServiceAction.AnswerPhone ?
+        public string Prompt => service.State.Kind!=GuestRequestKind.CleanTowel&&action!=GuestServiceAction.AnswerPhone?"No towel delivery requested":action == GuestServiceAction.AnswerPhone ?
             (service.Phase == GuestRequestPhase.Ringing ? "Answer Phone" : "Phone — no incoming call") :
-            action == GuestServiceAction.TakeTowel ? (LocalCarrier != null && LocalCarrier.HasTowel ? "Already carrying a clean towel" :
+            action == GuestServiceAction.TakeTowel ? (LocalCarrier != null && LocalCarrier.HasItem ? $"Carrying {LocalCarrier.ItemName} — finish that delivery first" :
             service.Phase == GuestRequestPhase.PendingDelivery ? "Take Clean Towel" : "Clean towels — answer a guest request first") :
             service.Room != deliveryRoom ? $"Room {deliveryRoom.RoomNumber} — no delivery requested" :
             service.Phase == GuestRequestPhase.Completed ? $"Room {deliveryRoom.RoomNumber} — request complete" :

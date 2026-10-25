@@ -1,0 +1,2 @@
+PASS: Saved scene reopened. Four rooms / five guests, shared Reception slot, exact request system reference, valid configurable durations, all room references, no missing scripts; 16 checkout/departure path segments complete.
+Prefab stay: 120 seconds. Scene stays: NetworkGuest_A=120, NetworkGuest_B=120, NetworkGuest_C=120, NetworkGuest_D=120, NetworkGuest_E=120

@@ -1,0 +1,8 @@
+FAIL client
+Exclusive workstation, remote camera/input isolation, unauthorized start refusal, disconnect release and reconnect.
+Concurrent/repeated shift start -> exactly one transition, no client bypass.
+Three distinct physical queue positions and four Ready rooms; camera focus leaves worker gameplay running.
+System.Exception: Walk blocked toward (20.35, 0.00, 12.65) at (20.23, 0.03, 12.65)
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Walk>d__51.MoveNext () [0x00190] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:375 
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Start>d__32.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:61 
+NPC distance: 0m; max queue=3

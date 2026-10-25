@@ -1,0 +1,13 @@
+player=(13.26, 0.03, 7.56) shift=Running 01:17 rooms=101:Occupied bed=True trash=2;102:Ready bed=True trash=2;103:Ready bed=True trash=2;104:Dirty bed=False trash=0 feedback=This breaker is already OK or the fault changed. request=3 Electrical Maintenance Completed step=0; Guest B WaitingForCheckIn q=1 pos=(8.78, 0.02, 5.87); Guest C Absent q=0 pos=(0.00, 0.00, 0.00); Guest D Absent q=0 pos=(0.00, 0.00, 0.00); Guest A InRoom q=0 pos=(18.93, 0.02, 13.53); Guest E Absent q=0 pos=(0.00, 0.00, 0.00) bags=101:Disposed/fault=False/reserved=False;102:Disposed/fault=False/reserved=False;103:Disposed/fault=False/reserved=False;104:Collecting/fault=False/reserved=False stats=NIGHT 1 COMPLETE — 06:00
+
+Guests checked in: 1
+Guests checked out: 0
+Left without service: 0
+Towels delivered: 1
+TV repairs: 0
+Missed / cancelled requests: 0
+Rooms prepared: 3
+Trash bags disposed: 3
+Electrical repairs: 2/2
+Guest relocations: 0
+Occupied at closing: 0

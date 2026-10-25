@@ -1,0 +1,6 @@
+PASS host
+Shared collection; disconnect bag recovery; empty-room check-in refusal; occupied outage; source turnover after physical relocation.
+Night complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1
+Second night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 1;TV repairs: 0;Missed / cancelled requests: 1;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0
+No critical runtime logs.
+NPC distance: 295.2635m; max queue=0

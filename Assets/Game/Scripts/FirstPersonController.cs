@@ -19,6 +19,7 @@ namespace MotelGame
 
         // Menus may suspend local input without disabling gravity.
         public bool InputSuspended { get; set; }
+        public float EyeHeight => eyeHeight;
 
         CharacterController controller;
         float verticalSpeed;
@@ -52,7 +53,7 @@ namespace MotelGame
             var mouse = Mouse.current;
             bool released = keyboard != null && keyboard.escapeKey.wasPressedThisFrame;
             bool justCaptured = false;
-            if (released) SetCursorCaptured(false);
+            if (released && !InputSuspended) SetCursorCaptured(false);
             else if (!InputSuspended && !cursorCaptured && Application.isFocused && mouse != null && mouse.leftButton.wasPressedThisFrame)
             {
                 SetCursorCaptured(true);
@@ -88,6 +89,8 @@ namespace MotelGame
             if ((flags & CollisionFlags.Below) != 0 && verticalSpeed < 0) verticalSpeed = -2f;
             if ((flags & CollisionFlags.Above) != 0 && verticalSpeed > 0) verticalSpeed = 0;
         }
+
+        public void ResumeAfterComputer() => SetCursorCaptured(Application.isFocused);
 
         void SetCursorCaptured(bool captured)
         {

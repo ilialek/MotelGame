@@ -1,0 +1,4 @@
+PASS auto1
+Anonymous authentication / persistent separate profile player
+Two unconfigured launches acquired separate persistent profiles and player IDs
+No critical runtime errors.

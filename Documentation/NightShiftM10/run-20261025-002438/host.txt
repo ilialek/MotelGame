@@ -1,0 +1,8 @@
+FAIL host
+Exclusive workstation, remote camera/input isolation, unauthorized start refusal, disconnect release and reconnect.
+Concurrent/repeated shift start -> exactly one transition, no client bypass.
+Default 900s clock, 45s first-delay bound, 80% arrival cutoff and 120s patience; no artificial initial queue hold.
+System.Exception: Walk blocked toward (20.00, 0.00, 12.65) at (20.00, 0.03, 13.52)
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Walk>d__57.MoveNext () [0x00190] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:429 
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Start>d__36.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:62 
+NPC distance: 36.3498m; max queue=1

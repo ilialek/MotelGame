@@ -1,0 +1,4 @@
+System.Exception: M10 primitive overlaps original geometry: PowerSocket / tv_remote_mp_1
+  at MotelGame.Editor.NightShiftSetup.Validate () [0x004a3] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/NightShiftSetup.cs:184 
+  at MotelGame.Editor.PlaytestBuild.Build () [0x0000f] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/PlaytestBuild.cs:15 
+  at MotelGame.Editor.MultipleGuestsSetup.Poll () [0x000f5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MultipleGuestsSetup.cs:38 

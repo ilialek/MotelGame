@@ -1,0 +1,4 @@
+PASS incompatible
+Anonymous authentication / persistent separate profile lifecycle-incompatible
+Actual Relay join rejected by host for incompatible version
+No critical runtime errors.

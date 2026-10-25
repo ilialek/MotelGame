@@ -1,0 +1,2 @@
+PASS: single existing NetworkManager, approval, registered player prefab, online controller/menu.
+2026-10-25T17:19:19.3760170Z

@@ -1,0 +1,3 @@
+System.Exception: Unmapped FBX material luggage_mp_1: luggage_mp_1
+  at MotelGame.Editor.MotelVisualOverhaul.Import () [0x00338] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelVisualOverhaul.cs:101 
+  at MotelGame.Editor.MotelVisualOverhaul.Poll () [0x00096] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelVisualOverhaul.cs:47 

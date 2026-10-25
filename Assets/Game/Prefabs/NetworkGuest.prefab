@@ -4531,6 +4531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Service.GuestLifecycle
   ShowTopMostFoldoutHeaderGroup: 1
+  stayDuration: 120
   arrivalPoint: {fileID: 0}
   receptionPoint: {fileID: 0}
   departurePoint: {fileID: 0}

@@ -1,0 +1,124 @@
+{
+  "generated": "2026-10-25T17:11:35.482073",
+  "tested_build_unchanged": true,
+  "runs": {
+    "door-regression-20261025-161823": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nTwo players spawned; owner-only camera, movement and interaction; remote cannot raycast.\nServer rejected distant client's direct RPC.\nClosed leaf blocks local CharacterController.\nOwner camera raycast/RPC opened door.\nOpen door permits CharacterController passage.\nHost observed client close through replicated state.\nRemote player moved to guest wing; client disconnect and late join preserved door state.\nDisconnect completed.\nCompleted.\n",
+        "client": "PASS client\nTwo players spawned; owner-only camera, movement and interaction; remote cannot raycast.\nObserved host movement and smooth door opening over NGO.\nOwner camera raycast/RPC closed door.\nClosed leaf blocks local CharacterController.\n20 rapid RPCs yielded one transition, stable replicated open state.\nDisconnect completed.\nCompleted.\n",
+        "late": "PASS late\nTwo players spawned; owner-only camera, movement and interaction; remote cannot raycast.\nLate join received open state and correct 90-degree collider pose.\nDisconnect completed.\nCompleted.\n"
+      }
+    },
+    "door-route-20261025-164053": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nTwo real CharacterController exits from Room 101 TV/bag position around an open door leaf; other owner opens via normal raycast/RPC. No collision bypass or teleport.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "client": "PASS client\nTwo real CharacterController exits from Room 101 TV/bag position around an open door leaf; other owner opens via normal raycast/RPC. No collision bypass or teleport.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "door-route-20261025-165148": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nTwo real CharacterController exits from Room 101 TV/bag position after another owner opens the leaf; worker backs out of the sweep and closes it via normal raycast/RPC. No collision bypass or teleport.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "client": "PASS client\nTwo real CharacterController exits from Room 101 TV/bag position after another owner opens the leaf; worker backs out of the sweep and closes it via normal raycast/RPC. No collision bypass or teleport.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "edges-20261025-155306": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 15.92629m; max queue=0\n",
+        "client": "PASS client\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "edges-20261025-164053": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 15.91653m; max queue=0\n",
+        "client": "PASS client\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "edges-20261025-165735": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 15.91477m; max queue=0\n",
+        "client": "PASS client\nComputer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.\nBoth clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "focused-20261025-155305": {
+      "status": "FAIL",
+      "reports": {
+        "host": null,
+        "client": "FAIL client\nTowel/bag conflict; before-answer repair; duplicate relocation; destination check-in and checkout conflict; late join; original deadline expired during real walk; exactly one checkout.\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1\nSystem.Exception: Walk blocked toward (20.00, 0.00, 12.65) at (20.00, 0.03, 13.51)\n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__69.MoveNext () [0x003ff] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:571 \n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__39.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:66 \nNPC distance: 0m; max queue=0\n",
+        "observer-bag": "PASS observer-bag\nLate join synchronized observer-bag; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-fault": "PASS observer-fault\nLate join synchronized observer-fault; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-relocation": "PASS observer-relocation\nLate join synchronized observer-relocation; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "focused-20261025-161823": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nShared collection; disconnect bag recovery; empty-room check-in refusal; occupied outage; source turnover after physical relocation.\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 1;TV repairs: 0;Missed / cancelled requests: 1;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 298.9261m; max queue=0\n",
+        "client": "PASS client\nTowel/bag conflict; before-answer repair; duplicate relocation; destination check-in and checkout conflict; late join; original deadline expired during real walk; exactly one checkout.\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 1;TV repairs: 0;Missed / cancelled requests: 1;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-bag": "PASS observer-bag\nLate join synchronized observer-bag; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-fault": "PASS observer-fault\nLate join synchronized observer-fault; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-relocation": "PASS observer-relocation\nLate join synchronized observer-relocation; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "focused-20261025-164600": {
+      "status": "CANCELLED_FOR_TEST_DRIVER_REBUILD",
+      "reports": {
+        "host": null,
+        "client": null,
+        "observer-bag": "PASS observer-bag\nLate join synchronized observer-bag; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-fault": "PASS observer-fault\nLate join synchronized observer-fault; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-relocation": null
+      }
+    },
+    "focused-20261025-165148": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nShared collection; disconnect bag recovery; empty-room check-in refusal; occupied outage; source turnover after physical relocation.\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 1;TV repairs: 0;Missed / cancelled requests: 1;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 295.2635m; max queue=0\n",
+        "client": "PASS client\nTowel/bag conflict; before-answer repair; duplicate relocation; destination check-in and checkout conflict; late join; original deadline expired during real walk; exactly one checkout.\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 1;TV repairs: 0;Missed / cancelled requests: 1;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-bag": "PASS observer-bag\nLate join synchronized observer-bag; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-fault": "PASS observer-fault\nLate join synchronized observer-fault; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n",
+        "observer-relocation": "PASS observer-relocation\nLate join synchronized observer-relocation; remote NPC agents disabled.\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "locomotion-20261025-160101": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host 2026-10-25T15:01:36.2419600Z\nTwo distinct player objects and lobby spawn points; one local owner.\nOwner input/camera/listener/capsule enabled; remote input/camera/listener/capsule disabled; only remote body visible.\nWalk 4 m/s, run 6 m/s, idle, reverse yaw. Observed remote movement via NGO: 3.73m and yaw 180.0deg.\nClient disconnect despawned remote player on host.\nDisconnect completed and network player objects were removed.\nNo critical error logs.\n\n",
+        "client": "PASS client 2026-10-25T15:01:36.1985130Z\nTwo distinct player objects and lobby spawn points; one local owner.\nOwner input/camera/listener/capsule enabled; remote input/camera/listener/capsule disabled; only remote body visible.\nWalk 4 m/s, run 6 m/s, idle, reverse yaw. Observed remote movement via NGO: 3.70m and yaw 180.0deg.\nDisconnect completed and network player objects were removed.\nNo critical error logs.\n\n"
+      }
+    },
+    "night-20261025-155305": {
+      "status": "FAIL",
+      "reports": {
+        "host": null,
+        "client": "FAIL client\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 7;Guests checked out: 7;Left without service: 0;Towels delivered: 1;TV repairs: 6;Missed / cancelled requests: 0;Rooms prepared: 12;Trash bags disposed: 12;Electrical repairs: 1/1;Guest relocations: 1;Occupied at closing: 0\nSystem.Exception: Walk blocked toward (8.00, 0.00, -3.10) at (7.75, 0.03, -3.42)\n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__69.MoveNext () [0x003ff] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:571 \n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__39.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:66 \nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "night-20261025-161823": {
+      "status": "FAIL",
+      "reports": {
+        "host": null,
+        "client": "FAIL client\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 7;Guests checked out: 7;Left without service: 0;Towels delivered: 1;TV repairs: 6;Missed / cancelled requests: 0;Rooms prepared: 12;Trash bags disposed: 12;Electrical repairs: 1/1;Guest relocations: 1;Occupied at closing: 0\nSystem.Exception: Walk blocked toward (20.00, 0.00, 12.65) at (20.00, 0.03, 13.50)\n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__69.MoveNext () [0x00705] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:598 \n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__39.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:66 \nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "night-20261025-164054": {
+      "status": "FAIL",
+      "reports": {
+        "host": null,
+        "client": "FAIL client\n\nSystem.Exception: Walk blocked toward (19.00, 0.00, 13.65) at (19.46, 0.03, 13.83)\n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__72.MoveNext () [0x00705] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:637 \n  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__41.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:67 \nNPC distance: 0m; max queue=0\n"
+      }
+    },
+    "night-20261025-165147": {
+      "status": "PASS",
+      "reports": {
+        "host": "PASS host\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 6;Guests checked out: 6;Left without service: 0;Towels delivered: 3;TV repairs: 3;Missed / cancelled requests: 0;Rooms prepared: 11;Trash bags disposed: 11;Electrical repairs: 1/1;Guest relocations: 1;Occupied at closing: 0\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 0;TV repairs: 0;Missed / cancelled requests: 2;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 627.0525m; max queue=0\n",
+        "client": "PASS client\nNight complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 6;Guests checked out: 6;Left without service: 0;Towels delivered: 3;TV repairs: 3;Missed / cancelled requests: 0;Rooms prepared: 11;Trash bags disposed: 11;Electrical repairs: 1/1;Guest relocations: 1;Occupied at closing: 0\nSecond night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 0;TV repairs: 0;Missed / cancelled requests: 2;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0\nNo critical runtime logs.\nNPC distance: 0m; max queue=0\n"
+      }
+    }
+  }
+}

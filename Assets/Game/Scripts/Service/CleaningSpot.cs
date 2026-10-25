@@ -15,7 +15,7 @@ namespace MotelGame.Service
         public Vector3 AimPoint => targetCollider.bounds.center;
         public bool CanInteract => room != null && room.CanClean(index);
         public string Prompt => room.State.Status == RoomStatus.Occupied ? "Occupied — cleaning unavailable" :
-            room.IsCleaned(index) ? (index == -1 ? "Bed made" : "Trash removed") : index == -1 ? "Make Bed" : "Remove Trash";
+            room.IsCleaned(index) ? (index == -1 ? "Bed made" : "Trash collected") : index == -1 ? "Make Bed" : "Collect Trash";
         public void Interact() { if (CanInteract) room.RequestCleanRpc(index, room.State.Cycle); }
         public void ApplyCleaned(bool cleaned)
         {

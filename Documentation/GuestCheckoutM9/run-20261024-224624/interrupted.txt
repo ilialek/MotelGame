@@ -1,0 +1,1 @@
+Diagnostic run stopped after first102/103 checkouts, physical departures, three successful late joins, and start of second102 cycle. Test assertions updated to allow the existing global request scheduler to replace a completed request. No gameplay exception observed. Full replacement run required.

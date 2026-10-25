@@ -1,0 +1,29 @@
+Motel/ReceptionDesk/ComputerMonitor/Visual_pc_monitor_mp_1 Center: (10.82, 1.28, 4.90), Extents: (0.20, 0.30, 0.31)
+pc_monitor_mp_1 Center: (10.84, 1.01, 4.90), Extents: (0.16, 0.03, 0.21) levels 1:0.11; 1.04:0.03
+pc_monitor_mp_1 Center: (10.82, 1.29, 4.90), Extents: (0.20, 0.28, 0.31) levels 1.45:0.05; 1.48:0.06; 1.57:0.06
+crt_screen_mp_2 Center: (11.00, 1.34, 4.90), Extents: (0.01, 0.18, 0.25) levels 
+Motel/ReceptionDesk/CCTVMonitor/Visual_pc_monitor_mp_1 Center: (10.84, 1.33, 6.60), Extents: (0.20, 0.35, 0.34)
+pc_monitor_mp_1 Center: (10.86, 1.01, 6.60), Extents: (0.16, 0.03, 0.23) levels 1:0.12; 1.04:0.03
+pc_monitor_mp_1 Center: (10.84, 1.34, 6.60), Extents: (0.20, 0.33, 0.34) levels 1.67:0.07
+crt_screen_mp_2 Center: (11.01, 1.40, 6.60), Extents: (0.01, 0.21, 0.28) levels 
+Motel/Storage/PizzaDoggyDecor/Visual_shelf_mx_3 Center: (15.20, 1.18, 6.35), Extents: (0.60, 1.18, 0.33)
+metal_hr_2 Center: (15.20, 1.18, 6.35), Extents: (0.60, 1.18, 0.32) levels 0.2:0.72; 0.8:0.72; 1.4:0.72; 2:0.72; 2.35:0.72
+Motel/Storage/PizzaDoggyDecor/Visual_shelf_mx_4 Center: (17.00, 1.18, 6.35), Extents: (0.60, 1.18, 0.33)
+metal_hr_2 Center: (17.00, 1.18, 6.35), Extents: (0.60, 1.18, 0.32) levels 0.2:0.72; 0.78:0.03; 0.8:0.01; 1.38:0.03; 1.4:0.01; 1.98:0.03; 2:0.01; 2.35:0.72
+grate_hm_1 Center: (17.00, 1.39, 6.34), Extents: (0.59, 0.60, 0.30) levels 0.79:0.70; 1.38:0.70; 1.99:0.70
+Motel/Storage/PizzaDoggyDecor/Visual_shelf_mx_3 Center: (18.70, 1.18, 6.35), Extents: (0.60, 1.18, 0.33)
+metal_hr_2 Center: (18.70, 1.18, 6.35), Extents: (0.60, 1.18, 0.32) levels 0.2:0.72; 0.8:0.72; 1.4:0.72; 2:0.72; 2.35:0.72
+NightShift/Room101_Television/TVHousing/Visual_tv_mp_1 Center: (19.25, 1.29, 15.11), Extents: (0.36, 0.49, 0.19)
+tvs_mp_1 Center: (19.25, 1.29, 15.11), Extents: (0.36, 0.49, 0.19) levels 0.84:0.04; 0.87:0.01; 1.47:0.21
+crt_screen_mp_1 Center: (19.25, 1.20, 14.94), Extents: (0.26, 0.18, 0.02) levels 
+NightShift/Room103_Television/TVHousing/Visual_tv_mp_1 Center: (19.25, 1.29, 20.81), Extents: (0.36, 0.49, 0.19)
+tvs_mp_1 Center: (19.25, 1.29, 20.81), Extents: (0.36, 0.49, 0.19) levels 0.84:0.04; 0.87:0.01; 1.47:0.21
+crt_screen_mp_1 Center: (19.25, 1.20, 20.64), Extents: (0.26, 0.18, 0.02) levels 
+Door 101 closed Center: (20.58, 1.10, 12.65), Extents: (0.02, 1.08, 0.51)
+Door 101 open Center: (20.07, 1.10, 13.16), Extents: (0.51, 1.08, 0.02)
+Door 102 closed Center: (23.82, 1.10, 12.65), Extents: (0.02, 1.08, 0.51)
+Door 102 open Center: (24.33, 1.10, 12.14), Extents: (0.51, 1.08, 0.02)
+Door 103 closed Center: (20.58, 1.10, 19.55), Extents: (0.02, 1.08, 0.51)
+Door 103 open Center: (20.07, 1.10, 20.06), Extents: (0.51, 1.08, 0.02)
+Door 104 closed Center: (23.82, 1.10, 19.55), Extents: (0.02, 1.08, 0.51)
+Door 104 open Center: (24.33, 1.10, 19.04), Extents: (0.51, 1.08, 0.02)

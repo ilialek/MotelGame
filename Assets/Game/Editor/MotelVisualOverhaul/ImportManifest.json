@@ -1,0 +1,1860 @@
+{
+  "models": [
+    {
+      "pack": "MegaPack",
+      "name": "bed_4",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/bed_4.fbx",
+      "materials": [
+        "old_mattress_mp_2_1",
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "bed_4_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/bed_4_1.fbx",
+      "materials": [
+        "old_mattress_mp_2_1",
+        "wood_3"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "bedside_table_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/bedside_table_1.fbx",
+      "materials": [
+        "metal_6",
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "bedside_table_2",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/bedside_table_2.fbx",
+      "materials": [
+        "metal_6",
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "wardrobe_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/wardrobe_mp_1.fbx",
+      "materials": [
+        "metal_6",
+        "wood_1",
+        "wood_5"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "table_large_3",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/table_large_3.fbx",
+      "materials": [
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "chair_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/chair_mp_1.fbx",
+      "materials": [
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "chair_mp_4",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/chair_mp_4.fbx",
+      "materials": [
+        "fabric_1",
+        "wood_6"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "sofa_3",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/sofa_3.fbx",
+      "materials": [
+        "fabric_1",
+        "wood_6"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "sofa_3_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/sofa_3_1.fbx",
+      "materials": [
+        "fabric_2",
+        "wood_6"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "armchair_2",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/armchair_2.fbx",
+      "materials": [
+        "fabric_1",
+        "wood_6"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "coffee_table_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/coffee_table_1.fbx",
+      "materials": [
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tv_table_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/tv_table_1.fbx",
+      "materials": [
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pillow_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pillow_mp_1.fbx",
+      "materials": [
+        "pillow_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "lamp_1_off",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/lamp_1_off.fbx",
+      "materials": [
+        "lamp_1_off",
+        "metal_mp_1",
+        "metal_mp_4",
+        "plastic_mp_2"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "lamp_3_off",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/lamp_3_off.fbx",
+      "materials": [
+        "lamp_3_off"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "ceiling_lamp_1_off",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/ceiling_lamp_1_off.fbx",
+      "materials": [
+        "ceiling_lamp_1_off",
+        "metal_mp_1",
+        "metal_mp_4"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "ceiling_lamp_2_off",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/ceiling_lamp_2_off.fbx",
+      "materials": [
+        "ceiling_lamp_1_off",
+        "metal_mp_1",
+        "metal_mp_4"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_monitor_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pc_monitor_mp_1.fbx",
+      "materials": [
+        "crt_screen_mp_2",
+        "pc_monitor_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_keyboard_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pc_keyboard_mp_1.fbx",
+      "materials": [
+        "pc_accessories_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_mouse_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pc_mouse_mp_1.fbx",
+      "materials": [
+        "pc_accessories_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pc_mp_1.fbx",
+      "materials": [
+        "pc_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tv_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/tv_mp_1.fbx",
+      "materials": [
+        "crt_screen_mp_1",
+        "tvs_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tv_mp_1_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/tv_mp_1_1.fbx",
+      "materials": [
+        "crt_screen_mp_1",
+        "tvs_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "toilet_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/toilet_mp_1.fbx",
+      "materials": [
+        "metal_mp_1",
+        "plastic_mp_2",
+        "toilet_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "curtain_rod_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/curtain_rod_mp_1.fbx",
+      "materials": [
+        "metal_mp_6",
+        "plastic_mp_2"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "painting_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/painting_1.fbx",
+      "materials": [
+        "painting_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "photo_frame_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/photo_frame_mp_1.fbx",
+      "materials": [
+        "photo_frames_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "clock_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/clock_1.fbx",
+      "materials": [
+        "clock_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "notebook_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/notebook_1.fbx",
+      "materials": [
+        "metal_mp_1",
+        "notebook_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "open_book_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/open_book_mp_1.fbx",
+      "materials": [
+        "books_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "book_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/book_mp_1.fbx",
+      "materials": [
+        "books_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pen_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pen_mp_1.fbx",
+      "materials": [
+        "misc_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pencil_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/pencil_mp_1.fbx",
+      "materials": [
+        "misc_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "ashtray_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/ashtray_1.fbx",
+      "materials": [
+        "ash_tray_mp_1",
+        "cigs_packet_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "plate_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/plate_mp_1.fbx",
+      "materials": [
+        "plate_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "key_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/key_mp_1.fbx",
+      "materials": [
+        "keys_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "key_mp_2",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/key_mp_2.fbx",
+      "materials": [
+        "keys_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "cardboard_box_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/cardboard_box_1.fbx",
+      "materials": [
+        "cardboard_box_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "cardboard_box_2",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/cardboard_box_2.fbx",
+      "materials": [
+        "cardboard_box_2"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "vent_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/vent_mp_1.fbx",
+      "materials": [
+        "vents_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "electrical_outlet_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/electrical_outlet_1.fbx",
+      "materials": [
+        "electrical_outlets_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "light_switch_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/light_switch_1.fbx",
+      "materials": [
+        "light_switches_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "potted_cactus_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/potted_cactus_mp_1.fbx",
+      "materials": [
+        "potted_cactus_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "shelf_mp_2",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/shelf_mp_2.fbx",
+      "materials": [
+        "wood_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tv_remote_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/tv_remote_mp_1.fbx",
+      "materials": [
+        "tv_remote_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPack",
+      "name": "door_2_loose",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Models/door_2_loose.fbx",
+      "materials": [
+        "door_1",
+        "door_handle_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "shelf_mx_3",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/shelf_mx_3.fbx",
+      "materials": [
+        "metal_hr_2"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "shelf_mx_4",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/shelf_mx_4.fbx",
+      "materials": [
+        "grate_hm_1",
+        "metal_hr_2"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "toolbox_mx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/toolbox_mx_1.fbx",
+      "materials": [
+        "toolbox_mx_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "paint_can_mx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/paint_can_mx_1.fbx",
+      "materials": [
+        "paint_can_mx_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "bucket_mx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/bucket_mx_1.fbx",
+      "materials": [
+        "bucket_mx_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "soap_mx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/soap_mx_1.fbx",
+      "materials": [
+        "soap_mx_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "plastic_bottle_mx_1_dirty_squashed",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/plastic_bottle_mx_1_dirty_squashed.fbx",
+      "materials": [
+        "plastic_bottle_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "plastic_bottle_mx_1_dirty",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/plastic_bottle_mx_1_dirty.fbx",
+      "materials": [
+        "plastic_bottle_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "luggage_mp_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/luggage_mp_1.fbx",
+      "materials": [
+        "luggage_mp_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "first_aid_kit_hr_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/first_aid_kit_hr_1.fbx",
+      "materials": [
+        "first_aid_kit_hr_1"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "rainwater_downpipe_hl_1_end",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/rainwater_downpipe_hl_1_end.fbx",
+      "materials": [
+        "metal_hr_5"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "rainwater_downpipe_hl_1_middle",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/rainwater_downpipe_hl_1_middle.fbx",
+      "materials": [
+        "metal_hr_5"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "lamp_mx_3_off",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/lamp_mx_3_off.fbx",
+      "materials": [
+        "lamp_1_off",
+        "metal_hr_2"
+      ]
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "wooden_plank_1",
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Models/wooden_plank_1.fbx",
+      "materials": [
+        "planks_hr_1"
+      ]
+    },
+    {
+      "pack": "Tech",
+      "name": "fuse_box_etx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Models/fuse_box_etx_1.fbx",
+      "materials": [
+        "electronics_etx_part_1",
+        "grate_etx_1"
+      ]
+    },
+    {
+      "pack": "Tech",
+      "name": "panel_etx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Models/panel_etx_1.fbx",
+      "materials": [
+        "electronics_etx_part_1",
+        "electronics_etx_part_2"
+      ]
+    },
+    {
+      "pack": "Tech",
+      "name": "lever_etx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Models/lever_etx_1.fbx",
+      "materials": [
+        "electronics_etx_part_1"
+      ]
+    },
+    {
+      "pack": "Tech",
+      "name": "electrical_tape_etx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Models/electrical_tape_etx_1.fbx",
+      "materials": [
+        "misc_etx_part_1"
+      ]
+    },
+    {
+      "pack": "Tech",
+      "name": "cup_etx_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Models/cup_etx_1.fbx",
+      "materials": [
+        "misc_etx_part_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/tree_1.fbx",
+      "materials": [
+        "tree_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_5",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/tree_5.fbx",
+      "materials": [
+        "branch_1",
+        "tree_bark_6"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_tree_n_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/pine_tree_n_1.fbx",
+      "materials": [
+        "pine_bark_2",
+        "pine_branch_3"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_tree_n_2",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/pine_tree_n_2.fbx",
+      "materials": [
+        "pine_bark_1",
+        "pine_branch_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "fern_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/fern_1.fbx",
+      "materials": [
+        "fern_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "fern_2",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/fern_2.fbx",
+      "materials": [
+        "fern_2"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/grass_1.fbx",
+      "materials": [
+        "grass_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_2",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/grass_2.fbx",
+      "materials": [
+        "grass_2"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_3",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/grass_3.fbx",
+      "materials": [
+        "grass_3"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "stone_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/stone_1.fbx",
+      "materials": [
+        "stone_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "stone_3",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/stone_3.fbx",
+      "materials": [
+        "stone_1"
+      ]
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_stump_1",
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Models/tree_stump_1.fbx",
+      "materials": [
+        "log_ends_1",
+        "tree_bark_5"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/old_mattress_mp_2_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_3.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_6.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_5.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/fabric_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_6.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/fabric_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pillow_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/lamp_1_off.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_4.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/plastic_mp_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/lamp_3_off.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/ceiling_lamp_1_off.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/crt_screen_mp_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_monitor_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_accessories_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/crt_screen_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/tvs_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/toilet_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_6.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/painting_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/photo_frames_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/clock_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/notebook_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/books_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/misc_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/ash_tray_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cigs_packet_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/plate_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/keys_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cardboard_box_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cardboard_box_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/vents_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/electrical_outlets_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/light_switches_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/potted_cactus_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/tv_remote_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/door_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/door_handle_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/metal_hr_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/grate_hm_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/toolbox_mx_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/paint_can_mx_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/bucket_mx_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/soap_mx_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/plastic_bottle_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/luggage_mp_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/first_aid_kit_hr_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/metal_hr_5.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/lamp_1_off.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/planks_hr_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Textures/electronics_etx_part_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Textures/grate_etx_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Textures/electronics_etx_part_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Tech/Textures/misc_etx_part_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/branch_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_bark_6.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_bark_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_branch_3.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_bark_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_branch_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/fern_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/fern_2.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_1.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_2.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_3.png",
+      "normal": false,
+      "alpha": true
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/stone_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/log_ends_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_bark_5.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_6.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_6_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_6_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_6_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/concrete_3.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/concrete_3_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_wall_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_wall_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_2_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/wallpaper_wall_pt_1_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/wallpaper_wall_pt_1_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/old_wallpaper_wall_pt_2_plain.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/old_wallpaper_wall_pt_2_plain_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/painted_concrete_wall_pt_5_plain.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/painted_concrete_wall_pt_5_plain_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_5_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_5_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_3.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_3_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/linoleum_pt_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/linoleum_pt_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/asphalt_old_pt_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/asphalt_old_pt_1_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_2.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_2_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_4.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_4_normal.png",
+      "normal": true,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_1.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_5.png",
+      "normal": false,
+      "alpha": false
+    },
+    {
+      "path": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_5_normal.png",
+      "normal": true,
+      "alpha": false
+    }
+  ],
+  "materials": [
+    {
+      "pack": "MegaPack",
+      "name": "old_mattress_mp_2_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/old_mattress_mp_2_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "wood_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "wood_3",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_3.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "metal_6",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_6.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "wood_5",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_5.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "fabric_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/fabric_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "wood_6",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/wood_6.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "fabric_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/fabric_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pillow_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pillow_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "lamp_1_off",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/lamp_1_off.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "metal_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "metal_mp_4",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_4.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "plastic_mp_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/plastic_mp_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "lamp_3_off",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/lamp_3_off.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "ceiling_lamp_1_off",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/ceiling_lamp_1_off.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "crt_screen_mp_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/crt_screen_mp_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_monitor_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_monitor_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_accessories_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_accessories_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "pc_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/pc_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "crt_screen_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/crt_screen_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tvs_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/tvs_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "toilet_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/toilet_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "metal_mp_6",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/metal_mp_6.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "painting_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/painting_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "photo_frames_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/photo_frames_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "clock_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/clock_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "notebook_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/notebook_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "books_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/books_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "misc_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/misc_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "ash_tray_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/ash_tray_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "cigs_packet_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cigs_packet_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "plate_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/plate_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "keys_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/keys_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "cardboard_box_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cardboard_box_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "cardboard_box_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/cardboard_box_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "vents_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/vents_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "electrical_outlets_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/electrical_outlets_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "light_switches_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/light_switches_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "potted_cactus_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/potted_cactus_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "tv_remote_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/tv_remote_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "door_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/door_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPack",
+      "name": "door_handle_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPack/Textures/door_handle_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "metal_hr_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/metal_hr_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "grate_hm_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/grate_hm_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "toolbox_mx_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/toolbox_mx_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "paint_can_mx_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/paint_can_mx_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "bucket_mx_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/bucket_mx_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "soap_mx_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/soap_mx_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "plastic_bottle_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/plastic_bottle_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "luggage_mp_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/luggage_mp_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "first_aid_kit_hr_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/first_aid_kit_hr_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "metal_hr_5",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/metal_hr_5.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "lamp_1_off",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/lamp_1_off.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "MegaPackII",
+      "name": "planks_hr_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/MegaPackII/Textures/planks_hr_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Tech",
+      "name": "electronics_etx_part_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Tech/Textures/electronics_etx_part_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Tech",
+      "name": "grate_etx_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Tech/Textures/grate_etx_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Tech",
+      "name": "electronics_etx_part_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/Tech/Textures/electronics_etx_part_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Tech",
+      "name": "misc_etx_part_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Tech/Textures/misc_etx_part_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "branch_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/branch_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_bark_6",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_bark_6.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_bark_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_bark_2.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_branch_3",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_branch_3.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_bark_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_bark_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "pine_branch_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/pine_branch_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "fern_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/fern_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "fern_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/fern_2.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_1.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_2.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "grass_3",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/grass_3.png",
+      "alpha": true,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "stone_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/stone_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "log_ends_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/log_ends_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "Nature",
+      "name": "tree_bark_5",
+      "texture": "Assets/Game/Art/PizzaDoggy/Nature/Textures/tree_bark_5.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "TexturesI",
+      "name": "wood_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_1_normal.png"
+    },
+    {
+      "pack": "TexturesI",
+      "name": "wood_6",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_6.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_6_normal.png"
+    },
+    {
+      "pack": "TexturesI",
+      "name": "tiles_floor_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_1_normal.png"
+    },
+    {
+      "pack": "TexturesI",
+      "name": "tiles_floor_6_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_6_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/tiles_floor_6_1_normal.png"
+    },
+    {
+      "pack": "TexturesI",
+      "name": "concrete_3",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/concrete_3.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/concrete_3_normal.png"
+    },
+    {
+      "pack": "TexturesI",
+      "name": "wood_wall_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_wall_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesI/Textures/wood_wall_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "carpet_pt_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "carpet_pt_1_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_2.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/carpet_pt_1_2_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "wallpaper_wall_pt_1_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/wallpaper_wall_pt_1_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/wallpaper_wall_pt_1_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "old_wallpaper_wall_pt_2_plain",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/old_wallpaper_wall_pt_2_plain.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/old_wallpaper_wall_pt_2_plain_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "painted_concrete_wall_pt_5_plain",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/painted_concrete_wall_pt_5_plain.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/painted_concrete_wall_pt_5_plain_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "tiles_floor_pt_5_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_5_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_5_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "tiles_floor_pt_3",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_3.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/tiles_floor_pt_3_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "linoleum_pt_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/linoleum_pt_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/linoleum_pt_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "asphalt_old_pt_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/asphalt_old_pt_1.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/asphalt_old_pt_1_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "grass_dead_pt_2",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_2.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_2_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "grass_dead_pt_4",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_4.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/grass_dead_pt_4_normal.png"
+    },
+    {
+      "pack": "TexturesII",
+      "name": "concrete_pt_1",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_1.png",
+      "alpha": false,
+      "normal": ""
+    },
+    {
+      "pack": "TexturesII",
+      "name": "concrete_pt_5",
+      "texture": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_5.png",
+      "alpha": false,
+      "normal": "Assets/Game/Art/PizzaDoggy/TexturesII/Textures/concrete_pt_5_normal.png"
+    }
+  ]
+}

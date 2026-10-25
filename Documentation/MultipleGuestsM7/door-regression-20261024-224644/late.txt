@@ -1,0 +1,5 @@
+PASS late
+Two players spawned; owner-only camera, movement and interaction; remote cannot raycast.
+Late join received open state and correct 90-degree collider pose.
+Disconnect completed.
+Completed.

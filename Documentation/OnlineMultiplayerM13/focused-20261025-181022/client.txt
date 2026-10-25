@@ -1,0 +1,7 @@
+FAIL client
+Towel/bag conflict; before-answer repair; duplicate relocation; destination check-in and checkout conflict; late join; original deadline expired during real walk; exactly one checkout.
+Night complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1
+System.Exception: Timeout leave room; player=(19.05, 0.03, 12.65) shift=Running 04:29 rooms=101:Dirty bed=True trash=2;102:Dirty bed=False trash=0;103:Dirty bed=False trash=0;104:Dirty bed=False trash=0 feedback=No filled bag available for this cleaning cycle. request=8 Clean Towel NoRequest step=0; Guest D Absent q=0 pos=(0.00, 0.00, 0.00); Guest B WaitingForCheckIn q=2 pos=(7.50, 0.02, 5.87); Guest C Absent q=0 pos=(0.00, 0.00, 0.00); Guest E Absent q=0 pos=(0.00, 0.00, 0.00); Guest A WaitingForCheckIn q=1 pos=(8.78, 0.02, 5.88)
+  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Wait>d__39.MoveNext () [0x000e5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:57 
+  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__41.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:67 
+NPC distance: 0m; max queue=0

@@ -1,0 +1,4 @@
+PASS observer-waiting
+Late join WaitingForCheckout: exact guest/room/request state, correct physical pose, visible model, remote NavMeshAgent disabled; carried towels match current request lifecycle.
+Disconnect clean.
+Completed without critical runtime logs.

@@ -20,12 +20,16 @@ namespace MotelGame.Networking
         string status = "Disconnected";
         string portText;
         bool starting;
+        OnlineSessionController online;
+        OnlineSessionMenu onlineMenu;
         public NetworkManager Manager => manager;
         public LocalTransportSettings TransportSettings => transportSettings;
 
         void Awake()
         {
             Application.runInBackground = true;
+            online = GetComponent<OnlineSessionController>();
+            onlineMenu = GetComponent<OnlineSessionMenu>();
             portText = transportSettings.Port.ToString();
             manager.ConnectionApprovalCallback = Approve;
             manager.OnClientConnectedCallback += Connected;
@@ -40,6 +44,8 @@ namespace MotelGame.Networking
             if (starting || manager.IsListening || manager.ShutdownInProgress) return false;
             try
             {
+                if (online != null && (online.Busy || online.OnlineMode)) return false;
+                manager.NetworkConfig.ConnectionData = Array.Empty<byte>();
                 transportSettings.Configure(host);
                 slots.Clear();
                 starting = true;
@@ -59,6 +65,7 @@ namespace MotelGame.Networking
 
         public void Disconnect()
         {
+            if (online != null && online.OnlineMode) { _ = online.LeaveLobbyAsync(); return; }
             status = "Disconnecting…";
             starting = false;
             manager.Shutdown();
@@ -70,14 +77,27 @@ namespace MotelGame.Networking
             for (int i = 0; i < Mathf.Min(4, spawnPositions.Length); i++)
                 if (!slots.ContainsValue(i)) { free = i; break; }
             response.Approved = free >= 0;
-            response.CreatePlayerObject = free >= 0;
+            response.CreatePlayerObject = free >= 0 && (online == null || online.ShouldSpawnPlayer);
             response.Pending = false;
             if (free < 0) { response.Reason = "Session is full (4 players)."; return; }
+            if (online != null && !online.Approve(request.ClientNetworkId, request.Payload, out string reason))
+            { response.Approved = false; response.CreatePlayerObject = false; response.Reason = reason; return; }
             slots[request.ClientNetworkId] = free;
             response.Position = spawnPositions[free];
             response.Rotation = Quaternion.identity;
         }
 
+        public void ResetSpawnSlots() => slots.Clear();
+        public void SpawnWaitingPlayers()
+        {
+            if (!manager.IsHost) return;
+            foreach (var pair in manager.ConnectedClients)
+            {
+                if (pair.Value.PlayerObject != null || !slots.TryGetValue(pair.Key, out int slot)) continue;
+                var player = Instantiate(manager.NetworkConfig.PlayerPrefab, spawnPositions[slot], Quaternion.identity);
+                player.GetComponent<NetworkObject>().SpawnAsPlayerObject(pair.Key);
+            }
+        }
         void Connected(ulong id)
         {
             if (id != manager.LocalClientId) return;
@@ -106,11 +126,12 @@ namespace MotelGame.Networking
             Vector2 point = mouse == null ? Vector2.zero : mouse.position.ReadValue();
             point.y = Screen.height - point.y;
             // Prevent a menu click from also recapturing the FPS cursor in the same frame.
-            movement.InputSuspended = local.GetComponent<MotelGame.Interactions.PlayerInteractor>().MenuOpen || Cursor.lockState != CursorLockMode.Locked && panel.Contains(point);
+            movement.InputSuspended = local.GetComponent<MotelGame.Interactions.PlayerInteractor>().MenuOpen || Cursor.lockState != CursorLockMode.Locked && (online != null && !online.LanMenu ? onlineMenu.ContainsMouse : panel.Contains(point));
         }
 
         void OnGUI()
         {
+            if (online != null && !online.LanMenu) return;
             var localInteractor = manager.LocalClient?.PlayerObject?.GetComponent<MotelGame.Interactions.PlayerInteractor>();
             if (localInteractor != null && localInteractor.MenuOpen) return;
             if (Cursor.lockState == CursorLockMode.Locked)
@@ -118,7 +139,7 @@ namespace MotelGame.Networking
                 GUI.Label(new Rect(12, 12, 430, 30), status + " | Esc: connection menu");
                 return;
             }
-            GUILayout.BeginArea(panel, "Local Multiplayer — Development", GUI.skin.window);
+            GUILayout.BeginArea(new Rect(panel.x, panel.y, panel.width, online != null ? 295 : panel.height), "Local Multiplayer — Development", GUI.skin.window);
             GUILayout.Label(status);
             GUI.enabled = !starting && !manager.IsListening && !manager.ShutdownInProgress;
             GUILayout.Label("Host IP (localhost: 127.0.0.1)");
@@ -133,6 +154,7 @@ namespace MotelGame.Networking
             if (GUILayout.Button("Disconnect")) Disconnect();
             GUI.enabled = true;
             GUILayout.Label("WASD · Mouse · Left Shift · Esc\nClick outside this panel to capture cursor.");
+            if (online != null && !manager.IsListening && !starting && GUILayout.Button("Back to Online Menu")) online.LanMenu = false;
             GUILayout.EndArea();
         }
         void StartFromUI(bool host)

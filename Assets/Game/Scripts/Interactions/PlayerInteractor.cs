@@ -16,6 +16,7 @@ namespace MotelGame.Interactions
         public bool MenuOpen { get; set; }
         public string Feedback { get; private set; }
         float feedbackUntil;
+        public bool FeedbackVisible => Time.unscaledTime < feedbackUntil;
         public void ShowFeedback(string message) { Feedback = message; feedbackUntil = Time.unscaledTime + 4; }
         public Vector3 EyePosition => playerCamera.transform.position;
 
@@ -75,7 +76,7 @@ namespace MotelGame.Interactions
                 string label = target.CanInteract ? "Press E — " + target.Prompt : target.Prompt;
                 GUI.Box(new Rect(Screen.width * .5f - 170, Screen.height * .5f + 24, 340, 30), label);
             }
-            if (Time.unscaledTime < feedbackUntil)
+            if (!MenuOpen && FeedbackVisible)
                 GUI.Box(new Rect(16, Screen.height - 72, Screen.width - 32, 56), Feedback);
         }
         void OnDisable() { target = null; MenuOpen = false; }

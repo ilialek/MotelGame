@@ -1,0 +1,13 @@
+player=(11.97, 0.03, 4.90) shift=Running 03:54 rooms=101:Ready bed=True trash=2;102:Dirty bed=False trash=0;103:Occupied bed=True trash=2;104:Dirty bed=False trash=0 feedback=No matching garbage bag. Collect a filled bag in a Dirty room. request=6 Clean Towel Completed step=0; Guest B InRoom q=0 pos=(19.03, 0.02, 19.41); Guest D Absent q=0 pos=(0.00, 0.00, 0.00); Guest C Absent q=0 pos=(0.00, 0.00, 0.00); Guest A Absent q=0 pos=(2.06, 0.02, -11.83); Guest E Absent q=0 pos=(0.00, 0.00, 0.00) bags=101:Disposed/fault=False/reserved=False;102:Collecting/fault=False/reserved=False;103:Disposed/fault=False/reserved=False;104:Collecting/fault=False/reserved=False stats=NIGHT 1 COMPLETE — 06:00
+
+Guests checked in: 2
+Guests checked out: 1
+Left without service: 0
+Towels delivered: 2
+TV repairs: 0
+Missed / cancelled requests: 0
+Rooms prepared: 4
+Trash bags disposed: 4
+Electrical repairs: 3/3
+Guest relocations: 1
+Occupied at closing: 0
