@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 12_LockedGimbalCarrier
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 0
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 1
+  contents:
+  - description: Concealed Mimic
+    kilograms: 7
+    metalFraction: 0.01
+    offsetCm: 1
+    travelCm: 3
+    response: 4
+    delaySeconds: 0.5
+    decaySeconds: 2
+  - description: Metal photographic gear
+    kilograms: 3.5
+    metalFraction: 0.7
+    offsetCm: -1
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: Camera equipment and padding. It includes a stabilizer.
+  weightAnswer: About thirteen kilos with the suitcase.
+  metalAnswer: Some metal brackets and lenses, not a full metal tool kit.
+  packingAnswer: The battery is removed and the transport pin locks the moving stage
+    solid.
+  responseAnswer: It cannot move by itself while pinned. A small vibration is just
+    the foam.
+  authorReasoning: Plausible technically true cover story. Packing follow-up asserts
+    a locked stage; opposing tilt response and delayed sizable movement contradict
+    that. Compare innocent powered rig, whose explanation differs.

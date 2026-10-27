@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 04_WaterAndLaundry
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 1
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 0
+  contents:
+  - description: Sealed water container
+    kilograms: 7
+    metalFraction: 0.01
+    offsetCm: 0
+    travelCm: 4
+    response: 2
+    delaySeconds: 0.03
+    decaySeconds: 2.8
+  - description: Laundry
+    kilograms: 2
+    metalFraction: 0
+    offsetCm: 0
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: Laundry and a sealed water jug for my camping trip.
+  weightAnswer: About ten kilos; most of it is water.
+  metalAnswer: Plastic bottles and fabric. Very little metal apart from the zip.
+  packingAnswer: The jug is strapped down, but water can move inside.
+  responseAnswer: A slosh after shaking. It will settle back when the platform is
+    level.
+  authorReasoning: 'Liquid response is innocent: downhill offset under tilt, level
+    balance recovers, long decay. Claims acknowledge liquid.'

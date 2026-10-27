@@ -1,0 +1,5 @@
+FAIL client
+Independent cleaning and concurrent registration: three required rooms plus104 occupied by four distinct physical guests.
+System.Exception: Premature departure hide
+  at MotelGame.Networking.Tests.MultipleGuestsSmokeTest+<Wait>d__21.MoveNext () [0x000e5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MultipleGuestsSmokeTest.cs:64 
+  at MotelGame.Networking.Tests.MultipleGuestsSmokeTest+<Start>d__20.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MultipleGuestsSmokeTest.cs:48 

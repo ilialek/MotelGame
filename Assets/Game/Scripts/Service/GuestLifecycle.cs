@@ -7,7 +7,7 @@ using MotelGame.Interactions;
 
 namespace MotelGame.Service
 {
-    public enum GuestPhase : byte { Absent, Arriving, WaitingForCheckIn, WalkingToRoom, InRoom, Leaving, ReturningForCheckout, WaitingForCheckout, Relocating }
+    public enum GuestPhase : byte { Absent, Arriving, WaitingForCheckIn, WalkingToRoom, InRoom, Leaving, ReturningForCheckout, WaitingForCheckout, Relocating, Evacuating, Evacuated, Dead }
     public struct GuestSnapshot : INetworkSerializable, IEquatable<GuestSnapshot>
     {
         public GuestPhase Phase;
@@ -54,12 +54,16 @@ namespace MotelGame.Service
         NavMeshAgent agent;
         NetworkTransform networkTransform;
         // Door crossings are explicit route stages, not a separate door state machine.
-        enum RouteStep { None, Reception, Outside, Enter, Idle, Inside, Exit, Depart }
+        enum RouteStep { None, Reception, Outside, Enter, Idle, Inside, Exit, Depart, Safety }
+        [SerializeField] Transform evacuationPoint;
+        Vector3 visualPosition; Quaternion visualRotation;
+        public Transform EvacuationPoint => evacuationPoint;
+        public bool Alive => Phase != GuestPhase.Absent && Phase != GuestPhase.Dead;
         RouteStep step;
         Transform destination;
         Transform queueTarget;
         public bool AtQueuePosition => step==RouteStep.None && (Phase==GuestPhase.WaitingForCheckIn||Phase==GuestPhase.WaitingForCheckout);
-        double nextPathAttempt;
+        double nextPathAttempt, baggagePauseUntil;
         Vector3 lastPosition, progressPosition;
         float lastProgress;
         bool hasPassage, warned;
@@ -88,6 +92,9 @@ namespace MotelGame.Service
             target!=null && target==room && State.RoomCycle==target.State.Cycle && target.Occupant==this;
         public string StatusText => State.Blocked ? "Guest route blocked — clear the way" : Phase switch
         {
+            GuestPhase.Dead => "Guest deceased",
+            GuestPhase.Evacuating => "Guest evacuating to lobby",
+            GuestPhase.Evacuated => "Guest evacuated — waiting in lobby",
             GuestPhase.Absent => "Next guest arriving soon",
             GuestPhase.Arriving => "Guest approaching Reception",
             GuestPhase.WaitingForCheckIn => "Guest waiting — select a Ready room",
@@ -100,6 +107,7 @@ namespace MotelGame.Service
         };
         void Awake()
         {
+            visualPosition=visual.transform.localPosition; visualRotation=visual.transform.localRotation;
             agent = GetComponent<NavMeshAgent>(); networkTransform = GetComponent<NetworkTransform>();
             agent.enabled = false; visual.SetActive(false); body.enabled = false; ApplyIdentity();
         }
@@ -131,12 +139,16 @@ namespace MotelGame.Service
                 shirt.SetPropertyBlock(color, shirtMaterialIndex);
             }
             if (nameLabel != null) nameLabel.text = guestName + (State.Visit > 0 ? " · " + State.Visit : "") +
-                (Phase==GuestPhase.WaitingForCheckout ? $"\nRoom {room?.RoomNumber} — Ready to check out" : "");
+                (Phase==GuestPhase.Dead ? "\nDECEASED" : Phase==GuestPhase.Evacuated ? "\nEVACUATED" : Phase==GuestPhase.WaitingForCheckout ? $"\nRoom {room?.RoomNumber} — Ready to check out" : "");
         }
         void ApplyPresentation()
         {
             bool present = IsSpawned && Phase != GuestPhase.Absent;
-            visual.SetActive(present); body.enabled = present;
+            visual.SetActive(present); body.enabled = present && Phase != GuestPhase.Dead;
+            visual.transform.localRotation = Phase == GuestPhase.Dead ? Quaternion.Euler(0,0,88) : visualRotation;
+            visual.transform.localPosition = Phase == GuestPhase.Dead ? visualPosition + Vector3.up*.12f : visualPosition;
+            var character=visual.GetComponentInChildren<MotelGame.Characters.CharacterVisuals>(true);
+            if(character!=null && character.Animator!=null) character.Animator.enabled=Phase!=GuestPhase.Dead;
             // Only the server simulates navigation. NGO's server-authoritative NetworkTransform
             // drives clients, including the initial pose on late join.
             if (!IsServer) agent.enabled = false;
@@ -179,7 +191,7 @@ namespace MotelGame.Service
         }
         void RoomChanged(RoomSnapshot before, RoomSnapshot after)
         {
-            if (!IsServer || !IsSpawned || !State.Assigned || Phase==GuestPhase.Leaving || Phase==GuestPhase.Absent || Phase==GuestPhase.Relocating) return;
+            if (!IsServer || !IsSpawned || !State.Assigned || Phase==GuestPhase.Leaving || Phase==GuestPhase.Absent || Phase==GuestPhase.Relocating || Phase==GuestPhase.Evacuating || Phase==GuestPhase.Evacuated || Phase==GuestPhase.Dead) return;
             if (after.Status!=RoomStatus.Occupied || after.Cycle!=State.RoomCycle) BeginLeaving();
         }
         // Reception reserves its single service position before allowing a guest to return.
@@ -190,6 +202,8 @@ namespace MotelGame.Service
             SetRoute(RouteStep.Inside,doorInside);
             return true;
         }
+        internal void PauseForBaggage(float seconds)
+        { if(IsServer){ baggagePauseUntil=NetworkManager.ServerTime.Time+seconds; if(agent.enabled&&agent.isOnNavMesh)agent.isStopped=true; } }
         internal void BeginLeaving()
         {
             // Room state can change to Dirty only through validated checkout at Reception.
@@ -203,6 +217,27 @@ namespace MotelGame.Service
             if(point!=null&&(step==RouteStep.Reception||Phase==GuestPhase.WaitingForCheckIn||Phase==GuestPhase.WaitingForCheckout))
             {SetPhase(State.Assigned?GuestPhase.ReturningForCheckout:GuestPhase.Arriving);SetRoute(RouteStep.Reception,point);}
         }
+        internal void ExtendDebugStay(double until) { if(IsServer&&Phase==GuestPhase.InRoom){var v=State;v.StayEndsAt=until;snapshot.Value=v;} }
+        internal bool EvacuateOnServer()
+        {
+            if(!IsServer || !IsSpawned || Phase!=GuestPhase.InRoom || evacuationPoint==null) return false;
+            SetPhase(GuestPhase.Evacuating); SetRoute(RouteStep.Inside,doorInside);
+            FindFirstObjectByType<GuestServiceRequests>()?.ValidateSource(); return true;
+        }
+        void VacateEmergencyRoom()
+        {
+            if(assignedRoom!=null) { assignedRoom.StateChanged-=RoomChanged; assignedRoom.VacateForRelocation(this); }
+            assignedRoom=null;
+            var v=State; v.Assigned=false; v.Room=default; v.QueuePosition=0; v.StayEndsAt=0; snapshot.Value=v;
+            FindFirstObjectByType<GuestServiceRequests>()?.ValidateSource();
+        }
+        internal bool KillOnServer()
+        {
+            if(!IsServer || !IsSpawned || !Alive) return false;
+            StopOnServer(); RelocationDestination?.CancelReservation(this); SetPhase(GuestPhase.Dead);
+            VacateEmergencyRoom(); agent.enabled=false;
+            FindFirstObjectByType<NightShiftController>()?.RecordGuestDeath(); return true;
+        }
         internal void StopOnServer()
         {
             if(!IsServer)return;
@@ -211,7 +246,7 @@ namespace MotelGame.Service
         }
         internal void ResetOnServer()
         {
-            if(!IsServer)return;StopOnServer();
+            if(!IsServer)return;StopOnServer();baggagePauseUntil=0;GetComponent<MotelGame.Inspection.GuestBaggage>()?.ResetOnServer();
             RelocationDestination?.CancelReservation(this);
             if(assignedRoom!=null)assignedRoom.StateChanged-=RoomChanged;
             assignedRoom=null;queueTarget=null;agent.enabled=false;
@@ -231,6 +266,7 @@ namespace MotelGame.Service
         {
             if (!IsSpawned || !IsServer) return;
             if (Phase==GuestPhase.Absent) return;
+            if(NetworkManager.ServerTime.Time<baggagePauseUntil){if(agent.enabled&&agent.isOnNavMesh)agent.isStopped=true;return;}
             if (step==RouteStep.None) return;
             if (!agent.enabled || !agent.isOnNavMesh) { ReportBlocked("NPC is not on its configured NavMesh."); return; }
             // A NavMesh path alone does not collide with a moving door or remote players.
@@ -282,6 +318,7 @@ namespace MotelGame.Service
             agent.enabled=true;
             if (!agent.Warp(hit.position)) { agent.enabled=false; ReportBlocked("Cannot place arriving guest."); return false; }
             var value=new GuestSnapshot { Phase=GuestPhase.Arriving,Visit=State.Visit+1, QueuePosition=State.QueuePosition }; snapshot.Value=value;
+            GetComponent<MotelGame.Inspection.GuestBaggage>()?.BeginVisitOnServer();
             SetRoute(RouteStep.Reception,queueTarget==null?receptionPoint:queueTarget); return true;
         }
         void Reached()
@@ -312,8 +349,12 @@ namespace MotelGame.Service
                     SetRoute(RouteStep.Exit,doorOutside); break;
                 case RouteStep.Exit:
                     ReleasePassage();
-                    if (Phase == GuestPhase.Relocating) ContinueRelocation();
+                    if (Phase == GuestPhase.Evacuating) { VacateEmergencyRoom(); SetRoute(RouteStep.Safety,evacuationPoint); }
+                    else if (Phase == GuestPhase.Relocating) ContinueRelocation();
                     else SetRoute(RouteStep.Reception,queueTarget==null?receptionPoint:queueTarget); break;
+                case RouteStep.Safety:
+                    SetPhase(GuestPhase.Evacuated); StopAt(evacuationPoint);
+                    FindFirstObjectByType<NightShiftController>()?.RecordEvacuation(); break;
                 case RouteStep.Depart:
                     ReleasePassage(); SetPhase(GuestPhase.Absent); agent.enabled=false;
                     step=RouteStep.None; destination=null;

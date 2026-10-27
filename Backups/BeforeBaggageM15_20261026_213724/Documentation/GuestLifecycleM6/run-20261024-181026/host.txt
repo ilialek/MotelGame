@@ -1,0 +1,6 @@
+FAIL host
+Cycle 0: physical arrival/check-in/door crossing/InRoom, 15s M5 call, cooperative delivery, checkout resets M4/M5, guest walks out before hiding.
+Cycle 1: physical arrival/check-in/door crossing/InRoom, 15s M5 call, cooperative delivery, checkout resets M4/M5, guest walks out before hiding.
+System.Exception: NPC penetrated solid geometry: DoorLeaf depth=0.2289559 at (20.50, 0.02, 12.52)
+  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Wait>d__24.MoveNext () [0x000d5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:61 
+  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Start>d__23.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:53 

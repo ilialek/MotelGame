@@ -1,0 +1,6 @@
+PASS host
+Player obstruction pauses/resumes NPC; client checkout midway through reserved doorway reverses safely; door closes and next guest arrives.
+Checkout during PendingDelivery clears request and both carried towel visuals, rejects stale RPCs, guest leaves physically and next arrival is consistent.
+Physical NPC travel: 163.9 m, all six phases; sampled solid collisions and continuity without route teleports.
+Disconnect completed.
+Completed without critical runtime logs.

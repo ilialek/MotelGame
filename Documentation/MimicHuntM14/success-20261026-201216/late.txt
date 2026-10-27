@@ -1,0 +1,4 @@
+PASS late / success
+Late join reconstructed active threat, decoy placement, firearm ownership and guest state.
+Completed; no critical runtime logs.
+Duct travel: 0m

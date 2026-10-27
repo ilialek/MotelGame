@@ -1,0 +1,4 @@
+System.Exception: Invalid M5 configuration.
+  at MotelGame.Editor.GuestServiceSetup.Validate () [0x00050] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/GuestServiceSetup.cs:165 
+  at MotelGame.Editor.GuestServiceSetup.Build () [0x00065] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/GuestServiceSetup.cs:212 
+  at MotelGame.Editor.GuestServiceSetup.Poll () [0x001ee] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/GuestServiceSetup.cs:58 

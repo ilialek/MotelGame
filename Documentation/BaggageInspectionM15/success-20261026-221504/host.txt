@@ -1,0 +1,12 @@
+FAIL host / success
+Two simultaneous/repeated analyzer claims granted exactly one lease; release worked.
+Guest 0: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 1: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 2: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 3: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Admitted carrier reached Room 103 with same bag; creature emerged and traversed room-to-vent route continuously.
+System.Exception: Ambush did not preserve guests
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Ambush>d__41.MoveNext () [0x0086d] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:270 
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:40 
+Infiltration travel: 5.504287m; exploration seen: True
+Duct travel: 33.3451m

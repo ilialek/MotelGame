@@ -1,0 +1,6 @@
+Anonymous authentication / persistent separate profile lifecycle-host
+Four Relay players; host-only Start Game; correct camera/input ownership
+All four owner movements replicated to this process
+Client leave/rejoin; current game retained; four players restored
+Graceful host departure returns everyone to menu
+New session created/joined after shutdown without restarting application

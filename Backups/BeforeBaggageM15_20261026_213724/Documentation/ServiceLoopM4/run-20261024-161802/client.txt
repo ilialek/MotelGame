@@ -1,0 +1,7 @@
+FAIL client
+Host/Client connected; ownership, camera and remote raycast isolation verified.
+System.Exception: Ray miss. Expected=Counter_Main_3.4m (MotelGame.Service.ReceptionInteraction), found=, can=True, enabled=True, owner=True, modal=False, eye=(9.48, 1.68, 6.34), point=(10.70, 0.55, 5.70), hits=NetworkPlayer(Clone):0.05285703, Counter_Main_3.4m:1.197786
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest.Use (MotelGame.Interactions.IInteractable expected, UnityEngine.Vector3 point) [0x000af] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:193 
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest.OpenReception () [0x00012] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:181 
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Run>d__20.MoveNext () [0x00489] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:80 
+  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Start>d__13.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:42 

@@ -1,0 +1,48 @@
+{
+  "backup": "/Users/ilalekomtsev/MotelGame/Backups/BeforeMotelOperationsM11_20261025_130600",
+  "baseline_files": 332,
+  "modified_existing_files": [
+    "Assets/Game/Editor/PlaytestBuild.cs",
+    "Assets/Game/Prefabs/NetworkPlayer.prefab",
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity",
+    "Assets/Game/Scripts/Service/CleaningSpot.cs",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs",
+    "Assets/Game/Scripts/Service/GuestServiceInteraction.cs",
+    "Assets/Game/Scripts/Service/GuestServiceRequests.cs",
+    "Assets/Game/Scripts/Service/NightShiftController.cs",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs",
+    "Assets/Game/Scripts/Service/ReceptionDesk.cs",
+    "Assets/Game/Scripts/Service/ServiceRoom.cs",
+    "Assets/Game/Scripts/Service/StaffTaskBoard.cs",
+    "Assets/Game/Scripts/Service/TowelCarrier.cs"
+  ],
+  "unchanged_existing_files": 319,
+  "scene_modified_existing_objects": [
+    "40893375",
+    "360739792",
+    "420678425",
+    "673768677",
+    "759762329",
+    "1507317280",
+    "1526079204",
+    "2131297273",
+    "9223372036854775807"
+  ],
+  "scene_added_objects": 107,
+  "scene_removed_objects": 0,
+  "preserved": "Every original scene Transform, renderer, mesh, light, collider and camera YAML block is byte-identical. Existing player transforms/presentation/collision unchanged except added child references. SampleScene, guest/door prefabs, NavMesh, art, materials, input, Packages and ProjectSettings match baseline.",
+  "new_assets": [
+    "Assets/Game/Editor/MotelOperationsSetup.cs",
+    "Assets/Game/Editor/MotelOperationsSetup.cs.meta",
+    "Assets/Game/Models.meta",
+    "Assets/Game/Models/GarbageBag.asset",
+    "Assets/Game/Models/GarbageBag.asset.meta",
+    "Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs.meta",
+    "Assets/Game/Scripts/Service/GarbageDumpster.cs",
+    "Assets/Game/Scripts/Service/GarbageDumpster.cs.meta",
+    "Assets/Game/Scripts/Service/RoomOperationsInteraction.cs",
+    "Assets/Game/Scripts/Service/RoomOperationsInteraction.cs.meta"
+  ],
+  "scene_sha256": "fb3fee4ca1d64656953fe69e7b12eb67e7316c54496f3ddc1bd6c6e7cd0bd6ad"
+}

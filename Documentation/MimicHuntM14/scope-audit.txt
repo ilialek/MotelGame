@@ -1,0 +1,215 @@
+Compared with pre-M14 backup, not Git HEAD.
+Existing changed files: 11
+Missing baseline files: 0
+Assets/Game/Scenes/Motel_Blockout_V3.unity
+Assets/Game/Scripts/FirstPersonController.cs
+Assets/Game/Scripts/Interactions/PlayerInteractor.cs
+Assets/Game/Scripts/Networking/OnlineSessionController.cs
+Assets/Game/Scripts/Service/ServiceInteractionValidation.cs
+Assets/Game/Scripts/Service/TowelCarrier.cs
+Assets/Game/Scripts/Service/NightShiftController.cs
+Assets/Game/Scripts/Service/ServiceRoom.cs
+Assets/Game/Scripts/Service/GuestLifecycle.cs
+Assets/Game/Scripts/Service/ReceptionComputer.cs
+Assets/Game/Editor/PlaytestBuild.cs
+Existing scene records changed: 11
+Existing scene records removed: 0
+Added scene records: 707
+Scene ID 929618707
+--- 
++++ 
+@@ -3,7 +3,7 @@
+   m_CorrespondingSourceObject: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+   m_PrefabInstance: {fileID: 929618706}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 0}
++  m_GameObject: {fileID: 929618709}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 11500000, guid: d652b90d1127439caf7404cebc008f45, type: 3}
+
+Scene ID 929618706
+--- 
++++ 
+@@ -46,6 +46,10 @@
+       propertyPath: receptionPoint
+       value: 
+       objectReference: {fileID: 1423926463}
++    - target: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      propertyPath: evacuationPoint
++      value: 
++      objectReference: {fileID: 134239225}
+     - target: {fileID: 2916091547623018412, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+       propertyPath: avoidancePriority
+       value: 30
+@@ -121,5 +125,8 @@
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 8392057822290768919, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 929618710}
+   m_SourcePrefab: {fileID: 100100000, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+
+Scene ID 1991438546
+--- 
++++ 
+@@ -50,6 +50,10 @@
+       propertyPath: receptionPoint
+       value: 
+       objectReference: {fileID: 1423926463}
++    - target: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      propertyPath: evacuationPoint
++      value: 
++      objectReference: {fileID: 1560314646}
+     - target: {fileID: 2916091547623018412, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+       propertyPath: avoidancePriority
+       value: 40
+@@ -121,5 +125,8 @@
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 8392057822290768919, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 1991438550}
+   m_SourcePrefab: {fileID: 100100000, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+
+Scene ID 96073275
+--- 
++++ 
+@@ -3,7 +3,7 @@
+   m_CorrespondingSourceObject: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+   m_PrefabInstance: {fileID: 96073274}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 0}
++  m_GameObject: {fileID: 96073276}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 11500000, guid: d652b90d1127439caf7404cebc008f45, type: 3}
+
+Scene ID 1991438547
+--- 
++++ 
+@@ -3,7 +3,7 @@
+   m_CorrespondingSourceObject: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+   m_PrefabInstance: {fileID: 1991438546}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 0}
++  m_GameObject: {fileID: 1991438549}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 11500000, guid: d652b90d1127439caf7404cebc008f45, type: 3}
+
+Scene ID 815239076
+--- 
++++ 
+@@ -3,7 +3,7 @@
+   m_CorrespondingSourceObject: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+   m_PrefabInstance: {fileID: 815239075}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 0}
++  m_GameObject: {fileID: 815239077}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 11500000, guid: d652b90d1127439caf7404cebc008f45, type: 3}
+
+Scene ID 96073274
+--- 
++++ 
+@@ -34,6 +34,10 @@
+       propertyPath: receptionPoint
+       value: 
+       objectReference: {fileID: 1423926463}
++    - target: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      propertyPath: evacuationPoint
++      value: 
++      objectReference: {fileID: 905714112}
+     - target: {fileID: 3722001469000760937, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+       propertyPath: 'm_Materials.Array.data[0]'
+       value: 
+@@ -101,5 +105,8 @@
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 8392057822290768919, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 96073277}
+   m_SourcePrefab: {fileID: 100100000, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+
+Scene ID 254584137
+--- 
++++ 
+@@ -46,6 +46,10 @@
+       propertyPath: receptionPoint
+       value: 
+       objectReference: {fileID: 1423926463}
++    - target: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      propertyPath: evacuationPoint
++      value: 
++      objectReference: {fileID: 1329280997}
+     - target: {fileID: 2916091547623018412, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+       propertyPath: avoidancePriority
+       value: 60
+@@ -121,5 +125,8 @@
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 8392057822290768919, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 254584141}
+   m_SourcePrefab: {fileID: 100100000, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+
+Scene ID 815239075
+--- 
++++ 
+@@ -46,6 +46,10 @@
+       propertyPath: receptionPoint
+       value: 
+       objectReference: {fileID: 1423926463}
++    - target: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      propertyPath: evacuationPoint
++      value: 
++      objectReference: {fileID: 504545548}
+     - target: {fileID: 2916091547623018412, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+       propertyPath: avoidancePriority
+       value: 20
+@@ -117,5 +121,8 @@
+     m_RemovedComponents: []
+     m_RemovedGameObjects: []
+     m_AddedGameObjects: []
+-    m_AddedComponents: []
++    m_AddedComponents:
++    - targetCorrespondingSourceObject: {fileID: 8392057822290768919, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
++      insertIndex: -1
++      addedObject: {fileID: 815239078}
+   m_SourcePrefab: {fileID: 100100000, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+
+Scene ID 9223372036854775807
+--- 
++++ 
+@@ -14,3 +14,4 @@
+   - {fileID: 254584137}
+   - {fileID: 420678424}
+   - {fileID: 1714016396}
++  - {fileID: 592403292}
+
+Scene ID 254584138
+--- 
++++ 
+@@ -3,7 +3,7 @@
+   m_CorrespondingSourceObject: {fileID: 2412633563202200925, guid: c394fcae32eaa47aab308a2b6e8aa72d, type: 3}
+   m_PrefabInstance: {fileID: 254584137}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 0}
++  m_GameObject: {fileID: 254584140}
+   m_Enabled: 1
+   m_EditorHideFlags: 0
+   m_Script: {fileID: 11500000, guid: d652b90d1127439caf7404cebc008f45, type: 3}

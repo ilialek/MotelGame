@@ -1,0 +1,4 @@
+PASS: Saved scene loaded and inspected in Unity 6000.3.19f1.
+PASS: 768 primitives; positive dimensions, valid materials, floor tops Y=0, no missing scripts.
+Previews skipped because the user already has this scene open.
+Original scene was not saved or modified.

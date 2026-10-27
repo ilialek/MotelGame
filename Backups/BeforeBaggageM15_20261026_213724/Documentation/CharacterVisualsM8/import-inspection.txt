@@ -1,0 +1,33 @@
+Casual root=(1.00, 1.00, 1.00)
+BEFORE sample baked=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41)
+AFTER sample baked=Center: (0.02, 2.40, 0.08), Extents: (0.70, 2.41, 0.41)
+BaseHuman scale (10000.002, 10000.001, 10000.001)
+HumanArmature scale (10000, 9999.99902, 9999.99902)
+Icosphere scale (100, 100, 100)
+Clip Idle length=3.333333 human=False
+Clip Run length=0.7 human=False
+Clip Walk length=0.8333334 human=False
+Mesh BaseHuman bounds=Center: (0.01, 2.38, 0.12), Extents: (0.96, 2.47, 0.54) tris=1849 materials=Shirt:RGBA(0.397, 0.451, 0.469, 1.000),Skin:RGBA(0.663, 0.542, 0.400, 1.000),Pants:RGBA(0.244, 0.228, 0.228, 1.000),Eyes:RGBA(0.153, 0.153, 0.153, 1.000),Socks:RGBA(0.669, 0.624, 0.624, 1.000),Hair:RGBA(0.226, 0.183, 0.186, 1.000)
+Avatar valid=True human=False
+LongSleeve root=(1.00, 1.00, 1.00)
+BEFORE sample baked=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45)
+AFTER sample baked=Center: (0.02, 2.40, 0.04), Extents: (0.70, 2.41, 0.45)
+BaseHuman scale (10000.002, 10000.001, 10000.001)
+HumanArmature scale (10000, 9999.99902, 9999.99902)
+Icosphere scale (100, 100, 100)
+Clip Idle length=3.333333 human=False
+Clip Run length=0.7 human=False
+Clip Walk length=0.8333334 human=False
+Mesh BaseHuman bounds=Center: (0.01, 2.38, 0.10), Extents: (0.98, 2.47, 0.58) tris=1967 materials=Shirt:RGBA(0.375, 0.420, 0.330, 1.000),Pants:RGBA(0.252, 0.297, 0.390, 1.000),Eyes:RGBA(0.153, 0.153, 0.153, 1.000),Skin:RGBA(0.366, 0.303, 0.264, 1.000),Hair:RGBA(0.226, 0.183, 0.186, 1.000)
+Avatar valid=True human=False
+Suit root=(1.00, 1.00, 1.00)
+BEFORE sample baked=Center: (0.01, 2.40, 0.03), Extents: (0.69, 2.40, 0.47)
+AFTER sample baked=Center: (0.02, 2.40, 0.03), Extents: (0.70, 2.41, 0.47)
+BaseHuman scale (10000.002, 10000.001, 10000.001)
+HumanArmature scale (10000, 9999.99902, 9999.99902)
+Icosphere scale (100, 100, 100)
+Clip Idle length=3.333333 human=False
+Clip Run length=0.7 human=False
+Clip Walk length=0.8333334 human=False
+Mesh BaseHuman bounds=Center: (0.02, 2.36, 0.09), Extents: (0.99, 2.45, 0.59) tris=2055 materials=Shirt:RGBA(0.145, 0.131, 0.145, 1.000),Pants:RGBA(0.145, 0.132, 0.147, 1.000),Eyes:RGBA(0.153, 0.153, 0.153, 1.000),Skin:RGBA(0.481, 0.390, 0.223, 1.000),Hair:RGBA(0.519, 0.508, 0.530, 1.000),Details:RGBA(0.838, 0.838, 0.838, 1.000),TieTexture:RGBA(0.906, 0.906, 0.906, 1.000)
+Avatar valid=True human=False

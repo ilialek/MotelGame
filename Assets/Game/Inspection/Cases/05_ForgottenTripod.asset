@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 05_ForgottenTripod
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 0
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 0
+  contents:
+  - description: Clothes
+    kilograms: 3
+    metalFraction: 0
+    offsetCm: 0
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  - description: Tripod and camera
+    kilograms: 5
+    metalFraction: 0.68
+    offsetCm: 3
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: Mainly clothes. I packed in a hurry.
+  weightAnswer: Maybe six kilos... I did not weigh it.
+  metalAnswer: 'You are right: my camera tripod is still in the side pocket. I forgot
+    it.'
+  packingAnswer: The tripod is strapped on the right; the clothes hold it still.
+  responseAnswer: There are no loose parts; the tripod clamps are locked.
+  authorReasoning: Initial mass estimate is wrong but follow-up explains metal and
+    stable right-heavy balance. An honest omission, not a universal lie detector.

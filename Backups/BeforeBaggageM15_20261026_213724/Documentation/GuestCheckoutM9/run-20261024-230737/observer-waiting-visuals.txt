@@ -1,0 +1,12 @@
+PASS configuration checks
+appearance-Casual
+appearance-LongSleeve
+appearance-Suit
+four-simultaneous-guests
+guest-Idle
+guest-phase-InRoom
+guest-phase-WaitingForCheckout
+guest-phase-WalkingToRoom
+local-player-Idle
+remote-hand-towel
+remote-player-Idle

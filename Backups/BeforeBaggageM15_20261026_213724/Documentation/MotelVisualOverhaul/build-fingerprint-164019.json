@@ -1,0 +1,18 @@
+{
+  "captured": "2026-10-25T16:42:35.071583",
+  "build_report_modified": "2026-10-25T16:40:19.023191",
+  "scene": "Motel_Blockout_V3",
+  "test_runs": [
+    "door-route-20261025-164053",
+    "edges-20261025-164053",
+    "night-20261025-164054"
+  ],
+  "files": {
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity": "b48a7cad0f5ed3d3b40831f563f4a7351203e28751808f8d9659ad1eb8fdc724",
+    "Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs": "7bf63bac7dbdd2b91e6243eddee100e6d58670b6ae28ee68a70e51c94967c655",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/level0": "f69024820bb932c080d94f94b1e7ac017b16a978ab2d023ccab36af1e9f47e7f",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/sharedassets0.assets": "0a7aa31e12e090b8a053c85f2881ccd7d4bcb45583bbcd8a791754224b8be39a",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "c4ffde3b2edb4cf67f8f7655ff3120f35c6e13c51e44cdfc2f33f5b2831236f4",
+    "Builds/Playtest/MotelGame.app/Contents/MacOS/MotelGame": "6d232a2074e0a1f822fc92d42251838d6a7d538891fa8f5cf2d0c91268bc5617"
+  }
+}

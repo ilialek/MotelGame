@@ -1,0 +1,26 @@
+{
+  "build_report": "Succeeded\nErrors: 0\nWarnings: 0\nOutput: Builds/Playtest/MotelGame.app\n",
+  "scene_sha256": "fd3aeb0b22c3c434ce8392302711d4768c0294b19f0df3f185dfb9c8b1b86833",
+  "baseline_files": 2391,
+  "source_files": {
+    "Assets/Game/Scripts/FirstPersonController.cs": "126b99acc1a59eedfc5ee41d52acd74f0215cf267ab70fb2bd3b3735af24b62f",
+    "Assets/Game/Scripts/Interactions/PlayerInteractor.cs": "41cf2bdc9b867ae997fa9703d5dbbe528f3deb2bf4ccd45b4b6d3724e2f15d91",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs": "09b5a833f7b471ae008834b9a9c7e62c6ed5af4fc5cacde19d9be2e47d96e780",
+    "Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs": "58e6d088f850e7b0924110c40aa0ebe84f992456d1e2d0d2f2bcea797b0b1fb8",
+    "Assets/Game/Scripts/Horror/MimicPresentation.cs": "fd95d8d9f1efefdfcd70244da941de79023f3c1d054de67c7b61a554036668cf",
+    "Assets/Game/Scripts/Horror/MimicHunt.cs": "f594a9d58eac5f9983e5e48671b42d87719dc75a2af6716f4d39110243c8c7f4",
+    "Assets/Game/Scripts/Horror/MimicDebugMenu.cs": "fc3ca040b9bd2214492336c46328073cc2c1e8901174c6c88f526b767f9eb68e",
+    "Assets/Game/Scripts/Horror/GuestEvacuation.cs": "64f4cc090f5da95112da5ff0efdef1395eae5f7e2f6c6c66f838a50bab2d02ec",
+    "Assets/Game/Scripts/Horror/VentSurveillance.cs": "1a2b7b639e5932ee99de547c8a5058fc47de0b26ce2143dc5a47ea8a13a8f361",
+    "Assets/Game/Scripts/Horror/VentNode.cs": "a5756b4ab161e39a9d06395b04539e5a157cd33e136bef3b8a48d2cb29d598c2",
+    "Assets/Game/Scripts/Horror/HuntEquipment.cs": "3be1d8fdf5ecf1529c656e60e4b4e84e220b86758f0ec2f2e0d6c793f8ecde2a",
+    "Assets/Game/Scripts/Service/ServiceInteractionValidation.cs": "d8ce0b9e100b51e2dea9faf92ff0e0f63adc03d6d9012b3866ef3ae44a440397",
+    "Assets/Game/Scripts/Service/TowelCarrier.cs": "82b93239989ed00a5ffc6d67aefce14a27aeeb0bbdb3940f72f39daabc28a3c9",
+    "Assets/Game/Scripts/Service/NightShiftController.cs": "3520ef746164d14d8f795a7341d897708546b379c9e2c93d78482adf447f368e",
+    "Assets/Game/Scripts/Service/ServiceRoom.cs": "74c0e1fe9fc5aa8ed974dcc51cd07683561cfdd179f4e7279d626de3148b2c7e",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs": "6461e662cb4e5701e4630a6e73228975b6340033272e9ccb85a06f16976b04b1",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs": "e7a19900e7afdc79ed6695e8b0ed7c7be665c3122fd8557eaacf6beb5a3936af",
+    "Assets/Game/Editor/PlaytestBuild.cs": "dde7fa534a7d30d066bdc60d5ed31a395b94586d164349eb20cac2a86f8aa58d",
+    "Assets/Game/Editor/MimicHuntSetup.cs": "793539da2f0e7d94fd0a4a5e8c7174fdab3ab1423fc215a7b86ce09fed35c22e"
+  }
+}

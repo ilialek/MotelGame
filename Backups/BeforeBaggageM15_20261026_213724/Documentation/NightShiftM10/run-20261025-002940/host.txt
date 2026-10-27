@@ -1,0 +1,8 @@
+FAIL host
+Exclusive workstation, remote camera/input isolation, unauthorized start refusal, disconnect release and reconnect.
+Concurrent/repeated shift start -> exactly one transition, no client bypass.
+Default 900s clock, 45s first-delay bound, 80% arrival cutoff and 120s patience; no artificial initial queue hold.
+System.Exception: Focus transform/root position
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<OpenComputer>d__46.MoveNext () [0x001c8] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:370 
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Start>d__36.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:62 
+NPC distance: 15.92411m; max queue=1

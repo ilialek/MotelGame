@@ -11,17 +11,19 @@ namespace MotelGame.Service
         public ShiftPhase Phase;
         public uint Number;
         public double StartedAt, Duration;
+        public int GuestDeaths, MimicsEliminated, Evacuations;
         public int TrashDisposed, ElectricalFaults, ElectricalRepairs, Relocations;
         public int ArrivalTarget, Arrived, CheckedIn, CheckedOut, Unserved, Towels, Repairs, MissedRequests, Prepared, OccupiedAtClose;
         public void NetworkSerialize<T>(BufferSerializer<T> s) where T:IReaderWriter
         {
+            s.SerializeValue(ref GuestDeaths);s.SerializeValue(ref MimicsEliminated);s.SerializeValue(ref Evacuations);
             s.SerializeValue(ref TrashDisposed);s.SerializeValue(ref ElectricalFaults);s.SerializeValue(ref ElectricalRepairs);s.SerializeValue(ref Relocations);
             s.SerializeValue(ref Phase);s.SerializeValue(ref Number);s.SerializeValue(ref StartedAt);s.SerializeValue(ref Duration);
             s.SerializeValue(ref ArrivalTarget);s.SerializeValue(ref Arrived);s.SerializeValue(ref CheckedIn);s.SerializeValue(ref CheckedOut);
             s.SerializeValue(ref Unserved);s.SerializeValue(ref Towels);s.SerializeValue(ref Repairs);s.SerializeValue(ref MissedRequests);
             s.SerializeValue(ref Prepared);s.SerializeValue(ref OccupiedAtClose);
         }
-        public bool Equals(ShiftSnapshot v)=>TrashDisposed==v.TrashDisposed&&ElectricalFaults==v.ElectricalFaults&&ElectricalRepairs==v.ElectricalRepairs&&Relocations==v.Relocations&&Phase==v.Phase&&Number==v.Number&&StartedAt==v.StartedAt&&Duration==v.Duration&&
+        public bool Equals(ShiftSnapshot v)=>GuestDeaths==v.GuestDeaths&&MimicsEliminated==v.MimicsEliminated&&Evacuations==v.Evacuations&&TrashDisposed==v.TrashDisposed&&ElectricalFaults==v.ElectricalFaults&&ElectricalRepairs==v.ElectricalRepairs&&Relocations==v.Relocations&&Phase==v.Phase&&Number==v.Number&&StartedAt==v.StartedAt&&Duration==v.Duration&&
             ArrivalTarget==v.ArrivalTarget&&Arrived==v.Arrived&&CheckedIn==v.CheckedIn&&CheckedOut==v.CheckedOut&&Unserved==v.Unserved&&
             Towels==v.Towels&&Repairs==v.Repairs&&MissedRequests==v.MissedRequests&&Prepared==v.Prepared&&OccupiedAtClose==v.OccupiedAtClose;
     }
@@ -69,6 +71,24 @@ namespace MotelGame.Service
             if(before.Status==RoomStatus.Dirty&&after.Status==RoomStatus.Ready)v.Prepared++;
             snapshot.Value=v;
         }
+        internal void RecordGuestDeath(){if(IsServer&&IsRunning){var v=State;v.GuestDeaths++;snapshot.Value=v;}}
+        internal void RecordMimicKill(){if(IsServer&&IsRunning){var v=State;v.MimicsEliminated++;snapshot.Value=v;}}
+        internal void RecordEvacuation(){if(IsServer&&IsRunning){var v=State;v.Evacuations++;snapshot.Value=v;}}
+        // Host-only M14 setup uses the same reset, arrival agenda and counters as normal reception.
+        internal void EndForHuntDebug(){if(IsServer&&IsRunning)FinishShift();}
+        internal bool DebugStartHuntShift(float seconds=480)
+        {
+            if(!IsServer||!IsSpawned||IsRunning)return false;
+            BeginShift(seconds,true); return true;
+        }
+        internal bool DebugStartScenario(float seconds,int count,float gap)
+        {
+            if(!IsServer||!IsSpawned||IsRunning)return false;
+            BeginShift(seconds,true);
+            arrivalTimes.Clear();var v=State;v.ArrivalTarget=count;
+            for(int i=0;i<count;i++)arrivalTimes.Add(v.StartedAt+1+i*gap);
+            snapshot.Value=v;return true;
+        }
         internal void RecordCheckIn() { if(IsServer&&IsRunning){var v=State;v.CheckedIn++;snapshot.Value=v;} }
         internal void RecordCheckout() { if(IsServer&&IsRunning){var v=State;v.CheckedOut++;snapshot.Value=v;} }
         internal void RecordDisposal() { if(IsServer&&IsRunning){var v=State;v.TrashDisposed++;snapshot.Value=v;} }
@@ -86,12 +106,19 @@ namespace MotelGame.Service
         public void StartShiftRpc(uint expectedNumber,uint lease,RpcParams rpcParams=default)
         {
             if(!IsServer||!IsSpawned||IsRunning||State.Number!=expectedNumber||!computer.Authorizes(rpcParams.Receive.SenderClientId,lease))return;
+            MotelGame.Inspection.HuntScenario.Instance?.OrdinaryOnServer();
+            BeginShift(durationSeconds,false);
+        }
+        void BeginShift(float seconds,bool debug)
+        {
+            FindFirstObjectByType<MotelGame.Horror.MimicHunt>()?.ResetOnServer();
             // Reset while not Running: room events cannot inflate the next night's statistics.
             requests.ResetOnServer(false);reception.ResetOnServer();
             foreach(var room in reception.Rooms)room.ResetOnServer();
             computer.ReleaseOnServer();
+            MotelGame.Inspection.BaggageInspection.Instance?.ResetOnServer();
             var v=new ShiftSnapshot{Phase=ShiftPhase.Running,Number=State.Number+1,StartedAt=NetworkManager.ServerTime.Time,
-                Duration=Mathf.Max(30,durationSeconds),ArrivalTarget=UnityEngine.Random.Range(Mathf.Max(1,arrivalCount.x),Mathf.Max(arrivalCount.x,arrivalCount.y)+1)};
+                Duration=Mathf.Max(30,seconds),ArrivalTarget=UnityEngine.Random.Range(Mathf.Max(1,arrivalCount.x),Mathf.Max(arrivalCount.x,arrivalCount.y)+1)};
             arrivalTimes.Clear();
             // Stratified random timings keep natural gaps without an unbounded arrival stream.
             Vector3 w=new Vector3(Mathf.Max(.01f,workloadWeights.x),Mathf.Max(.01f,workloadWeights.y),Mathf.Max(.01f,workloadWeights.z));
@@ -103,6 +130,7 @@ namespace MotelGame.Service
                 double offset=Mathf.Lerp(Mathf.Min(firstArrivalDelay,(float)v.Duration*lastArrivalFraction*.5f),(float)v.Duration*lastArrivalFraction,f);
                 arrivalTimes.Add(v.StartedAt+offset);
             }
+            if(debug) { arrivalTimes.Clear(); v.ArrivalTarget=2; arrivalTimes.Add(v.StartedAt+1);arrivalTimes.Add(v.StartedAt+8); }
             snapshot.Value=v;
             BuildElectricalAgenda();
         }
@@ -143,7 +171,9 @@ namespace MotelGame.Service
         }
         void FinishShift()
         {
+            MotelGame.Inspection.BaggageInspection.Instance?.FinishShiftOnServer();
             // Cancel exactly once before freezing counters; quiesce routes without destroying NGO identities.
+            FindFirstObjectByType<MotelGame.Horror.MimicHunt>()?.ResetOnServer();
             requests.ResetOnServer(true);
             foreach(var g in reception.Guests)if(g.Phase==GuestPhase.Arriving||g.Phase==GuestPhase.WaitingForCheckIn)RecordUnserved();
             var v=State;v.OccupiedAtClose=Array.FindAll(reception.Guests,g=>g.State.Assigned&&g.Phase!=GuestPhase.Absent&&g.Phase!=GuestPhase.Leaving).Length;
@@ -154,15 +184,16 @@ namespace MotelGame.Service
             foreach(var room in reception.Rooms)room.ResetOnServer();
             computer.ReleaseOnServer();
         }
-        public string SummaryText=>$"NIGHT {State.Number} COMPLETE — 06:00\n\nGuests checked in: {State.CheckedIn}\nGuests checked out: {State.CheckedOut}\nLeft without service: {State.Unserved}\nTowels delivered: {State.Towels}\nTV repairs: {State.Repairs}\nMissed / cancelled requests: {State.MissedRequests}\nRooms prepared: {State.Prepared}\nTrash bags disposed: {State.TrashDisposed}\nElectrical repairs: {State.ElectricalRepairs}/{State.ElectricalFaults}\nGuest relocations: {State.Relocations}\nOccupied at closing: {State.OccupiedAtClose}";
+        Vector2 summaryScroll;
+        public string SummaryText=>$"NIGHT {State.Number} COMPLETE — 06:00\n\nGuests checked in: {State.CheckedIn}\nGuests checked out: {State.CheckedOut}\nLeft without service: {State.Unserved}\nTowels delivered: {State.Towels}\nTV repairs: {State.Repairs}\nMissed / cancelled requests: {State.MissedRequests}\nRooms prepared: {State.Prepared}\nTrash bags disposed: {State.TrashDisposed}\nElectrical repairs: {State.ElectricalRepairs}/{State.ElectricalFaults}\nGuest relocations: {State.Relocations}\nOccupied at closing: {State.OccupiedAtClose}\nGuest deaths: {State.GuestDeaths}\nGuests evacuated: {State.Evacuations}\nMimics eliminated: {State.MimicsEliminated}\n{MotelGame.Inspection.BaggageInspection.Instance?.Debrief}";
         void OnGUI()
         {
             if(!IsSpawned||NetworkManager.LocalClient?.PlayerObject==null)return;
             var i=NetworkManager.LocalClient.PlayerObject.GetComponent<MotelGame.Interactions.PlayerInteractor>();if(i.MenuOpen)return;
             if(State.Phase==ShiftPhase.Finished)
             {
-                float w=Mathf.Min(350,Screen.width-24);GUILayout.BeginArea(new Rect(Screen.width-w-12,45,w,370),GUI.skin.box);
-                GUILayout.Label(SummaryText);GUILayout.Space(8);GUILayout.Label("Reception computer [E] → Start Next Shift");GUILayout.EndArea();
+                float w=Mathf.Min(350,Screen.width-24);GUILayout.BeginArea(new Rect(Screen.width-w-12,45,w,Mathf.Min(Screen.height-65,440)),GUI.skin.box);
+                summaryScroll=GUILayout.BeginScrollView(summaryScroll);GUILayout.Label(SummaryText);GUILayout.EndScrollView();GUILayout.Space(8);GUILayout.Label("Reception computer [E] → Start Next Shift");GUILayout.EndArea();
             }
             else GUI.Box(new Rect(12,Screen.height-108,240,28),IsRunning?$"NIGHT {State.Number}   {ClockText}":"22:00 — Start shift at the computer");
         }

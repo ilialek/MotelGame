@@ -1,0 +1,5 @@
+PASS late-hunt / failure
+Late join after infiltration reconstructed active creature and server-simulated guests.
+Completed; no critical runtime logs.
+Infiltration travel: 0m; exploration seen: False
+Duct travel: 0m

@@ -19,6 +19,7 @@ namespace MotelGame
 
         // Menus may suspend local input without disabling gravity.
         public bool InputSuspended { get; set; }
+        public bool TemporarilyIncapacitated { get; set; }
         public float EyeHeight => eyeHeight;
 
         CharacterController controller;
@@ -64,7 +65,7 @@ namespace MotelGame
 
             Vector2 move = Vector2.zero;
             float speed = walkingSpeed;
-            if (!InputSuspended && cursorCaptured && Application.isFocused)
+            if (!InputSuspended && !TemporarilyIncapacitated && cursorCaptured && Application.isFocused)
             {
                 if (keyboard != null)
                 {

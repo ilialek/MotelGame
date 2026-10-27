@@ -1,0 +1,23 @@
+{
+  "captured": "2026-10-25T16:52:59.986186",
+  "build_report_modified": "2026-10-25T16:51:11.518869",
+  "scene": "Motel_Blockout_V3",
+  "files": {
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity": "b48a7cad0f5ed3d3b40831f563f4a7351203e28751808f8d9659ad1eb8fdc724",
+    "Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs": "03f1e09036b07d0ba57285f17fc0388cc69a6f292d0e4944ad3fbd7b3c004abf",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/level0": "f69024820bb932c080d94f94b1e7ac017b16a978ab2d023ccab36af1e9f47e7f",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/sharedassets0.assets": "0a7aa31e12e090b8a053c85f2881ccd7d4bcb45583bbcd8a791754224b8be39a",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "18f0862edcf5e80c0555f66af92fc9d5e160169cb71d91a33946cea9fa2aa52c",
+    "Builds/Playtest/MotelGame.app/Contents/MacOS/MotelGame": "3b22fc64e4ff28b2242c0ec0978800611e20b7b41e49f8d19a9ec074e5627a1d"
+  },
+  "successful_final_build_runs": [
+    "night-20261025-165147",
+    "focused-20261025-165148",
+    "edges-20261025-165735",
+    "door-route-20261025-165148"
+  ],
+  "earlier_art_build_regressions": [
+    "door-regression-20261025-161823",
+    "locomotion-20261025-160101"
+  ]
+}

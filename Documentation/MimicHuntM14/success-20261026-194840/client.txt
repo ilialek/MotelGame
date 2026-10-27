@@ -1,0 +1,6 @@
+FAIL client / success
+
+System.Exception: Timeout two guests physically reach rooms at=(8.00, 0.03, 2.00) mimic=Dormant hp=100 feedback=
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Wait>d__24.MoveNext () [0x001ba] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:32 
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
+Duct travel: 0m

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 11_UnsecuredRadioCarrier
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 2
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 1
+  contents:
+  - description: Concealed Mimic
+    kilograms: 6
+    metalFraction: 0.01
+    offsetCm: 0
+    travelCm: 4
+    response: 4
+    delaySeconds: 0.65
+    decaySeconds: 2.6
+  - description: Books
+    kilograms: 2
+    metalFraction: 0
+    offsetCm: 1
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  - description: Radio metal cover
+    kilograms: 1.8
+    metalFraction: 0.7
+    offsetCm: -1
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: Books and an old radio. I left the radio unsecured.
+  weightAnswer: About ten or eleven kilos with the backpack.
+  metalAnswer: The radio has a metal cover; the books are paper.
+  packingAnswer: The radio may slide. It is unplugged and the batteries are removed.
+  responseAnswer: Any movement is just the loose radio falling downhill. There is
+    no wound spring or motor.
+  authorReasoning: Initial mass/metal are plausible. Left and right tilts show motion
+    against the slope, followed by delayed pulse recovery. An unpowered loose radio
+    cannot explain the combination.

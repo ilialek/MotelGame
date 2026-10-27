@@ -1,0 +1,13 @@
+OnlineMultiplayerM13/setup-validation.txt
+GuestCheckoutM9/navigation-validation.txt
+GuestCheckoutM9/setup-validation.txt
+MultipleGuestsM7/navigation-validation.txt
+MultipleGuestsM7/setup-validation.txt
+MotelOperationsM11/preview-breakers.png
+MotelOperationsM11/preview-room-power-on.png
+MotelOperationsM11/preview-dumpster.png
+MotelOperationsM11/preview-room-power-off.png
+NightShiftM10/preview-board.png
+NightShiftM10/preview-computer.png
+NightShiftM10/preview-television.png
+MotelVisualOverhaul/scene-validation.txt

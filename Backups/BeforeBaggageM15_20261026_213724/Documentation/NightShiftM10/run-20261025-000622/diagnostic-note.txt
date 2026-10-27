@@ -1,0 +1,1 @@
+Stopped by test runner maintainer after confirmed test routing deadlock: host remained inside Room102 door conservative sweep bounds while waiting for client to open it. TV two-step/concurrent completion and late observer passed. Move the host clear before waiting for client exit; production door safety is correct.

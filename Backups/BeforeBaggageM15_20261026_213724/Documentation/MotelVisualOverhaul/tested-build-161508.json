@@ -1,0 +1,9 @@
+{
+  "captured": "2026-10-25T16:32:17.252068",
+  "purpose": "Build used by successful focused-20261025-161823 and in-progress night-20261025-161823, before final VACANCY label depth change",
+  "files": {
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/sharedassets0.assets": "0a7aa31e12e090b8a053c85f2881ccd7d4bcb45583bbcd8a791754224b8be39a",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/level0": "a314e2a227e973724d49fb4894b34e98ef800e697bc567e73b4463dcb6c250f0",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "bacdbe0a0302c3f745f68b2eb2e2078794a4f700f3cc71ae890fb8b93924f415"
+  }
+}

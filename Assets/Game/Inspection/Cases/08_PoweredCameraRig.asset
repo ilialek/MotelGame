@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 08_PoweredCameraRig
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 0
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 0
+  contents:
+  - description: Camera stabilizer rig
+    kilograms: 5
+    metalFraction: 0.25
+    offsetCm: 0
+    travelCm: 3
+    response: 4
+    delaySeconds: 0.5
+    decaySeconds: 1.6
+  - description: Battery and pads
+    kilograms: 1.5
+    metalFraction: 0.3
+    offsetCm: 0
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: A camera stabilizer with a battery fitted, wrapped in pads.
+  weightAnswer: Just under nine kilos including the suitcase.
+  metalAnswer: The metal frame, camera and battery account for a moderate reading.
+  packingAnswer: The rig is powered. I forgot the transport lock, so it tries to
+    stay centered.
+  responseAnswer: It can correct against a tilt and move after a short delay. I should
+    have turned it off.
+  authorReasoning: Innocent powered counterbalance. Mass and metal agree; the guest
+    admits power and unlocked mechanism. Counter-motion alone is not conclusive.

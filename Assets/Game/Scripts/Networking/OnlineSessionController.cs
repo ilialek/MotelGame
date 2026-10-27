@@ -17,7 +17,7 @@ namespace MotelGame.Networking
     [RequireComponent(typeof(DevelopmentSession))]
     public sealed class OnlineSessionController : MonoBehaviour
     {
-        public const string BuildVersion = "motel-m13-1";
+        public const string BuildVersion = "motel-m15-1";
         public const int Capacity = 4;
         const int OperationSeconds = 45;
         readonly OnlineIdentity identity = new();

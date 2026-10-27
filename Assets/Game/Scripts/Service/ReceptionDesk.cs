@@ -33,7 +33,7 @@ namespace MotelGame.Service
         public GuestLifecycle WaitingNpc => System.Array.Find(guests,g=>g.IsSpawned && g.State.QueuePosition==1 && g.AtQueuePosition && g.CanCheckIn);
         public GuestLifecycle CheckoutNpc => System.Array.Find(guests,g=>g.IsSpawned && g.State.QueuePosition==1 && g.AtQueuePosition && g.CanCheckoutFor(g.Room));
         public bool GuestWaiting => IsSpawned && WaitingNpc != null;
-        public bool CanRegister(ServiceRoom room) => GuestWaiting && System.Array.IndexOf(rooms,room)>=0 && room.AvailableForCheckIn;
+        public bool CanRegister(ServiceRoom room) => GuestWaiting && System.Array.IndexOf(rooms,room)>=0 && room.AvailableForCheckIn && (MotelGame.Inspection.BaggageInspection.Instance==null || MotelGame.Inspection.BaggageInspection.Instance.CanAdmit(WaitingNpc));
         public override void OnNetworkSpawn()
         {
             queue.Clear();waitingSince.Clear();clearingGuest=null;nextGuest=0;
@@ -101,6 +101,7 @@ namespace MotelGame.Service
                 guest.SetQueuePosition(null,0);
             }
         }
+        internal void TouchInspection(GuestLifecycle guest) { if(IsServer&&waitingSince.ContainsKey(guest))waitingSince[guest]=NetworkManager.ServerTime.Time; }
         internal void ResetOnServer()
         {
             if(!IsServer)return;queue.Clear();waitingSince.Clear();clearingGuest=null;nextGuest=0;
@@ -131,8 +132,9 @@ namespace MotelGame.Service
             if (!shift.IsRunning || !computer.Authorizes(sender,lease)) message = "Use the Reception computer during the shift.";
             else if (index < 0 || index >= rooms.Length) message = "Invalid room.";
             else if (!GuestWaiting || !expectedGuest.TryGet(out var selected,NetworkManager) || selected!=WaitingNpc.NetworkObject || WaitingNpc.State.Visit!=visit) message = "Waiting guest changed. Select again.";
+            else if (MotelGame.Inspection.BaggageInspection.Instance!=null&&!MotelGame.Inspection.BaggageInspection.Instance.CanAdmit(WaitingNpc)) message = "Ask about the contents and weigh this guest's bag before admission.";
             else if (!WaitingNpc.TryCheckIn(rooms[index],cycle)) message = "Room unavailable. Refresh your selection.";
-            else message = $"Guest checked into Room {rooms[index].RoomNumber}.";
+            else { MotelGame.Inspection.BaggageInspection.Instance?.RecordDecisionOnServer(rooms[index].Occupant,true); message = $"Guest checked into Room {rooms[index].RoomNumber}."; }
             FeedbackRpc(message, RpcTarget.Single(sender, RpcTargetUse.Temp));
         }
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -148,6 +150,21 @@ namespace MotelGame.Service
                 message = "Checkout unavailable. Guest or room changed; select the waiting guest again.";
             else message = $"Key returned — Room {rooms[index].RoomNumber} is Dirty. Guest departing.";
             FeedbackRpc(message, RpcTarget.Single(sender, RpcTargetUse.Temp));
+        }
+        public void RefuseWaitingGuest()
+        {
+            var guest=WaitingNpc;
+            if(guest!=null)RequestRefuseRpc(new NetworkObjectReference(guest.NetworkObject),guest.State.Visit,computer.Lease);
+        }
+        [Rpc(SendTo.Server,InvokePermission=RpcInvokePermission.Everyone)]
+        public void RequestRefuseRpc(NetworkObjectReference expectedGuest,uint visit,uint lease,RpcParams rpc=default)
+        {
+            if(!IsServer||!IsSpawned||!shift.IsRunning||!computer.Authorizes(rpc.Receive.SenderClientId,lease)||
+                !expectedGuest.TryGet(out var obj,NetworkManager)||WaitingNpc==null||obj!=WaitingNpc.NetworkObject||WaitingNpc.State.Visit!=visit)return;
+            var guest=WaitingNpc;
+            MotelGame.Inspection.BaggageInspection.Instance?.RecordDecisionOnServer(guest,false);
+            guest.BeginLeaving();
+            FeedbackRpc("Accommodation refused. The guest leaves with their baggage.",RpcTarget.Single(rpc.Receive.SenderClientId,RpcTargetUse.Temp));
         }
         public void Relocate(int sourceIndex, int destinationIndex)
         {

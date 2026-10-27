@@ -1,0 +1,11 @@
+FAIL host / success
+Two simultaneous/repeated analyzer claims granted exactly one lease; release worked.
+Guest 0: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 1: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 2: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 3: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+System.Exception: Timeout admitted guests physically enter rooms at=(13.27, 0.03, 8.32) mimic=Exploring hp=100 shift=Running/1 feedback=Waiting guest changed. Select again.
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Wait>d__24.MoveNext () [0x00256] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:33 
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:40 
+Infiltration travel: 3.970796m; exploration seen: True
+Duct travel: 46.98083m

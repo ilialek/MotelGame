@@ -1,0 +1,4 @@
+PASS invalid
+Anonymous authentication / persistent separate profile lifecycle-invalid
+Invalid/unknown code, retry, cancellation, recreation
+No critical runtime errors.

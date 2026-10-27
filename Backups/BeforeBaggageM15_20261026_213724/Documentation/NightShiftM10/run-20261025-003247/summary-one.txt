@@ -1,0 +1,10 @@
+NIGHT 1 COMPLETE — 06:00
+
+Guests checked in: 7
+Guests checked out: 7
+Left without service: 0
+Towels delivered: 4
+TV repairs: 2
+Missed / cancelled requests: 1
+Rooms prepared: 11
+Occupied at closing: 0

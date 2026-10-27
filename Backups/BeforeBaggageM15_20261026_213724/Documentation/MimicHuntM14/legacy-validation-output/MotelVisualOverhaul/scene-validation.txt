@@ -1,0 +1,9 @@
+PASS 2026-10-26T20:18:11.1081830+01:00
+Architecture renderer/collider bounds match within 1 mm after UV/submesh changes.
+Room 101: gameplay configuration, clean/dirty linen roots, door descendants, TV references and art present.
+Room 102: gameplay configuration, clean/dirty linen roots, door descendants, TV references and art present.
+Room 103: gameplay configuration, clean/dirty linen roots, door descendants, TV references and art present.
+Room 104: gameplay configuration, clean/dirty linen roots, door descendants, TV references and art present.
+Computer collider/focus assigned; employee positions, queue positions and dumpster approach clear; 4 room routes complete on existing NavMesh.
+Imported visual instances: 247; scene renderers: 1485; enabled/active: 1174; active mesh triangles: 100670; distinct scene materials: 169; scene lights: 20.
+All imported URP materials/textures assigned; vegetation uses cutout/double-sided materials. No new decorative colliders. Character prefabs unchanged (separate hash validation).

@@ -1,0 +1,3 @@
+System.Exception: M11 primitive intersects original geometry: PanelBacking / panel_etx_1
+  at MotelGame.Editor.MotelOperationsSetup.Validate () [0x00482] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelOperationsSetup.cs:194 
+  at MotelGame.Editor.MotelOperationsSetup.Poll () [0x000ce] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelOperationsSetup.cs:35 

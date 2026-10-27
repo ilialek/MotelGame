@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-26T23:35:20.341811+01:00",
+  "unity": "m_EditorVersion: 6000.3.19f1\nm_EditorVersionWithRevision: 6000.3.19f1 (7689f4515d75)",
+  "build_report": "Succeeded\nErrors: 0\nWarnings: 1\nOutput: Builds/Playtest/MotelGame.app\n",
+  "sha256": {
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity": "eb52951940e2f2047177766e9fb9bda2cfd0b54f316321a82004740608dd9f72",
+    "Packages/manifest.json": "f7a84d05b93be9c92298697c2644ab70dd64dd1b8277e136c07610e0369be127",
+    "Packages/packages-lock.json": "35db3cec40401f36d73f409e6117830b451f725d7c5ba73363ffd2d8dd240bd8",
+    "ProjectSettings/ProjectVersion.txt": "3e78f3e1fbb6e96c92f36002865a679ff7344056725f11d06922c2b2eab02ff3",
+    "Assets/Game/Scripts/Inspection/BaggageHandle.cs": "e85f0e71336d5132ed2f1e1290b7538a0bd3579e5060ff39d58769dd3071915f",
+    "Assets/Game/Scripts/Inspection/GuestBaggage.cs": "c541f81c85ec24679169227665ec8d8e4b43d8242cc59b35149dabf213586786",
+    "Assets/Game/Scripts/Inspection/BaggageCase.cs": "958e953bb57639c348f787cc9a9fd8e0b361d27897625c2a28be7a03c22e87a6",
+    "Assets/Game/Scripts/Inspection/AnalyzerPanel.cs": "1551fabdfc8f1881407fda874a4350058b0bebf82167b460a7e47658cbeb993e",
+    "Assets/Game/Scripts/Inspection/BaggageInspection.cs": "1f0c0e35635bc3c987087e03865abbe812e2b466728ca85deb0b189fa576d883",
+    "Assets/Game/Scripts/Inspection/HuntScenario.cs": "286eea6fc0741e56b76591d2ad43389ee36eda539bf68b84d6644612d3128c2d",
+    "Builds/Playtest/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "c491e19cbd288b069179c45d5d875ef9ca5300f3eb6d00943f31e5d50cc564aa"
+  }
+}

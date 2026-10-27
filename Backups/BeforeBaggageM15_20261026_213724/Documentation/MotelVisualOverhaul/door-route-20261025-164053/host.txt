@@ -1,0 +1,4 @@
+PASS host
+Two real CharacterController exits from Room 101 TV/bag position around an open door leaf; other owner opens via normal raycast/RPC. No collision bypass or teleport.
+No critical runtime logs.
+NPC distance: 0m; max queue=0

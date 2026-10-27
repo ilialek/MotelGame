@@ -1,0 +1,6 @@
+FAIL client / success
+Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
+System.Exception: Timeout open room at=(22.20, 0.03, 12.56) mimic=Dormant hp=100 shift=Running/1 feedback=
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Wait>d__24.MoveNext () [0x00250] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:32 
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
+Duct travel: 0m

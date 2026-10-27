@@ -1,0 +1,6 @@
+PASS late
+Host/Client connected; ownership, camera and remote raycast isolation verified.
+Late join received Occupied cycle, made bed, removed trash colliders, and correct guest location.
+Late client's reception checkout completed second full cycle; all cleaning interactions and visuals reset.
+Disconnect completed.
+Completed without critical runtime logs.

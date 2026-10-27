@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "source": "Actual saved Unity scene colliders",
+  "hinge": [
+    20.58,
+    0,
+    13.16
+  ],
+  "doorway_clear": [
+    1.1,
+    2.2
+  ],
+  "leaf_dimensions": [
+    0.05,
+    2.15,
+    1.02
+  ],
+  "leaf_bottom": 0.025,
+  "leaf_top": 2.175,
+  "angle_range": [
+    0,
+    90
+  ],
+  "angle_sample_degrees": 0.1,
+  "oriented_box_sweep_samples": 2703,
+  "static_intersections": 0
+}

@@ -1,0 +1,560 @@
+{
+  "cases": [
+    {
+      "name": "01_ClothesWeekend",
+      "shell": 0,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Clothes and toiletries",
+          "kilograms": 3,
+          "metalFraction": 0.01,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Clothes for the weekend and a wash bag. No equipment.",
+      "weightAnswer": "About five or six kilos including the suitcase.",
+      "metalAnswer": "Just the zip, handle and small toiletry fittings.",
+      "packingAnswer": "Everything is folded tightly between straps.",
+      "responseAnswer": "Nothing loose or powered. It should barely move.",
+      "authorReasoning": "Low metal, 5.4 kg and fixed balance support all statements. Straightforward innocent."
+    },
+    {
+      "name": "02_MechanicTools",
+      "shell": 3,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Steel tools",
+          "kilograms": 12,
+          "metalFraction": 0.92,
+          "offsetCm": -1.5,
+          "travelCm": 2,
+          "response": 1,
+          "delaySeconds": 0.02,
+          "decaySeconds": 0.55
+        },
+        {
+          "description": "Cloth padding",
+          "kilograms": 1,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Workshop tools and padding. I am repairing a truck tomorrow.",
+      "weightAnswer": "Nearly fifteen kilos with the hard case. Yes, it is heavy.",
+      "metalAnswer": "Steel spanners, sockets and a hammer; a strong metal response is expected.",
+      "packingAnswer": "The tray is not latched; it can slide a little downhill.",
+      "responseAnswer": "A short metal rattle. Once the tray settles, it should stay on that side.",
+      "authorReasoning": "Heavy and metal-rich is legitimate. Tilt shifts downhill; leveling preserves tray displacement. No active recovery."
+    },
+    {
+      "name": "03_BooksAndCamera",
+      "shell": 2,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Books",
+          "kilograms": 6,
+          "metalFraction": 0.0,
+          "offsetCm": -1,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        },
+        {
+          "description": "Metal-body camera",
+          "kilograms": 1.5,
+          "metalFraction": 0.65,
+          "offsetCm": 2,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        },
+        {
+          "description": "Clothes",
+          "kilograms": 1,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Several books, a camera and a spare shirt.",
+      "weightAnswer": "Around nine kilos. The books are most of it.",
+      "metalAnswer": "An old metal-bodied camera, wrapped between the books.",
+      "packingAnswer": "Tightly packed; nothing should roll.",
+      "responseAnswer": "No battery motor or loose mechanism. A small dull impact is possible.",
+      "authorReasoning": "9.2 kg and modest metal response fit a metal camera among heavier books; fixed balanced load."
+    },
+    {
+      "name": "04_WaterAndLaundry",
+      "shell": 1,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Sealed water container",
+          "kilograms": 7,
+          "metalFraction": 0.01,
+          "offsetCm": 0,
+          "travelCm": 4,
+          "response": 2,
+          "delaySeconds": 0.03,
+          "decaySeconds": 2.8
+        },
+        {
+          "description": "Laundry",
+          "kilograms": 2,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Laundry and a sealed water jug for my camping trip.",
+      "weightAnswer": "About ten kilos; most of it is water.",
+      "metalAnswer": "Plastic bottles and fabric. Very little metal apart from the zip.",
+      "packingAnswer": "The jug is strapped down, but water can move inside.",
+      "responseAnswer": "A slosh after shaking. It will settle back when the platform is level.",
+      "authorReasoning": "Liquid response is innocent: downhill offset under tilt, level balance recovers, long decay. Claims acknowledge liquid."
+    },
+    {
+      "name": "05_ForgottenTripod",
+      "shell": 0,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Clothes",
+          "kilograms": 3,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        },
+        {
+          "description": "Tripod and camera",
+          "kilograms": 5,
+          "metalFraction": 0.68,
+          "offsetCm": 3,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Mainly clothes. I packed in a hurry.",
+      "weightAnswer": "Maybe six kilos... I did not weigh it.",
+      "metalAnswer": "You are right: my camera tripod is still in the side pocket. I forgot it.",
+      "packingAnswer": "The tripod is strapped on the right; the clothes hold it still.",
+      "responseAnswer": "There are no loose parts; the tripod clamps are locked.",
+      "authorReasoning": "Initial mass estimate is wrong but follow-up explains metal and stable right-heavy balance. An honest omission, not a universal lie detector."
+    },
+    {
+      "name": "06_PrivateWeights",
+      "shell": 1,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Cast exercise weights",
+          "kilograms": 12,
+          "metalFraction": 0.9,
+          "offsetCm": -2,
+          "travelCm": 3,
+          "response": 1,
+          "delaySeconds": 0.02,
+          "decaySeconds": 0.7
+        },
+        {
+          "description": "Clothes",
+          "kilograms": 3,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Only some clothes and personal things.",
+      "weightAnswer": "All right, there are exercise weights under the clothes. Roughly sixteen kilos total.",
+      "metalAnswer": "The weights are cast metal. I did not want to explain my training equipment.",
+      "packingAnswer": "One weight is loose at the bottom. It slides downhill, then stays there.",
+      "responseAnswer": "A heavy short thud, perhaps some metal rattle. Nothing can push back uphill.",
+      "authorReasoning": "Deliberately misleading innocent. Follow-ups predict high mass/metal and passive irreversible sliding. False accusation remains possible."
+    },
+    {
+      "name": "07_WoundMusicMechanism",
+      "shell": 3,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Clockwork mechanism",
+          "kilograms": 5,
+          "metalFraction": 0.7,
+          "offsetCm": 0,
+          "travelCm": 2,
+          "response": 4,
+          "delaySeconds": 0.65,
+          "decaySeconds": 3.5
+        },
+        {
+          "description": "Foam and wood",
+          "kilograms": 1,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "A spring-driven music mechanism for restoration. No batteries.",
+      "weightAnswer": "About eight kilos including the protective case.",
+      "metalAnswer": "Brass gears, steel springs and the carrying case hardware.",
+      "packingAnswer": "It is mounted on a moving suspension. The spring is still wound.",
+      "responseAnswer": "It can react after a short delay and pull its counterweight back. That is why I said spring-driven, not an empty box.",
+      "authorReasoning": "Counter-motion and delayed response have a legitimate disclosed clockwork cause, supported by metal-rich load. Same response vocabulary as some Mimics."
+    },
+    {
+      "name": "08_PoweredCameraRig",
+      "shell": 0,
+      "containsMimic": false,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Camera stabilizer rig",
+          "kilograms": 5,
+          "metalFraction": 0.25,
+          "offsetCm": 0,
+          "travelCm": 3,
+          "response": 4,
+          "delaySeconds": 0.5,
+          "decaySeconds": 1.6
+        },
+        {
+          "description": "Battery and pads",
+          "kilograms": 1.5,
+          "metalFraction": 0.3,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "A camera stabilizer with a battery fitted, wrapped in pads.",
+      "weightAnswer": "Just under nine kilos including the suitcase.",
+      "metalAnswer": "The metal frame, camera and battery account for a moderate reading.",
+      "packingAnswer": "The rig is powered. I forgot the transport lock, so it tries to stay centered.",
+      "responseAnswer": "It can correct against a tilt and move after a short delay. I should have turned it off.",
+      "authorReasoning": "Innocent powered counterbalance. Mass and metal agree; the guest admits power and unlocked mechanism. Counter-motion alone is not conclusive."
+    },
+    {
+      "name": "09_LightClothesCarrier",
+      "shell": 0,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic",
+          "kilograms": 9,
+          "metalFraction": 0.01,
+          "offsetCm": 2,
+          "travelCm": 3,
+          "response": 4,
+          "delaySeconds": 0.6,
+          "decaySeconds": 2.2
+        },
+        {
+          "description": "Clothing cover",
+          "kilograms": 1.5,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "A few light clothes and a towel. Nothing else.",
+      "weightAnswer": "Four or five kilos, certainly no heavy equipment.",
+      "metalAnswer": "No tools or electronics; just the suitcase fittings.",
+      "packingAnswer": "Everything is tightly strapped. Nothing loose.",
+      "responseAnswer": "That movement must be the clothes settling. There is no mechanism.",
+      "authorReasoning": "13 kg contradicts the confident light-load claim. Counterbalance/delayed pulse contradict both fixed packing and passive cloth. At least two independent clues."
+    },
+    {
+      "name": "10_FalseToolboxCarrier",
+      "shell": 3,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic",
+          "kilograms": 8,
+          "metalFraction": 0.01,
+          "offsetCm": -2,
+          "travelCm": 1.5,
+          "response": 3,
+          "delaySeconds": 0.5,
+          "decaySeconds": 2
+        },
+        {
+          "description": "Small steel wrench and cloth",
+          "kilograms": 1,
+          "metalFraction": 0.55,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "A full case of steel spanners and sockets.",
+      "weightAnswer": "About eleven kilos, a normal tool kit.",
+      "metalAnswer": "It should be mostly metal: steel tools fill almost all the case.",
+      "packingAnswer": "The trays are bolted down. The heavy part is on the left.",
+      "responseAnswer": "Any sound is steel against steel. There is no spring or suspension.",
+      "authorReasoning": "Mass is plausible but metal response around 9 percent is incompatible with mostly steel. Elastic recovery also contradicts bolted trays. No need for universal counter-motion cue."
+    },
+    {
+      "name": "11_UnsecuredRadioCarrier",
+      "shell": 2,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic",
+          "kilograms": 6,
+          "metalFraction": 0.01,
+          "offsetCm": 0,
+          "travelCm": 4,
+          "response": 4,
+          "delaySeconds": 0.65,
+          "decaySeconds": 2.6
+        },
+        {
+          "description": "Books",
+          "kilograms": 2,
+          "metalFraction": 0,
+          "offsetCm": 1,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        },
+        {
+          "description": "Radio metal cover",
+          "kilograms": 1.8,
+          "metalFraction": 0.7,
+          "offsetCm": -1,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Books and an old radio. I left the radio unsecured.",
+      "weightAnswer": "About ten or eleven kilos with the backpack.",
+      "metalAnswer": "The radio has a metal cover; the books are paper.",
+      "packingAnswer": "The radio may slide. It is unplugged and the batteries are removed.",
+      "responseAnswer": "Any movement is just the loose radio falling downhill. There is no wound spring or motor.",
+      "authorReasoning": "Initial mass/metal are plausible. Left and right tilts show motion against the slope, followed by delayed pulse recovery. An unpowered loose radio cannot explain the combination."
+    },
+    {
+      "name": "12_LockedGimbalCarrier",
+      "shell": 0,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic",
+          "kilograms": 7,
+          "metalFraction": 0.01,
+          "offsetCm": 1,
+          "travelCm": 3,
+          "response": 4,
+          "delaySeconds": 0.5,
+          "decaySeconds": 2
+        },
+        {
+          "description": "Metal photographic gear",
+          "kilograms": 3.5,
+          "metalFraction": 0.7,
+          "offsetCm": -1,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Camera equipment and padding. It includes a stabilizer.",
+      "weightAnswer": "About thirteen kilos with the suitcase.",
+      "metalAnswer": "Some metal brackets and lenses, not a full metal tool kit.",
+      "packingAnswer": "The battery is removed and the transport pin locks the moving stage solid.",
+      "responseAnswer": "It cannot move by itself while pinned. A small vibration is just the foam.",
+      "authorReasoning": "Plausible technically true cover story. Packing follow-up asserts a locked stage; opposing tilt response and delayed sizable movement contradict that. Compare innocent powered rig, whose explanation differs."
+    },
+    {
+      "name": "13_StaticSamplesCarrier",
+      "shell": 1,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic braced left",
+          "kilograms": 10,
+          "metalFraction": 0.01,
+          "offsetCm": -5,
+          "travelCm": 1,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        },
+        {
+          "description": "Foam cover",
+          "kilograms": 1,
+          "metalFraction": 0,
+          "offsetCm": 0,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "Nonmetallic sample weights and foam. They are packed in a centered rigid block.",
+      "weightAnswer": "About twelve kilos total. Nothing lightweight.",
+      "metalAnswer": "No electronics or metal apparatus.",
+      "packingAnswer": "The single block is fixed exactly in the center, evenly padded left and right.",
+      "responseAnswer": "Nothing should move. The block cannot shift in its housing.",
+      "authorReasoning": "A quiet, braced Mimic has no signature sound or counter-motion. Stable left-heavy center of mass around -4.2 cm contradicts the explicit centered symmetrical packing. Weight and metal alone would miss it."
+    },
+    {
+      "name": "14_PackedBatteryCarrier",
+      "shell": 3,
+      "containsMimic": true,
+      "color": {
+        "r": 0.26,
+        "g": 0.3,
+        "b": 0.27,
+        "a": 1
+      },
+      "contents": [
+        {
+          "description": "Concealed Mimic",
+          "kilograms": 4,
+          "metalFraction": 0.02,
+          "offsetCm": 0,
+          "travelCm": 5,
+          "response": 2,
+          "delaySeconds": 0.7,
+          "decaySeconds": 3.1
+        },
+        {
+          "description": "Battery and small tools",
+          "kilograms": 2,
+          "metalFraction": 0.55,
+          "offsetCm": 2,
+          "travelCm": 0,
+          "response": 0,
+          "delaySeconds": 0,
+          "decaySeconds": 0.15
+        }
+      ],
+      "contentsAnswer": "A small battery and hand tools, all fitted in solid foam.",
+      "weightAnswer": "Eight kilos or so with the case.",
+      "metalAnswer": "There is metal in the tools and battery, but lots of packing as well.",
+      "packingAnswer": "No liquid containers. All the fitted pieces are clamped and cannot slide.",
+      "responseAnswer": "A slight rattle from a loose latch, nothing with a long moving response.",
+      "authorReasoning": "Mass/metal plausible. Large tilt displacement, level recovery and delayed long pulse decay contradict both solid clamps and no liquid/moving mechanism. Different combination from low-metal toolbox or quiet off-center case."
+    }
+  ]
+}

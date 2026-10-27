@@ -1,0 +1,55 @@
+{
+  "night-20261025-133158": {
+    "host": {
+      "result": "PASS",
+      "report_sha256": "f49708daf0371053f2d4c5639fc64b41b63d89f59f55f76971664ab392d66ae4",
+      "critical_log_matches": 0
+    },
+    "client": {
+      "result": "PASS",
+      "report_sha256": "5c9c03ee34bf4460efadcd869f842f266f26eedaab8810143f2f3fc1ee62c1ed",
+      "critical_log_matches": 0
+    }
+  },
+  "focused-20261025-133637": {
+    "host": {
+      "result": "PASS",
+      "report_sha256": "b721b1391ff08a1e4969d77d91896ab6961e24e61be9829ec82dbde4ab3ebc49",
+      "critical_log_matches": 0
+    },
+    "client": {
+      "result": "PASS",
+      "report_sha256": "cd6b96852d07459e76f26537261bb09958ae3dfe3142a864f6f277385a2056bf",
+      "critical_log_matches": 0
+    },
+    "observer-bag": {
+      "result": "PASS",
+      "report_sha256": "39f9aaae05a25d7e95066c2a2d0dbedeb1077124af4a7e6dd2f7df6e98490dc5",
+      "critical_log_matches": 0
+    },
+    "observer-fault": {
+      "result": "PASS",
+      "report_sha256": "b529c33507cc9234724e53ab3056e08d492e5ed577ad079310a4578e8fdd3c52",
+      "critical_log_matches": 0
+    },
+    "observer-relocation": {
+      "result": "PASS",
+      "report_sha256": "c92b312cebab512d7219aae96ea1b5169dba734558f7d5ea578a2c7d97e090fd",
+      "critical_log_matches": 0
+    }
+  },
+  "edges-20261025-135152": {
+    "host": {
+      "result": "PASS",
+      "report_sha256": "b6bcfc91863f572629b2ff2ba93bb3a59058cef0faea2670457113dc24af8eb2",
+      "critical_log_matches": 0
+    },
+    "client": {
+      "result": "PASS",
+      "report_sha256": "c5cff0500627861ebfb01c518cc626aa85220c457bedd375f468cedd68ebd5c5",
+      "critical_log_matches": 0
+    }
+  },
+  "final_fingerprint_matches": true,
+  "time": "2026-10-25T13:56:26.449832"
+}

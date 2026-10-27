@@ -188,6 +188,8 @@ namespace MotelGame.Service
             Status = RoomStatus.Dirty, Cycle = State.Cycle + 1,
             Faulted = preserveFault && State.Faulted, FaultId = preserveFault ? State.FaultId : State.FaultId + 1
         };
+        internal void PrepareForHuntDebug()
+        { if(IsServer&&AcceptingWork&&State.Status!=RoomStatus.Occupied) snapshot.Value=new RoomSnapshot{Status=RoomStatus.Ready,Cycle=State.Cycle+1,BedMade=true,RemovedTrash=AllTrashMask,Bag=GarbagePhase.Disposed}; }
         internal void ResetOnServer()
         {
             if (!IsServer || !IsSpawned) return;

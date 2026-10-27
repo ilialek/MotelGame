@@ -26,7 +26,7 @@ namespace MotelGame.Interactions
         {
             target = null;
             if (!IsSpawned || !IsOwner || !Application.isFocused ||
-                Cursor.lockState != CursorLockMode.Locked || movement.InputSuspended || MenuOpen) return;
+                Cursor.lockState != CursorLockMode.Locked || movement.InputSuspended || movement.TemporarilyIncapacitated || MenuOpen) return;
             target = FindFocus();
             if (target != null && target.CanInteract && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
                 target.Interact();
@@ -40,7 +40,7 @@ namespace MotelGame.Interactions
         }
         IInteractable FindFocus()
         {
-            if (!enabled || !IsSpawned || !IsOwner || MenuOpen || playerCamera == null) return null;
+            if (!enabled || !IsSpawned || !IsOwner || MenuOpen || movement.TemporarilyIncapacitated || playerCamera == null) return null;
             int count = Physics.RaycastNonAlloc(playerCamera.transform.position, playerCamera.transform.forward,
                 rayHits, MaxDistance, ~0, QueryTriggerInteraction.Ignore);
             var hits = rayHits;

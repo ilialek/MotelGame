@@ -1,0 +1,7 @@
+PASS host / inspection
+Two simultaneous/repeated analyzer claims granted exactly one lease; release worked.
+Guest 0: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Focused final-build regression: all measurements and pulse sound RPC, shared data, contextual answers, admission and late join.
+Completed; no critical runtime logs.
+Infiltration travel: 0m; exploration seen: False
+Duct travel: 0m

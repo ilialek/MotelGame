@@ -1,0 +1,13 @@
+FAIL client / success
+Two simultaneous/repeated analyzer claims granted exactly one lease; release worked.
+Guest 0: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 1: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 2: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Guest 3: physical transfer, all 7 tests, repeated weight/tilt/pulse, 5 contextual statements and shared admission gate.
+Admitted carrier reached Room 103 with same bag; creature emerged and traversed room-to-vent route continuously.
+Full arrival → questioning → measurement → admission → physical infiltration → local thermal bait → 3 server-authoritative hits; no guest deaths.
+System.Exception: Player blocked (19.00, 0.02, 12.65) at (19.51, 0.03, 12.37)
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Walk>d__56.MoveNext () [0x001ba] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:488 
+  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:40 
+Infiltration travel: 0m; exploration seen: False
+Duct travel: 0m

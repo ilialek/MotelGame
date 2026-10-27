@@ -1,0 +1,8 @@
+FAIL client / success
+Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
+System.NullReferenceException: Object reference not set to an instance of an object.
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00018] in /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/BindingsHelpers.cs:62 
+  at UnityEngine.Component.get_transform () [0x00006] in <4ba3edbf991d47b68a9d766e9e7fca63>:0 
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Wait>d__24.MoveNext () [0x0006c] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:32 
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
+Duct travel: 0m

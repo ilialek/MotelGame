@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77783bfeabd44f6f88b70278b292d428, type: 3}
+  m_Name: 14_PackedBatteryCarrier
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Inspection.BaggageCase
+  shell: 3
+  color: {r: 0.26, g: 0.3, b: 0.27, a: 1}
+  containsMimic: 1
+  contents:
+  - description: Concealed Mimic
+    kilograms: 4
+    metalFraction: 0.02
+    offsetCm: 0
+    travelCm: 5
+    response: 2
+    delaySeconds: 0.7
+    decaySeconds: 3.1
+  - description: Battery and small tools
+    kilograms: 2
+    metalFraction: 0.55
+    offsetCm: 2
+    travelCm: 0
+    response: 0
+    delaySeconds: 0
+    decaySeconds: 0.15
+  contentsAnswer: A small battery and hand tools, all fitted in solid foam.
+  weightAnswer: Eight kilos or so with the case.
+  metalAnswer: There is metal in the tools and battery, but lots of packing as well.
+  packingAnswer: No liquid containers. All the fitted pieces are clamped and cannot
+    slide.
+  responseAnswer: A slight rattle from a loose latch, nothing with a long moving
+    response.
+  authorReasoning: Mass/metal plausible. Large tilt displacement, level recovery
+    and delayed long pulse decay contradict both solid clamps and no liquid/moving
+    mechanism. Different combination from low-metal toolbox or quiet off-center case.

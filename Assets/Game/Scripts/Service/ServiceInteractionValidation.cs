@@ -12,6 +12,7 @@ namespace MotelGame.Service
             if (target == null || !target.enabled || !target.gameObject.activeInHierarchy ||
                 !manager.ConnectedClients.TryGetValue(sender, out var client) ||
                 client.PlayerObject == null || !client.PlayerObject.IsSpawned) return false;
+            if(client.PlayerObject.GetComponent<TowelCarrier>()?.Incapacitated==true) return false;
             var interactor = client.PlayerObject.GetComponent<PlayerInteractor>();
             if (interactor == null) return false;
             Physics.SyncTransforms();

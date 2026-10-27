@@ -1,0 +1,7 @@
+FAIL client
+Exclusive workstation, remote camera/input isolation, unauthorized start refusal, disconnect release and reconnect.
+Concurrent/repeated shift start -> exactly one transition, no client bypass.
+System.Exception: Queue physical position
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Run>d__33.MoveNext () [0x00eb3] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:156 
+  at MotelGame.Networking.Tests.NightShiftSmokeTest+<Start>d__29.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/NightShiftSmokeTest.cs:61 
+NPC distance: 0m; max queue=3

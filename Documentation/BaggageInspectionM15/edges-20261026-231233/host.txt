@@ -1,0 +1,8 @@
+PASS host / edges
+Analyzer operator disconnected mid-measurement: host completed test, released lease and restored same bag/readings/statements on rejoin.
+Computer owner disconnected while another employee used analyzer; computer released, shared record and other lease survived.
+Refusing all legitimate arrivals produces explicit SERVICE FAILED, one lost stay, and no invented threat.
+32 seeded normal-shift decks: exactly one carrier across 18 assignments, varied initial position, no replacement after the original case.
+Completed; no critical runtime logs.
+Infiltration travel: 0m; exploration seen: False
+Duct travel: 0m

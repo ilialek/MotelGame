@@ -30,6 +30,8 @@ namespace MotelGame.Service
         float transitionStart;
         bool closing;
         Vector2 scroll;
+        bool cctv, baggage;
+        Vector2 baggageScroll;
         ServiceRoom relocationSource;
         Texture2D background;
         GUIStyle labelStyle,buttonStyle,boxStyle,titleStyle;
@@ -56,6 +58,7 @@ namespace MotelGame.Service
         {
             if(!IsServer||!IsSpawned||Occupied||Lease!=expectedLease)return;
             ulong sender=rpcParams.Receive.SenderClientId;
+            if(!NetworkManager.ConnectedClients.TryGetValue(sender,out var actor)||actor.PlayerObject==null||actor.PlayerObject.GetComponent<TowelCarrier>()?.Incapacitated==true)return;
             if(!NearWorkstation(sender)||!ServiceInteractionValidation.CanReach(NetworkManager,sender,screen))return;
             seat.Value=new ComputerSeat{Occupied=true,User=sender,Lease=Lease+1};
         }
@@ -137,6 +140,17 @@ namespace MotelGame.Service
             GUILayout.BeginArea(new Rect((Screen.width-w)/2,(Screen.height-h)/2,w,h),boxStyle);
             GUILayout.Label("MOTEL / NIGHT DESK",titleStyle);
             GUILayout.Label($"{shift.ClockText}     {shift.State.Phase}     IN {shift.State.CheckedIn}   OUT {shift.State.CheckedOut}",labelStyle);
+            var hunt=MotelGame.Horror.MimicHunt.Instance;
+            if(hunt!=null&&!string.IsNullOrEmpty(hunt.Complaint))GUILayout.Label("GUEST REPORT / "+hunt.Complaint,labelStyle);
+            var surveillance=FindFirstObjectByType<MotelGame.Horror.VentSurveillance>();
+            GUILayout.BeginHorizontal();
+            if(GUILayout.Button("Reception",buttonStyle)){cctv=false;baggage=false;}
+            if(surveillance!=null&&GUILayout.Button("Vent CCTV",buttonStyle)){cctv=true;baggage=false;}
+            var inspection=MotelGame.Inspection.BaggageInspection.Instance;
+            if(inspection!=null&&GUILayout.Button("Baggage",buttonStyle)){baggage=true;cctv=false;}
+            GUILayout.EndHorizontal();
+            if(baggage&&inspection!=null){baggageScroll=GUILayout.BeginScrollView(baggageScroll);inspection.GetComponent<MotelGame.Inspection.AnalyzerPanel>().DrawComputerReview();GUILayout.EndScrollView();if(GUILayout.Button("Return to motel [Esc]",buttonStyle))CloseLocal();GUILayout.EndArea();return;}
+            if(cctv&&surveillance!=null){surveillance.DrawFeeds(w-40,h-195);if(GUILayout.Button("Return to motel [Esc]",buttonStyle))CloseLocal();GUILayout.EndArea();return;}
             scroll=GUILayout.BeginScrollView(scroll);
             if(!shift.IsRunning)
             {
@@ -147,8 +161,9 @@ namespace MotelGame.Service
             {
                 var incoming=reception.WaitingNpc;var outgoing=reception.CheckoutNpc;
                 GUILayout.Label("RECEPTION — "+(outgoing!=null?$"{outgoing.GuestName} / Room {outgoing.Room.RoomNumber} — returning key":
-                    incoming!=null?incoming.GuestName+" — choose a Ready room":"Waiting for the next customer to reach the desk"),labelStyle);
+                    incoming!=null?incoming.GuestName+" — inspect baggage before room assignment":"Waiting for the next customer to reach the desk"),labelStyle);
                 GUILayout.Label($"Queue: {reception.QueueCount}/3",labelStyle);
+                if(incoming!=null&&inspection!=null){if(GUILayout.Button("Inspect / review baggage and decide",buttonStyle)){baggage=true;cctv=false;}}
                 if(outgoing!=null&&GUILayout.Button($"Accept key / Check out Room {outgoing.Room.RoomNumber}",buttonStyle))
                     reception.Checkout(Array.IndexOf(reception.Rooms,outgoing.Room));
                 GUILayout.Space(8);GUILayout.Label("ROOMS / REGISTERED GUESTS",titleStyle);

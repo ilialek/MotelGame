@@ -19,9 +19,9 @@ namespace MotelGame.Editor
                 if(File.Exists(path))snapshots[path]=File.ReadAllBytes(path);
             try
             {
-                MultipleGuestsSetup.Validate();CharacterVisualsSetup.Validate();GuestCheckoutSetup.Validate();NightShiftSetup.Validate();MotelOperationsSetup.Validate();MotelVisualOverhaul.Validate();OnlineMultiplayerSetup.Validate();
+                MultipleGuestsSetup.Validate();CharacterVisualsSetup.Validate();GuestCheckoutSetup.Validate();NightShiftSetup.Validate();MotelOperationsSetup.Validate();MotelVisualOverhaul.Validate();OnlineMultiplayerSetup.Validate();MimicHuntSetup.Validate();BaggageInspectionSetup.Validate();
                 var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{MultipleGuestsSetup.ScenePath},locationPathName=output+"/MotelGame.app",target=BuildTarget.StandaloneOSX,options=BuildOptions.Development});
-                File.WriteAllText(OnlineMultiplayerSetup.Reports+"/build-validation.txt",report.summary.result+"\nErrors: "+report.summary.totalErrors+"\nWarnings: "+report.summary.totalWarnings+"\nOutput: "+output+"/MotelGame.app\n");
+                File.WriteAllText("Documentation/BaggageInspectionM15/build-validation.txt",report.summary.result+"\nErrors: "+report.summary.totalErrors+"\nWarnings: "+report.summary.totalWarnings+"\nOutput: "+output+"/MotelGame.app\n");
                 if(report.summary.result!=BuildResult.Succeeded || report.summary.totalErrors > 0 || !File.Exists(output+"/MotelGame.app/Contents/MacOS/MotelGame"))throw new Exception("Playtest build failed.");
                 File.WriteAllText(output+"/LaunchWindowed.command","#!/bin/zsh\nopen -n \"${0:A:h}/MotelGame.app\" --args -screen-fullscreen 0 -screen-width 800 -screen-height 600\n");
                 for (int i = 1; i <= 4; i++)

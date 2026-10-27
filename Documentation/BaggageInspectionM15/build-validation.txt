@@ -1,0 +1,4 @@
+Succeeded
+Errors: 0
+Warnings: 1
+Output: Builds/Playtest/MotelGame.app

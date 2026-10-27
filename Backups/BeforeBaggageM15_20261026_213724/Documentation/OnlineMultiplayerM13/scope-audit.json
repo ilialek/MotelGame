@@ -1,0 +1,32 @@
+{
+  "changed": [
+    "Assets/Game/Scenes/Motel_Blockout_V3.unity",
+    "Assets/Game/Scripts/Networking/DevelopmentSession.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs",
+    "Assets/Game/Editor/PlaytestBuild.cs",
+    "Packages/manifest.json",
+    "Packages/packages-lock.json"
+  ],
+  "added": [
+    "Assets/Resources.meta",
+    "Assets/Game/Scripts/Networking/OnlineIdentity.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionMenu.cs.meta",
+    "Assets/Game/Scripts/Networking/OnlineIdentity.cs.meta",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs.meta",
+    "Assets/Game/Scripts/Networking/OnlineSessionMenu.cs",
+    "Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs.meta",
+    "Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs",
+    "Assets/Game/Editor/OnlineMultiplayerSetup.cs",
+    "Assets/Game/Editor/OnlineMultiplayerSetup.cs.meta"
+  ],
+  "missing": [],
+  "scene_changed_records": [
+    "365786485",
+    "365786489"
+  ],
+  "scene_added_records": [
+    "365786492",
+    "365786491"
+  ]
+}

@@ -1,0 +1,4 @@
+PASS: Saved player prefab and scene, reopened in Unity 6000.3.19f1.
+Scene SHA256: 383ba4a550114512349e9aeb6fc260ff5dbdb8385f0426f7ac1219ae8cc6626f
+Owner-authoritative NetworkTransform, player prefab, UTP, approval, lobby camera and required references verified.
+This is setup validation, not a two-instance multiplayer test.

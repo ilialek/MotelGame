@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-25T13:52:31.188698",
+  "launcher": "/Users/ilalekomtsev/MotelGame/Builds/Playtest/LaunchWindowed.command",
+  "result": "PASS",
+  "new_process": [
+    94625
+  ],
+  "existing_processes_preserved": [
+    94552,
+    94561
+  ],
+  "checked": "Stable .command launched one normal app; process remained alive for 8 seconds; startup log has no exception/error matches. Window flags 800x600, fullscreen 0. No human input/visual assertion.",
+  "critical_log_matches": []
+}

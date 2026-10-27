@@ -1,0 +1,7 @@
+FAIL solo / success
+Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
+Reception camera focus, occupancy, both CCTV targets and first-person return.
+System.Exception: Player blocked (20.00, 0.02, 14.20) at (20.00, 0.03, 13.49)
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Walk>d__37.MoveNext () [0x001ba] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:258 
+  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
+Duct travel: 0m

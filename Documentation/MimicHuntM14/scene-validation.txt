@@ -1,0 +1,5 @@
+PASS: saved scene reopened; no missing scripts; 10 connected vent nodes, 4 room vents, 2 cameras, 1 Mimic, 1 decoy, 1 pistol; 5 evacuation paths; unique NGO scene identities.
+Vent_Room101: landing on NavMesh, approach complete; graph distance to 101=0
+Vent_Room102: landing on NavMesh, approach complete; graph distance to 101=6.959999
+Vent_Room103: landing on NavMesh, approach complete; graph distance to 101=12.66
+Vent_Room104: landing on NavMesh, approach complete; graph distance to 101=12.66

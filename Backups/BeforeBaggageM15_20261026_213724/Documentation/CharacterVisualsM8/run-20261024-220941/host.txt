@@ -1,0 +1,8 @@
+PASS host
+Independent cleaning and concurrent registration: three required rooms plus104 occupied by four distinct physical guests.
+Room102 request: wrong101 rejected, duplicate correct deliveries complete once; checkout104 preserves102 call/carry. Specific concurrent checkout102 resets only102 and guest walks out.
+Source103 checkout cancels only its request and both towels; stale prior request rejected; departing103 and arriving104 traverse shared routes without deadlock.
+Two complete102 occupancy/service/checkout cycles, all four room requests, full cleaning reset, later checkout while walking, bounded pool and one reception slot.
+Sampled all NPC routes: 547.9m; no teleport, solid/NPC penetration, duplicate assignment or waiting slot.
+Disconnect clean.
+Completed without critical runtime logs.

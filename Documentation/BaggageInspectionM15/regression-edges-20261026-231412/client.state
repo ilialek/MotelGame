@@ -1,0 +1,16 @@
+player=(8.00, 0.03, 2.00) shift=Running 22:56 rooms=101:Dirty bed=False trash=0;102:Dirty bed=False trash=0;103:Dirty bed=False trash=0;104:Dirty bed=False trash=0 feedback= request=3 Clean Towel NoRequest step=0; Guest A Absent q=0 pos=(8.74, 0.02, 5.89); Guest E Absent q=0 pos=(0.00, 0.00, 0.00); Guest B Absent q=0 pos=(0.00, 0.00, 0.00); Guest C Absent q=0 pos=(0.00, 0.00, 0.00); Guest D Absent q=0 pos=(0.00, 0.00, 0.00) bags=101:Collecting/fault=False/reserved=False;102:Collecting/fault=False/reserved=False;103:Collecting/fault=False/reserved=False;104:Collecting/fault=False/reserved=False stats=NIGHT 2 COMPLETE — 06:00
+
+Guests checked in: 0
+Guests checked out: 0
+Left without service: 0
+Towels delivered: 0
+TV repairs: 0
+Missed / cancelled requests: 0
+Rooms prepared: 0
+Trash bags disposed: 0
+Electrical repairs: 0/0
+Guest relocations: 0
+Occupied at closing: 0
+Guest deaths: 0
+Guests evacuated: 0
+Mimics eliminated: 0

@@ -1,0 +1,3 @@
+System.Exception: Vent landing off NavMesh: Vent_Room101 requested=(19.15, 0.03, 14.15) closest=(19.15, 3.02, 14.15)
+  at MotelGame.Editor.MimicHuntSetup.Validate () [0x00184] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MimicHuntSetup.cs:191 
+  at MotelGame.Editor.MimicHuntSetup.Poll () [0x0007a] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MimicHuntSetup.cs:30 

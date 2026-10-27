@@ -1,0 +1,5 @@
+FAIL client
+
+System.Exception: Timeout: player obstructs NPC approach
+  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Wait>d__25.MoveNext () [0x000d5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:63 
+  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Start>d__24.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:55 

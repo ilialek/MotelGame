@@ -1,0 +1,4 @@
+PASS: Scene reopened in Unity 6000.3.19f1.
+M5 room/phone/supply/delivery/audio/carry references valid. M4/door intact. No missing scripts.
+Door opening preserved; corridor clearance at tray >= 2.6 m.
+Scene SHA256: 1bb0cf040de522db1511b92d9326c9346f988071a474af401712d2869af40b6b

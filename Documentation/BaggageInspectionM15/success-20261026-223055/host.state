@@ -1,0 +1,6 @@
+Guest A InRoom at (18.93, 0.02, 13.53) blocked=False bag=InRoom
+Guest B WaitingForCheckIn at (8.74, 0.02, 5.89) blocked=False bag=WithGuest
+Guest C WaitingForCheckIn at (7.50, 0.02, 5.88) blocked=False bag=WithGuest
+Guest D WaitingForCheckIn at (6.21, 0.02, 5.88) blocked=False bag=WithGuest
+Guest E Absent at (0.00, 0.00, 0.00) blocked=False bag=Hidden
+Hunt Dormant at (20.00, 0.04, 14.30) age 0
