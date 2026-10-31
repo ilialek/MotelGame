@@ -8,6 +8,10 @@ namespace MotelGame.Horror
     public sealed class VentNode : MonoBehaviour, IInteractable
     {
         public int index;
+        public bool underground;
+        public int sector;
+        public Transform hiddenAnchor,hiddenBend;
+        public BoxCollider roomVolume;
         public VentNode[] neighbours;
         public ServiceRoom room;
         public Transform mouth, landing, grille;
@@ -27,6 +31,7 @@ namespace MotelGame.Horror
 
         void Update()
         {
+            if(underground)return;
             var hunt = MimicHunt.Instance;
             bool open = hunt != null && hunt.IsSpawned && hunt.State.Node == index && hunt.State.Active && (hunt.State.Phase == MimicPhase.Infiltrating || hunt.State.Phase == MimicPhase.Emerging || hunt.State.Phase == MimicPhase.Exposed || hunt.State.Phase == MimicPhase.Attacking || hunt.State.Phase == MimicPhase.Retreating || hunt.State.Phase == MimicPhase.Dead);
             if (grille != null)

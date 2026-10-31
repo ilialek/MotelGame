@@ -32,11 +32,11 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Mainly clothes. I packed in a hurry.
-  weightAnswer: Maybe six kilos... I did not weigh it.
-  metalAnswer: 'You are right: my camera tripod is still in the side pocket. I forgot
-    it.'
-  packingAnswer: The tripod is strapped on the right; the clothes hold it still.
-  responseAnswer: There are no loose parts; the tripod clamps are locked.
-  authorReasoning: Initial mass estimate is wrong but follow-up explains metal and
-    stable right-heavy balance. An honest omission, not a universal lie detector.
+  contentsAnswer: Clothes for a shoot tomorrow. I packed while my taxi was honking.
+  weightAnswer: Six kilos? Honestly, I just grabbed whatever was by the door.
+  metalAnswer: Oh. The tripod and camera are still in there. That explains why it
+    felt heavier.
+  packingAnswer: The tripod is strapped down. The clamps are closed.
+  responseAnswer: It should stay still. A tripod does not do much with its legs folded.
+  authorReasoning: 'Innocent omission: 10.4 kg contradicts an uncertain guess, but
+    the camera/tripod admission explains moderate metal and a quiet pulse.'

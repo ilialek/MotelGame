@@ -1,0 +1,3 @@
+System.Exception: V4 validation failed; see Documentation/LevelM16/scene-validation.txt
+  at MotelGame.Editor.MotelLayoutV4.Validate () [0x00aa5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelLayoutV4.Validation.cs:93 
+  at MotelGame.Editor.MotelLayoutV4.Poll () [0x000d1] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelLayoutV4.cs:35 

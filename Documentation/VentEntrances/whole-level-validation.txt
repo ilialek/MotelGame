@@ -1,0 +1,100 @@
+PASS Six configured rooms in numeric order
+PASS Room 101 gameplay references and secondary door
+PASS Room 102 gameplay references and secondary door
+PASS Room 103 gameplay references and secondary door
+PASS Room 104 gameplay references and secondary door
+PASS Room 105 gameplay references and secondary door
+PASS Room 106 gameplay references and secondary door
+PASS Reception / seven guest pool / queue references
+PASS Guest inspection / registration configuration
+PASS Vent graph / six room branches / threat references
+PASS NetworkManager is a scene root
+PASS Twelve room doors, four staff doors and backyard exit
+PASS Independent registration and CCTV workstations
+PASS Unique nonzero in-scene NGO hashes: 45
+PASS No missing scripts or broken serialized references 
+PASS 101 interior NPC approach clears door swing including stopping tolerance
+PASS 102 interior NPC approach clears door swing including stopping tolerance
+PASS 103 interior NPC approach clears door swing including stopping tolerance
+PASS 104 interior NPC approach clears door swing including stopping tolerance
+PASS 105 interior NPC approach clears door swing including stopping tolerance
+PASS 106 interior NPC approach clears door swing including stopping tolerance
+PASS Lobby -> 101 (public areas only) navigable
+Lobby -> 101 (public areas only): 16.54 m / 4.1 s walking
+PASS 101 assigned-room route navigable
+101 assigned-room route: 4.22 m / 1.1 s walking
+PASS 101 interior door-to-door (private area only) navigable
+101 interior door-to-door (private area only): 3.94 m / 1.0 s walking
+PASS 101 guest -> vent landing navigable
+101 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> 102 (public areas only) navigable
+Lobby -> 102 (public areas only): 19.32 m / 4.8 s walking
+PASS 102 assigned-room route navigable
+102 assigned-room route: 4.22 m / 1.1 s walking
+PASS 102 interior door-to-door (private area only) navigable
+102 interior door-to-door (private area only): 3.96 m / 1.0 s walking
+PASS 102 guest -> vent landing navigable
+102 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> 103 (public areas only) navigable
+Lobby -> 103 (public areas only): 24.94 m / 6.2 s walking
+PASS 103 assigned-room route navigable
+103 assigned-room route: 4.22 m / 1.1 s walking
+PASS 103 interior door-to-door (private area only) navigable
+103 interior door-to-door (private area only): 3.94 m / 1.0 s walking
+PASS 103 guest -> vent landing navigable
+103 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> 104 (public areas only) navigable
+Lobby -> 104 (public areas only): 56.05 m / 14.0 s walking
+PASS 104 assigned-room route navigable
+104 assigned-room route: 4.22 m / 1.1 s walking
+PASS 104 interior door-to-door (private area only) navigable
+104 interior door-to-door (private area only): 3.96 m / 1.0 s walking
+PASS 104 guest -> vent landing navigable
+104 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> 105 (public areas only) navigable
+Lobby -> 105 (public areas only): 61.83 m / 15.5 s walking
+PASS 105 assigned-room route navigable
+105 assigned-room route: 4.22 m / 1.1 s walking
+PASS 105 interior door-to-door (private area only) navigable
+105 interior door-to-door (private area only): 3.96 m / 1.0 s walking
+PASS 105 guest -> vent landing navigable
+105 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> 106 (public areas only) navigable
+Lobby -> 106 (public areas only): 67.62 m / 16.9 s walking
+PASS 106 assigned-room route navigable
+106 assigned-room route: 4.22 m / 1.1 s walking
+PASS 106 interior door-to-door (private area only) navigable
+106 interior door-to-door (private area only): 3.94 m / 1.0 s walking
+PASS 106 guest -> vent landing navigable
+106 guest -> vent landing: 3.39 m / 0.8 s walking
+PASS Lobby -> Storage navigable
+Lobby -> Storage: 8.16 m / 2.0 s walking
+PASS Lobby -> Maintenance navigable
+Lobby -> Maintenance: 37.30 m / 9.3 s walking
+PASS 103 -> Dumpster navigable
+103 -> Dumpster: 29.51 m / 7.4 s walking
+PASS 106 -> Dumpster navigable
+106 -> Dumpster: 24.70 m / 6.2 s walking
+PASS Maintenance -> Courtyard navigable
+Maintenance -> Courtyard: 19.24 m / 4.8 s walking
+PASS Vent graph connected: 20 nodes
+PASS Wall segments have no duplicate volume: 
+PASS Floor segments have no duplicate volume: 
+PASS Lobby eye-height grid has no direct corridor view (0 leaks)
+PASS Storage_LobbyDoor sweep: 
+PASS Storage_CourtyardDoor sweep: 
+PASS Maintenance_CorridorDoor sweep: 
+PASS Maintenance_BackyardDoor sweep: 
+PASS Backyard_PublicExit sweep: 
+PASS Room101_CorridorDoor sweep: 
+PASS Room101_CourtyardDoor sweep: 
+PASS Room102_CorridorDoor sweep: 
+PASS Room102_CourtyardDoor sweep: 
+PASS Room103_CorridorDoor sweep: 
+PASS Room103_CourtyardDoor sweep: 
+PASS Room104_CorridorDoor sweep: 
+PASS Room104_CourtyardDoor sweep: 
+PASS Room105_CorridorDoor sweep: 
+PASS Room105_CourtyardDoor sweep: 
+PASS Room106_CorridorDoor sweep: 
+PASS Room106_CourtyardDoor sweep: 

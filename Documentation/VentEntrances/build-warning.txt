@@ -1,0 +1,1 @@
+Final build errors=0, warnings=1. An earlier build (or this build if warnings=1) reported Unity Cloud Diagnostics symbol upload HTTP 403; credentials unavailable. No service credentials/configuration changed.

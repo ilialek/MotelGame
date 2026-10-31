@@ -1,0 +1,612 @@
+Assets/Game/Scenes/Motel_Layout_V4.unity dirty=False
+RENDER Motel_Layout_V4/01_Architecture/Room103/Floor Center: (2.80, -0.10, 3.00), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Wall Center: (0.20, 1.40, 6.10), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Baseboard Center: (0.20, 0.06, 6.10), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Wall Center: (5.20, 1.40, 6.10), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Baseboard Center: (5.20, 0.06, 6.10), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Glass Center: (3.45, 1.78, 6.10), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Frame Center: (2.13, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Frame Center: (4.78, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Frame Center: (3.45, 1.33, 6.10), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Wall_Cut Center: (1.65, 1.40, 6.10), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Wall_Cut Center: (1.90, 1.93, 6.10), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room103_CourtyardWall/Wall_Cut Center: (3.80, 0.43, 6.10), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/WingWestWall_0/Baseboard Center: (-0.10, 0.06, 3.00), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_103/Wall Center: (5.70, 1.40, 3.00), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_103/Baseboard Center: (5.70, 0.06, 3.00), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102/Floor Center: (8.60, -0.10, 3.00), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Wall Center: (6.00, 1.40, 6.10), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Baseboard Center: (6.00, 0.06, 6.10), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Wall Center: (11.00, 1.40, 6.10), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Baseboard Center: (11.00, 0.06, 6.10), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Glass Center: (9.25, 1.78, 6.10), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Frame Center: (7.93, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Frame Center: (10.58, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Frame Center: (9.25, 1.33, 6.10), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Wall_Cut Center: (7.45, 1.40, 6.10), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Wall_Cut Center: (7.70, 1.93, 6.10), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room102_CourtyardWall/Wall_Cut Center: (9.60, 0.43, 6.10), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_102/Wall Center: (11.50, 1.40, 3.00), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_102/Baseboard Center: (11.50, 0.06, 3.00), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101/Floor Center: (14.40, -0.10, 3.00), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Wall Center: (11.80, 1.40, 6.10), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Baseboard Center: (11.80, 0.06, 6.10), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Wall Center: (16.80, 1.40, 6.10), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Baseboard Center: (16.80, 0.06, 6.10), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Glass Center: (15.05, 1.78, 6.10), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Frame Center: (13.73, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Frame Center: (16.38, 1.78, 6.10), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Frame Center: (15.05, 1.33, 6.10), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Wall_Cut Center: (13.25, 1.40, 6.10), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Wall_Cut Center: (13.50, 1.93, 6.10), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room101_CourtyardWall/Wall_Cut Center: (15.40, 0.43, 6.10), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_101/Wall Center: (17.30, 1.40, 3.00), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_101/Baseboard Center: (17.30, 0.06, 3.00), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104/Floor Center: (2.80, -0.10, 20.40), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Wall Center: (0.40, 1.40, 17.30), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Baseboard Center: (0.40, 0.06, 17.30), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Wall Center: (5.40, 1.40, 17.30), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Baseboard Center: (5.40, 0.06, 17.30), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Glass Center: (2.15, 1.78, 17.30), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Frame Center: (0.82, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Frame Center: (3.48, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Frame Center: (2.15, 1.33, 17.30), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Wall_Cut Center: (1.80, 0.43, 17.30), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Wall_Cut Center: (3.95, 1.40, 17.30), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room104_CourtyardWall/Wall_Cut Center: (3.70, 1.93, 17.30), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/WingWestWall_1/Baseboard Center: (-0.10, 0.06, 20.40), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_104/Wall Center: (5.70, 1.40, 20.40), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_104/Baseboard Center: (5.70, 0.06, 20.40), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105/Floor Center: (8.60, -0.10, 20.40), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Wall Center: (6.20, 1.40, 17.30), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Baseboard Center: (6.20, 0.06, 17.30), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Wall Center: (11.20, 1.40, 17.30), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Baseboard Center: (11.20, 0.06, 17.30), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Glass Center: (7.95, 1.78, 17.30), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Frame Center: (6.63, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Frame Center: (9.28, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Frame Center: (7.95, 1.33, 17.30), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Wall_Cut Center: (7.60, 0.43, 17.30), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Wall_Cut Center: (9.75, 1.40, 17.30), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room105_CourtyardWall/Wall_Cut Center: (9.50, 1.93, 17.30), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_105/Wall Center: (11.50, 1.40, 20.40), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_105/Baseboard Center: (11.50, 0.06, 20.40), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106/Floor Center: (14.40, -0.10, 20.40), Extents: (2.90, 0.10, 3.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Wall Center: (12.00, 1.40, 17.30), Extents: (0.40, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Baseboard Center: (12.00, 0.06, 17.30), Extents: (0.40, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Wall Center: (17.00, 1.40, 17.30), Extents: (0.20, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Baseboard Center: (17.00, 0.06, 17.30), Extents: (0.20, 0.06, 0.11) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Glass Center: (13.75, 1.78, 17.30), Extents: (1.35, 0.48, 0.01) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Frame Center: (12.43, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Frame Center: (15.08, 1.78, 17.30), Extents: (0.03, 0.48, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Frame Center: (13.75, 1.33, 17.30), Extents: (1.35, 0.03, 0.04) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Wall_Cut Center: (13.40, 0.43, 17.30), Extents: (1.00, 0.43, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Wall_Cut Center: (15.55, 1.40, 17.30), Extents: (0.05, 1.40, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Room106_CourtyardWall/Wall_Cut Center: (15.30, 1.93, 17.30), Extents: (0.20, 0.88, 0.10) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_106/Wall Center: (17.30, 1.40, 20.40), Extents: (0.10, 1.40, 3.20) collider=True
+RENDER Motel_Layout_V4/01_Architecture/RoomPartyWall_106/Baseboard Center: (17.30, 0.06, 20.40), Extents: (0.11, 0.06, 3.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 6.60), Extents: (0.11, 0.06, 0.40) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 8.25), Extents: (0.11, 0.06, 1.25) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 9.90), Extents: (0.11, 0.06, 0.40) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 13.55), Extents: (0.11, 0.06, 0.45) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 15.20), Extents: (0.11, 0.06, 1.20) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/WestConnector_Yard/Baseboard Center: (-0.10, 0.06, 16.80), Extents: (0.11, 0.06, 0.40) collider=NONE
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (0.74, -0.04, 6.10), Extents: (0.84, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (0.74, -0.04, 8.08), Extents: (0.84, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (0.74, -0.04, 11.70), Extents: (0.84, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (0.74, -0.04, 15.32), Extents: (0.84, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (2.13, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (2.13, -0.04, 15.32), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (2.80, -0.04, 11.70), Extents: (0.12, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (3.47, -0.04, 6.10), Extents: (0.55, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (3.47, -0.04, 8.08), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (3.47, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (5.70, -0.04, 6.10), Extents: (1.68, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (5.70, -0.04, 8.08), Extents: (1.68, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (5.70, -0.04, 11.70), Extents: (1.68, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (5.70, -0.04, 15.32), Extents: (1.68, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (7.93, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (7.93, -0.04, 15.32), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (8.60, -0.04, 11.70), Extents: (0.12, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (9.27, -0.04, 6.10), Extents: (0.55, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (9.27, -0.04, 8.08), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (9.27, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (11.50, -0.04, 6.10), Extents: (1.68, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (11.50, -0.04, 8.08), Extents: (1.68, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (11.50, -0.04, 11.70), Extents: (1.68, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (11.50, -0.04, 15.32), Extents: (1.68, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (13.73, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (13.73, -0.04, 15.32), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (14.40, -0.04, 11.70), Extents: (0.12, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (15.07, -0.04, 6.10), Extents: (0.55, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (15.07, -0.04, 8.08), Extents: (0.55, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (15.07, -0.04, 11.70), Extents: (0.55, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (16.51, -0.04, 6.10), Extents: (0.89, 0.04, 0.00) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (16.51, -0.04, 8.08), Extents: (0.89, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (16.51, -0.04, 11.70), Extents: (0.89, 0.04, 1.64) collider=True
+RENDER Motel_Layout_V4/01_Architecture/Courtyard/FloorAroundServiceHousing Center: (16.51, -0.04, 15.32), Extents: (0.89, 0.04, 1.98) collider=True
+RENDER Motel_Layout_V4/01_Architecture/EastOutdoorWalk/Floor Center: (20.85, -0.10, 8.00), Extents: (3.45, 0.10, 12.30) collider=True
+RENDER Motel_Layout_V4/02_Exterior/ForestBeyondProperty/ForestGround_Backdrop Center: (12.00, -0.16, 7.00), Extents: (40.00, 0.10, 45.00) collider=NONE
+RENDER Motel_Layout_V4/02_Exterior/CourtyardPlantingBed Center: (8.60, 0.10, 11.70), Extents: (1.60, 0.10, 1.30) collider=True
+RENDER Motel_Layout_V4/02_Exterior/tree_5/tree_5 Center: (8.60, 2.55, 11.70), Extents: (1.26, 2.35, 1.24) collider=NONE
+RENDER Motel_Layout_V4/02_Exterior/CourtyardTreeTrunkCollision Center: (8.60, 1.30, 11.70), Extents: (0.21, 1.30, 0.21) collider=True
+RENDER Motel_Layout_V4/02_Exterior/fern_2/fern_2 Center: (7.50, 0.45, 12.30), Extents: (0.28, 0.25, 0.29) collider=NONE
+RENDER Motel_Layout_V4/02_Exterior/fern_2/fern_2 Center: (8.40, 0.45, 12.30), Extents: (0.34, 0.25, 0.33) collider=NONE
+RENDER Motel_Layout_V4/02_Exterior/fern_2/fern_2 Center: (9.30, 0.45, 12.30), Extents: (0.37, 0.25, 0.37) collider=NONE
+RENDER Motel_Layout_V4/02_Exterior/ServiceLampPost Center: (3.00, 1.20, 7.00), Extents: (0.06, 1.20, 0.06) collider=True
+RENDER Motel_Layout_V4/02_Exterior/ServiceLampPost Center: (14.00, 1.20, 16.60), Extents: (0.06, 1.20, 0.06) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (15.20, 0.43, 4.60), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (15.91, 0.30, 5.65), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (15.87, 0.50, 5.65), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (15.80, 0.76, 4.95), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (15.10, 0.66, 4.60), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/Room101_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (12.60, 1.10, 6.10), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/Room101_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (13.01, 1.10, 6.10), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ClosedWindowCurtain Center: (15.05, 1.78, 6.02), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/VentWindowSill/Lintel Center: (14.05, 1.18, 6.10), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/VentWindowSill/Sill Center: (15.40, 1.08, 6.10), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (9.40, 0.43, 4.60), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (10.11, 0.30, 5.65), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (10.07, 0.50, 5.65), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (10.00, 0.76, 4.95), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (9.30, 0.66, 4.60), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/Room102_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (6.80, 1.10, 6.10), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/Room102_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (7.21, 1.10, 6.10), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ClosedWindowCurtain Center: (9.25, 1.78, 6.02), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/VentWindowSill/Lintel Center: (8.25, 1.18, 6.10), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/VentWindowSill/Sill Center: (9.60, 1.08, 6.10), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (3.60, 0.43, 4.60), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (4.31, 0.30, 5.65), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (4.27, 0.50, 5.65), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (4.20, 0.76, 4.95), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (3.50, 0.66, 4.60), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/Room103_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (1.00, 1.10, 6.10), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/Room103_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (1.41, 1.10, 6.10), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ClosedWindowCurtain Center: (3.45, 1.78, 6.02), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/VentWindowSill/Lintel Center: (2.45, 1.18, 6.10), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/VentWindowSill/Sill Center: (3.80, 1.08, 6.10), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (2.00, 0.43, 18.80), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (1.29, 0.30, 17.75), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (1.33, 0.50, 17.75), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1 Center: (5.22, 1.05, 19.10), Extents: (0.33, 1.05, 0.60) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_door_2 Center: (4.93, 1.14, 18.83), Extents: (0.03, 0.85, 0.27) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_drawer Center: (5.13, 0.20, 19.10), Extents: (0.23, 0.08, 0.54) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (1.40, 0.76, 18.45), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (2.10, 0.66, 18.80), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/ServiceState/Trash_2/DiscardedPackaging/Visual_cardboard_box_1/cardboard_box_1 Center: (4.75, 0.09, 19.05), Extents: (0.12, 0.08, 0.14) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/Room104_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (4.60, 1.10, 17.30), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/Room104_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (4.19, 1.10, 17.30), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ClosedWindowCurtain Center: (2.15, 1.78, 17.38), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/VentWindowSill/Lintel Center: (3.15, 1.18, 17.30), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/VentWindowSill/Sill Center: (1.80, 1.08, 17.30), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (7.80, 0.43, 18.80), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (7.09, 0.30, 17.75), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (7.13, 0.50, 17.75), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1 Center: (11.02, 1.05, 19.10), Extents: (0.33, 1.05, 0.60) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_door_2 Center: (10.73, 1.14, 18.83), Extents: (0.03, 0.85, 0.27) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_drawer Center: (10.93, 0.20, 19.10), Extents: (0.23, 0.08, 0.54) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (7.20, 0.76, 18.45), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (7.90, 0.66, 18.80), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/ServiceState/Trash_2/DiscardedPackaging/Visual_cardboard_box_1/cardboard_box_1 Center: (10.55, 0.09, 19.05), Extents: (0.12, 0.08, 0.14) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/Room105_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (10.40, 1.10, 17.30), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/Room105_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (9.99, 1.10, 17.30), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ClosedWindowCurtain Center: (7.95, 1.78, 17.38), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/VentWindowSill/Lintel Center: (8.95, 1.18, 17.30), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/VentWindowSill/Sill Center: (7.60, 1.08, 17.30), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DoubleBed_base/Visual_bed_4/bed_4 Center: (13.60, 0.43, 18.80), Extents: (1.09, 0.43, 0.83) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1 Center: (12.89, 0.30, 17.75), Extents: (0.24, 0.30, 0.23) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/BedsideTable/Visual_bedside_table_1/bedside_table_1/bedside_table_1_drawer Center: (12.93, 0.50, 17.75), Extents: (0.22, 0.07, 0.16) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1 Center: (16.82, 1.05, 19.10), Extents: (0.33, 1.05, 0.60) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_door_2 Center: (16.53, 1.14, 18.83), Extents: (0.03, 0.85, 0.27) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Wardrobe/Visual_wardrobe_mp_1/wardrobe_mp_1/wardrobe_mp_1_drawer Center: (16.73, 0.20, 19.10), Extents: (0.23, 0.08, 0.54) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/ServiceState/UnmadeBedding/Visual_pillow_mp_1/pillow_mp_1 Center: (13.00, 0.76, 18.45), Extents: (0.21, 0.07, 0.24) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/ServiceState/UnmadeBedding/LinenCover Center: (13.70, 0.66, 18.80), Extents: (0.86, 0.08, 0.84) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/ServiceState/Trash_2/DiscardedPackaging/Visual_cardboard_box_1/cardboard_box_1 Center: (16.35, 0.09, 19.05), Extents: (0.12, 0.08, 0.14) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/Room106_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose Center: (16.20, 1.10, 17.30), Extents: (0.51, 1.08, 0.02) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/Room106_CourtyardDoor/Hinge/DoorLeaf/Visual_door_2_loose/door_2_loose/door_2_loose_handle Center: (15.79, 1.10, 17.30), Extents: (0.07, 0.01, 0.05) collider=NONE
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ClosedWindowCurtain Center: (13.75, 1.78, 17.38), Extents: (1.37, 0.48, 0.02) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/VentWindowSill/Lintel Center: (14.75, 1.18, 17.30), Extents: (0.35, 0.13, 0.10) collider=True
+RENDER Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/VentWindowSill/Sill Center: (13.40, 1.08, 17.30), Extents: (1.00, 0.23, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceFloor0 Center: (13.85, -0.06, 6.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceRoof0 Center: (13.85, 1.21, 6.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide-1_0 Center: (13.24, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide1_0 Center: (14.46, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceFloor1 Center: (13.85, -0.22, 6.83), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceRoof1 Center: (13.85, 1.21, 6.83), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide-1_1 Center: (13.24, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide1_1 Center: (14.46, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceFloor2 Center: (13.85, -0.56, 7.95), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceRoof2 Center: (13.85, 0.92, 7.95), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide-1_2 Center: (13.24, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide1_2 Center: (14.46, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceRoof3 Center: (13.85, 0.22, 9.45), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide-1_3 Center: (13.24, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/EntranceSide1_3 Center: (14.46, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/ReturnRoof0 Center: (12.25, -0.99, 8.33), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/ReturnSide-1_0 Center: (11.64, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/ReturnSide1_0 Center: (12.86, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/TurnRoof Center: (13.05, -0.19, 10.90), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/TurnWallW Center: (11.64, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/TurnWallE Center: (14.46, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/TurnWallN Center: (13.05, -0.88, 11.51), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/TurnWeb Center: (13.05, -0.88, 10.29), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/HingedGrille Center: (13.85, 0.53, 6.23), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.96, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.86, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.75, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.65, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.54, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.43, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.33, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.23, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleHinge/Louvre Center: (13.85, 0.12, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleFrame Center: (13.27, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleFrame Center: (14.44, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_101/GrilleFrameTop Center: (13.85, 1.09, 6.08), Extents: (0.62, 0.04, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceFloor0 Center: (8.05, -0.06, 6.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceRoof0 Center: (8.05, 1.21, 6.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide-1_0 Center: (7.44, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide1_0 Center: (8.66, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceFloor1 Center: (8.05, -0.22, 6.83), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceRoof1 Center: (8.05, 1.21, 6.83), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide-1_1 Center: (7.44, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide1_1 Center: (8.66, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceFloor2 Center: (8.05, -0.56, 7.95), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceRoof2 Center: (8.05, 0.92, 7.95), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide-1_2 Center: (7.44, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide1_2 Center: (8.66, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceRoof3 Center: (8.05, 0.22, 9.45), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide-1_3 Center: (7.44, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/EntranceSide1_3 Center: (8.66, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/ReturnRoof0 Center: (9.65, -0.99, 8.33), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/ReturnSide-1_0 Center: (9.04, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/ReturnSide1_0 Center: (10.26, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/TurnRoof Center: (8.85, -0.19, 10.90), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/TurnWallW Center: (7.44, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/TurnWallE Center: (10.26, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/TurnWallN Center: (8.85, -0.88, 11.51), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/TurnWeb Center: (8.85, -0.88, 10.29), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/HingedGrille Center: (8.05, 0.53, 6.23), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.96, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.86, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.75, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.65, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.54, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.43, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.33, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.23, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleHinge/Louvre Center: (8.05, 0.12, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleFrame Center: (7.47, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleFrame Center: (8.64, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_102/GrilleFrameTop Center: (8.05, 1.09, 6.08), Extents: (0.62, 0.04, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceFloor0 Center: (2.25, -0.06, 6.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceRoof0 Center: (2.25, 1.21, 6.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide-1_0 Center: (1.64, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide1_0 Center: (2.86, 0.58, 6.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceFloor1 Center: (2.25, -0.22, 6.83), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceRoof1 Center: (2.25, 1.21, 6.83), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide-1_1 Center: (1.64, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide1_1 Center: (2.86, 0.42, 6.83), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceFloor2 Center: (2.25, -0.56, 7.95), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceRoof2 Center: (2.25, 0.92, 7.95), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide-1_2 Center: (1.64, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide1_2 Center: (2.86, 0.24, 7.95), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceRoof3 Center: (2.25, 0.22, 9.45), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide-1_3 Center: (1.64, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/EntranceSide1_3 Center: (2.86, -0.47, 9.45), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/ReturnRoof0 Center: (3.85, -0.99, 8.33), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/ReturnSide-1_0 Center: (3.24, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/ReturnSide1_0 Center: (4.46, -1.68, 8.33), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/TurnRoof Center: (3.05, -0.19, 10.90), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/TurnWallW Center: (1.64, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/TurnWallE Center: (4.46, -0.88, 10.90), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/TurnWallN Center: (3.05, -0.88, 11.51), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/TurnWeb Center: (3.05, -0.88, 10.29), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/HingedGrille Center: (2.25, 0.53, 6.23), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.96, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.86, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.75, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.65, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.54, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.43, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.33, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.23, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleHinge/Louvre Center: (2.25, 0.12, 6.19), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleFrame Center: (1.67, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleFrame Center: (2.84, 0.54, 6.08), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_103/GrilleFrameTop Center: (2.25, 1.09, 6.08), Extents: (0.62, 0.04, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceFloor0 Center: (3.35, -0.06, 17.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceRoof0 Center: (3.35, 1.21, 17.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide-1_0 Center: (3.96, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide1_0 Center: (2.74, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceFloor1 Center: (3.35, -0.22, 16.58), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceRoof1 Center: (3.35, 1.21, 16.58), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide-1_1 Center: (3.96, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide1_1 Center: (2.74, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceFloor2 Center: (3.35, -0.56, 15.45), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceRoof2 Center: (3.35, 0.92, 15.45), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide-1_2 Center: (3.96, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide1_2 Center: (2.74, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceRoof3 Center: (3.35, 0.22, 13.95), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide-1_3 Center: (3.96, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/EntranceSide1_3 Center: (2.74, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/ReturnRoof0 Center: (4.95, -0.99, 15.08), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/ReturnSide-1_0 Center: (5.56, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/ReturnSide1_0 Center: (4.34, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/TurnRoof Center: (4.15, -0.19, 12.50), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/TurnWallW Center: (5.56, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/TurnWallE Center: (2.74, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/TurnWallN Center: (4.15, -0.88, 11.89), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/TurnWeb Center: (4.15, -0.88, 13.11), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/HingedGrille Center: (3.35, 0.53, 17.17), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.96, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.86, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.75, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.65, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.54, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.43, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.33, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.23, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleHinge/Louvre Center: (3.35, 0.12, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleFrame Center: (3.93, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleFrame Center: (2.76, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_104/GrilleFrameTop Center: (3.35, 1.09, 17.32), Extents: (0.62, 0.04, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceFloor0 Center: (9.15, -0.06, 17.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceRoof0 Center: (9.15, 1.21, 17.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide-1_0 Center: (9.76, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide1_0 Center: (8.54, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceFloor1 Center: (9.15, -0.22, 16.58), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceRoof1 Center: (9.15, 1.21, 16.58), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide-1_1 Center: (9.76, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide1_1 Center: (8.54, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceFloor2 Center: (9.15, -0.56, 15.45), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceRoof2 Center: (9.15, 0.92, 15.45), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide-1_2 Center: (9.76, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide1_2 Center: (8.54, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceRoof3 Center: (9.15, 0.22, 13.95), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide-1_3 Center: (9.76, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/EntranceSide1_3 Center: (8.54, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/ReturnRoof0 Center: (7.55, -0.99, 15.08), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/ReturnSide-1_0 Center: (8.16, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/ReturnSide1_0 Center: (6.94, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/TurnRoof Center: (8.35, -0.19, 12.50), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/TurnWallW Center: (9.76, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/TurnWallE Center: (6.94, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/TurnWallN Center: (8.35, -0.88, 11.89), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/TurnWeb Center: (8.35, -0.88, 13.11), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/HingedGrille Center: (9.15, 0.53, 17.17), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.96, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.86, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.75, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.65, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.54, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.43, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.33, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.23, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleHinge/Louvre Center: (9.15, 0.12, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleFrame Center: (9.73, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleFrame Center: (8.56, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_105/GrilleFrameTop Center: (9.15, 1.09, 17.32), Extents: (0.62, 0.04, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceFloor0 Center: (14.95, -0.06, 17.20), Extents: (0.55, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceRoof0 Center: (14.95, 1.21, 17.20), Extents: (0.67, 0.06, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide-1_0 Center: (15.56, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide1_0 Center: (14.34, 0.58, 17.20), Extents: (0.06, 0.70, 0.10) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceFloor1 Center: (14.95, -0.22, 16.58), Extents: (0.55, 0.22, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceRoof1 Center: (14.95, 1.21, 16.58), Extents: (0.67, 0.06, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide-1_1 Center: (15.56, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide1_1 Center: (14.34, 0.42, 16.58), Extents: (0.06, 0.85, 0.52) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceFloor2 Center: (14.95, -0.56, 15.45), Extents: (0.55, 0.24, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceRoof2 Center: (14.95, 0.92, 15.45), Extents: (0.67, 0.35, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide-1_2 Center: (15.56, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide1_2 Center: (14.34, 0.24, 15.45), Extents: (0.06, 1.04, 0.60) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceRoof3 Center: (14.95, 0.22, 13.95), Extents: (0.67, 0.47, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide-1_3 Center: (15.56, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/EntranceSide1_3 Center: (14.34, -0.47, 13.95), Extents: (0.06, 1.16, 0.90) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/ReturnRoof0 Center: (13.35, -0.99, 15.08), Extents: (0.67, 0.86, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/ReturnSide-1_0 Center: (13.96, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/ReturnSide1_0 Center: (12.74, -1.68, 15.08), Extents: (0.06, 1.55, 2.03) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/TurnRoof Center: (14.15, -0.19, 12.50), Extents: (1.35, 0.06, 0.55) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/TurnWallW Center: (15.56, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/TurnWallE Center: (12.74, -0.88, 12.50), Extents: (0.06, 0.75, 0.61) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/TurnWallN Center: (14.15, -0.88, 11.89), Extents: (1.41, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/TurnWeb Center: (14.15, -0.88, 13.11), Extents: (0.25, 0.75, 0.06) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/HingedGrille Center: (14.95, 0.53, 17.17), Extents: (0.54, 0.52, 0.02) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.96, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.86, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.75, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.65, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.54, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.43, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.33, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.23, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleHinge/Louvre Center: (14.95, 0.12, 17.21), Extents: (0.49, 0.04, 0.03) collider=NONE
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleFrame Center: (15.54, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleFrame Center: (14.37, 0.54, 17.32), Extents: (0.04, 0.54, 0.12) collider=True
+RENDER Motel_Layout_V4/05_Underground/WallVent_106/GrilleFrameTop Center: (14.95, 1.09, 17.32), Extents: (0.62, 0.04, 0.12) collider=True
+ENTRANCE 101 root=(11.60, 0.00, 0.00) yaw=0
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DoubleBed_base Center: (15.20, 0.22, 4.60), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (15.20, 0.51, 4.60), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/Headboard Center: (16.28, 0.60, 4.60), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/BedsideTable Center: (15.90, 0.30, 5.65), Extents: (0.25, 0.30, 0.22)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/BedsideTable Center: (15.90, 0.30, 3.55), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/Wardrobe Center: (11.98, 1.05, 4.30), Extents: (0.32, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DeskTop Center: (16.72, 0.75, 2.30), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DeskLeg Center: (16.72, 0.35, 2.82), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/DeskLeg Center: (16.72, 0.35, 1.78), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/ChairSeat Center: (16.05, 0.46, 2.30), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/ChairBack Center: (15.79, 0.72, 2.30), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/ShowerTray Center: (12.12, 0.04, 1.55), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/Toilet Center: (13.05, 0.23, 1.45), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Furniture/Basin Center: (11.92, 0.82, 2.55), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Bathroom/BathroomSide Center: (12.63, 1.40, 3.05), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Bathroom/BathroomFront Center: (13.60, 1.40, 2.97), Extents: (0.05, 1.40, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Bathroom/BathroomFront Center: (13.60, 1.40, 1.05), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (13.60, 2.48, 2.52), Extents: (0.05, 0.33, 0.43)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/ServiceState/Trash_1 Center: (16.40, 0.09, 2.90), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/ServiceState/Trash_2 Center: (12.45, 0.09, 4.35), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Room101Delivery Center: (15.20, 1.05, -0.28), Extents: (0.27, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Room101_Television/PowerSocket Center: (16.64, 0.85, 2.78), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Room101_Television/TuningReset Center: (16.53, 0.99, 2.03), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ReusedRoomContents/Room101_GarbageBag Center: (16.55, 0.02, 3.30), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/Room101_CorridorDoor/Hinge/DoorLeaf Center: (14.25, 1.10, -0.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/Room101_CourtyardDoor/Hinge/DoorLeaf Center: (12.60, 1.10, 6.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/RoomSafetyVolume Center: (14.40, 1.40, 3.00), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/ClosedWindowCurtain Center: (15.05, 1.78, 6.02), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/VentWindowSill/Lintel Center: (14.05, 1.18, 6.10), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room101/VentWindowSill/Sill Center: (15.40, 1.08, 6.10), Extents: (1.00, 0.23, 0.10)
+ENTRANCE 102 root=(5.80, 0.00, 0.00) yaw=0
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DoubleBed_base Center: (9.40, 0.22, 4.60), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (9.40, 0.51, 4.60), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/Headboard Center: (10.48, 0.60, 4.60), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/BedsideTable Center: (10.10, 0.30, 5.65), Extents: (0.25, 0.30, 0.22)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/BedsideTable Center: (10.10, 0.30, 3.55), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/Wardrobe Center: (6.18, 1.05, 4.30), Extents: (0.32, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DeskTop Center: (10.92, 0.75, 2.30), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DeskLeg Center: (10.92, 0.35, 2.82), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/DeskLeg Center: (10.92, 0.35, 1.78), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/ChairSeat Center: (10.25, 0.46, 2.30), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/ChairBack Center: (9.99, 0.72, 2.30), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/ShowerTray Center: (6.32, 0.04, 1.55), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/Toilet Center: (7.25, 0.23, 1.45), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Furniture/Basin Center: (6.12, 0.82, 2.55), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Bathroom/BathroomSide Center: (6.82, 1.40, 3.05), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Bathroom/BathroomFront Center: (7.80, 1.40, 2.97), Extents: (0.05, 1.40, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Bathroom/BathroomFront Center: (7.80, 1.40, 1.05), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (7.80, 2.48, 2.52), Extents: (0.05, 0.33, 0.43)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/ServiceState/Trash_1 Center: (10.60, 0.09, 2.90), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/ServiceState/Trash_2 Center: (6.65, 0.09, 4.35), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Room101Delivery Center: (9.40, 1.05, -0.28), Extents: (0.28, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Room101_Television/PowerSocket Center: (10.84, 0.85, 2.78), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Room101_Television/TuningReset Center: (10.73, 0.99, 2.03), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ReusedRoomContents/Room101_GarbageBag Center: (10.75, 0.02, 3.30), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/Room102_CorridorDoor/Hinge/DoorLeaf Center: (8.45, 1.10, -0.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/Room102_CourtyardDoor/Hinge/DoorLeaf Center: (6.80, 1.10, 6.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/RoomSafetyVolume Center: (8.60, 1.40, 3.00), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/ClosedWindowCurtain Center: (9.25, 1.78, 6.02), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/VentWindowSill/Lintel Center: (8.25, 1.18, 6.10), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room102/VentWindowSill/Sill Center: (9.60, 1.08, 6.10), Extents: (1.00, 0.23, 0.10)
+ENTRANCE 103 root=(0.00, 0.00, 0.00) yaw=0
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DoubleBed_base Center: (3.60, 0.22, 4.60), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (3.60, 0.51, 4.60), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/Headboard Center: (4.68, 0.60, 4.60), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/BedsideTable Center: (4.30, 0.30, 5.65), Extents: (0.25, 0.30, 0.22)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/BedsideTable Center: (4.30, 0.30, 3.55), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/Wardrobe Center: (0.38, 1.05, 4.30), Extents: (0.33, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DeskTop Center: (5.12, 0.75, 2.30), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DeskLeg Center: (5.12, 0.35, 2.82), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/DeskLeg Center: (5.12, 0.35, 1.78), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/ChairSeat Center: (4.45, 0.46, 2.30), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/ChairBack Center: (4.19, 0.72, 2.30), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/ShowerTray Center: (0.52, 0.04, 1.55), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/Toilet Center: (1.45, 0.23, 1.45), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Furniture/Basin Center: (0.32, 0.82, 2.55), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Bathroom/BathroomSide Center: (1.02, 1.40, 3.05), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Bathroom/BathroomFront Center: (2.00, 1.40, 2.97), Extents: (0.05, 1.40, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Bathroom/BathroomFront Center: (2.00, 1.40, 1.05), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (2.00, 2.48, 2.52), Extents: (0.05, 0.33, 0.43)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/ServiceState/Trash_1 Center: (4.80, 0.09, 2.90), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/ServiceState/Trash_2 Center: (0.85, 0.09, 4.35), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Room101Delivery Center: (3.60, 1.05, -0.28), Extents: (0.28, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Room101_Television/PowerSocket Center: (5.04, 0.85, 2.78), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Room101_Television/TuningReset Center: (4.93, 0.99, 2.03), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ReusedRoomContents/Room101_GarbageBag Center: (4.95, 0.02, 3.30), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/Room103_CorridorDoor/Hinge/DoorLeaf Center: (2.65, 1.10, -0.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/Room103_CourtyardDoor/Hinge/DoorLeaf Center: (1.00, 1.10, 6.10), Extents: (0.51, 1.08, 0.03)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/RoomSafetyVolume Center: (2.80, 1.40, 3.00), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/ClosedWindowCurtain Center: (3.45, 1.78, 6.02), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/VentWindowSill/Lintel Center: (2.45, 1.18, 6.10), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room103/VentWindowSill/Sill Center: (3.80, 1.08, 6.10), Extents: (1.00, 0.23, 0.10)
+ENTRANCE 104 root=(5.60, 0.00, 23.40) yaw=180
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DoubleBed_base Center: (2.00, 0.22, 18.80), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (2.00, 0.51, 18.80), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Headboard Center: (0.92, 0.60, 18.80), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/BedsideTable Center: (1.30, 0.30, 17.75), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/BedsideTable Center: (1.30, 0.30, 19.85), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Wardrobe Center: (5.22, 1.05, 19.10), Extents: (0.33, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DeskTop Center: (0.48, 0.75, 21.10), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DeskLeg Center: (0.48, 0.35, 20.58), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/DeskLeg Center: (0.48, 0.35, 21.62), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/ChairSeat Center: (1.15, 0.46, 21.10), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/ChairBack Center: (1.41, 0.72, 21.10), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/ShowerTray Center: (5.08, 0.04, 21.85), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Toilet Center: (4.15, 0.23, 21.95), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Furniture/Basin Center: (5.28, 0.82, 20.85), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Bathroom/BathroomSide Center: (4.58, 1.40, 20.35), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Bathroom/BathroomFront Center: (3.60, 1.40, 20.43), Extents: (0.05, 1.40, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Bathroom/BathroomFront Center: (3.60, 1.40, 22.35), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (3.60, 2.48, 20.88), Extents: (0.05, 0.33, 0.42)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/ServiceState/Trash_1 Center: (0.80, 0.09, 20.50), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/ServiceState/Trash_2 Center: (4.75, 0.09, 19.05), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Room101Delivery Center: (2.00, 1.05, 23.68), Extents: (0.28, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Room101_Television/PowerSocket Center: (0.56, 0.85, 20.62), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Room101_Television/TuningReset Center: (0.67, 0.99, 21.37), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ReusedRoomContents/Room101_GarbageBag Center: (0.65, 0.02, 20.10), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/Room104_CorridorDoor/Hinge/DoorLeaf Center: (2.95, 1.10, 23.50), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/Room104_CourtyardDoor/Hinge/DoorLeaf Center: (4.60, 1.10, 17.30), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/RoomSafetyVolume Center: (2.80, 1.40, 20.40), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/ClosedWindowCurtain Center: (2.15, 1.78, 17.38), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/VentWindowSill/Lintel Center: (3.15, 1.18, 17.30), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room104/VentWindowSill/Sill Center: (1.80, 1.08, 17.30), Extents: (1.00, 0.23, 0.10)
+ENTRANCE 105 root=(11.40, 0.00, 23.40) yaw=180
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DoubleBed_base Center: (7.80, 0.22, 18.80), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (7.80, 0.51, 18.80), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Headboard Center: (6.72, 0.60, 18.80), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/BedsideTable Center: (7.10, 0.30, 17.75), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/BedsideTable Center: (7.10, 0.30, 19.85), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Wardrobe Center: (11.02, 1.05, 19.10), Extents: (0.32, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DeskTop Center: (6.28, 0.75, 21.10), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DeskLeg Center: (6.28, 0.35, 20.58), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/DeskLeg Center: (6.28, 0.35, 21.62), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/ChairSeat Center: (6.95, 0.46, 21.10), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/ChairBack Center: (7.21, 0.72, 21.10), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/ShowerTray Center: (10.88, 0.04, 21.85), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Toilet Center: (9.95, 0.23, 21.95), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Furniture/Basin Center: (11.08, 0.82, 20.85), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Bathroom/BathroomSide Center: (10.38, 1.40, 20.35), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Bathroom/BathroomFront Center: (9.40, 1.40, 20.43), Extents: (0.05, 1.40, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Bathroom/BathroomFront Center: (9.40, 1.40, 22.35), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (9.40, 2.48, 20.88), Extents: (0.05, 0.33, 0.42)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/ServiceState/Trash_1 Center: (6.60, 0.09, 20.50), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/ServiceState/Trash_2 Center: (10.55, 0.09, 19.05), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Room101Delivery Center: (7.80, 1.05, 23.68), Extents: (0.27, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Room101_Television/PowerSocket Center: (6.36, 0.85, 20.62), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Room101_Television/TuningReset Center: (6.47, 0.99, 21.37), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ReusedRoomContents/Room101_GarbageBag Center: (6.45, 0.02, 20.10), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/Room105_CorridorDoor/Hinge/DoorLeaf Center: (8.75, 1.10, 23.50), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/Room105_CourtyardDoor/Hinge/DoorLeaf Center: (10.40, 1.10, 17.30), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/RoomSafetyVolume Center: (8.60, 1.40, 20.40), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/ClosedWindowCurtain Center: (7.95, 1.78, 17.38), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/VentWindowSill/Lintel Center: (8.95, 1.18, 17.30), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room105/VentWindowSill/Sill Center: (7.60, 1.08, 17.30), Extents: (1.00, 0.23, 0.10)
+ENTRANCE 106 root=(17.20, 0.00, 23.40) yaw=180
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DoubleBed_base Center: (13.60, 0.22, 18.80), Extents: (1.03, 0.22, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DoubleBed_mattress Center: (13.60, 0.51, 18.80), Extents: (1.03, 0.07, 0.80)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Headboard Center: (12.52, 0.60, 18.80), Extents: (0.04, 0.60, 0.85)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/BedsideTable Center: (12.90, 0.30, 17.75), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/BedsideTable Center: (12.90, 0.30, 19.85), Extents: (0.25, 0.30, 0.23)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Wardrobe Center: (16.82, 1.05, 19.10), Extents: (0.33, 1.05, 0.60)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DeskTop Center: (12.08, 0.75, 21.10), Extents: (0.30, 0.04, 0.63)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DeskLeg Center: (12.08, 0.35, 20.58), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/DeskLeg Center: (12.08, 0.35, 21.62), Extents: (0.25, 0.35, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/ChairSeat Center: (12.75, 0.46, 21.10), Extents: (0.24, 0.04, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/ChairBack Center: (13.01, 0.72, 21.10), Extents: (0.03, 0.30, 0.24)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/ShowerTray Center: (16.68, 0.04, 21.85), Extents: (0.48, 0.04, 0.48)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Toilet Center: (15.75, 0.23, 21.95), Extents: (0.35, 0.23, 0.25)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Furniture/Basin Center: (16.88, 0.82, 20.85), Extents: (0.24, 0.07, 0.33)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Bathroom/BathroomSide Center: (16.18, 1.40, 20.35), Extents: (1.03, 1.40, 0.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Bathroom/BathroomFront Center: (15.20, 1.40, 20.43), Extents: (0.05, 1.40, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Bathroom/BathroomFront Center: (15.20, 1.40, 22.35), Extents: (0.05, 1.40, 1.05)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Bathroom/BathroomDoorHeader Center: (15.20, 2.48, 20.88), Extents: (0.05, 0.33, 0.42)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/ServiceState/Trash_1 Center: (12.40, 0.09, 20.50), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/ServiceState/Trash_2 Center: (16.35, 0.09, 19.05), Extents: (0.14, 0.09, 0.16)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Room101Delivery Center: (13.60, 1.05, 23.68), Extents: (0.27, 0.04, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Room101_Television/PowerSocket Center: (12.16, 0.85, 20.62), Extents: (0.05, 0.06, 0.07)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Room101_Television/TuningReset Center: (12.28, 0.99, 21.37), Extents: (0.03, 0.04, 0.04)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ReusedRoomContents/Room101_GarbageBag Center: (12.25, 0.02, 20.10), Extents: (0.00, 0.00, 0.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/Room106_CorridorDoor/Hinge/DoorLeaf Center: (14.55, 1.10, 23.50), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/Room106_CourtyardDoor/Hinge/DoorLeaf Center: (16.20, 1.10, 17.30), Extents: (0.51, 1.08, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/RoomSafetyVolume Center: (14.40, 1.40, 20.40), Extents: (2.80, 1.40, 3.00)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/ClosedWindowCurtain Center: (13.75, 1.78, 17.38), Extents: (1.37, 0.48, 0.02)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/VentWindowSill/Lintel Center: (14.75, 1.18, 17.30), Extents: (0.35, 0.13, 0.10)
+ROOM Motel_Layout_V4/04_Gameplay/GuestRooms/Room106/VentWindowSill/Sill Center: (13.40, 1.08, 17.30), Extents: (1.00, 0.23, 0.10)
+SPEED 1.1 / 1

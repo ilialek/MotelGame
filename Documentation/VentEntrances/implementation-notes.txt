@@ -1,0 +1,41 @@
+WALL VENT ENTRANCES — implementation notes
+
+Existing scene: Assets/Game/Scenes/Motel_Layout_V4.unity
+
+Six wall grilles replace the former floor hatches. The existing VentHatch script GUID and NetworkObject identities are retained; the component now controls only a hinged leaf. E uses the existing IInteractable/PlayerInteractor path. The server validates reach, incapacitation, revision and hinge sweep occupancy. Recessed grilles additionally test their visible centre when the closest upper edge is occluded by the lintel, so opening while standing works. The optional useCenter argument defaults to false for all existing ServiceInteractionValidation callers. A replicated state contains Open, Revision, StartedAt and FromAngle. Both sides animate from synchronized NGO time over 0.55 seconds. Concurrent/repeated stale requests cannot toggle twice. A blocked closing sweep is rejected; an actor entering an active closing sweep causes it to reopen from its current angle. No input, position setter, teleport, reservation, auto-climb or movement command exists in the grille component.
+
+FirstPersonController retains WASD, mouse, crouch, sprint, gravity, collision, flashlight and pistol integration. Removed the legacy automatic ventPath traversal and cancellation. The normal movement calculation is in one private MovePlayer method, used by Update; the development route test invokes that same method with deterministic forward input in background windows. Route marker transforms in VentHatch are authoring/verification data, never consumed by production player movement. NetworkPlayer's crouch validation now relies on actual headroom instead of a hatch transit reservation.
+
+Geometry (metres, room-local coordinates)
+- Original rooms remain 5.6 x 6 m; current scene dimensions, not superseded blockout dimensions.
+- Low courtyard-wall opening: x=1.7..2.8, y=0..1.05, z=6.0..6.2, immediately beside the bed.
+- Clear passage width 1.10 m. Structural aperture height 1.05 m; the open grille/louvres sit overhead. Existing crouched capsule height 0.90 m, radius 0.30 m, eye height 0.78 m.
+- Hinge at (2.25,1.05,6.23), leaf rotates -90 degrees around local X into the ceiling recess. Closed panel 1.08 x 1.03 x 0.045 m; nine non-colliding metal louvres. Rust texture reuses PizzaDoggy metal_mp_6; no existing material asset edited.
+- Threshold z=6.1..6.3 at y=0, then first flight z=6.3..8.55 drops 0.68 m (16.82 degrees), z=8.55..10.35 drops another 0.82 m (24.49 degrees).
+- U-turn landing: 2.70 x 1.10 m at y=-1.50, z=10.35..11.45.
+- Return flight: 4.05 m horizontal run, 1.60 m drop (21.55 degrees), ending at y=-3.10, z=6.3.
+- Return flight centre x=0.65 for 101/104, x=3.85 for 102/103/105/106. This keeps the descending floors clear of the existing outer tunnels.
+- Short level bottom connection joins the unchanged attack point at local (1.6,-2.65,4.6), floor -3.10.
+- Overall approach-to-existing-network route: 15.14 m for 101/104; 16.44 m for the other rooms, including landing and connector. Sloped horizontal runs total 8.10 m; no ladder or vertical step.
+- Nominal duct clearance 1.25 m, 1.15 m beneath the entrance ceiling recess; first ceiling section provides room for the opening leaf. Main tunnels retain their original 1.30 m clearance and 1.40 m width.
+- Floor and walls 0.12 m. Closed prism MeshColliders have exact matching vertical ends; adjacent slope surfaces have no artificial steps.
+- Necessary low exterior service housing: approximately 1.34 x 3.96 m at each courtyard wall, maximum height 1.27 m. Original courtyard slab is retained inactive; replacement ground pieces meet the housing and cover the buried lower sections. A local carving NavMeshObstacle excludes each housing from guest routes; the original baked NavMesh asset is unchanged.
+- Existing hidden pocket caps remain clear. Two gentler/steeper first-flight sections avoid intersecting the Mimic pockets; landing floor remains 0.06 m above the original tunnel roof exterior.
+
+Scene changes
+- Restored all six original room floors, removed FloorAroundHatch pieces, old covers, buttons, shaft walls, ladders and floor-hole NavMeshObstacles.
+- Closed only the former hatch openings in the underground roof; retained the four Mimic holes.
+- Cut wall apertures, raised the six courtyard window sills from 0.85 to 1.30 m, shortened matching curtains; beds/wardrobes/desks/bathrooms unchanged.
+- Relocated only Trash_2 in each room to local (0.85,0.09,4.35) to clear the grille approach. All cleaning components/references retained.
+- Added six ramp assemblies and surgically opened their bottom connections in existing shell panels.
+- Attack node transforms, graph neighbours, sectors, hidden anchors/bends, room volumes and Mimic settings unchanged. Updated only each attack node's room-side landing and mouth references.
+- Existing lights, existing renderer components, room doors, lobby, reception, furniture other than the six trash props, parking and landscaping preserved. Unity's ExecuteAlways text materials null their serialized fallback references on save; restored the 66 original fallback font references to avoid unrelated serialized renderer changes.
+
+Authoring / future maintenance
+- VentEntranceSetup performs a one-shot migration guarded against reapplying it to the migrated scene. The previous floor-hatch refinement is retired. Use the backed-up scene to reproduce migration; do not rerun legacy Install on the active level.
+- Existing UndergroundSetup validation/build workflow calls the new physical-route validator. Builds go to a separate VentEntranceFinal folder and are promoted to UndergroundCandidate only after verification.
+- Online compatibility string is motel-underground-2 because the scene component's replicated state changed. No transport or Relay logic changed; all participants need this version.
+- No packages installed; no networking framework, gameplay system, Mimic change, new lighting or Git commit.
+
+Rollback
+For an immediate playable rollback, launch Builds/UndergroundBeforeWallVents_20261031/LaunchWindowed.command (same app also retained in the BeforeWallVents backup). To roll back the Unity project, close Play Mode/Editor; restore the modified pre-existing C# files and Motel_Layout_V4.unity from the backup, remove the newly added Assets/Game/Editor/VentEntranceSetup.cs and its .meta, and optionally remove only Assets/Game/Geometry/VentEntrances/ plus its .meta. Do not delete the parent Geometry folder or unrelated files. The list of modified-files.txt identifies the existing scripts; all are backed up under their original relative paths. Refresh Unity after restoring. Packages, settings, prefabs and the baked NavMesh were not changed and need no rollback.

@@ -1,0 +1,27 @@
+PASS Six configured cases, three photographs, two workstations and seven registered NPC slots
+PASS Wade Mercer 
+PASS Wade Mercer actual 480x320 photo / point filtering
+PASS Ellis Boone 
+PASS Ellis Boone actual 480x320 photo / point filtering
+PASS Jonah Voss 
+PASS Jonah Voss actual 480x320 photo / point filtering
+PASS Sam Ortiz 
+PASS Martin Cole 
+PASS Roy Keller 
+PASS No active baggage scanner, bag, dialogue or debug interaction
+PASS Two registration/RoadWatch panels and ten CCTV feeds
+PASS Guest_A appearance and parked vehicle
+PASS Guest_A vehicle arrival -> reception public route
+PASS Guest_B appearance and parked vehicle
+PASS Guest_B vehicle arrival -> reception public route
+PASS Guest_C appearance and parked vehicle
+PASS Guest_C vehicle arrival -> reception public route
+PASS Guest_D appearance and parked vehicle
+PASS Guest_D vehicle arrival -> reception public route
+PASS Guest_E appearance and parked vehicle
+PASS Guest_E vehicle arrival -> reception public route
+PASS Guest_F appearance and parked vehicle
+PASS Guest_F vehicle arrival -> reception public route
+PASS Guest_G appearance and parked vehicle
+PASS Guest_G vehicle arrival -> reception public route
+PASS 80 randomized agendas: unique cases, floor/ceil half reports, distributed pairs

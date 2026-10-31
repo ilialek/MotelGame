@@ -47,10 +47,11 @@ namespace MotelGame.Horror
         [SerializeField, Min(.1f)]
         float shotInterval = .45f;
         readonly NetworkVariable<EquipmentSnapshot> state = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-        Renderer[] fins;
+        Renderer[] fins,allRenderers;bool undergroundVisual;
         MaterialPropertyBlock heatColor;
         void Awake()
         {
+            allRenderers=visual.GetComponentsInChildren<Renderer>(true);
             fins = visual.GetComponentsInChildren<Renderer>(true).Where(r => r.name == "HeatingFin").ToArray();
             heatColor = new MaterialPropertyBlock();
         }
@@ -135,7 +136,7 @@ namespace MotelGame.Horror
                 return;
             if (!Floor(requested, out var floor))
                 return;
-            Vector3 eye = c.PlayerObject.transform.position + Vector3.up * 1.65f;
+            Vector3 eye = c.PlayerObject.transform.position + Vector3.up * c.PlayerObject.GetComponent<FirstPersonController>().EyeHeight;
             if (Physics.RaycastAll(eye, (floor - eye).normalized, Vector3.Distance(eye, floor) - .12f, ~0, QueryTriggerInteraction.Ignore).Any(h => !h.collider.transform.IsChildOf(c.PlayerObject.transform) && !h.collider.transform.IsChildOf(transform)))
                 return;
             Release(floor, true);
@@ -275,6 +276,7 @@ namespace MotelGame.Horror
         void Apply()
         {
             pickup.enabled = !State.Held;
+            bool below=visual.position.y<-.5f;if(below!=undergroundVisual){undergroundVisual=below;foreach(var r in allRenderers)r.renderingLayerMask=below?2u:1u;}
             if (item == ServiceItem.ThermalDecoy)
             {
                 heatColor.SetColor("_EmissionColor", IsHeating ? new Color(3, .7f, .06f) : Color.black);
@@ -286,7 +288,7 @@ namespace MotelGame.Horror
             if (State.Held && NetworkManager.SpawnManager.SpawnedObjects.Values.FirstOrDefault(o => o.IsPlayerObject && o.OwnerClientId == State.Holder)is NetworkObject player)
             {
                 var camera = player.GetComponentInChildren<Camera>(true).transform;
-                Vector3 offset = item == ServiceItem.Firearm ? new Vector3(.24f, -.22f, .48f) : new Vector3(.2f, -.43f, .6f);
+                Vector3 offset = item == ServiceItem.Firearm ? new Vector3(.18f, -.18f, .3f) : new Vector3(.2f, -.43f, .6f);
                 visual.SetPositionAndRotation(camera.TransformPoint(offset), camera.rotation);
             }
             else
@@ -298,9 +300,15 @@ namespace MotelGame.Horror
         {
             if (!LocallyHeld || NetworkManager.LocalClient?.PlayerObject?.GetComponent<PlayerInteractor>().MenuOpen == true)
                 return;
-            GUI.Box(new Rect(Screen.width / 2 - 190, Screen.height - 48, 380, 30), item == ServiceItem.Firearm ? "PISTOL · LMB fire · G place · 3 hits to kill" : "THERMAL DECOY · G place near a vent · E retrieve");
-            if (item == ServiceItem.Firearm && Cursor.lockState == CursorLockMode.Locked)
-                GUI.Label(new Rect(Screen.width / 2 - 4, Screen.height / 2 - 10, 20, 20), "+");
+            var previous=GUI.matrix;float scale=Mathf.Min(Screen.width/900f,Screen.height/600f);
+            GUI.matrix=Matrix4x4.Scale(new Vector3(scale,scale,1));
+            try
+            {
+                float w=Screen.width/scale,h=Screen.height/scale;
+                GUI.Box(new Rect(w/2-260,h-48,520,30),item==ServiceItem.Firearm?"PISTOL · LMB fire · G place · F flashlight · Ctrl crouch":"THERMAL DECOY · inactive legacy item");
+                if(item==ServiceItem.Firearm&&Cursor.lockState==CursorLockMode.Locked)GUI.Label(new Rect(w/2-4,h/2-10,20,20),"+");
+            }
+            finally{GUI.matrix=previous;}
         }
 
         public bool ConfigurationValid() => home != null && visual != null && pickup != null && (item == ServiceItem.ThermalDecoy || gunshot != null && flash != null);

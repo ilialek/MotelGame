@@ -32,13 +32,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Camera equipment and padding. It includes a stabilizer.
-  weightAnswer: About thirteen kilos with the suitcase.
-  metalAnswer: Some metal brackets and lenses, not a full metal tool kit.
-  packingAnswer: The battery is removed and the transport pin locks the moving stage
+  contentsAnswer: Camera gear for a property survey. It includes a stabilizer; I
+    have the travel checklist.
+  weightAnswer: Thirteen kilos, case included. I weighed it before leaving.
+  metalAnswer: Brackets, lenses, the usual. Not a case full of metal.
+  packingAnswer: Battery removed. Transport pin fitted. The moving stage is locked
     solid.
-  responseAnswer: It cannot move by itself while pinned. A small vibration is just
-    the foam.
-  authorReasoning: Plausible technically true cover story. Packing follow-up asserts
-    a locked stage; opposing tilt response and delayed sizable movement contradict
-    that. Compare innocent powered rig, whose explanation differs.
+  responseAnswer: Foam can tremble, but that locked stage cannot pull back after
+    a push.
+  authorReasoning: 'Carrier: 12.9 kg and moderate metal fit. The explicit locked/unpowered
+    explanation contradicts a clear delayed corrective pulse. Same broad response
+    as innocent case 08, different packing claim.'

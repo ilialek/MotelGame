@@ -1,0 +1,5 @@
+PASS 2026-10-28T11:57:49.104869
+Candidate copied to Builds/Playtest/MotelGame.app; all 340 file hashes match.
+Launchers, existing Windows files, Packages and ProjectSettings match their original hashes.
+Original working build retained at /Users/ilalekomtsev/MotelGame/Backups/BeforeRefinementM161_20261028_105326/Playtest/MotelGame.app
+Post-copy stable Host/Client test PASS: refusal-20261028-115919; temporary swap copy removed after matching permanent backup.

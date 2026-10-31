@@ -32,12 +32,12 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: A camera stabilizer with a battery fitted, wrapped in pads.
-  weightAnswer: Just under nine kilos including the suitcase.
-  metalAnswer: The metal frame, camera and battery account for a moderate reading.
-  packingAnswer: The rig is powered. I forgot the transport lock, so it tries to
-    stay centered.
-  responseAnswer: It can correct against a tilt and move after a short delay. I should
-    have turned it off.
-  authorReasoning: Innocent powered counterbalance. Mass and metal agree; the guest
-    admits power and unlocked mechanism. Counter-motion alone is not conclusive.
+  contentsAnswer: Camera stabilizer and its battery. Twelve hours shooting a wedding.
+    I am done.
+  weightAnswer: A little under nine kilos, including the case.
+  metalAnswer: Frame, camera and battery. Some metal, plenty of padding.
+  packingAnswer: Wait, the power light was still on. And I forgot the travel lock.
+  responseAnswer: The motors try to correct a push. That is my fault; it should have
+    been switched off.
+  authorReasoning: 'Innocent active load: 8.9 kg, moderate metal, delayed corrective
+    pulse agree with the admitted powered unlocked rig. Compare case 12.'

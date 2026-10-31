@@ -32,11 +32,11 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Laundry and a sealed water jug for my camping trip.
-  weightAnswer: About ten kilos; most of it is water.
-  metalAnswer: Plastic bottles and fabric. Very little metal apart from the zip.
-  packingAnswer: The jug is strapped down, but water can move inside.
-  responseAnswer: A slosh after shaking. It will settle back when the platform is
-    level.
-  authorReasoning: 'Liquid response is innocent: downhill offset under tilt, level
-    balance recovers, long decay. Claims acknowledge liquid.'
+  contentsAnswer: The campsite flooded. Laundry and our water jug. I would really
+    like a shower.
+  weightAnswer: Around ten kilos. The jug is still mostly full.
+  metalAnswer: A zip and a few fittings. The jug is plastic.
+  packingAnswer: The jug cannot slide, but the water inside can.
+  responseAnswer: That is the water sloshing. It takes a few seconds to settle.
+  authorReasoning: 'Innocent: 9.8 kg, low metal, immediate sustained movement. The
+    guest supplies a plausible liquid explanation before the pulse.'

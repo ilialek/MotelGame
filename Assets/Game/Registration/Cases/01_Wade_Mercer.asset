@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 01_Wade_Mercer
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Wade Mercer
+  firstName: Wade
+  lastName: Mercer
+  dateOfBirth: 14 MAR 1967
+  portrait: {fileID: 2800000, guid: c03cc2ab560174c7fa60a8e7db28f627, type: 3}
+  bookingFirstName: Wade
+  bookingLastName: Mercer
+  checkInDate: 27 OCT 2002
+  requestedRoom: 101
+  expectedGuests: 1
+  bookingNote: Late arrival. Wildlife depot appointment at 06:00. Please keep room
+    until midnight.
+  countQuestion: 
+  noteQuestion: Your note mentions the wildlife depot at six. What happened?
+  holderQuestion: 
+  countAnswer: 
+  noteAnswer: I hit a deer on Pine Cut. Dispatch asked me to bring it in, but the
+    depot is closed until morning. I have it covered in the trunk.
+  holderAnswer: 
+  appearance: 1
+  clothing: {r: 0.30588236, g: 0.39607844, b: 0.28627452, a: 1}
+  vehicleKind: 0
+  vehicleColor: {r: 0.34509805, g: 0.17254902, b: 0.20784314, a: 1}
+  actualPlate: KDH-417
+  vehicleDescription: Yes. Burgundy sedan, the old one with the square lights.
+  hasReservation: 1
+  reservationEntry: Wade Mercer / tonight / one room
+  nameAnswer: Wade Mercer.
+  reservationAnswer: Yes. I have a booking for tonight.
+  drivingAnswer: Yes. Burgundy sedan, the old one with the square lights.
+  plateAnswer: KDH-417. It's parked outside.
+  originAnswer: Pine Cut Road. I hit a deer just beyond the logging turnoff.
+  purposeAnswer: The wildlife depot is closed. I need to stay until it opens at six.
+  claimedPlate: KDH-417
+  hasReport: 1
+  report:
+    headline: Blood trail at Pine Cut turnout
+    location: Pine Cut Road / logging turnoff
+    eventTime: "October 27 \xB7 21:42"
+    source: County road patrol / submitted camera image
+    description: A man was seen beside a burgundy sedan with its trunk open. Blood
+      dripped onto the turnout beneath a covered load; a warning triangle stood behind
+      the vehicle. Wildlife dispatch confirms a deer collision was called in from
+      this stretch of road.
+    photograph: {fileID: 2800000, guid: 11d8ddac9b76a43ae8f2904ef4566d9b, type: 3}
+  followUpQuestion: Why is blood running out of your trunk in this photograph?
+  followUpAnswer: I called county wildlife. Their officer asked me to bring the deer
+    to the depot. The tarp tore. You can see its antler by the open lid.
+  disguisedMimic: 0
+  disguiseSeconds: 45
+  authorReasoning: 'Human. Blood/open trunk is suspicious; booking, note answer,
+    report dispatch call and visible antler agree. Admit: ordinary stay; refuse:
+    lost stay.'

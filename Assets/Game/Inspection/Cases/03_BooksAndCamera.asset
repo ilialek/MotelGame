@@ -40,10 +40,11 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Several books, a camera and a spare shirt.
-  weightAnswer: Around nine kilos. The books are most of it.
-  metalAnswer: An old metal-bodied camera, wrapped between the books.
-  packingAnswer: Tightly packed; nothing should roll.
-  responseAnswer: No battery motor or loose mechanism. A small dull impact is possible.
-  authorReasoning: 9.2 kg and modest metal response fit a metal camera among heavier
-    books; fixed balanced load.
+  contentsAnswer: Books from my father, and his old camera. I could not bring myself
+    to leave either behind.
+  weightAnswer: Nine kilos, give or take. Books are heavier than they look.
+  metalAnswer: The camera body is metal. It is wrapped in a shirt between the books.
+  packingAnswer: Packed solid. There is not room for anything to roll around.
+  responseAnswer: A dull tap would make sense. The camera is off and wedged in place.
+  authorReasoning: 'Innocent: 9.2 kg, modest metal, no substantial pulse movement.
+    No equipment specification knowledge needed.'

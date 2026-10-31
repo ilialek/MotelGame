@@ -1,0 +1,89 @@
+Motel Game — Gameplay, Ventilation & Reception UX Refinement
+Unity 6000.3.19f1 / URP / NGO 2.13.3 / Unity Transport 2.7.4
+Сцена: Assets/Game/Scenes/Motel_Layout_V4.unity
+Сетевая версия: motel-refinement-1. Для совместной игры нужны одинаковые версии.
+
+Результат реализации
+
+1. Двери и решётки. Animated leaf оставлен как interaction trigger. Отдельный неподвижный ClosedPassageBlocker закрывает только исходный дверной проём. Сервер синхронизирует блокировку; перед включением проверяются игроки и NPC, включая логические капсулы удалённых игроков. При закрывании через игрока блокировка откладывается до освобождения проёма. Сохранены RPC, проверки дистанции, ownership и резервация двери для NPC.
+
+2. Входы 101–106. Одна прямая рампа на каждый номер: уклон 35°, перепад 3.10 м, горизонтальная проекция 4.427 м, длина по склону около 5.40 м, чистая ширина 1.10 м. Вертикальный просвет порядка 1.15–1.30 м, в зависимости от участка. От подхода внутри номера до главного тоннеля около 7.19–7.50 м. Основная сеть из 20 узлов, её размеры, петли и скрытые пути сохранены. Решётки открываются непосредственно по E, без автоматического перемещения игрока.
+
+3. Пересечение земли. Источник дефекта — ForestGround_Backdrop (большой render-only куб 80×0.2×90 м), а также затронутые участки пола двора. Вместо сплошной поверхности созданы сегментированные меши с локальными вырезами по полному наклонному объёму каждой рампы. Сохранены участки выше крыши и ниже пола тоннеля. Исходные объекты оставлены выключенными для отката; замена покрывает их прежнюю площадь вне вырезов. Исходный backdrop не имел Collider; его замена сохраняет это свойство. У пола двора MeshCollider соответствует видимому мешу. UV новых частей сохраняют исходную проекцию текстуры.
+
+4. Локальные изменения подходов. Входы 103/106 смещены к свободной стороне комнаты, чтобы не пересекать боковые тоннели и скрытые выходы. В этих двух номерах передвинуты только две передние BedsideTable к другому концу кровати; остальные кровати, столы, шкафы, мебель lobby, reception и parking сохранены. Новая NavMesh хранится отдельно в Motel_Refinement_NavMesh.asset. Сохранены персональные области номеров и служебная область 9 для Storage/Maintenance. Воксель 0.025 м нужен для корректного прохода возле существующего изголовья; радиус агента 0.4 м не уменьшался.
+
+5. Управление. Left Ctrl теперь удерживается. После отпускания под низким потолком игрок остаётся пригнувшимся и автоматически встаёт при достаточном просвете. Локальная проверка свободного пространства предотвращает поток неудачных запросов вставания. WASD, walk 4 м/с, sprint 6 м/с и crouch 1.7 м/с сохранены.
+
+6. Фонарик. Inspector-параметры в NetworkPlayer.Exploration: intensity 12, range 14 м, spotAngle 70°, innerSpotAngle 42°. Изменена только настройка фонарика игрока; существующее освещение уровня сохранено.
+
+7. Mimic. ductSpeed 0.75 м/с; retreatSpeed 0.9 м/с. Остальные фазы и правила охоты сохранены. При переходе Emerging → ActiveHunt отправляется один общий аудиосигнал и HUD-уведомление UNDERGROUND ACTIVITY. Значительные обычные события движения и ложные сигналы используют ту же подачу с ограничением частоты. Звук не сообщает точную позицию, номер комнаты или цель.
+
+8. Reception. Поддерживаемые существующим GuestCase поля Reservations показывают контекстную подсказку; обработчик клика сразу вызывает существующий вопрос без отдельной кнопки подтверждения. Сервер не принимает новую реплику, пока гость говорит; повтор ответа обновляет прежнюю запись, не дублирует её. Текст полей остаётся читаемым во время ответа. Кнопки используют общие стили. Субтитры рисуются владельцем камеры снизу игрового окна, за пределами монитора; камера компьютера оставляет для них отдельную полосу. Контент диалогов, Reservations и RoadWatch не переписывался.
+
+9. Parking. Сервер выбирает случайное свободное валидное место. ID места реплицируется; маршрут машины, фактическая точка выхода/посадки водителя, ответ гостя, номерной знак и выбранная камера соответствуют этому месту. Резервация освобождается после физического выезда автомобиля. Слот погибшего/раскрытого гостя сохраняется, пока его машина остаётся припаркованной, либо до сброса смены.
+
+Сохранность
+Исходные материалы, освещение, Packages и ProjectSettings не изменены. Стабильные приложения и прежние LaunchWindowed.command сохранены. Git commit/push/merge не выполнялись. Проверка SHA-256 исходных файлов записана в preservation.json; изменения Finder .DS_Store отмечены отдельно.
+Резервная копия проекта и прежней стабильной сборки:
+/Users/ilalekomtsev/MotelGame/Backups/BeforeGameplayRefinement_20261031_132249
+
+Фактически выполненные проверки
+
+- Компиляция C# и нативная сборка Unity: 0 ошибок. Одно предупреждение: символы отладки не загружены в Unity Cloud Diagnostics (403 / credentials unavailable). Это не ошибка игрового Player; локальные символы сохранены рядом со сборкой.
+- Нативная проверка сцены: нет missing scripts / broken serialized references; проверены шесть номеров, NPC, двери, основные и скрытые тоннели, капсульные зазоры, поддержка пола и отсутствие render-only земли внутри проходов. Служебные области Storage/Maintenance исключены из публичных маршрутов.
+- Реальные отдельные Player-процессы Host/Client и поздний третий клиент, с программно управляемыми тестовыми действиями. Все итоговые акторы завершились PASS, 0 critical runtime logs.
+- Underground routes: все шесть рамп физически пройдены CharacterController вверх и вниз; стоящий игрок открывает решётку; удержание Ctrl, безопасное отпускание и автоматическое вставание; no displacement у двери; закрывание через игрока с отложенной блокировкой; повторные одновременные запросы; клиентский маршрут 106 → 105; поздний join и disconnect. Визуально просмотрены кадры от первого лица входа/выхода всех шести рамп — прежней пересекающей поверхности земли не видно.
+- UI: оба физических компьютера, 800×600, 1280×720, 1920×1200, 2560×1080, последовательное изменение размеров во время работы. Проверены проекция всех углов внутрь монитора, 40 screenshots, hover через синтетическую позицию IMGUI, реальный обработчик вопроса/RPC, запрет повторной реплики, отдельные субтитры, восстановление FOV при выходе. Просмотрены representative screenshots всех четырёх размеров. Нативный клик мышью ОС НЕ автоматизирован: проверка обработчика не заменяет ручной клик в Editor.
+- Registration: все шесть существующих случаев, три RoadWatch report с photograph, ответы двух сотрудников, защита workstation lease, отказ против конфликтующего admission, отсутствие дубликатов, реальный выезд машины и сброс ParkingSlot, late join.
+- Service: семь заселений/выселений/полных циклов уборки и удаления мусора; все шесть номеров, Room 101 дважды без перезапуска. Полотенца, ремонт TV, электричество Room 105, физические маршруты гостей, summary и нормальный запуск следующей смены.
+- Hunt: шесть одновременных занятых парковок P05/P06/P03/P02/P04/P07 без дублей; реальное появление и один alert, AudioSource.isPlaying; атака и смерть ненаблюдаемого гостя, физический уход в скрытую сеть; защита гостя присутствием/наблюдением; реальный пистолет Client, урон и смерть после трёх попаданий, защитная задержка, следующий Mimic только после устранения предыдущего, late join, reset. Субъективная слышимость и баланс остаются ручной оценкой.
+- Private lobby / Unity Relay: Host, Client и поздний клиент действительно подключались через Relay; движущаяся машина синхронизировалась, останавливалась перед удалённым игроком, продолжала путь, парковалась, доставляла гостя к reception; disconnect и cleanup прошли. Один более ранний запуск не завершился из-за сетевого сбоя авторизации третьего профиля; повтор с отдельным тестовым профилем прошёл. Это проверка трёх процессов на одном Mac через Relay, не проверка двух удалённых физических компьютеров.
+- macOS bundle universal arm64/x86_64: фактически запускалась нативная архитектура этого Mac. Проверены подписи bundle (codesign), Info.plist, наличие файлов и SHA-256 до/после перемещения. Windows и Intel-исполнение в этом milestone не проверялись и не обновлялись.
+
+В процессе проверки найден и исправлен пропуск служебных NavMesh-областей: без них NPC выбирали Storage как сокращение пути. Ошибки тестовых условий (неактивный седьмой NPC, клиентское сглаживание машины, позиции двух игроков у решётки) исправлены отдельно от игровой логики. Промежуточные неуспешные отчёты сохранены для истории, итоговые прогоны перечислены ниже.
+
+Итоговые прогоны:
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/underground-routes-20261031-143836
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/ui-20261031-144235
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/registration-20261031-144259
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/service-20261031-144915
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/underground-hunt-20261031-145637
+/Users/ilalekomtsev/MotelGame/Documentation/GameplayRefinement/Tests/relay-vehicles-20261031-150022
+
+Запуск
+
+/Users/ilalekomtsev/MotelGame/Builds/GameplayRefinement/LaunchWindowed.command
+Приложение: /Users/ilalekomtsev/MotelGame/Builds/GameplayRefinement/MotelGame.app
+Launcher открывает новое окно 800×600; его можно запустить дважды. Для локального теста используйте существующий LAN/Local режим: Host в первом окне, Client на 127.0.0.1 во втором. Для private online lobby создайте сессию, передайте её код второму игроку и начните игру после подключения. На обоих концах нужна новая версия motel-refinement-1.
+В Unity: открыть Motel_Layout_V4.unity, нажать Play и запустить Host. E — взаимодействие с решёткой; Left Ctrl нужно удерживать. F — фонарик. На reception наведите мышь на поддерживаемое вопросом поле и нажмите его; повторный клик во время ответа не должен запускать вторую реплику.
+
+Оставшаяся ручная проверка: нативная мышь в Editor Game View и ощущения от управления; субъективная яркость фонарика, громкость оповещения и сложность погони. Визуальные снимки и сетевые проверки выполнялись в standalone Player; ручной Play Mode в Editor через управление окном недоступен.
+
+Откат
+Готовую предыдущую версию можно запустить напрямую из Builds/UndergroundCandidate/LaunchWindowed.command. Она сохранена побайтово. Для отката исходного проекта закройте Unity, восстановите изменённые файлы из Backups/BeforeGameplayRefinement_20261031_132249 и уберите добавленные файлы из Assets согласно changed-files.json в отдельную папку. Не смешивайте новые C#-файлы со старой версией зависимостей.
+
+Изменённые существующие файлы:
+Assets/Game/Scripts/FirstPersonController.cs
+Assets/Game/Scripts/Interactions/NetworkDoor.cs
+Assets/Game/Scripts/Interactions/PlayerInteractor.cs
+Assets/Game/Scripts/Registration/RegistrationPanel.cs
+Assets/Game/Scripts/Registration/RegisteredGuest.cs
+Assets/Game/Scripts/Registration/GuestVehicleJourney.cs
+Assets/Game/Scripts/Networking/OnlineSessionController.cs
+Assets/Game/Scripts/Networking/NetworkPlayer.Exploration.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Registration.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Underground.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Vehicles.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs
+Assets/Game/Scripts/Networking/Tests/UndergroundUiVerification.cs
+Assets/Game/Scripts/Horror/MimicHunt.cs
+Assets/Game/Scripts/Horror/VentHatch.cs
+Assets/Game/Scripts/Horror/VentSurveillance.cs
+Assets/Game/Scripts/Service/ServiceInteractionValidation.cs
+Assets/Game/Scripts/Service/GuestLifecycle.cs
+Assets/Game/Scripts/Service/ReceptionComputer.cs
+Assets/Game/Editor/VentEntranceSetup.cs
+Assets/Game/Scenes/Motel_Layout_V4.unity
+
+Добавлены: PassageBlocker.cs, ComputerUiStyles.cs, GuestDialogueSubtitles.cs, GameplayRefinementSetup и его части; Audio/UndergroundActivity.wav; Navigation/Motel_Refinement_NavMesh.asset; сгенерированные Geometry/StraightVentEntrances и соответствующие .meta. Полный пофайловый список — changed-files.json; source-hashes.json и verification.json содержат контрольные суммы.

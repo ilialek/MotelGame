@@ -1,0 +1,3 @@
+System.Exception: Candidate build failed
+  at MotelGame.Editor.GameplayRefinementSetup.Build () [0x00147] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/GameplayRefinementSetup.Validation.cs:74 
+  at MotelGame.Editor.GameplayRefinementSetup.Poll () [0x00115] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/GameplayRefinementSetup.cs:28 

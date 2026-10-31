@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 07_Roy_Keller
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Roy Keller
+  firstName: Roy
+  lastName: Keller
+  dateOfBirth: 30 APR 1970
+  portrait: {fileID: 2800000, guid: 0e3de2dc07f0443ddba33d314e094bb3, type: 3}
+  bookingFirstName: Ray
+  bookingLastName: Keller
+  checkInDate: 27 OCT 2002
+  requestedRoom: 106
+  expectedGuests: 2
+  bookingNote: Roy Keller + Arthur. Mill Road boiler installation. Arriving together.
+  countQuestion: Your reservation lists Arthur as a second guest. Is he joining you?
+  noteQuestion: The note says a boiler installation on Mill Road. Is that your job?
+  holderQuestion: The booking holder is Ray, but your license says Roy. Which name
+    is correct?
+  countAnswer: There is no Arthur. I always work alone. I'm a night security guard,
+    not a boiler installer.
+  noteAnswer: No installation. Night security. I wrote that booking myself and I
+    never mentioned a coworker.
+  holderAnswer: Ray. My license says Ray Keller. Read it again; it's the same name.
+  appearance: 0
+  clothing: {r: 0.2, g: 0.21176471, b: 0.21960784, a: 1}
+  vehicleKind: 0
+  vehicleColor: {r: 0.14509805, g: 0.1764706, b: 0.20392157, a: 1}
+  actualPlate: WQN-701
+  vehicleDescription: Black sedan. I parked outside.
+  hasReservation: 1
+  reservationEntry: Roy Keller / tonight / one room
+  nameAnswer: Roy Keller.
+  reservationAnswer: Yes. I have a booking for tonight.
+  drivingAnswer: Black sedan. I parked outside.
+  plateAnswer: WQN-701.
+  originAnswer: The warehouse on Mill Road. I drove alone.
+  purposeAnswer: A room until morning. Nothing else.
+  claimedPlate: WQN-701
+  hasReport: 0
+  report:
+    headline: 
+    location: 
+    eventTime: 
+    source: 
+    description: 
+    photograph: {fileID: 0}
+  followUpQuestion: 
+  followUpAnswer: 
+  disguisedMimic: 1
+  disguiseSeconds: 45
+  authorReasoning: 'Mimic without report. Must ask booking fields: denies the visibly
+    printed license name, denies his own note and coworker, changes profession. Human
+    Sam has an explained name variation, Ellis an explained count change, so mismatch
+    alone is not the rule. Admit: existing delayed infiltration/hunt; refuse: leaves
+    safely.'

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using MotelGame.Service;
@@ -45,7 +46,7 @@ namespace MotelGame.Horror
                 return;
             }
 
-            if (FindFirstObjectByType<ReceptionComputer>().LocalOpen || FindFirstObjectByType<AnalyzerPanel>().LocalOpen)
+            if (FindObjectsByType<ReceptionComputer>(FindObjectsSortMode.None).Any(c => c.LocalOpen) || FindFirstObjectByType<AnalyzerPanel>().LocalOpen)
                 return;
             open = true;
             hunt.NetworkManager.LocalClient.PlayerObject.GetComponent<PlayerInteractor>().MenuOpen = true;
@@ -111,14 +112,15 @@ namespace MotelGame.Horror
                         carrierIndex = i;
                 }
 
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < hunt.Nodes.Length; i++)
+                    if(hunt.Nodes[i].room!=null)
                     if (GUILayout.Button((i == nodeIndex ? "> " : "") + "Manual start: Room " + hunt.Nodes[i].room.RoomNumber))
                         nodeIndex = i;
                 GUI.enabled = !hunt.State.Active && guests[carrierIndex].Alive && hunt.Shift.IsRunning;
                 if (GUILayout.Button("Manual activation — selected guest protected"))
                     hunt.ActivateOnServer(nodeIndex, guests[carrierIndex]);
                 GUI.enabled = true;
-                if (GUILayout.Button("Harmless fan complaint — Room 104"))
+                if (GUILayout.Button("Harmless fan complaint — the configured fan room"))
                     hunt.HarmlessComplaintOnServer();
                 if (GUILayout.Button("Reset threat and equipment only"))
                     hunt.ResetOnServer();

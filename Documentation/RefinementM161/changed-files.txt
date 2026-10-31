@@ -1,0 +1,45 @@
+Compared with the pre-M16.1 backup (not Git baseline).
+
+CHANGED
+Assets/Game/Editor/MotelLayoutV4.Architecture.cs
+Assets/Game/Editor/MotelLayoutV4.Gameplay.cs
+Assets/Game/Inspection/Cases/01_ClothesWeekend.asset
+Assets/Game/Inspection/Cases/02_MechanicTools.asset
+Assets/Game/Inspection/Cases/03_BooksAndCamera.asset
+Assets/Game/Inspection/Cases/04_WaterAndLaundry.asset
+Assets/Game/Inspection/Cases/05_ForgottenTripod.asset
+Assets/Game/Inspection/Cases/06_PrivateWeights.asset
+Assets/Game/Inspection/Cases/07_WoundMusicMechanism.asset
+Assets/Game/Inspection/Cases/08_PoweredCameraRig.asset
+Assets/Game/Inspection/Cases/09_LightClothesCarrier.asset
+Assets/Game/Inspection/Cases/10_FalseToolboxCarrier.asset
+Assets/Game/Inspection/Cases/11_UnsecuredRadioCarrier.asset
+Assets/Game/Inspection/Cases/12_LockedGimbalCarrier.asset
+Assets/Game/Inspection/Cases/13_StaticSamplesCarrier.asset
+Assets/Game/Inspection/Cases/14_PackedBatteryCarrier.asset
+Assets/Game/Inspection/Editor/Cases.json
+Assets/Game/Navigation/Motel_Layout_V4_NavMesh.asset
+Assets/Game/Scenes/Motel_Layout_V4.unity
+Assets/Game/Scripts/Inspection/AnalyzerPanel.cs
+Assets/Game/Scripts/Inspection/BaggageInspection.cs
+Assets/Game/Scripts/Networking/OnlineSessionController.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs
+Assets/Game/Scripts/Service/GuestServiceRequests.cs
+Assets/Game/Scripts/Service/NightShiftController.cs
+Assets/Game/Scripts/Service/ReceptionComputer.cs
+Assets/Game/Scripts/Service/ServiceRoom.cs
+
+NEW
+Assets/Game/Editor/MotelLayoutV4.Refinement.cs
+Assets/Game/Editor/MotelLayoutV4.Refinement.cs.meta
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Refinement.cs
+Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Refinement.cs.meta
+
+GENERATED REPORTS / BUILD
+Documentation/LevelM16/room101-nav-grid.txt
+Documentation/LevelM16/validation-passed.txt
+Documentation/LevelM16/scene-validation.txt
+Documentation/LevelM16/candidate-build.txt
+Documentation/RefinementM161/** (reports, captures, test transcripts, run scripts)
+Builds/Playtest/MotelGame.app/** (verified macOS application)
+Builds/Validation/MotelGame.app/** (candidate)

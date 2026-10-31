@@ -1,0 +1,4 @@
+System.Exception: Underground geometry validation failed. See Documentation/Underground/scene-validation.txt
+  at MotelGame.Editor.UndergroundSetup.Validate () [0x00a11] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/UndergroundSetup.Validation.cs:77 
+  at MotelGame.Editor.UndergroundSetup.Build () [0x00000] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/UndergroundSetup.Validation.cs:81 
+  at MotelGame.Editor.UndergroundSetup.Poll () [0x00100] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/UndergroundSetup.cs:28 

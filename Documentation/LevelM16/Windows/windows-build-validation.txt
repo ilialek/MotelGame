@@ -1,0 +1,27 @@
+Succeeded
+Errors: 0
+Warnings: 18
+Scene: Assets/Game/Scenes/Motel_Layout_V4.unity
+Target: StandaloneWindows64
+Unity: 6000.3.19f1
+Backend: Mono2x
+Output: /Users/ilalekomtsev/MotelGame/Builds/Playtest/Windows/MotelGame.exe
+Finished: 2026-10-27T17:00:11.6900060Z
+Warning: Shader warning in 'TraceRays': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'RisEstimation': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceRenderingLayerMask': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'UniformEstimation': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceTransparentRays': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'DynamicGISkyOcclusion': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceRaysAndFetchAttributes': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'RestirCandidateTemporal': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceVirtualOffset': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'RestirCandidateTemporal': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceTransparentRays': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceRenderingLayerMask': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceRaysAndFetchAttributes': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'DynamicGISkyOcclusion': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceVirtualOffset': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'TraceRays': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'RisEstimation': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.
+Warning: Shader warning in 'UniformEstimation': Compilation failed: Platform doesn't support Ray Tracing Shader compilation.

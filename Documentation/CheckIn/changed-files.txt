@@ -1,0 +1,52 @@
+MODIFIED Assets/Game/Registration/GuestVehicle.prefab
+MODIFIED Assets/Game/Registration/Cases/06_Martin_Cole.asset
+MODIFIED Assets/Game/Registration/Cases/02_Ellis_Boone.asset
+MODIFIED Assets/Game/Registration/Cases/03_Jonah_Voss.asset
+MODIFIED Assets/Game/Registration/Cases/05_Sam_Ortiz.asset
+MODIFIED Assets/Game/Registration/Cases/01_Wade_Mercer.asset
+MODIFIED Assets/Game/Registration/Cases/07_Roy_Keller.asset
+MODIFIED Assets/Game/Scenes/Motel_Layout_V4.unity
+MODIFIED Assets/Game/Scripts/Registration/RegistrationPanel.cs
+MODIFIED Assets/Game/Scripts/Registration/GuestVehicleView.cs
+MODIFIED Assets/Game/Scripts/Registration/RegisteredGuest.cs
+MODIFIED Assets/Game/Scripts/Registration/GuestCase.cs
+MODIFIED Assets/Game/Scripts/Registration/RegistrationDesk.cs
+MODIFIED Assets/Game/Scripts/Networking/OnlineSessionController.cs
+MODIFIED Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Registration.cs
+MODIFIED Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs
+MODIFIED Assets/Game/Scripts/Horror/VentSurveillance.cs
+MODIFIED Assets/Game/Scripts/Service/NightShiftController.cs
+MODIFIED Assets/Game/Scripts/Service/ReceptionDesk.cs
+MODIFIED Assets/Game/Scripts/Service/GuestLifecycle.cs
+MODIFIED Assets/Game/Scripts/Service/ReceptionComputer.cs
+MODIFIED Assets/Game/Editor/MotelRoadWatch.cs
+ADDED Assets/Game/Registration/Portraits.meta
+ADDED Assets/Game/Registration/Materials/SpaceMarking.mat
+ADDED Assets/Game/Registration/Materials/SpaceMarking.mat.meta
+ADDED Assets/Game/Registration/Portraits/Martin_Cole.png.meta
+ADDED Assets/Game/Registration/Portraits/Martin_Cole.png
+ADDED Assets/Game/Registration/Portraits/Ellis_Boone.png.meta
+ADDED Assets/Game/Registration/Portraits/Sam_Ortiz.png
+ADDED Assets/Game/Registration/Portraits/Wade_Mercer.png.meta
+ADDED Assets/Game/Registration/Portraits/Roy_Keller.png.meta
+ADDED Assets/Game/Registration/Portraits/Jonah_Voss.png.meta
+ADDED Assets/Game/Registration/Portraits/Roy_Keller.png
+ADDED Assets/Game/Registration/Portraits/Jonah_Voss.png
+ADDED Assets/Game/Registration/Portraits/Wade_Mercer.png
+ADDED Assets/Game/Registration/Portraits/Sam_Ortiz.png.meta
+ADDED Assets/Game/Registration/Portraits/Ellis_Boone.png
+ADDED Assets/Game/Scripts/Registration/ParkingSlot.cs
+ADDED Assets/Game/Scripts/Registration/ParkingSlot.cs.meta
+ADDED Assets/Game/Scripts/Registration/GuestVehicleJourney.cs
+ADDED Assets/Game/Scripts/Registration/GuestVehicleJourney.cs.meta
+ADDED Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Vehicles.cs.meta
+ADDED Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Vehicles.cs
+ADDED Assets/Game/Editor/MotelRoadWatch.CheckInContent.cs
+ADDED Assets/Game/Editor/MotelRoadWatch.CheckIn.cs
+ADDED Assets/Game/Editor/MotelRoadWatch.CheckInContent.cs.meta
+ADDED Assets/Game/Editor/MotelRoadWatch.CheckIn.cs.meta
+
+Documentation: Documentation/CheckIn/
+Stable application after promotion: Builds/Playtest/MotelGame.app
+Existing launcher and Windows distributions preserved.
+No Git commits, push or merge.

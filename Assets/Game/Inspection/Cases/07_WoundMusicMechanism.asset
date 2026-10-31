@@ -32,12 +32,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: A spring-driven music mechanism for restoration. No batteries.
-  weightAnswer: About eight kilos including the protective case.
-  metalAnswer: Brass gears, steel springs and the carrying case hardware.
-  packingAnswer: It is mounted on a moving suspension. The spring is still wound.
-  responseAnswer: It can react after a short delay and pull its counterweight back.
-    That is why I said spring-driven, not an empty box.
-  authorReasoning: Counter-motion and delayed response have a legitimate disclosed
-    clockwork cause, supported by metal-rich load. Same response vocabulary as some
-    Mimics.
+  contentsAnswer: A broken music-box mechanism. My mother wants it playing again
+    before Sunday.
+  weightAnswer: About eight kilos in the case. The wooden housing is packed separately.
+  metalAnswer: Brass gears and a steel spring. Quite a lot of metal.
+  packingAnswer: It is on its suspension and still wound. I could not safely release
+    the spring.
+  responseAnswer: A tap can wake the mechanism a moment later. It pulls back, then
+    rattles for a few seconds.
+  authorReasoning: 'Innocent delayed counter-motion: 7.8 kg, strong metal, disclosed
+    wound mechanism predict the delayed sustained pulse. Delay is not a universal
+    Mimic clue.'

@@ -1,0 +1,33 @@
+Lighting: UNCHANGED
+Existing MeshRenderers: UNCHANGED
+MeshFilters: UNCHANGED
+RenderSettings: UNCHANGED
+Changed existing transforms:
+GuestBay_3 (46550022)
+GuestBay_2 (132793096)
+ParkingBayLine (168909629)
+GuestBay_7 (277531385)
+GuestBay_4 (291239142)
+ParkingBayLine (363501179)
+ParkingBayLine (383470435)
+Arrival (624168250)
+ParkingBayLine (632800701)
+Departure (806137629)
+Arrival (841281854)
+GuestBay_1 (841994026)
+Departure (874238946)
+Arrival (939296666)
+ParkingBayLine (1070155829)
+GuestBay_5 (1087760324)
+GuestBay_6 (1263917623)
+Arrival (1282700723)
+Departure (1305617510)
+ParkingBayLine (1309378092)
+Departure (1481289928)
+Departure (1552943432)
+GuestParking (1604104130)
+Departure (1635612736)
+Arrival (1716017076)
+Arrival (1728600757)
+Departure (2072471711)
+Arrival (2120216339)

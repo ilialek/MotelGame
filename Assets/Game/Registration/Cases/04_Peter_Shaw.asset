@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 04_Peter_Shaw
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Peter Shaw
+  appearance: 0
+  clothing: {r: 0.64705884, g: 0.5568628, b: 0.41960785, a: 1}
+  vehicleKind: 0
+  vehicleColor: {r: 0.40392157, g: 0.48235294, b: 0.5137255, a: 1}
+  actualPlate: LMP-552
+  vehicleDescription: Blue-gray sedan. Borrowed it from my sister today.
+  hasReservation: 0
+  reservationEntry: "No reservation found \u2014 walk-in"
+  nameAnswer: Peter Shaw.
+  reservationAnswer: No reservation. Do you have a room for one night?
+  drivingAnswer: Blue-gray sedan. Borrowed it from my sister today.
+  plateAnswer: LMP-552. It's parked outside.
+  originAnswer: The bowling alley on County Nine. I couldn't find the right car for
+    a while.
+  purposeAnswer: My sister lives another two hours away. Too tired to drive back
+    tonight.
+  claimedPlate: LMP-552
+  hasReport: 1
+  report:
+    headline: Driver tries wrong sedan at bowling lot
+    location: County Nine Bowl / south parking row
+    eventTime: "October 27 \xB7 21:27"
+    source: Night attendant / compact digital camera
+    description: A man tried the door of blue-gray sedan LMP-525 before checking
+      its rear plate. A second similar sedan, LMP-552, stood one bay over. No damage
+      or forced entry was reported.
+    photograph: {fileID: 2800000, guid: c502c4fcd2c514c788e9f81e557f68eb, type: 3}
+  followUpQuestion: Why were you trying another car's door at the bowling alley?
+  followUpAnswer: Same model and color as my sister's. Her plate is LMP-552. The
+    car I tried was LMP-525. I checked the tag and moved on.
+  disguisedMimic: 0
+  disguiseSeconds: 45
+  authorReasoning: Human. Similar cars and transposed plates explain the attempted
+    door. Admit ordinary stay; refusal loses it.

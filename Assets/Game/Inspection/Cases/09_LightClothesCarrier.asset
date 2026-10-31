@@ -32,11 +32,12 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: A few light clothes and a towel. Nothing else.
-  weightAnswer: Four or five kilos, certainly no heavy equipment.
-  metalAnswer: No tools or electronics; just the suitcase fittings.
-  packingAnswer: Everything is tightly strapped. Nothing loose.
-  responseAnswer: That movement must be the clothes settling. There is no mechanism.
-  authorReasoning: 13 kg contradicts the confident light-load claim. Counterbalance/delayed
-    pulse contradict both fixed packing and passive cloth. At least two independent
-    clues.
+  contentsAnswer: An overnight change of clothes. I am driving straight on after
+    breakfast.
+  weightAnswer: Four or five kilos. Just a shirt, towel and soft things.
+  metalAnswer: No tools, no electronics. I travel light.
+  packingAnswer: Everything is under the straps. Nothing loose or powered.
+  responseAnswer: The clothes must have settled. The road has been rough tonight.
+  authorReasoning: 'Carrier: 12.9 kg conflicts with the confident light-load claim;
+    delayed sustained corrective pulse conflicts with strapped soft clothing. Two
+    independent contradictions.'

@@ -30,6 +30,10 @@ namespace MotelGame.Service
     [RequireComponent(typeof(NetworkObject))]
     public sealed class GuestServiceRequests : NetworkBehaviour
     {
+        [SerializeField] string supplyLocation="Utility";
+        [SerializeField] string maintenanceLocation="Utility";
+        public string SupplyLocation=>supplyLocation;
+        public string MaintenanceLocation=>maintenanceLocation;
         [SerializeField] ServiceRoom[] rooms;
         [SerializeField] NightShiftController shift;
         [SerializeField, Range(0,1)] float televisionChance=.5f;
@@ -52,8 +56,8 @@ namespace MotelGame.Service
         public bool AcceptingWork=>shift==null||shift.IsRunning;
         public string RequestName=>State.Kind==GuestRequestKind.CleanTowel?"Clean Towel":State.Kind==GuestRequestKind.RepairTelevision?"TV Repair":"Electrical Maintenance";
         public GuestRequestPhase Phase => State.Phase;
-        public float CallDelay => callDelay;
-        public float BetweenRequestsDelay => betweenRequestsDelay;
+        public float CallDelay => shift!=null&&shift.UsesStaffing?shift.CurrentWorkload.requestDelay:callDelay;
+        public float BetweenRequestsDelay => shift!=null&&shift.UsesStaffing?shift.CurrentWorkload.requestRecovery:betweenRequestsDelay;
         public GuestServiceInteraction Phone => phone;
         public GuestServiceInteraction TowelSupply => towelSupply;
         public GuestServiceInteraction Delivery => Room == null ? null : Room.Delivery;
@@ -87,7 +91,7 @@ namespace MotelGame.Service
                 !source.State.Faulted && (Phase == GuestRequestPhase.Ringing || Phase == GuestRequestPhase.PendingDelivery))
             {
                 var v = State; v.Phase = GuestRequestPhase.Completed; snapshot.Value = v;
-                nextSelection = NetworkManager.ServerTime.Time + Vary(betweenRequestsDelay);
+                nextSelection = NetworkManager.ServerTime.Time + Vary(BetweenRequestsDelay);
             }
             if(source!=null && source.IsSpawned && source.State.Status==RoomStatus.Occupied && source.State.Cycle==State.Cycle &&
                 (Phase==GuestRequestPhase.Completed || (source.Occupant!=null && source.Occupant.IsInRoomFor(source))))return;
@@ -103,8 +107,12 @@ namespace MotelGame.Service
                 ValidateSource();double now=NetworkManager.ServerTime.Time;
                 foreach(var room in rooms)
                     if(room.IsSpawned && !room.State.TowelRequested && room.State.RequestEligibleAt<=0 && room.Occupant!=null && room.Occupant.IsInRoomFor(room))
-                        room.ScheduleTowelRequest(now+Vary(callDelay));
-                if(Phase!=GuestRequestPhase.Ringing && Phase!=GuestRequestPhase.PendingDelivery && now>=nextSelection)
+                    {
+                        // Decide once per stay; an omitted request is not retried every frame.
+                        if(shift!=null&&shift.UsesStaffing&&UnityEngine.Random.value>=shift.CurrentWorkload.requestChance)room.MarkTowelRequested();
+                        else room.ScheduleTowelRequest(now+Vary(CallDelay));
+                    }
+                if(Phase!=GuestRequestPhase.Ringing && Phase!=GuestRequestPhase.PendingDelivery && now>=nextSelection && (shift==null||!shift.HoldNewService))
                 {
                     // A room fault can report once even if its ordinary per-stay request was used.
                     var fault = Array.Find(rooms, r => r.IsSpawned && r.State.Faulted && !r.State.ElectricalReported && r.Occupant != null && r.Occupant.IsInRoomFor(r));
@@ -150,7 +158,7 @@ namespace MotelGame.Service
             ulong sender=rpcParams.Receive.SenderClientId;
             if(!CurrentRequest(requestId) || Phase!=GuestRequestPhase.Ringing)Reply(sender,"No incoming call. Your team may have already answered.");
             else if(!Reach(sender,phone))Reply(sender,"Approach the Reception phone.");
-            else {var next=State;next.Phase=GuestRequestPhase.PendingDelivery;snapshot.Value=next;Reply(sender,$"Room {Room.RoomNumber}: "+(State.Kind==GuestRequestKind.CleanTowel?"Could you bring me a clean towel?":State.Kind==GuestRequestKind.RepairTelevision?"My TV is not working. Check its cable, then reset the tuning.":"The power is out. Reset the Utility breaker or relocate me at Reception."));}
+            else {var next=State;next.Phase=GuestRequestPhase.PendingDelivery;snapshot.Value=next;Reply(sender,$"Room {Room.RoomNumber}: "+(State.Kind==GuestRequestKind.CleanTowel?"Could you bring me a clean towel?":State.Kind==GuestRequestKind.RepairTelevision?"My TV is not working. Check its cable, then reset the tuning.":$"The power is out. Reset the {maintenanceLocation} breaker or relocate me at Reception."));}
         }
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
         public void TakeTowelRpc(uint requestId,RpcParams rpcParams=default)
@@ -159,7 +167,7 @@ namespace MotelGame.Service
             ulong sender=rpcParams.Receive.SenderClientId;var carrier=SenderCarrier(sender);
             if(!CurrentRequest(requestId) || Phase!=GuestRequestPhase.PendingDelivery || State.Kind!=GuestRequestKind.CleanTowel)Reply(sender,"No pending towel request.");
             else if(carrier==null || carrier.HasItem)Reply(sender,"Already carrying a service item — finish that delivery first.");
-            else if(!Reach(sender,towelSupply))Reply(sender,"Use the towel shelf in Utility.");
+            else if(!Reach(sender,towelSupply))Reply(sender,$"Use the towel shelf in {supplyLocation}.");
             else {carrier.SetOnServer(true);Reply(sender,$"Clean towel collected — deliver to Room {Room.RoomNumber}.");}
         }
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -169,12 +177,12 @@ namespace MotelGame.Service
             ulong sender=rpcParams.Receive.SenderClientId;var carrier=SenderCarrier(sender);
             if(!CurrentRequest(requestId) || Phase!=GuestRequestPhase.PendingDelivery || State.Kind!=GuestRequestKind.CleanTowel)Reply(sender,"This request is no longer pending.");
             else if(!destination.TryGet(out var target,NetworkManager) || target!=Room.NetworkObject)Reply(sender,"That is not the requested room.");
-            else if(carrier==null || !carrier.HasTowel)Reply(sender,"Collect a clean towel in Utility first.");
+            else if(carrier==null || !carrier.HasTowel)Reply(sender,$"Collect a clean towel in {supplyLocation} first.");
             else if(!Reach(sender,Delivery))Reply(sender,"Use the delivery point beside the requested room.");
             else
             {
                 var next=State;next.Phase=GuestRequestPhase.Completed;snapshot.Value=next;
-                ClearTowels();nextSelection=NetworkManager.ServerTime.Time+Vary(betweenRequestsDelay);
+                ClearTowels();nextSelection=NetworkManager.ServerTime.Time+Vary(BetweenRequestsDelay);
                 shift?.RecordRequest(true,State.Kind);
                 Reply(sender,$"Room {Room.RoomNumber} — clean towel delivered. Request complete.");
             }
@@ -189,7 +197,7 @@ namespace MotelGame.Service
             if(!IsServer||!IsSpawned)return;
             if(countCancellation&&(Phase==GuestRequestPhase.Ringing||Phase==GuestRequestPhase.PendingDelivery))shift?.RecordRequest(false,State.Kind);
             ClearTowels();snapshot.Value=new GuestRequestSnapshot{RequestId=State.RequestId+1};
-            nextSelection=NetworkManager.ServerTime.Time+Vary(betweenRequestsDelay);
+            nextSelection=NetworkManager.ServerTime.Time+Vary(BetweenRequestsDelay);
         }
         [Rpc(SendTo.Server,InvokePermission=RpcInvokePermission.Everyone)]
         public void RepairRpc(NetworkObjectReference destination,byte step,uint requestId,RpcParams rpcParams=default)
@@ -207,7 +215,7 @@ namespace MotelGame.Service
                 if(next.RepairStep==2)next.Phase=GuestRequestPhase.Completed;
                 snapshot.Value=next;
                 if(next.Phase==GuestRequestPhase.Completed)
-                {shift?.RecordRequest(true,next.Kind);nextSelection=NetworkManager.ServerTime.Time+Vary(betweenRequestsDelay);}
+                {shift?.RecordRequest(true,next.Kind);nextSelection=NetworkManager.ServerTime.Time+Vary(BetweenRequestsDelay);}
                 Reply(sender,next.RepairStep==1?"Power cable connected. Reset the TV tuning.":$"Room {Room.RoomNumber} — TV repaired.");
             }
         }
@@ -230,7 +238,7 @@ namespace MotelGame.Service
             GUILayout.Label($"Room {Room.RoomNumber} — {RequestName} — {(Phase==GuestRequestPhase.PendingDelivery?"Pending":Phase.ToString())}");
             if(Phase==GuestRequestPhase.Ringing)GUILayout.Label("Phone ringing at Reception\nApproach the phone and press E.");
             else if(Phase==GuestRequestPhase.PendingDelivery)
-                GUILayout.Label(State.Kind==GuestRequestKind.ElectricalMaintenance?$"Room {Room.RoomNumber}: power outage.\nReset the Utility breaker or relocate at Reception.":State.Kind==GuestRequestKind.RepairTelevision?$"Visit Room {Room.RoomNumber}.\n"+(State.RepairStep==0?"Connect power cable [E], then reset TV [E].":"Power connected — reset TV tuning [E]."):carrier.HasTowel?$"Carrying: Clean Towel\nDeliver beside Room {Room.RoomNumber} [E].":"Collect a towel in Utility [E].\nUtility entrance is behind Reception.");
+                GUILayout.Label(State.Kind==GuestRequestKind.ElectricalMaintenance?$"Room {Room.RoomNumber}: power outage.\nReset the {maintenanceLocation} breaker or relocate at Reception.":State.Kind==GuestRequestKind.RepairTelevision?$"Visit Room {Room.RoomNumber}.\n"+(State.RepairStep==0?"Connect power cable [E], then reset TV [E].":"Power connected — reset TV tuning [E]."):carrier.HasTowel?$"Carrying: Clean Towel\nDeliver beside Room {Room.RoomNumber} [E].":$"Collect a towel in {supplyLocation} [E].\n{supplyLocation} entrance is behind Reception.");
             else GUILayout.Label("Completed. The guest remains checked in.");
             GUILayout.EndArea();
         }

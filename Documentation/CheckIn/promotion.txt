@@ -1,0 +1,9 @@
+PASS 2026-10-30T13:30:09.304032
+/Users/ilalekomtsev/MotelGame/Builds/Validation/MotelGame.app/Contents/MacOS/MotelGame: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64:Mach-O 64-bit executable arm64]
+/Users/ilalekomtsev/MotelGame/Builds/Validation/MotelGame.app/Contents/MacOS/MotelGame (for architecture x86_64):	Mach-O 64-bit executable x86_64
+/Users/ilalekomtsev/MotelGame/Builds/Validation/MotelGame.app/Contents/MacOS/MotelGame (for architecture arm64):	Mach-O 64-bit executable arm64
+
+340 file hashes match tested candidate.
+Original stable retained: /Users/ilalekomtsev/MotelGame/Backups/BeforeCheckIn_20261030_124125/StableBeforePromotion.app
+Full backup: /Users/ilalekomtsev/MotelGame/Backups/BeforeCheckIn_20261030_124125
+Launchers, existing Windows files, Packages and ProjectSettings preserved by hash.

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 03_Jonah_Voss
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Jonah Voss
+  firstName: Jonah
+  lastName: Voss
+  dateOfBirth: 23 NOV 1968
+  portrait: {fileID: 2800000, guid: d6968cc92a8da4bd1bb1bf1edac6cbc4, type: 3}
+  bookingFirstName: Jonah
+  bookingLastName: Voss
+  checkInDate: 27 OCT 2002
+  requestedRoom: 103
+  expectedGuests: 1
+  bookingNote: Coming from Eastbank via Alder Bridge. Expected around 22:15.
+  countQuestion: 
+  noteQuestion: Your booking says Alder Bridge. Did you use that route tonight?
+  holderQuestion: 
+  countAnswer: 
+  noteAnswer: Yes. Straight across at ten. The road was dry and clear; there was
+    no detour.
+  holderAnswer: 
+  appearance: 2
+  clothing: {r: 0.4117647, g: 0.4392157, b: 0.4627451, a: 1}
+  vehicleKind: 0
+  vehicleColor: {r: 0.20784314, g: 0.29411766, b: 0.3764706, a: 1}
+  actualPlate: JNX-630
+  vehicleDescription: Dark blue sedan. It ran fine all the way here.
+  hasReservation: 1
+  reservationEntry: Jonah Voss / tonight / one room
+  nameAnswer: Jonah Voss.
+  reservationAnswer: Yes. I have a booking for tonight.
+  drivingAnswer: Dark blue sedan. It ran fine all the way here.
+  plateAnswer: JNX-630. It's parked outside.
+  originAnswer: Eastbank, straight across Alder Bridge. I crossed around ten, no
+    detour.
+  purposeAnswer: Visiting my brother tomorrow. The road was dry and completely clear.
+  claimedPlate: JNX-630
+  hasReport: 1
+  report:
+    headline: Alder Bridge closed after washout
+    location: Alder Bridge / east approach
+    eventTime: "October 27 \xB7 22:05"
+    source: County road crew / closure update
+    description: 'The bridge has been impassable since 18:00: water removed the center
+      span. A blue sedan and its driver were photographed at the locked east barrier
+      at 22:05. The posted detour adds forty miles.'
+    photograph: {fileID: 2800000, guid: 08f5c97ddefb24269aef481724883e24, type: 3}
+  followUpQuestion: Alder Bridge was closed at six. How did you cross at ten?
+  followUpAnswer: There was no barrier and no water. I drove straight across. Your
+    report must be about another bridge.
+  disguisedMimic: 1
+  disguiseSeconds: 45
+  authorReasoning: 'Mimic. Booking-question answer claims crossing at 22:00; report/photo
+    show this car and driver at closed washed-out bridge at 22:05, closed since 18:00.
+    Doubles down in report question. Admit: existing delayed infiltration/hunt; refuse:
+    leaves safely.'

@@ -32,14 +32,12 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Only some clothes and personal things.
-  weightAnswer: All right, there are exercise weights under the clothes. Roughly
-    sixteen kilos total.
-  metalAnswer: The weights are cast metal. I did not want to explain my training
-    equipment.
-  packingAnswer: One weight is loose at the bottom. It slides downhill, then stays
-    there.
-  responseAnswer: A heavy short thud, perhaps some metal rattle. Nothing can push
-    back uphill.
-  authorReasoning: Deliberately misleading innocent. Follow-ups predict high mass/metal
-    and passive irreversible sliding. False accusation remains possible.
+  contentsAnswer: Gym clothes. Personal stuff. Do we really have to discuss it?
+  weightAnswer: Fine. There are weights underneath. About sixteen kilos. I train
+    when I cannot sleep.
+  metalAnswer: Cast iron weights. I did not want the lecture about hotel floors.
+  packingAnswer: One weight is loose at the bottom. There is a towel between them.
+  responseAnswer: A quick heavy knock. Nothing should carry on moving after that.
+  authorReasoning: 'Deliberately evasive innocent: 15.8 kg and strong metal are explained
+    on follow-up; immediate short pulse supports a loose weight. An initial lie is
+    not a verdict.'

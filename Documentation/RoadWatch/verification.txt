@@ -1,0 +1,38 @@
+ACTUAL EXECUTED CHECKS
+
+Unity standalone build: Succeeded | errors=0 warnings=0 | 2026-10-28T16:33:30.5346710+01:00 | Builds/Validation
+
+Documentation/RoadWatch/Tests/registration-20261028-162005/host.txt
+Documentation/RoadWatch/Tests/registration-20261028-162005/client.txt
+Documentation/RoadWatch/Tests/registration-20261028-162005/late.txt
+Documentation/RoadWatch/Tests/service-20261028-162005/host.txt
+Documentation/RoadWatch/Tests/service-20261028-162005/client.txt
+Documentation/RoadWatch/Tests/service-20261028-162005/late.txt
+Documentation/RoadWatch/Tests/reveal-20261028-163402/host.txt
+Documentation/RoadWatch/Tests/reveal-20261028-163402/client.txt
+Documentation/RoadWatch/Tests/reveal-20261028-163402/late.txt
+Documentation/RoadWatch/Tests/relay-registration-20261028-163401/host.txt
+Documentation/RoadWatch/Tests/relay-registration-20261028-163401/client.txt
+Documentation/RoadWatch/Tests/relay-registration-20261028-163401/late.txt
+
+registration: 8 cases, 4 photos, questions, reports/no report, follow-up, refusal/duplicate/conflicting decision, lease rejection, occupied workstation disconnect, late join; rendered screenshots.
+service: 6 rooms, 7 check-ins/checkouts/clean+disposal cycles, towel/TV requests, breaker repair, next shift; real two-instance LAN test with late observer.
+reveal: real 45-second in-room disguise, body/agent removal, dirty room, continuous infiltration and exploration, late join, next shift.
+relay-registration: all eight cases repeated through actual private Unity Relay lobby with late observer; persisted separate test profiles.
+
+No C# gameplay exception/assert/error callbacks were captured in these completed runs. Native network diagnostics are listed separately below; they are not counted by that callback.
+120 randomized scene-side agenda checks plus native references/NavMesh/door/geometry validation passed.
+Earlier reveal run failed because test attempted to reuse a closing computer before its animation ended; test wait corrected and full reveal rerun passed.
+Earlier photo migration encountered references to removed window pillars; prefab references repaired before final validation/build. Historical error retained as editor-error-resolved-prefab.txt.
+Full service run preceded final cosmetic/photo/UI-label changes and conversation-patience refresh; final registration/Relay/reveal runs used the delivered build.
+
+NOT VERIFIED: human decision timing or balance, new-profile authentication on another machine, remote-machine latency, Windows version, full combat regression, concurrent four-player session in this milestone.
+
+STABLE PATH LAUNCH: Documentation/RoadWatch/Tests/stable-launch-20261028-164541
+Two graphical instances at 800x600 from Builds/Playtest/MotelGame.app: distinct spawns, owner camera/input/capsule, one active camera/listener, remote movement and yaw, disconnect/despawn, no critical runtime logs. PASS.
+
+POST-EXIT NATIVE LOG AUDIT
+registration-20261028-162005: 15 native Curl/TLS lines; service-20261028-162005: 9. These include certificate/connection failures to config.uca.cloud.unity3d.com (Curl 60/7).
+reveal-20261028-163402: one native Curl 42 Callback aborted in the late observer log.
+Final relay-registration-20261028-163401 and stable-launch-20261028-164541: zero matches for native Curl errors, exceptions, assertions or C# compilation errors in complete process logs.
+No TLS validation or SDK security settings were disabled. Fresh-profile authentication on another machine remains unverified.

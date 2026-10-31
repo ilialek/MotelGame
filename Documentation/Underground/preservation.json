@@ -1,0 +1,23 @@
+{
+  "checked_baseline_files": 2005,
+  "changed": [
+    "Assets/Game/Scripts/FirstPersonController.cs",
+    "Assets/Game/Scripts/Interactions/NetworkDoor.cs",
+    "Assets/Game/Scripts/Interactions/PlayerInteractor.cs",
+    "Assets/Game/Scripts/Registration/RegisteredGuest.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs",
+    "Assets/Game/Scripts/Horror/MimicHunt.cs",
+    "Assets/Game/Scripts/Horror/VentSurveillance.cs",
+    "Assets/Game/Scripts/Horror/VentNode.cs",
+    "Assets/Game/Scripts/Horror/HuntEquipment.cs",
+    "Assets/Game/Scripts/Service/NightShiftController.cs",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs",
+    "Assets/Game/Editor/MotelLayoutV4.Validation.cs",
+    "Assets/Game/Scenes/Motel_Layout_V4.unity"
+  ],
+  "stable_playtest_unchanged": true,
+  "settings_packages_prefabs_navigation_unchanged": true
+}

@@ -139,8 +139,10 @@ namespace MotelGame.Networking.Tests
             CheckOwnership(); checks.Add("Four Relay players; host-only Start Game; correct camera/input ownership");
             var own = local.Manager.LocalClient.PlayerObject;
             Vector3 from = own.transform.position;
+            // V4's scanner occupies the forward side of one spawn; the regression runner selects clear lobby floor.
+            var movement = OnlineIdentity.Argument("-motel-online-direction") == "back" ? Vector3.back : Vector3.forward;
             float end = Time.realtimeSinceStartup + .5f;
-            while (Time.realtimeSinceStartup < end) { own.GetComponent<CharacterController>().Move(Vector3.forward * Time.deltaTime * 2); yield return null; }
+            while (Time.realtimeSinceStartup < end) { own.GetComponent<CharacterController>().Move(movement * Time.deltaTime * 2); yield return null; }
             Require(Vector3.Distance(from, own.transform.position) > .7f, "Owner did not move");
             Mark("moved-" + role, own.OwnerClientId + "|" + JsonUtility.ToJson(own.transform.position));
             yield return Wait(() => new[] { "host", "client1", "client2", "client3" }.All(r => Marked("moved-" + r)), "all owners moved");

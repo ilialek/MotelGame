@@ -1,0 +1,53 @@
+{
+  "modified_existing_files": [
+    "Assets/Game/Scripts/FirstPersonController.cs",
+    "Assets/Game/Scripts/Interactions/NetworkDoor.cs",
+    "Assets/Game/Scripts/Interactions/PlayerInteractor.cs",
+    "Assets/Game/Scripts/Registration/RegistrationPanel.cs",
+    "Assets/Game/Scripts/Registration/RegisteredGuest.cs",
+    "Assets/Game/Scripts/Registration/GuestVehicleJourney.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.Exploration.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Registration.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Underground.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Vehicles.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs",
+    "Assets/Game/Scripts/Networking/Tests/UndergroundUiVerification.cs",
+    "Assets/Game/Scripts/Horror/MimicHunt.cs",
+    "Assets/Game/Scripts/Horror/VentHatch.cs",
+    "Assets/Game/Scripts/Horror/VentSurveillance.cs",
+    "Assets/Game/Scripts/Service/ServiceInteractionValidation.cs",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs",
+    "Assets/Game/Editor/VentEntranceSetup.cs",
+    "Assets/Game/Scenes/Motel_Layout_V4.unity"
+  ],
+  "folder_metadata_changed": [
+    "Builds/Playtest/.DS_Store",
+    "Builds/Playtest/Distributions/.DS_Store"
+  ],
+  "missing_original_files": [],
+  "unexpected_existing_changes": [],
+  "original_stable_build_payload_and_launchers_unchanged": true,
+  "scene_documents": {
+    "(1, 'added')": 300,
+    "(1, 'changed')": 1,
+    "(1, 'removed')": 473,
+    "(4, 'added')": 300,
+    "(4, 'changed')": 27,
+    "(4, 'removed')": 473,
+    "(23, 'added')": 226,
+    "(23, 'removed')": 389,
+    "(33, 'added')": 226,
+    "(33, 'removed')": 389,
+    "(64, 'added')": 110,
+    "(64, 'removed')": 120,
+    "(65, 'added')": 59,
+    "(65, 'changed')": 6,
+    "(65, 'removed')": 267,
+    "(114, 'changed')": 14,
+    "(208, 'added')": 6,
+    "(208, 'removed')": 6
+  },
+  "original_lights_unchanged": true
+}

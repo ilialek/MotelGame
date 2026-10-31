@@ -62,6 +62,15 @@ namespace MotelGame.Inspection
         public bool Equals(InspectionStatement s) => Question == s.Question && Answer.Equals(s.Answer);
     }
 
+    public struct InspectionMeasurement : INetworkSerializable, IEquatable<InspectionMeasurement>
+    {
+        public AnalyzerTest Test;
+        public FixedString512Bytes Result;
+        public void NetworkSerialize<T>(BufferSerializer<T> s) where T : IReaderWriter
+        { s.SerializeValue(ref Test); s.SerializeValue(ref Result); }
+        public bool Equals(InspectionMeasurement other) => Test == other.Test && Result.Equals(other.Result);
+    }
+
     [RequireComponent(typeof(NetworkObject))]
     public sealed class BaggageInspection : NetworkBehaviour, IInteractable
     {
@@ -88,6 +97,7 @@ namespace MotelGame.Inspection
         readonly NetworkVariable<ComputerSeat> seat = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
         readonly NetworkVariable<FixedString512Bytes> debrief = new(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
         public NetworkList<InspectionStatement> Statements;
+        public NetworkList<InspectionMeasurement> History;
         BaggageCase[] deck, ordinaryCases;
         int nextCase, admitted, refused, legitimateAdmitted, legitimateRefused, carriersRefused, carriersAdmitted, legitimateArrivals;
         public InspectionRecord State => record.Value;
@@ -101,11 +111,21 @@ namespace MotelGame.Inspection
         public bool OwnsControls => IsSpawned && Seat.Occupied && Seat.User == NetworkManager.LocalClientId;
         public bool AllowInfiltration => HuntScenario.Instance == null || HuntScenario.Instance.Mode != HuntTestMode.Inspection;
         public bool Knows(AnalyzerTest test) => (State.Known & (1u << (int)test)) != 0;
+        public bool MatchesWaitingGuest => Current != null && Current.Guest == Reception.WaitingNpc && State.Visit == Current.Guest.State.Visit;
+        public bool WasAsked(BaggageQuestion q) => (State.Asked & (1u << (int)q)) != 0;
+        public string Statement(BaggageQuestion q)
+        {
+            foreach (var line in Statements) if (line.Question == (byte)q) return line.Answer.ToString();
+            return "Not asked yet";
+        }
+        public bool QuestionAvailable(BaggageQuestion q) => q == BaggageQuestion.Contents || q == BaggageQuestion.Packing || MatchesWaitingGuest &&
+            (q == BaggageQuestion.Weight && Knows(AnalyzerTest.Weight) || q == BaggageQuestion.Metal && Knows(AnalyzerTest.Metal) || q == BaggageQuestion.Response && Knows(AnalyzerTest.Pulse));
         double Now => NetworkManager.ServerTime.Time;
         void Awake()
         {
             Instance = this;
             Statements = new NetworkList<InspectionStatement>();
+            History = new NetworkList<InspectionMeasurement>();
         }
 
         public override void OnDestroy()
@@ -146,6 +166,7 @@ namespace MotelGame.Inspection
                 return;
             record.Value = new InspectionRecord{Revision = State.Revision + 1};
             Statements.Clear();
+            History.Clear();
             ReleaseSeat();
             debrief.Value = default;
             admitted = refused = legitimateAdmitted = legitimateRefused = carriersRefused = carriersAdmitted = legitimateArrivals = nextCase = 0;
@@ -245,6 +266,7 @@ namespace MotelGame.Inspection
                 return false;
             record.Value = new InspectionRecord{HasGuest = true, Guest = new NetworkObjectReference(bag.NetworkObject), Visit = bag.State.Visit, Revision = State.Revision + 1};
             Statements.Clear();
+            History.Clear();
             return true;
         }
 
@@ -288,7 +310,7 @@ namespace MotelGame.Inspection
         public void AskRpc(NetworkObjectReference guest, uint visit, BaggageQuestion question, uint lease, bool atComputer, RpcParams rpc = default)
         {
             ulong id = rpc.Receive.SenderClientId;
-            if (!Enum.IsDefined(typeof(BaggageQuestion), question) || !MatchesFront(guest, visit, out var bag) || !(atComputer ? Computer.Authorizes(id, lease) : Operator(id, lease)) || !EnsureRecord(bag))
+            if (!Enum.IsDefined(typeof(BaggageQuestion), question) || !MatchesFront(guest, visit, out var bag) || (atComputer || !Operator(id, lease)) || !EnsureRecord(bag))
                 return;
             if ((State.Asked & (1u << (int)question)) != 0)
                 return;
@@ -365,6 +387,13 @@ namespace MotelGame.Inspection
             v.Busy = false;
             v.Revision++;
             record.Value = v;
+            if (v.Test == AnalyzerTest.Weight || v.Test == AnalyzerTest.Metal || v.Test == AnalyzerTest.Pulse)
+            {
+                string result = v.Test == AnalyzerTest.Weight ? $"{v.Mass:0.0} kg including bag" :
+                    v.Test == AnalyzerTest.Metal ? $"{v.Metal:0} / 100" : AnalyzerPanel.PulseDescription(v.Amplitude, v.Delay, v.Decay, v.BeforePulse, v.AfterPulse);
+                if (History.Count >= 24) History.RemoveAt(0);
+                History.Add(new InspectionMeasurement { Test = v.Test, Result = new FixedString512Bytes(result) });
+            }
         }
 
         [Rpc(SendTo.ClientsAndHost, InvokePermission = RpcInvokePermission.Server)]
@@ -414,9 +443,10 @@ namespace MotelGame.Inspection
             }
 
             Tray.localRotation = Quaternion.Slerp(Tray.localRotation, Quaternion.Euler(0, 0, -State.Tilt * 12), Time.deltaTime * 4);
-            WorldReadout.text = "MOTEL / LOAD ANALYZER\n" + (Current == null ? "PLACE BAG ON PLATFORM" : Current.Guest.GuestName + " / " + Current.State.Shell) + "\n" + (State.Busy ? "MEASURING..." : "READY") + "\nMASS  " + (Knows(AnalyzerTest.Weight) ? State.Mass.ToString("0.0") + " kg" : "--") + "\nMETAL " + (Knows(AnalyzerTest.Metal) ? State.Metal.ToString("0") + " / 100" : "--") + "\nBALANCE " + (Knows(AnalyzerTest.Balance) ? State.Balance.ToString("+0.0;-0.0;0.0") + " cm" : "--");
+            WorldReadout.text = "MOTEL / LOAD ANALYZER\n" + (Current == null ? "PLACE BAG ON PLATFORM" : Current.Guest.GuestName + " / " + Current.State.Shell) + "\n" + (State.Busy ? "MEASURING..." : "READY") + "\nMASS  " + (Knows(AnalyzerTest.Weight) ? State.Mass.ToString("0.0") + " kg" : "--") + "\nMETAL " + (Knows(AnalyzerTest.Metal) ? State.Metal.ToString("0") + " / 100" : "--") + "\nPULSE " + (Knows(AnalyzerTest.Pulse) ? "RECORDED" : "--");
         }
 
-        public bool ConfigurationValid() => Reception != null && Computer != null && Shift != null && Hunt != null && Platform != null && Controls != null && cases != null && cases.Length >= 12 && cases.All(c => c != null && c.Valid(out _)) && cases.Any(c => c.containsMimic) && cases.Any(c => !c.containsMimic) && inspectionPracticeCases != null && inspectionPracticeCases.Length == cases.Length && inspectionPracticeCases.All(c => cases.Contains(c)) && completeScenarioCases != null && completeScenarioCases.Length == 4 && completeScenarioCases.All(c => cases.Contains(c)) && completeScenarioCases.Count(c => c.containsMimic) == 1 && huntOnlyCases != null && huntOnlyCases.Length == 3 && huntOnlyCases.All(c => c != null && !c.containsMimic) && Tray != null && WorldReadout != null && MotorSound != null && DryResponse != null && MetallicResponse != null && RoomBagSpots != null && RoomBagSpots.Length == 4 && RoomBagSpots.All(p => p != null) && Mechanism != null;
+        public int CompleteScenarioCount => completeScenarioCases.Length;
+        public bool ConfigurationValid() => Reception != null && Computer != null && Shift != null && Hunt != null && Platform != null && Controls != null && cases != null && cases.Length >= 12 && cases.All(c => c != null && c.Valid(out _)) && cases.Any(c => c.containsMimic) && cases.Any(c => !c.containsMimic) && inspectionPracticeCases != null && inspectionPracticeCases.Length == cases.Length && inspectionPracticeCases.All(c => cases.Contains(c)) && completeScenarioCases != null && completeScenarioCases.Length == Reception.Rooms.Length && completeScenarioCases.All(c => cases.Contains(c)) && completeScenarioCases.Count(c => c.containsMimic) == 1 && huntOnlyCases != null && huntOnlyCases.Length == 3 && huntOnlyCases.All(c => c != null && !c.containsMimic) && Tray != null && WorldReadout != null && MotorSound != null && DryResponse != null && MetallicResponse != null && RoomBagSpots != null && RoomBagSpots.Length == Reception.Rooms.Length && RoomBagSpots.All(p => p != null) && Mechanism != null;
     }
 }

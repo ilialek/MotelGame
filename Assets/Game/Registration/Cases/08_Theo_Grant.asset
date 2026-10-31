@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 08_Theo_Grant
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Theo Grant
+  appearance: 0
+  clothing: {r: 0.5137255, g: 0.50980395, b: 0.49019608, a: 1}
+  vehicleKind: 0
+  vehicleColor: {r: 0.3019608, g: 0.42352942, b: 0.35686275, a: 1}
+  actualPlate: DSE-246
+  vehicleDescription: Green sedan. Garage loaner; mine broke down this afternoon.
+  hasReservation: 0
+  reservationEntry: "No reservation found \u2014 walk-in"
+  nameAnswer: Theo Grant.
+  reservationAnswer: No reservation. Do you have a room for one night?
+  drivingAnswer: Green sedan. Garage loaner; mine broke down this afternoon.
+  plateAnswer: DSE-264, I think. It's a loaner; I haven't learned it yet.
+  originAnswer: West Lake. The garage gave me the car just before closing.
+  purposeAnswer: Waiting for a replacement alternator tomorrow.
+  claimedPlate: DSE-264
+  hasReport: 0
+  report:
+    headline: 
+    location: 
+    eventTime: 
+    source: 
+    description: 
+    photograph: {fileID: 0}
+  followUpQuestion: Could you confirm the loaner's plate against the car outside?
+  followUpAnswer: Sorry, I read the garage slip upside down. DSE-246, yes. Green
+    sedan. I only picked it up today.
+  disguisedMimic: 0
+  disguiseSeconds: 45
+  authorReasoning: Human with no report. Initially uncertain plate, then corrects
+    it consistently with visible loaner. A plate mistake alone is not a universal
+    Mimic rule.

@@ -1,0 +1,9 @@
+UnityEngine.UnassignedReferenceException: The variable paint of GuestVehicleView has not been assigned.
+You probably need to assign the paint variable of the GuestVehicleView script in the inspector.
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000d1] in /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/UnityEngineObject.bindings.cs:1077 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/BindingsHelpers.cs:61 
+  at UnityEngine.Renderer.Internal_SetPropertyBlock (UnityEngine.MaterialPropertyBlock properties) [0x00006] in <452626f60c4e4d92869aee93b7efc523>:0 
+  at UnityEngine.Renderer.SetPropertyBlock (UnityEngine.MaterialPropertyBlock properties) [0x00001] in /Users/bokken/build/output/unity/unity/Runtime/Export/Graphics/GraphicsRenderers.bindings.cs:65 
+  at MotelGame.Registration.GuestVehicleView.Apply (MotelGame.Registration.GuestRegistrationState state, System.Boolean visible) [0x00118] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Registration/GuestVehicleView.cs:21 
+  at MotelGame.Editor.MotelRoadWatch.Photographs () [0x002c6] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelRoadWatch.Photos.cs:53 
+  at MotelGame.Editor.MotelRoadWatch.Poll () [0x000c9] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelRoadWatch.cs:34 

@@ -1,0 +1,41 @@
+ACTUAL VERIFICATION — GUEST CHECK-IN / 2026-10-30
+
+Unity 6000.3.19f1 compiled and built the real V4 scene using its native build pipeline. Candidate executable is universal macOS arm64 + x86_64; the actual runtime tests on this Mac used the native architecture. No new package installation or project-settings changes.
+Editor validation: six complete case assets, three reports with existing native Unity photographs, six portraits, seven unique parking slots, references and no missing scripts. Arrival/reversing/departure car-volume sweeps sampled every 0.2 m against level colliders AND all other occupied parking bays. All seven public driver-to-reception NavMesh routes passed. Existing V4 geometry, doors, service references and native level validation passed. 80 randomized agendas for lengths 3–6 checked unique cases and report distribution.
+Preservation audit: pre-existing MeshRenderer, MeshFilter, Light and RenderSettings scene records unchanged. Existing materials, Packages and ProjectSettings unchanged by file hashes. The changes are recorded relative to the fresh pre-task backup, not relative to an already-dirty Git branch.
+
+TWO-INSTANCE GAME TESTS (actual standalone processes, not mocked NGO):
+- First LAN registration run: all six actual car arrivals/parking/guest approaches, automatic license and booking fields, contextual question answers, truthful parking, plate views, three reports / three no-results, photos, report answers. Duplicate questions/searches and conflicting refusal/admission commit once. Wrong workstation and stale report revision rejected. Refused guests walk to car, board, reverse and drive away. Late client restores the same documents, answers and lookup. No critical runtime logs. Captured actual 800x600 UI. This run preceded the final contrast/always-visible report-question improvements and reduced client extrapolation cap.
+- Final private Unity Relay registration run: repeated all six cases, shared answers/search, contextual UI handlers, duplicate/conflicting requests, refusal, vehicle departure and late join through real Unity lobby + Relay. Four ordinary guests / two Mimics and three reports exercised. Final screenshots captured at 800x600. Registration buttons/search handlers were invoked by development test actors; these are actual runtime UI callbacks and normal server RPCs, not mock responses.
+- Final LAN vehicles test: remote owner walks their real CharacterController onto the entry road. Server car stops before player, holds position for one second, resumes when player walks away, parks, opens driver door and guest walks to counter. Late join DURING DRIVING restores vehicle motion and hidden driver, without a client NavMeshAgent. Host and Client pass.
+- Final LAN service test: six early admissions with zero questions; actual NPC walks to all six rooms. Host answers real phone interactions; Client delivers towels / repairs televisions, including rooms 105 and 106. Controlled electrical fault and matching Maintenance breaker repair. Six checkout/bed/trash/bag/disposal/vehicle-departure cycles plus a second full Room 101 cycle; seven check-ins, seven checkouts and seven disposals. Late join validates ready rooms/doors; next shift resets room, guest, search, workstation and threat state. Longer stays and repeated human cases are TEST FIXTURES only, not production content or timing changes.
+- Final LAN reveal test: early admission of Jonah with zero questions, ordinary walk to Room 101, real 45-second in-room delay, visible human body/collider/agent retired, room dirtied and vacated, continuous infiltration and exploration using the existing Mimic/vent system. Late join observes the same active threat. Next shift resets it without reconnecting.
+All completed runs check local input/camera ownership, visible remote player, disconnection and workstation release. Critical runtime-log count is zero in each completed report. Full raw reports/logs remain in Tests/.
+
+VISUAL INSPECTION
+Viewed actual native portraits and built-game screenshots of license/booking, contextual booking action, answers, live parking, report/photo and no-results. Sedan KDH-417 and van RVT-208 are legible at 800x600; all six parking screenshots are saved. Contrast improved after first screenshots. ASK ABOUT REPORT moved outside the scroll area so it is visible. Longer report content/photo controls can scroll; clicking the photograph also opens its enlarged version.
+
+LIMITS / MANUAL CHECKS
+No native mouse/keyboard UI automation was available: the desktop tool reported "Sky Computer Use service startup request failed". Tests invoke the real question/search UI handlers and RPCs, set local input text/selected field for rendering, and inspect real screenshots. Actual mouse selection of the booking field, typing the plate, Guest view toggle and general subjective usability still need a human pass. These physical UI clicks/keystrokes are NOT reported as tested.
+Relay tests used separate existing cached test authentication profiles on this Mac. Fresh authentication on another computer, real remote-network latency/loss, a four-player session and host migration were not tested. Full combat/gunplay was not re-run; the existing infiltration/exploration integration and next-shift cleanup were tested. Windows was neither rebuilt nor executed. x86_64 binary presence was verified, but the Intel executable path was not run on separate hardware.
+Vehicle entry/exit is placeholder door motion plus NPC visibility transition at the driver point; no seated driver or bespoke enter/exit animation. Human playtesting must assess path smoothness, investigation readability/pacing and the six authored clues. Fixed fictional date/limited six-case catalogue remains prototype content.
+Batch Unity builds report two warnings about editor Cloud linkage/authentication and absent symbol-upload token. The project ID and settings were preserved, and actual private lobby/Relay tests succeeded; no TLS/security bypass or service configuration change was made. These warnings are not counted as passed runtime checks or hidden.
+
+Test reports:
+Documentation/CheckIn/Tests/vehicles-20261030-131515/host.txt
+Documentation/CheckIn/Tests/vehicles-20261030-131515/client.txt
+Documentation/CheckIn/Tests/vehicles-20261030-131515/late.txt
+Documentation/CheckIn/Tests/service-20261030-131812/host.txt
+Documentation/CheckIn/Tests/service-20261030-131812/client.txt
+Documentation/CheckIn/Tests/service-20261030-131812/late.txt
+Documentation/CheckIn/Tests/reveal-20261030-132047/host.txt
+Documentation/CheckIn/Tests/reveal-20261030-132047/client.txt
+Documentation/CheckIn/Tests/reveal-20261030-132047/late.txt
+Documentation/CheckIn/Tests/relay-registration-20261030-131513/host.txt
+Documentation/CheckIn/Tests/relay-registration-20261030-131513/client.txt
+Documentation/CheckIn/Tests/relay-registration-20261030-131513/late.txt
+
+Build: Succeeded | errors=0 warnings=2 | 2026-10-30T13:13:33.1318030+01:00 | Builds/Validation
+
+STABLE PATH LAUNCH: Documentation/CheckIn/Tests/stable-launch-20261030-133047
+Two graphical instances at 800x600 from Builds/Playtest/MotelGame.app: distinct spawns, owner camera/input/capsule, one active camera/listener, remote movement and yaw, disconnect/despawn, no critical runtime logs. PASS.

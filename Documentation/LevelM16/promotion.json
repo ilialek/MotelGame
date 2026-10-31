@@ -1,0 +1,58 @@
+{
+  "passed_suites": {
+    "routes": "routes-20261027-152548",
+    "service": "service-20261027-155555",
+    "refusal": "refusal-20261027-152548",
+    "failure": "failure-20261027-152755",
+    "hunt": "hunt-20261027-161444",
+    "relay": "relay-20261027-155822"
+  },
+  "stable_app": "/Users/ilalekomtsev/MotelGame/Builds/Playtest/MotelGame.app",
+  "previous_live_app": "/Users/ilalekomtsev/MotelGame/Backups/BeforeLevelM16_20261027_135215/LivePlaytestBeforePromotion.app",
+  "initial_backup": "/Users/ilalekomtsev/MotelGame/Backups/BeforeLevelM16_20261027_135215",
+  "restored_unrelated_settings": [
+    "Assets/Settings/DefaultVolumeProfile.asset",
+    "Assets/Settings/PC_RPAsset.asset",
+    "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "ProjectSettings/UnityConnectSettings.asset"
+  ],
+  "binary_hashes": {
+    "Contents/MacOS/MotelGame": "29fa88f82c3ffc5d203e4731ece223ba439733f6a7d6b3b0082d9d49f8c6e750",
+    "Contents/Resources/Data/Managed/Assembly-CSharp.dll": "628babbafeb7eac8cab9aef6a2f5da18f9c1f84cbfd1e934f9e73936c2ebe372",
+    "Contents/Resources/Data/level0": "83b1a571c79d596501089547354d1594b687c285a5ade1258a8a9da5cc40badb"
+  },
+  "candidate_build": "Succeeded | errors=0 warnings=0 | 2026-10-27T16:13:32.6550040+01:00 | Builds/Validation",
+  "preexisting_files_audited": 2501,
+  "changed_preexisting_files": [
+    "Assets/Game/Scripts/Interactions/NetworkDoor.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs",
+    "Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs",
+    "Assets/Game/Scripts/Horror/MimicHunt.cs",
+    "Assets/Game/Scripts/Horror/MimicDebugMenu.cs",
+    "Assets/Game/Scripts/Horror/VentSurveillance.cs",
+    "Assets/Game/Scripts/Inspection/BaggageInspection.cs",
+    "Assets/Game/Scripts/Inspection/HuntScenario.cs",
+    "Assets/Game/Scripts/Service/GuestServiceInteraction.cs",
+    "Assets/Game/Scripts/Service/GuestServiceRequests.cs",
+    "Assets/Game/Scripts/Service/NightShiftController.cs",
+    "Assets/Game/Scripts/Service/ComputerInteraction.cs",
+    "Assets/Game/Scripts/Service/StaffTaskBoard.cs",
+    "Assets/Game/Scripts/Service/ServiceRoom.cs",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs",
+    "Assets/Game/Editor/PlaytestBuild.cs",
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "unexpected_changes": [],
+  "stable_verification": {
+    "suite": "routes-20261027-162134",
+    "results": {
+      "host": "PASS",
+      "client": "PASS",
+      "late": "PASS"
+    },
+    "critical_runtime_logs": 0,
+    "application": "/Users/ilalekomtsev/MotelGame/Builds/Playtest/MotelGame.app"
+  }
+}

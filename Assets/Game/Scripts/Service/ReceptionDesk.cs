@@ -33,14 +33,22 @@ namespace MotelGame.Service
         public GuestLifecycle WaitingNpc => System.Array.Find(guests,g=>g.IsSpawned && g.State.QueuePosition==1 && g.AtQueuePosition && g.CanCheckIn);
         public GuestLifecycle CheckoutNpc => System.Array.Find(guests,g=>g.IsSpawned && g.State.QueuePosition==1 && g.AtQueuePosition && g.CanCheckoutFor(g.Room));
         public bool GuestWaiting => IsSpawned && WaitingNpc != null;
-        public bool CanRegister(ServiceRoom room) => GuestWaiting && System.Array.IndexOf(rooms,room)>=0 && room.AvailableForCheckIn && (MotelGame.Inspection.BaggageInspection.Instance==null || MotelGame.Inspection.BaggageInspection.Instance.CanAdmit(WaitingNpc));
+        public bool CanRegister(ServiceRoom room) => GuestWaiting && System.Array.IndexOf(rooms,room)>=0 && room.AvailableForCheckIn && RegistrationComplete(WaitingNpc);
+        bool RegistrationComplete(GuestLifecycle guest) => MotelGame.Registration.RegistrationDesk.Instance!=null
+            ? MotelGame.Registration.RegistrationDesk.Instance.CanAdmit(guest)
+            : MotelGame.Inspection.BaggageInspection.Instance==null||MotelGame.Inspection.BaggageInspection.Instance.CanAdmit(guest);
+        void RecordDecision(GuestLifecycle guest,bool admit)
+        {
+            if(MotelGame.Registration.RegistrationDesk.Instance!=null)MotelGame.Registration.RegistrationDesk.Instance.RecordDecisionOnServer(guest,admit);
+            else MotelGame.Inspection.BaggageInspection.Instance?.RecordDecisionOnServer(guest,admit);
+        }
         public override void OnNetworkSpawn()
         {
             queue.Clear();waitingSince.Clear();clearingGuest=null;nextGuest=0;
             waitingGuest.SetActive(false);guestLabel.gameObject.SetActive(false);
         }
         void Update(){if(IsSpawned&&IsServer&&shift.IsRunning)ScheduleReception();}
-        static bool Queued(GuestLifecycle guest)=>guest.Phase==GuestPhase.Arriving||guest.Phase==GuestPhase.WaitingForCheckIn||
+        static bool Queued(GuestLifecycle guest)=>guest.Phase==GuestPhase.DrivingToMotel||guest.Phase==GuestPhase.Arriving||guest.Phase==GuestPhase.WaitingForCheckIn||
             guest.Phase==GuestPhase.ReturningForCheckout||guest.Phase==GuestPhase.WaitingForCheckout;
         void UpdatePositions()
         {
@@ -132,9 +140,9 @@ namespace MotelGame.Service
             if (!shift.IsRunning || !computer.Authorizes(sender,lease)) message = "Use the Reception computer during the shift.";
             else if (index < 0 || index >= rooms.Length) message = "Invalid room.";
             else if (!GuestWaiting || !expectedGuest.TryGet(out var selected,NetworkManager) || selected!=WaitingNpc.NetworkObject || WaitingNpc.State.Visit!=visit) message = "Waiting guest changed. Select again.";
-            else if (MotelGame.Inspection.BaggageInspection.Instance!=null&&!MotelGame.Inspection.BaggageInspection.Instance.CanAdmit(WaitingNpc)) message = "Ask about the contents and weigh this guest's bag before admission.";
+            else if (!RegistrationComplete(WaitingNpc)) message = "Complete the guest registration before admission.";
             else if (!WaitingNpc.TryCheckIn(rooms[index],cycle)) message = "Room unavailable. Refresh your selection.";
-            else { MotelGame.Inspection.BaggageInspection.Instance?.RecordDecisionOnServer(rooms[index].Occupant,true); message = $"Guest checked into Room {rooms[index].RoomNumber}."; }
+            else { RecordDecision(rooms[index].Occupant,true); message = $"Guest checked into Room {rooms[index].RoomNumber}."; }
             FeedbackRpc(message, RpcTarget.Single(sender, RpcTargetUse.Temp));
         }
         [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -162,9 +170,9 @@ namespace MotelGame.Service
             if(!IsServer||!IsSpawned||!shift.IsRunning||!computer.Authorizes(rpc.Receive.SenderClientId,lease)||
                 !expectedGuest.TryGet(out var obj,NetworkManager)||WaitingNpc==null||obj!=WaitingNpc.NetworkObject||WaitingNpc.State.Visit!=visit)return;
             var guest=WaitingNpc;
-            MotelGame.Inspection.BaggageInspection.Instance?.RecordDecisionOnServer(guest,false);
+            RecordDecision(guest,false);
             guest.BeginLeaving();
-            FeedbackRpc("Accommodation refused. The guest leaves with their baggage.",RpcTarget.Single(rpc.Receive.SenderClientId,RpcTargetUse.Temp));
+            FeedbackRpc("Accommodation refused. The guest leaves the motel.",RpcTarget.Single(rpc.Receive.SenderClientId,RpcTargetUse.Temp));
         }
         public void Relocate(int sourceIndex, int destinationIndex)
         {

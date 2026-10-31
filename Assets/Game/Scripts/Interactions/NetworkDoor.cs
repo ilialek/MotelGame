@@ -28,12 +28,18 @@ namespace MotelGame.Interactions
         }
         readonly NetworkVariable<DoorState> state = new NetworkVariable<DoorState>(default,
             NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        [SerializeField] UnityEngine.AI.NavMeshObstacle openLeafObstacle;
         public bool IsOpen => state.Value.Open;
         public double TransitionStartedAt => state.Value.StartedAt;
         public bool IsMoving => IsSpawned && state.Value.StartedAt > 0 &&
             NetworkManager.ServerTime.Time < state.Value.StartedAt + animationDuration;
+        readonly NetworkVariable<bool> blocking = new(false,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Server);
+        PassageBlocker blocker;
+        public bool PassageBlocked => blocker != null && blocker.Enabled;
         Collider passageGuest;
         bool closeAfterGuest;
+        [SerializeField] bool autoCloseAfterPlayer;
+        double autoCloseAt;
         public bool GuestPassage => state.Value.GuestPassage;
         public bool CanInteract => IsSpawned && !IsMoving && !GuestPassage;
         public string Prompt => GuestPassage ? "Guest using door" : IsMoving ? "Door moving" : IsOpen ? "Close door" : "Open door";
@@ -42,6 +48,8 @@ namespace MotelGame.Interactions
 
         public override void OnNetworkSpawn()
         {
+            hinge.localRotation=Quaternion.identity;
+            blocker = new PassageBlocker(transform, leaf, NetworkManager);
             if (IsServer) { var next=state.Value; next.GuestPassage=false; state.Value=next; }
             ApplyPose();
         }
@@ -49,7 +57,8 @@ namespace MotelGame.Interactions
         {
             if (!IsSpawned) return;
             ApplyPose();
-            if (IsServer && closeAfterGuest && !IsMoving && !GuestPassage && !SweepOccupied())
+            if(IsServer&&autoCloseAfterPlayer&&IsOpen&&!GuestPassage&&!IsMoving&&NetworkManager.ServerTime.Time>=autoCloseAt)SetOpen(false);
+            if (IsServer && closeAfterGuest && !IsMoving && !GuestPassage)
             { closeAfterGuest=false; SetOpen(false); passageGuest=null; }
         }
 
@@ -61,6 +70,11 @@ namespace MotelGame.Interactions
             t = t * t * (3 - 2 * t);
             CurrentAngle = Mathf.Lerp(value.Open ? 0 : openAngle, value.Open ? openAngle : 0, t);
             hinge.localRotation = Quaternion.Euler(0, CurrentAngle, 0);
+            if(IsServer)blocking.Value=!value.Open && !IsMoving && blocker!=null && blocker.CanBlock;
+            blocker?.SetClosed(blocking.Value);
+            // Optional in authored scenes with through-routes. Closed doors remain planned
+            // as explicit guest crossings; the animated leaf remains query-only.
+            if(openLeafObstacle!=null)openLeafObstacle.enabled=false;
             // One moving primitive door: keep raycasts/CharacterController collision current locally.
             Physics.SyncTransforms();
         }
@@ -71,21 +85,10 @@ namespace MotelGame.Interactions
         public void RequestToggleRpc(RpcParams rpcParams = default)
         {
             if (!IsSpawned || !IsServer || IsMoving || GuestPassage) return;
-            ulong sender = rpcParams.Receive.SenderClientId;
-            if (!NetworkManager.ConnectedClients.TryGetValue(sender, out var client) ||
-                client.PlayerObject == null || !client.PlayerObject.IsSpawned) return;
-            var interactor = client.PlayerObject.GetComponent<PlayerInteractor>();
-            if (interactor == null) return;
-            ApplyPose();
-            Vector3 eye = interactor.EyePosition;
-            Vector3 closest = leaf.ClosestPoint(eye);
-            if ((closest - eye).sqrMagnitude > PlayerInteractor.MaxDistance * PlayerInteractor.MaxDistance) return;
-            // The server uses its own player position and geometry, never a client-supplied distance/id.
-            if (Physics.Linecast(eye, closest, out var hit, ~0, QueryTriggerInteraction.Ignore) &&
-                !hit.collider.transform.IsChildOf(transform)) return;
-            if (SweepOccupied()) return;
+            if(!ServiceInteractionValidation.CanReach(NetworkManager,rpcParams.Receive.SenderClientId,leaf))return;
             closeAfterGuest=false;
             SetOpen(!IsOpen);
+            if(IsOpen)autoCloseAt=NetworkManager.ServerTime.Time+3;
         }
 
         void SetOpen(bool open)
@@ -101,7 +104,7 @@ namespace MotelGame.Interactions
                 Vector3.Distance(guest.bounds.center,transform.position)>3.5f || (passageGuest!=null && passageGuest!=guest)) return false;
             passageGuest=guest; closeAfterGuest=false;
             var next=state.Value; next.GuestPassage=true; state.Value=next;
-            if (!IsMoving && !IsOpen && !SweepOccupied()) SetOpen(true);
+            if (!IsMoving && !IsOpen) SetOpen(true);
             return true;
         }
         public void EndGuestPassage(Collider guest)
@@ -110,25 +113,7 @@ namespace MotelGame.Interactions
             var next=state.Value; next.GuestPassage=false; state.Value=next;
             closeAfterGuest=true;
         }
-        public override void OnNetworkDespawn() { passageGuest=null; closeAfterGuest=false; }
+        public override void OnNetworkDespawn() { blocker?.Dispose();blocker=null;passageGuest=null; closeAfterGuest=false;if(openLeafObstacle!=null)openLeafObstacle.enabled=false; }
 
-        bool SweepOccupied()
-        {
-            // Remote CharacterControllers are disabled, so test connected player positions directly.
-            foreach (var client in NetworkManager.ConnectedClientsList)
-            {
-                if (client.PlayerObject == null) continue;
-                var capsule = client.PlayerObject.GetComponent<CharacterController>();
-                if (capsule == null) continue;
-                Vector3 center = transform.InverseTransformPoint(client.PlayerObject.transform.TransformPoint(capsule.center));
-                Vector3 half = sweepSize * .5f;
-                if (Mathf.Abs(center.x - sweepCenter.x) < half.x + capsule.radius &&
-                    Mathf.Abs(center.z - sweepCenter.z) < half.z + capsule.radius &&
-                    Mathf.Abs(center.y - sweepCenter.y) < half.y + capsule.height * .5f) return true;
-            }
-            foreach (var collider in Physics.OverlapBox(transform.TransformPoint(sweepCenter),sweepSize*.5f,transform.rotation,~0,QueryTriggerInteraction.Ignore))
-                if(collider.GetComponent<GuestLifecycle>()!=null) return true;
-            return false;
-        }
     }
 }

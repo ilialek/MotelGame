@@ -26,7 +26,7 @@ namespace MotelGame.Inspection
         public string Description => Mode switch
         {
             HuntTestMode.Inspection => $"INSPECTION PRACTICE · 12-minute shift\n{inspection.CaseCount} authored cases; manual admission. Short stays and automatic checkout/turnover. No creature release in this isolated mode.",
-            HuntTestMode.Complete => "COMPLETE GAMEPLAY · 10-minute shift\nFour arrivals, manual inspection/admission. One carrier in the sequence. Refusal prevents the hunt; no replacement is spawned.",
+            HuntTestMode.Complete => $"COMPLETE GAMEPLAY · 10-minute shift\n{inspection.CompleteScenarioCount} arrivals, manual inspection/admission. One carrier in the sequence. Refusal prevents the hunt; no replacement is spawned.",
             HuntTestMode.HuntOnly => "HUNT ONLY · 10-minute shift\nThree guests walk to prepared rooms automatically. Hunt starts when all three arrive. One protected carrier, two potential victims.",
             _ => "ORDINARY SHIFT · 15 minutes\nUse Reception to start the shift. Arrivals require baggage registration."
         };
@@ -56,7 +56,7 @@ namespace MotelGame.Inspection
             Mode = mode;
             startedHunt = false;
             extended.Clear();
-            inspection.Shift.DebugStartScenario(mode == HuntTestMode.Inspection ? 720 : 600, mode == HuntTestMode.Inspection ? inspection.CaseCount : mode == HuntTestMode.HuntOnly ? 3 : 4, mode == HuntTestMode.Inspection ? 10 : 16);
+            inspection.Shift.DebugStartScenario(mode == HuntTestMode.Inspection ? 720 : 600, mode == HuntTestMode.Inspection ? inspection.CaseCount : mode == HuntTestMode.HuntOnly ? 3 : inspection.CompleteScenarioCount, mode == HuntTestMode.Inspection ? 10 : 16);
             foreach (var room in inspection.Reception.Rooms)
                 room.PrepareForHuntDebug();
         }

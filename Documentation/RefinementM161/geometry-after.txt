@@ -1,0 +1,196 @@
+PASS South corridor east boundary both sides -2.7 y=0.15
+PASS South corridor east boundary both sides -2.7 y=1.65
+PASS South corridor east boundary both sides -2.7 y=2.7
+PASS South corridor east boundary both sides -2.4 y=0.15
+PASS South corridor east boundary both sides -2.4 y=1.65
+PASS South corridor east boundary both sides -2.4 y=2.7
+PASS South corridor east boundary both sides -2.1 y=0.15
+PASS South corridor east boundary both sides -2.1 y=1.65
+PASS South corridor east boundary both sides -2.1 y=2.7
+PASS South corridor east boundary both sides -1.8 y=0.15
+PASS South corridor east boundary both sides -1.8 y=1.65
+PASS South corridor east boundary both sides -1.8 y=2.7
+PASS South corridor east boundary both sides -1.5 y=0.15
+PASS South corridor east boundary both sides -1.5 y=1.65
+PASS South corridor east boundary both sides -1.5 y=2.7
+PASS South corridor east boundary both sides -1.2 y=0.15
+PASS South corridor east boundary both sides -1.2 y=1.65
+PASS South corridor east boundary both sides -1.2 y=2.7
+PASS South corridor east boundary both sides -0.9000003 y=0.15
+PASS South corridor east boundary both sides -0.9000003 y=1.65
+PASS South corridor east boundary both sides -0.9000003 y=2.7
+PASS South corridor east boundary both sides -0.6000003 y=0.15
+PASS South corridor east boundary both sides -0.6000003 y=1.65
+PASS South corridor east boundary both sides -0.6000003 y=2.7
+PASS South corridor east boundary both sides -0.3000003 y=0.15
+PASS South corridor east boundary both sides -0.3000003 y=1.65
+PASS South corridor east boundary both sides -0.3000003 y=2.7
+PASS 101 bathroom closure both sides z=0.15 y=0.15
+PASS 101 bathroom closure both sides z=0.15 y=1.65
+PASS 101 bathroom closure both sides z=0.15 y=2.7
+PASS 101 bathroom closure both sides z=0.55 y=0.15
+PASS 101 bathroom closure both sides z=0.55 y=1.65
+PASS 101 bathroom closure both sides z=0.55 y=2.7
+PASS 101 bathroom closure both sides z=0.95 y=0.15
+PASS 101 bathroom closure both sides z=0.95 y=1.65
+PASS 101 bathroom closure both sides z=0.95 y=2.7
+PASS 101 bathroom closure both sides z=1.55 y=0.15
+PASS 101 bathroom closure both sides z=1.55 y=1.65
+PASS 101 bathroom closure both sides z=1.55 y=2.7
+PASS 101 bathroom closure both sides z=1.95 y=0.15
+PASS 101 bathroom closure both sides z=1.95 y=1.65
+PASS 101 bathroom closure both sides z=1.95 y=2.7
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 101 ceiling-wall continuity
+PASS 102 bathroom closure both sides z=0.15 y=0.15
+PASS 102 bathroom closure both sides z=0.15 y=1.65
+PASS 102 bathroom closure both sides z=0.15 y=2.7
+PASS 102 bathroom closure both sides z=0.55 y=0.15
+PASS 102 bathroom closure both sides z=0.55 y=1.65
+PASS 102 bathroom closure both sides z=0.55 y=2.7
+PASS 102 bathroom closure both sides z=0.95 y=0.15
+PASS 102 bathroom closure both sides z=0.95 y=1.65
+PASS 102 bathroom closure both sides z=0.95 y=2.7
+PASS 102 bathroom closure both sides z=1.55 y=0.15
+PASS 102 bathroom closure both sides z=1.55 y=1.65
+PASS 102 bathroom closure both sides z=1.55 y=2.7
+PASS 102 bathroom closure both sides z=1.95 y=0.15
+PASS 102 bathroom closure both sides z=1.95 y=1.65
+PASS 102 bathroom closure both sides z=1.95 y=2.7
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 102 ceiling-wall continuity
+PASS 103 bathroom closure both sides z=0.15 y=0.15
+PASS 103 bathroom closure both sides z=0.15 y=1.65
+PASS 103 bathroom closure both sides z=0.15 y=2.7
+PASS 103 bathroom closure both sides z=0.55 y=0.15
+PASS 103 bathroom closure both sides z=0.55 y=1.65
+PASS 103 bathroom closure both sides z=0.55 y=2.7
+PASS 103 bathroom closure both sides z=0.95 y=0.15
+PASS 103 bathroom closure both sides z=0.95 y=1.65
+PASS 103 bathroom closure both sides z=0.95 y=2.7
+PASS 103 bathroom closure both sides z=1.55 y=0.15
+PASS 103 bathroom closure both sides z=1.55 y=1.65
+PASS 103 bathroom closure both sides z=1.55 y=2.7
+PASS 103 bathroom closure both sides z=1.95 y=0.15
+PASS 103 bathroom closure both sides z=1.95 y=1.65
+PASS 103 bathroom closure both sides z=1.95 y=2.7
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 103 ceiling-wall continuity
+PASS 104 bathroom closure both sides z=0.15 y=0.15
+PASS 104 bathroom closure both sides z=0.15 y=1.65
+PASS 104 bathroom closure both sides z=0.15 y=2.7
+PASS 104 bathroom closure both sides z=0.55 y=0.15
+PASS 104 bathroom closure both sides z=0.55 y=1.65
+PASS 104 bathroom closure both sides z=0.55 y=2.7
+PASS 104 bathroom closure both sides z=0.95 y=0.15
+PASS 104 bathroom closure both sides z=0.95 y=1.65
+PASS 104 bathroom closure both sides z=0.95 y=2.7
+PASS 104 bathroom closure both sides z=1.55 y=0.15
+PASS 104 bathroom closure both sides z=1.55 y=1.65
+PASS 104 bathroom closure both sides z=1.55 y=2.7
+PASS 104 bathroom closure both sides z=1.95 y=0.15
+PASS 104 bathroom closure both sides z=1.95 y=1.65
+PASS 104 bathroom closure both sides z=1.95 y=2.7
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 104 ceiling-wall continuity
+PASS 105 bathroom closure both sides z=0.15 y=0.15
+PASS 105 bathroom closure both sides z=0.15 y=1.65
+PASS 105 bathroom closure both sides z=0.15 y=2.7
+PASS 105 bathroom closure both sides z=0.55 y=0.15
+PASS 105 bathroom closure both sides z=0.55 y=1.65
+PASS 105 bathroom closure both sides z=0.55 y=2.7
+PASS 105 bathroom closure both sides z=0.95 y=0.15
+PASS 105 bathroom closure both sides z=0.95 y=1.65
+PASS 105 bathroom closure both sides z=0.95 y=2.7
+PASS 105 bathroom closure both sides z=1.55 y=0.15
+PASS 105 bathroom closure both sides z=1.55 y=1.65
+PASS 105 bathroom closure both sides z=1.55 y=2.7
+PASS 105 bathroom closure both sides z=1.95 y=0.15
+PASS 105 bathroom closure both sides z=1.95 y=1.65
+PASS 105 bathroom closure both sides z=1.95 y=2.7
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 105 ceiling-wall continuity
+PASS 106 bathroom closure both sides z=0.15 y=0.15
+PASS 106 bathroom closure both sides z=0.15 y=1.65
+PASS 106 bathroom closure both sides z=0.15 y=2.7
+PASS 106 bathroom closure both sides z=0.55 y=0.15
+PASS 106 bathroom closure both sides z=0.55 y=1.65
+PASS 106 bathroom closure both sides z=0.55 y=2.7
+PASS 106 bathroom closure both sides z=0.95 y=0.15
+PASS 106 bathroom closure both sides z=0.95 y=1.65
+PASS 106 bathroom closure both sides z=0.95 y=2.7
+PASS 106 bathroom closure both sides z=1.55 y=0.15
+PASS 106 bathroom closure both sides z=1.55 y=1.65
+PASS 106 bathroom closure both sides z=1.55 y=2.7
+PASS 106 bathroom closure both sides z=1.95 y=0.15
+PASS 106 bathroom closure both sides z=1.95 y=1.65
+PASS 106 bathroom closure both sides z=1.95 y=2.7
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS 106 ceiling-wall continuity
+PASS Reception -> emergency equipment connected
+Reception -> emergency equipment: 7.00 m / 1.7 s excluding doors
+PASS 101 -> emergency equipment connected
+101 -> emergency equipment: 24.98 m / 6.2 s excluding doors
+PASS Reception -> Maintenance connected
+Reception -> Maintenance: 37.30 m / 9.3 s excluding doors
+PASS Reception -> 101 connected
+Reception -> 101: 16.54 m / 4.1 s excluding doors
+PASS Reception -> 102 connected
+Reception -> 102: 19.32 m / 4.8 s excluding doors
+PASS Reception -> 103 connected
+Reception -> 103: 24.94 m / 6.2 s excluding doors
+PASS Reception -> 104 connected
+Reception -> 104: 46.39 m / 11.6 s excluding doors
+PASS Reception -> 105 connected
+Reception -> 105: 41.79 m / 10.4 s excluding doors
+PASS Reception -> 106 connected
+Reception -> 106: 36.74 m / 9.2 s excluding doors
+ThermalDecoy pickup bounds=Center: (29.04, 1.06, -3.02), Extents: (0.16, 0.15, 0.15) home=(29.04, 0.94, -3.02)
+PASS ThermalDecoy unobstructed pickup from (27.88, 1.68, -3.34)
+ThermalDecoy closest-point probe (27.88, 1.68, -3.34) -> (28.88, 1.21, -3.17): 
+PASS ThermalDecoy unobstructed pickup from (27.79, 1.65, -3.02)
+ThermalDecoy closest-point probe (27.79, 1.65, -3.02) -> (28.88, 1.21, -3.02): Motel_Layout_V4/04_Gameplay/MimicHunt_M14/ThermalDecoy/Visual
+Firearm pickup bounds=Center: (29.04, 1.06, -2.18), Extents: (0.08, 0.13, 0.22) home=(29.04, 0.94, -2.18)
+PASS Firearm unobstructed pickup from (27.88, 1.68, -3.34)
+Firearm closest-point probe (27.88, 1.68, -3.34) -> (28.96, 1.19, -2.40): Motel_Layout_V4/04_Gameplay/MimicHunt_M14/Firearm/Visual
+PASS Firearm unobstructed pickup from (27.79, 1.65, -2.18)
+Firearm closest-point probe (27.79, 1.65, -2.18) -> (28.96, 1.19, -2.18): Motel_Layout_V4/04_Gameplay/MimicHunt_M14/Firearm/Visual
+PASS Staff workload configuration
+PASS 14 authored cases and one shared record
+PASS Exactly three primary tests

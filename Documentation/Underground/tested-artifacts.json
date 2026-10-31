@@ -1,0 +1,38 @@
+{
+  "build": "Succeeded errors=0 warnings=0 2026-10-30T23:34:48.8719200+01:00",
+  "tests": {
+    "underground-routes": "Documentation/Underground/Tests/underground-routes-20261030-233006",
+    "underground-hunt": "Documentation/Underground/Tests/underground-hunt-20261030-233505",
+    "service": "Documentation/Underground/Tests/service-20261030-230704",
+    "ui": "Documentation/Underground/Tests/ui-20261030-230017"
+  },
+  "sha256": {
+    "Builds/UndergroundCandidate/MotelGame.app/Contents/MacOS/MotelGame": "188f640d1541f4372d641b7046ebf016531de412bb5c32cb29730207efc1c4fe",
+    "Builds/UndergroundCandidate/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "af6369214037a8bb4c69924de77010bd46f2bb0b9e227cbb74fbb2dd48345d74",
+    "Assets/Game/Scenes/Motel_Layout_V4.unity": "7cb59bb7daabc8df2bcaa56a9af12b9591f96cfbd65ef01dee1ac209fac39492"
+  },
+  "source_sha256": {
+    "Assets/Game/Scripts/FirstPersonController.cs": "8ed62cfe1b2a46b6e51b3551be41c3cef301638688b4a8c5c082bde163364536",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.cs": "640fc4fdb8e531844aa7ad8748b51bbaa083bf7a4d48e1f04437190ba155cc2e",
+    "Assets/Game/Scripts/Horror/HuntEquipment.cs": "7425d288da812ea1dbcfe2be2deb776ac2906d46d0b76386926ef4d478eab309",
+    "Assets/Game/Scripts/Registration/RegisteredGuest.cs": "4d1ab0f756a0645e1189102d3380e6826825bb3ca87ff845db317762c7b1f3f8",
+    "Assets/Game/Scripts/Service/GuestLifecycle.cs": "36dc1b03bbdf6da85360847d6b8be278989e577562d47223bd4688ff27cdeeda",
+    "Assets/Game/Scripts/Horror/VentNode.cs": "0056bd9e0dcee060cd081dd14949306f24ffcb3d33c2bdedb52e1a08d06921a7",
+    "Assets/Game/Scripts/Horror/VentSurveillance.cs": "a644b1d0631f9ad277743a4cf835bd35a8e0f438635bde48796ff0344c2f1071",
+    "Assets/Game/Scripts/Service/ReceptionComputer.cs": "43e4aafa42637d569383022aa692c6fb63146b67e8c550b44f6d57e7c37aedab",
+    "Assets/Game/Scripts/Interactions/NetworkDoor.cs": "47c2e6c9daacdecea4550ba55c1860e0e89dda28cf09a617a0bf95f98be1cc8d",
+    "Assets/Game/Scripts/Service/NightShiftController.cs": "1232c031e958c1a0e710288aeaa2f8f406f97e6130351c941537998740b6466b",
+    "Assets/Game/Scripts/Interactions/PlayerInteractor.cs": "d7b520250fdc58102a0bf21d28e46af9ce292868015803515eb6f3b2f8d94d33",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs": "a140b4dab2105ee867af0179bcc48758d5e7ec683c564f6e8d0c49b64dbbd993",
+    "Assets/Game/Scripts/Horror/MimicHunt.cs": "50bdf65e64e013c365431b6fffd7369f9f18100dd231e5af39094feed4af0fa1",
+    "Assets/Game/Scripts/Horror/VentHatch.cs": "7c894a72670c85860b8db13ba765e52fbcaba7ea91a57afa11f31678b8dbaabc",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.Exploration.cs": "4dcd62235dd46346189b1119f5098dec362a5c54c98a79a447b231d8d5dd6229",
+    "Assets/Game/Editor/UndergroundSetup.cs": "674b1b7e1963e2fba2d5b52d4ace82cf5102ab02f4925c928176ef77aa726740",
+    "Assets/Game/Editor/UndergroundSetup.Geometry.cs": "25ce620e6a43bc79d973d0d7265d4fdb9318126faae7c610f0d28e3971314f98",
+    "Assets/Game/Editor/UndergroundSetup.Validation.cs": "06696d084532c2e0f940a096e45328619122d795cc8f7bab95e6567ca42a65c2",
+    "Assets/Game/Editor/MotelLayoutV4.Validation.cs": "5658af9b2377e565714a9a53f3730c6553e20b18a1014a5a8fea7ae6a24ddc4c",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs": "6439d90f1f6db6c8372b307c8ac2acd6c4df20f400b071b472cf2af08e29b005",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Underground.cs": "f33575c61b66bb8f87aeb8e015b475718940a100587570420409cd67ef6cfc42",
+    "Assets/Game/Scripts/Networking/Tests/UndergroundUiVerification.cs": "2f5f088fc65dd1c78dd5c23753e615b4fecd1beb5c43c5800793993952ea2545"
+  }
+}

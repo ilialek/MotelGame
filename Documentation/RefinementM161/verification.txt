@@ -1,0 +1,137 @@
+M16.1 — фактически выполненные проверки
+Дата: 2026-10-28
+
+Сборка: Succeeded | errors=0 warnings=0 | 2026-10-28T11:38:50.6855500+01:00 | Builds/Validation
+macOS Universal: x86_64 + arm64; запуск проверен только на текущем Mac.
+codesign --verify --deep --strict: exit 0. Info.plist проверяется при переносе.
+
+Native Editor: обе стороны исправленных стен на высоте 0,15 / 1,65 / 2,7 м; стыки с потолками; NavMesh; ссылки; дверные створки; уникальные NGO ID.
+Geometry: 181 PASS; 0 FAIL. Файл: RefinementM161/geometry-after.txt
+Scene: 71 PASS; 0 FAIL. Файл: LevelM16/scene-validation.txt
+
+ИГРОВЫЕ ПРОГОНЫ (настоящие standalone-процессы, управление автоматизировано)
+
+routes-20261028-112712
+PASS host / routes
+Two real NGO instances: independent owner input/view and visible remote body.
+Registration and separate CCTV station occupied simultaneously by different players; three feeds selectable.
+Room 101: both entrances traversed, bed/trash cleared, filled bag carried out through courtyard.
+Room 102: both entrances traversed, bed/trash cleared, filled bag carried out through courtyard.
+Room 103: both entrances traversed, bed/trash cleared, filled bag carried out through courtyard.
+Maintenance through-route, backyard, exterior Storage entrance and direct Lobby entrance walked.
+Client disconnect and host cleanup completed.
+Completed with 0 critical runtime logs.
+PASS client / routes
+PASS late / routes
+
+inspection-20261028-114054
+PASS host / inspection
+Disconnect preserved evidence; another player took free controls and continued the same record.
+Duplicate Admit plus stale Refuse produced one guest, one occupied room and one admission. Guest physically reached Room 101.
+Ordinary next shift cleared measurement history/answers and restored the configured handover without duplicate baggage.
+Completed with 0 critical runtime logs.
+PASS client / inspection
+Analyzer-only questions and three tests committed once despite duplicate RPCs. Reception simultaneously observed the same authoritative record.
+Completed with 0 critical runtime logs.
+PASS registrar / inspection
+Server rejected questioning and measurement from the Reception user, including forged analyzer-origin requests.
+Duplicate Admit plus stale Refuse produced one guest, one occupied room and one admission. Guest physically reached Room 101.
+Ordinary next shift cleared measurement history/answers and restored the configured handover without duplicate baggage.
+Completed with 0 critical runtime logs.
+PASS late / inspection
+Late join received the exact existing measurements, five guest statements and history; no ownership takeover.
+Completed with 0 critical runtime logs.
+
+service-20261028-114545
+PASS host / service
+Two real NGO instances: independent owner input/view and visible remote body.
+Six guests registered through scanner + computer and walked to their own corridor entrances, including 105 and 106.
+Room 101: CleanTowel answered and completed through real interactions by two employees.
+Room 102: RepairTelevision answered and completed through real interactions by two employees.
+Room 103: CleanTowel answered and completed through real interactions by two employees.
+Room 104: RepairTelevision answered and completed through real interactions by two employees.
+Room 105: CleanTowel answered and completed through real interactions by two employees.
+Room 106: RepairTelevision answered and completed through real interactions by two employees.
+Room 105 power failure, real phone answer, correct breaker repair in Maintenance, synchronized restoration.
+Room 101: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 102: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 103: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 104: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 105: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 106: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Room 101: RepairTelevision answered and completed through real interactions by two employees.
+Room 101: checkout at Reception, departure, bed/trash/bag reset and physical re-preparation.
+Seven check-ins, seven checkouts, seven complete clean/dispose cycles. Room 101 completed two cycles without scene/session restart.
+Shift summary and normal next-shift RPC reset guests, baggage, threat, room cleaning and instrument lease.
+Client disconnect and host cleanup completed.
+Completed with 0 critical runtime logs.
+PASS client / service
+PASS late / service
+
+refusal-20261028-114316
+PASS host / refusal
+Two real NGO instances: independent owner input/view and visible remote body.
+Three primary tests and five answers replicated; duplicate refusal applied once; carrier departed with no admission or infiltration.
+Client disconnect and host cleanup completed.
+Completed with 0 critical runtime logs.
+PASS client / refusal
+
+hunt-20261028-114057
+PASS host / hunt
+Two real NGO instances: independent owner input/view and visible remote body.
+Actual carrier baggage opened in Room 103; creature crawled to that room's vent and explored the new connected graph.
+Room 104 guest evacuated through corridor to separate lobby wait point, freeing the room.
+Thermal decoy caused physical emergence; first shot replicated 66 HP; retreat preserved damage.
+Separate lethal combat fixture: three server-validated shots killed the mimic once; carrier protected; guest service remains running.
+Scenario restart reset threat, equipment, baggage and guest states while both players stayed connected.
+Client disconnect and host cleanup completed.
+Completed with 0 critical runtime logs.
+PASS client / hunt
+PASS late / hunt
+
+failure-20261028-114646
+PASS host / failure
+Two real NGO instances: independent owner input/view and visible remote body.
+Actual carrier baggage opened in Room 103; creature crawled to that room's vent and explored the new connected graph.
+Unopposed hunt produced a synchronized guest death; the admitted carrier remained protected.
+Client disconnect and host cleanup completed.
+Completed with 0 critical runtime logs.
+PASS client / failure
+PASS late / failure
+
+solo-20261028-114051
+PASS host / solo
+Real 900-second ordinary shift via Start Shift, no F8/timing override: 4 arrivals, 3 admitted, 1 refused, 2 checkout, 2 disposals, 2 towels, 1 TV repairs, 0 faults; 563+ seconds of explicit idle recovery. Test oracle refused carriers; deduction usability was not evaluated.
+Next shift reset successfully, preserving two prepared handover rooms and clearing all inspection/service counters.
+Completed with 0 critical runtime logs.
+
+RELAY / PRIVATE LOBBIES
+Tests/relay-20261028-115140: функциональные проверки завершены на четырёх отдельных UGS-профилях через Relay (не localhost transport).
+Проверены: Host-only Start Game; владение вводом/камерой; репликация движения; limit 4; отказ пятому и несовместимой версии; leave/rejoin; корректный выход Host; вторая сессия без перезапуска; принудительная потеря Host.
+Итог NOT CLEAN: client1 получил SDK LobbyChannel.GetLobbyAsync HTTP 403 "lobby is private" после потери Host, хотя все проверки поведения и возврат в меню завершились. Остальные клиенты PASS. Ошибка не скрыта, исходный FAIL сохранён.
+Tests/relay-20261028-114322 и relay-20261028-114737: новый профиль incompatible не авторизован — UnityTls error 7 / Curl error 60 / SSL CA certificate error; это не проверка успешного подключения. Сохранённые профили позволили закончить функциональный прогон.
+
+НАЙДЕННОЕ В ХОДЕ ПРОВЕРКИ
+Исправлено: RecordArrival повторно проверял занятость уже после добавления гостя в очередь; счётчик мог не увеличиваться. Полная обычная смена повторена после исправления.
+Исправлено: сокращённое расписание растягивало первое прибытие до ~4 минут; начальное ожидание ограничено настроенным первым интервалом.
+Исправлено: приманка на новой полке перекрывала server reach ray к пистолету; увеличено расстояние между предметами. Повторный hunt PASS.
+Тестовые исправления: стартовая позиция актёра перекрывала вход NPC; Host слишком рано начинал следующую смену, до подтверждения клиента. Изменены только тестовые действия/барьеры. Ранние FAIL/ABORTED сохранены.
+
+ГРАНИЦЫ
+Сервисный сценарий задаёт ускоренную очередь, подготовленные комнаты и нужные типы просьб, но выполняет реальные пути/двери/взаимодействия. Боевые проверки используют отдельно отмеченные fixtures для проверки урона и отступления после настоящего проникновения багажа.
+Solo длится настоящие 900 секунд с обычным Start Shift и без изменения частоты/сроков. Авторская истина используется тестовым актёром только для отказа носителям. Это не человеческая проверка дедукции.
+Все 14 случаев проверены на корректность данных в Editor и прочитаны с сопоставлением модели/ответов; не все 14 сыграны человеком.
+Нет внешнего playtest на другом компьютере/сети; нет проверки запуска Intel или Windows. Новая Windows-сборка не создавалась.
+Оценку атмосферы, баланса, понятности диалогов и полной визуальной чистоты нужно подтвердить вручную.
+
+СТАБИЛЬНАЯ СБОРКА
+PASS 2026-10-28T11:57:49.104869
+Candidate copied to Builds/Playtest/MotelGame.app; all 340 file hashes match.
+Old build retained in Backups/BeforeRefinementM161_20261028_105326/Playtest and temporarily at /Users/ilalekomtsev/MotelGame/Builds/Playtest/.MotelGame.app.before-refinement
+Launchers, existing Windows files, Packages and ProjectSettings match their original hashes.
+Universal Mach-O и подпись проверены; Intel-ветвь отдельно не запускалась.
+
+POST-COPY STABLE TEST: refusal-20261028-115919
+Host + Client PASS; three primary tests, five statements, refusal, physical departure and disconnect. Zero critical logs. Stable app hashes still match all 340 candidate files.
+Final saved scene: original Renderer/Light records unchanged; launch command, Packages and ProjectSettings hashes match backup.
+Temporary swap copy removed; permanent pre-M16.1 backup kept.

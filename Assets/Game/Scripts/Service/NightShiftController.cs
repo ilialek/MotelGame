@@ -13,17 +13,17 @@ namespace MotelGame.Service
         public double StartedAt, Duration;
         public int GuestDeaths, MimicsEliminated, Evacuations;
         public int TrashDisposed, ElectricalFaults, ElectricalRepairs, Relocations;
-        public int ArrivalTarget, Arrived, CheckedIn, CheckedOut, Unserved, Towels, Repairs, MissedRequests, Prepared, OccupiedAtClose;
+        public int StaffAtStart, ArrivalTarget, Arrived, CheckedIn, CheckedOut, Unserved, Towels, Repairs, MissedRequests, Prepared, OccupiedAtClose;
         public void NetworkSerialize<T>(BufferSerializer<T> s) where T:IReaderWriter
         {
             s.SerializeValue(ref GuestDeaths);s.SerializeValue(ref MimicsEliminated);s.SerializeValue(ref Evacuations);
             s.SerializeValue(ref TrashDisposed);s.SerializeValue(ref ElectricalFaults);s.SerializeValue(ref ElectricalRepairs);s.SerializeValue(ref Relocations);
             s.SerializeValue(ref Phase);s.SerializeValue(ref Number);s.SerializeValue(ref StartedAt);s.SerializeValue(ref Duration);
-            s.SerializeValue(ref ArrivalTarget);s.SerializeValue(ref Arrived);s.SerializeValue(ref CheckedIn);s.SerializeValue(ref CheckedOut);
+            s.SerializeValue(ref StaffAtStart);s.SerializeValue(ref ArrivalTarget);s.SerializeValue(ref Arrived);s.SerializeValue(ref CheckedIn);s.SerializeValue(ref CheckedOut);
             s.SerializeValue(ref Unserved);s.SerializeValue(ref Towels);s.SerializeValue(ref Repairs);s.SerializeValue(ref MissedRequests);
             s.SerializeValue(ref Prepared);s.SerializeValue(ref OccupiedAtClose);
         }
-        public bool Equals(ShiftSnapshot v)=>GuestDeaths==v.GuestDeaths&&MimicsEliminated==v.MimicsEliminated&&Evacuations==v.Evacuations&&TrashDisposed==v.TrashDisposed&&ElectricalFaults==v.ElectricalFaults&&ElectricalRepairs==v.ElectricalRepairs&&Relocations==v.Relocations&&Phase==v.Phase&&Number==v.Number&&StartedAt==v.StartedAt&&Duration==v.Duration&&
+        public bool Equals(ShiftSnapshot v)=>GuestDeaths==v.GuestDeaths&&MimicsEliminated==v.MimicsEliminated&&Evacuations==v.Evacuations&&TrashDisposed==v.TrashDisposed&&ElectricalFaults==v.ElectricalFaults&&ElectricalRepairs==v.ElectricalRepairs&&Relocations==v.Relocations&&Phase==v.Phase&&Number==v.Number&&StartedAt==v.StartedAt&&Duration==v.Duration&&StaffAtStart==v.StaffAtStart&&
             ArrivalTarget==v.ArrivalTarget&&Arrived==v.Arrived&&CheckedIn==v.CheckedIn&&CheckedOut==v.CheckedOut&&Unserved==v.Unserved&&
             Towels==v.Towels&&Repairs==v.Repairs&&MissedRequests==v.MissedRequests&&Prepared==v.Prepared&&OccupiedAtClose==v.OccupiedAtClose;
     }
@@ -32,6 +32,48 @@ namespace MotelGame.Service
     [RequireComponent(typeof(NetworkObject))]
     public sealed class NightShiftController : NetworkBehaviour
     {
+        [Serializable]
+        public sealed class StaffWorkload
+        {
+            public Vector2Int arrivals;
+            public Vector2Int faults;
+            [Range(0,1)] public float requestChance;
+            [Min(0)] public float firstArrival, requestDelay, requestRecovery, arrivalDeferral;
+            [Range(0,6)] public int preparedRooms;
+            public bool Valid => arrivals.x >= 1 && arrivals.y >= arrivals.x && arrivals.y <= 32 && faults.x >= 0 && faults.y >= faults.x && faults.y <= 4 &&
+                requestChance >= 0 && requestChance <= 1 && firstArrival >= 0 && requestDelay > 0 && requestRecovery > 0 && arrivalDeferral >= 0 && preparedRooms >= 0 && preparedRooms <= 6;
+        }
+        [SerializeField, Tooltip("Ordinary shifts only. Entries: one, two, three, four staff.")]
+        StaffWorkload[] staffing = {
+            new StaffWorkload { arrivals=new(3,4), faults=new(0,1), requestChance=.55f, firstArrival=75, requestDelay=70, requestRecovery=75, arrivalDeferral=90, preparedRooms=2 },
+            new StaffWorkload { arrivals=new(5,6), faults=new(1,1), requestChance=.75f, firstArrival=60, requestDelay=45, requestRecovery=40, arrivalDeferral=45, preparedRooms=2 },
+            new StaffWorkload { arrivals=new(6,7), faults=new(1,2), requestChance=.9f, firstArrival=45, requestDelay=30, requestRecovery=25, arrivalDeferral=20, preparedRooms=1 },
+            new StaffWorkload { arrivals=new(7,8), faults=new(1,2), requestChance=1, firstArrival=45, requestDelay=25, requestRecovery=15, arrivalDeferral=0, preparedRooms=0 }
+        };
+        bool ordinaryShift;
+        double arrivalDeferredUntil;
+        public bool UsesStaffing => ordinaryShift;
+        public StaffWorkload WorkloadFor(int players) => staffing[Mathf.Clamp(players,1,4)-1];
+        public StaffWorkload CurrentWorkload => WorkloadFor(ActiveStaff);
+        int ActiveStaff
+        {
+            get
+            {
+                if (!IsServer || NetworkManager == null) return Mathf.Max(1,State.StaffAtStart);
+                int count=0;foreach(var client in NetworkManager.ConnectedClientsList)if(client.PlayerObject!=null&&client.PlayerObject.IsSpawned)count++;
+                return Mathf.Clamp(count,1,4);
+            }
+        }
+        public bool VisibleEmergency
+        {
+            get
+            {
+                var h=MotelGame.Horror.MimicHunt.Instance;
+                return h!=null&&h.State.Active&&(h.State.Phase==MotelGame.Horror.MimicPhase.Emerging||h.State.Phase==MotelGame.Horror.MimicPhase.ActiveHunt||h.State.Phase==MotelGame.Horror.MimicPhase.Defending);
+            }
+        }
+        bool BusyWithDuty => reception.QueueCount>0 || requests.Phase==GuestRequestPhase.Ringing || requests.Phase==GuestRequestPhase.PendingDelivery || VisibleEmergency;
+        public bool HoldNewService => ordinaryShift && (VisibleEmergency || ActiveStaff==1 && reception.QueueCount>0);
         [SerializeField, Min(30)] float durationSeconds=900;
         [SerializeField] Vector2Int arrivalCount=new Vector2Int(6,8);
         [SerializeField, Min(0)] float firstArrivalDelay=45;
@@ -57,7 +99,17 @@ namespace MotelGame.Service
             Math.Clamp(NetworkManager.ServerTime.Time-State.StartedAt,0,State.Duration);
         public float Progress=>State.Duration>0?(float)(Elapsed/State.Duration):0;
         public string ClockText { get { int minutes=22*60+Mathf.FloorToInt(Progress*480);return $"{minutes/60%24:00}:{minutes%60:00}"; } }
-        public bool ArrivalDue=>IsRunning&&State.Arrived<arrivalTimes.Count&&Progress<=lastArrivalFraction&&NetworkManager.ServerTime.Time>=arrivalTimes[State.Arrived];
+        public bool ArrivalDue
+        {
+            get
+            {
+                if(!IsRunning||State.Arrived>=arrivalTimes.Count||Progress>lastArrivalFraction||NetworkManager.ServerTime.Time<arrivalTimes[State.Arrived])return false;
+                if(!ordinaryShift||!BusyWithDuty)return true;
+                // A bounded postponement creates breathing room without silently deleting arrivals.
+                if(arrivalDeferredUntil<=0)arrivalDeferredUntil=NetworkManager.ServerTime.Time+CurrentWorkload.arrivalDeferral;
+                return NetworkManager.ServerTime.Time>=arrivalDeferredUntil;
+            }
+        }
         public override void OnNetworkSpawn()
         {
             if(IsServer)snapshot.Value=new ShiftSnapshot{Duration=durationSeconds};
@@ -94,7 +146,13 @@ namespace MotelGame.Service
         internal void RecordDisposal() { if(IsServer&&IsRunning){var v=State;v.TrashDisposed++;snapshot.Value=v;} }
         internal void RecordElectricalRepair() { if(IsServer&&IsRunning){var v=State;v.ElectricalRepairs++;snapshot.Value=v;nextFaultAllowedAt=NetworkManager.ServerTime.Time+Math.Min(45,State.Duration*.05);} }
         internal void RecordRelocation() { if(IsServer&&IsRunning){var v=State;v.Relocations++;snapshot.Value=v;} }
-        internal void RecordArrival(){if(!IsServer||!ArrivalDue)return;var v=State;v.Arrived++;snapshot.Value=v;}
+        internal void RecordArrival()
+        {
+            // Reception checked ArrivalDue before adding the guest to the queue. Rechecking the
+            // workload gate after that mutation would count the new guest as a reason to defer itself.
+            if(!IsServer||!IsRunning||State.Arrived>=arrivalTimes.Count)return;
+            var v=State;v.Arrived++;snapshot.Value=v;arrivalDeferredUntil=0;
+        }
         internal void RecordUnserved(){if(!IsServer||!IsRunning)return;var v=State;v.Unserved++;snapshot.Value=v;}
         internal void RecordRequest(bool completed,GuestRequestKind kind)
         {
@@ -111,14 +169,20 @@ namespace MotelGame.Service
         }
         void BeginShift(float seconds,bool debug)
         {
+            ordinaryShift=!debug;arrivalDeferredUntil=0;
+            int staff=ActiveStaff;var workload=WorkloadFor(staff);
             FindFirstObjectByType<MotelGame.Horror.MimicHunt>()?.ResetOnServer();
             // Reset while not Running: room events cannot inflate the next night's statistics.
             requests.ResetOnServer(false);reception.ResetOnServer();
             foreach(var room in reception.Rooms)room.ResetOnServer();
-            computer.ReleaseOnServer();
+            foreach(var workstation in FindObjectsByType<ReceptionComputer>(FindObjectsSortMode.None))workstation.ReleaseOnServer();
             MotelGame.Inspection.BaggageInspection.Instance?.ResetOnServer();
-            var v=new ShiftSnapshot{Phase=ShiftPhase.Running,Number=State.Number+1,StartedAt=NetworkManager.ServerTime.Time,
-                Duration=Mathf.Max(30,seconds),ArrivalTarget=UnityEngine.Random.Range(Mathf.Max(1,arrivalCount.x),Mathf.Max(arrivalCount.x,arrivalCount.y)+1)};
+            MotelGame.Registration.RegistrationDesk.Instance?.ResetOnServer();
+            if(ordinaryShift)for(int i=0;i<Math.Min(workload.preparedRooms,reception.Rooms.Length);i++)reception.Rooms[i].PrepareOnServer();
+            var target=ordinaryShift?workload.arrivals:arrivalCount;
+            var v=new ShiftSnapshot{StaffAtStart=staff,Phase=ShiftPhase.Running,Number=State.Number+1,StartedAt=NetworkManager.ServerTime.Time,
+                Duration=Mathf.Max(30,seconds),ArrivalTarget=UnityEngine.Random.Range(Mathf.Max(1,target.x),Mathf.Max(target.x,target.y)+1)};
+            if(ordinaryShift&&MotelGame.Registration.RegistrationDesk.Instance!=null)v.ArrivalTarget=Math.Min(v.ArrivalTarget,MotelGame.Registration.RegistrationDesk.Instance.Cases.Length);
             arrivalTimes.Clear();
             // Stratified random timings keep natural gaps without an unbounded arrival stream.
             Vector3 w=new Vector3(Mathf.Max(.01f,workloadWeights.x),Mathf.Max(.01f,workloadWeights.y),Mathf.Max(.01f,workloadWeights.z));
@@ -127,18 +191,22 @@ namespace MotelGame.Service
             {
                 float u=(i+UnityEngine.Random.Range(.2f,.8f))/v.ArrivalTarget*total;
                 float f=u<w.x?u/w.x*.3f:u<w.x+w.y?.3f+(u-w.x)/w.y*.35f:.65f+(u-w.x-w.y)/w.z*.35f;
-                double offset=Mathf.Lerp(Mathf.Min(firstArrivalDelay,(float)v.Duration*lastArrivalFraction*.5f),(float)v.Duration*lastArrivalFraction,f);
+                double offset=Mathf.Lerp(Mathf.Min(ordinaryShift?workload.firstArrival:firstArrivalDelay,(float)v.Duration*lastArrivalFraction*.5f),(float)v.Duration*lastArrivalFraction,f);
+                // Fewer guests must not stretch the opening wait across the first time stratum.
+                if(ordinaryShift&&i==0)offset=Math.Min(offset,workload.firstArrival+UnityEngine.Random.Range(0f,15f));
                 arrivalTimes.Add(v.StartedAt+offset);
             }
             if(debug) { arrivalTimes.Clear(); v.ArrivalTarget=2; arrivalTimes.Add(v.StartedAt+1);arrivalTimes.Add(v.StartedAt+8); }
             snapshot.Value=v;
+            MotelGame.Registration.RegistrationDesk.Instance?.BeginShiftOnServer(v.ArrivalTarget);
             BuildElectricalAgenda();
         }
         void BuildElectricalAgenda()
         {
             faultTimes.Clear(); nextFault = 0; nextFaultAllowedAt = 0;
             faultRandom = new System.Random(electricalSeed == 0 ? UnityEngine.Random.Range(1, int.MaxValue) : electricalSeed);
-            int count = faultRandom.Next(Mathf.Max(0, electricalFaultCount.x), Mathf.Max(electricalFaultCount.x, electricalFaultCount.y) + 1);
+            var faults=ordinaryShift?WorkloadFor(State.StaffAtStart).faults:electricalFaultCount;
+            int count = faultRandom.Next(Mathf.Max(0, faults.x), Mathf.Max(faults.x, faults.y) + 1);
             for (int i = 0; i < count; i++)
             {
                 float fraction = Mathf.Lerp(faultWindow.x, faultWindow.y, (i + .2f + (float)faultRandom.NextDouble() * .6f) / count);
@@ -147,6 +215,7 @@ namespace MotelGame.Service
         }
         void ScheduleElectricalFault()
         {
+            if (ordinaryShift && BusyWithDuty) return;
             if (nextFault >= faultTimes.Count || Progress > faultWindow.y || NetworkManager.ServerTime.Time < faultTimes[nextFault] || NetworkManager.ServerTime.Time < nextFaultAllowedAt ||
                 Array.Exists(reception.Rooms, r => r.State.Faulted)) return;
             // Reserved rooms cannot change availability under a guest already walking there.
@@ -172,20 +241,21 @@ namespace MotelGame.Service
         void FinishShift()
         {
             MotelGame.Inspection.BaggageInspection.Instance?.FinishShiftOnServer();
+            MotelGame.Registration.RegistrationDesk.Instance?.FinishShiftOnServer();
             // Cancel exactly once before freezing counters; quiesce routes without destroying NGO identities.
             FindFirstObjectByType<MotelGame.Horror.MimicHunt>()?.ResetOnServer();
             requests.ResetOnServer(true);
-            foreach(var g in reception.Guests)if(g.Phase==GuestPhase.Arriving||g.Phase==GuestPhase.WaitingForCheckIn)RecordUnserved();
+            foreach(var g in reception.Guests)if(g.Phase==GuestPhase.DrivingToMotel||g.Phase==GuestPhase.Arriving||g.Phase==GuestPhase.WaitingForCheckIn)RecordUnserved();
             var v=State;v.OccupiedAtClose=Array.FindAll(reception.Guests,g=>g.State.Assigned&&g.Phase!=GuestPhase.Absent&&g.Phase!=GuestPhase.Leaving).Length;
             v.Phase=ShiftPhase.Finished;snapshot.Value=v;
             // Closing may catch an NPC in a narrow doorway. Retire the existing pool
             // and reset rooms after freezing totals, so no stopped capsule traps a player.
             reception.ResetOnServer();
             foreach(var room in reception.Rooms)room.ResetOnServer();
-            computer.ReleaseOnServer();
+            foreach(var workstation in FindObjectsByType<ReceptionComputer>(FindObjectsSortMode.None))workstation.ReleaseOnServer();
         }
         Vector2 summaryScroll;
-        public string SummaryText=>$"NIGHT {State.Number} COMPLETE — 06:00\n\nGuests checked in: {State.CheckedIn}\nGuests checked out: {State.CheckedOut}\nLeft without service: {State.Unserved}\nTowels delivered: {State.Towels}\nTV repairs: {State.Repairs}\nMissed / cancelled requests: {State.MissedRequests}\nRooms prepared: {State.Prepared}\nTrash bags disposed: {State.TrashDisposed}\nElectrical repairs: {State.ElectricalRepairs}/{State.ElectricalFaults}\nGuest relocations: {State.Relocations}\nOccupied at closing: {State.OccupiedAtClose}\nGuest deaths: {State.GuestDeaths}\nGuests evacuated: {State.Evacuations}\nMimics eliminated: {State.MimicsEliminated}\n{MotelGame.Inspection.BaggageInspection.Instance?.Debrief}";
+        public string SummaryText=>$"NIGHT {State.Number} COMPLETE — 06:00\n\nGuests checked in: {State.CheckedIn}\nGuests checked out: {State.CheckedOut}\nLeft without service: {State.Unserved}\nTowels delivered: {State.Towels}\nTV repairs: {State.Repairs}\nMissed / cancelled requests: {State.MissedRequests}\nRooms prepared: {State.Prepared}\nTrash bags disposed: {State.TrashDisposed}\nElectrical repairs: {State.ElectricalRepairs}/{State.ElectricalFaults}\nGuest relocations: {State.Relocations}\nOccupied at closing: {State.OccupiedAtClose}\nGuest deaths: {State.GuestDeaths}\nGuests evacuated: {State.Evacuations}\nMimics eliminated: {State.MimicsEliminated}\n{MotelGame.Registration.RegistrationDesk.Instance?.Debrief ?? MotelGame.Inspection.BaggageInspection.Instance?.Debrief}";
         void OnGUI()
         {
             if(!IsSpawned||NetworkManager.LocalClient?.PlayerObject==null)return;
@@ -197,7 +267,7 @@ namespace MotelGame.Service
             }
             else GUI.Box(new Rect(12,Screen.height-108,240,28),IsRunning?$"NIGHT {State.Number}   {ClockText}":"22:00 — Start shift at the computer");
         }
-        public bool ConfigurationValid()=>electricalFaultCount.x>=0&&electricalFaultCount.y>=electricalFaultCount.x&&electricalFaultCount.y<=4&&faultWindow.x>0&&faultWindow.y>faultWindow.x&&faultWindow.y<1&&durationSeconds>=30&&arrivalCount.x>=1&&arrivalCount.y>=arrivalCount.x&&arrivalCount.y<=32&&
+        public bool ConfigurationValid()=>staffing!=null&&staffing.Length==4&&Array.TrueForAll(staffing,w=>w!=null&&w.Valid)&&electricalFaultCount.x>=0&&electricalFaultCount.y>=electricalFaultCount.x&&electricalFaultCount.y<=4&&faultWindow.x>0&&faultWindow.y>faultWindow.x&&faultWindow.y<1&&durationSeconds>=30&&arrivalCount.x>=1&&arrivalCount.y>=arrivalCount.x&&arrivalCount.y<=32&&
             lastArrivalFraction>0&&lastArrivalFraction<1&&reception!=null&&computer!=null&&requests!=null&&clockLabel!=null;
     }
 }

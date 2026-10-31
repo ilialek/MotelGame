@@ -20,7 +20,7 @@ MonoBehaviour:
     kilograms: 10
     metalFraction: 0.01
     offsetCm: -5
-    travelCm: 1
+    travelCm: 0
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
@@ -32,13 +32,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Nonmetallic sample weights and foam. They are packed in a centered
-    rigid block.
-  weightAnswer: About twelve kilos total. Nothing lightweight.
-  metalAnswer: No electronics or metal apparatus.
-  packingAnswer: The single block is fixed exactly in the center, evenly padded left
-    and right.
-  responseAnswer: Nothing should move. The block cannot shift in its housing.
-  authorReasoning: A quiet, braced Mimic has no signature sound or counter-motion.
-    Stable left-heavy center of mass around -4.2 cm contradicts the explicit centered
-    symmetrical packing. Weight and metal alone would miss it.
+  contentsAnswer: Display samples for a shop window. Hollow display shells, in foam.
+    The real goods arrive next week.
+  weightAnswer: Five kilos at most, including the bag. There is no solid merchandise
+    in it.
+  metalAnswer: No metal. They are painted hollow shapes, not working equipment.
+  packingAnswer: Firmly wedged in foam. I do not want the painted surfaces touching.
+  responseAnswer: It ought to be quiet. Nothing loose, no mechanism.
+  authorReasoning: 'Quiet carrier: 11.8 kg conflicts with the confident lightweight
+    hollow-display claim. Low metal and an almost still pulse do not exonerate it.
+    Does not require removed balance test; false certainty would still be a player
+    error.'

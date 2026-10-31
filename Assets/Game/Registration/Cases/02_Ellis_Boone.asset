@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 02_Ellis_Boone
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Ellis Boone
+  firstName: Ellis
+  lastName: Boone
+  dateOfBirth: 06 JUL 1972
+  portrait: {fileID: 2800000, guid: 67af7428d7cca4f459e893dca1d0513a, type: 3}
+  bookingFirstName: Ellis
+  bookingLastName: Boone
+  checkInDate: 27 OCT 2002
+  requestedRoom: 102
+  expectedGuests: 2
+  bookingNote: Ellis + coworker Dale. Overnight fuel-pump repair at Marlow Fuel.
+  countQuestion: Your booking is for two people. Is someone else joining you?
+  noteQuestion: Were you repairing a pump at Marlow Fuel tonight?
+  holderQuestion: 
+  countAnswer: Dale got called to another station. It's just me tonight. We booked
+    before his schedule changed.
+  noteAnswer: Pump three. The attendant left the service key in the red box. My tools
+    are still in the van.
+  holderAnswer: 
+  appearance: 1
+  clothing: {r: 0.7254902, g: 0.40784314, b: 0.21176471, a: 1}
+  vehicleKind: 1
+  vehicleColor: {r: 0.76862746, g: 0.7647059, b: 0.6784314, a: 1}
+  actualPlate: RVT-208
+  vehicleDescription: White service van. I work on fuel pumps.
+  hasReservation: 1
+  reservationEntry: Ellis Boone / tonight / one room
+  nameAnswer: Ellis Boone.
+  reservationAnswer: Yes. I have a booking for tonight.
+  drivingAnswer: White service van. I work on fuel pumps.
+  plateAnswer: RVT-208. It's parked outside.
+  originAnswer: Marlow Fuel, south of here. The night attendant called about a jammed
+    dispenser.
+  purposeAnswer: My next service call is in the morning. I booked a room on the way.
+  claimedPlate: RVT-208
+  hasReport: 1
+  report:
+    headline: After-hours access at Marlow Fuel
+    location: Marlow Fuel / pump three
+    eventTime: "October 27 \xB7 21:10"
+    source: Passing motorist / roadside camera
+    description: A man in work clothes opened the service panel of a locked dispenser
+      after closing. A white van and a tool case were beside pump three. The station
+      sign lists an after-hours maintenance number.
+    photograph: {fileID: 2800000, guid: 1c3aa7076595e401889cf238be8be556, type: 3}
+  followUpQuestion: RoadWatch says someone was opening the locked pumps. Was that
+    you?
+  followUpAnswer: Yes. The attendant left the service key in the red box. The photo
+    shows my tools under pump three. I was there to repair it.
+  disguisedMimic: 0
+  disguiseSeconds: 45
+  authorReasoning: 'Human. Expected count differs for an explained work change. Report
+    shows tools at pump three, consistent with note and answer. Admit: normal stay;
+    refuse: lost stay.'

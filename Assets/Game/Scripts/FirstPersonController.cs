@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
+using MotelGame.Networking;
 
 namespace MotelGame
 {
@@ -17,10 +19,40 @@ namespace MotelGame
         [SerializeField, Range(1f, 89f)] float pitchLimit = 85f;
         [SerializeField, Min(0.1f)] float gravity = 20f;
 
+        [SerializeField, Min(.7f)] float crouchedHeight = .9f;
+        [SerializeField, Min(.1f)] float crouchedEyeHeight = .78f;
+        [SerializeField, Min(.1f)] float crouchedSpeed = 1.7f;
+        float standingHeight, standingStepOffset;
+        bool crouched;
+        float nextPostureCheck, nextPostureRequest;
+        public bool Crouched => crouched;
+        public float CrouchedHeight => crouchedHeight;
+        public float StandingHeight => standingHeight;
+        public void RequestCrouch(bool value)
+        {
+            if(value == crouched || Time.unscaledTime < nextPostureRequest || !value && !CanStand())return;
+            nextPostureRequest=Time.unscaledTime+.4f;
+            var net=GetComponent<NetworkPlayer>();
+            if(net!=null&&net.IsSpawned){if(net.IsOwner)net.RequestCrouchRpc(value);}
+            else ApplyCrouch(value);
+        }
+        public bool CanStand()
+        {
+            var foot=transform.position;
+            return !Physics.OverlapCapsule(foot+Vector3.up*(controller.radius+.04f),foot+Vector3.up*(standingHeight-controller.radius),
+                controller.radius*.95f,~0,QueryTriggerInteraction.Ignore).Any(c=>!c.transform.IsChildOf(transform));
+        }
+        public void ApplyCrouch(bool value)
+        {
+            crouched=value;nextPostureRequest=0;float height=value?crouchedHeight:standingHeight;
+            controller.height=height;controller.center=Vector3.up*(height*.5f);
+            controller.stepOffset=Mathf.Min(standingStepOffset,height*.25f);
+            var eye=playerCamera.transform.localPosition;eye.y=EyeHeight;playerCamera.transform.localPosition=eye;
+        }
         // Menus may suspend local input without disabling gravity.
         public bool InputSuspended { get; set; }
         public bool TemporarilyIncapacitated { get; set; }
-        public float EyeHeight => eyeHeight;
+        public float EyeHeight => crouched ? crouchedEyeHeight : eyeHeight;
 
         CharacterController controller;
         float verticalSpeed;
@@ -30,6 +62,7 @@ namespace MotelGame
         void Awake()
         {
             controller = GetComponent<CharacterController>();
+            standingHeight=controller.height;standingStepOffset=controller.stepOffset;
             if (playerCamera == null)
             {
                 Debug.LogError("FirstPersonController requires its own player camera.", this);
@@ -64,14 +97,15 @@ namespace MotelGame
             if (cursorCaptured && Cursor.lockState != CursorLockMode.Locked) SetCursorCaptured(false);
 
             Vector2 move = Vector2.zero;
-            float speed = walkingSpeed;
+            float speed = crouched ? crouchedSpeed : walkingSpeed;
             if (!InputSuspended && !TemporarilyIncapacitated && cursorCaptured && Application.isFocused)
             {
                 if (keyboard != null)
                 {
+                    UpdatePosture(keyboard.leftCtrlKey.isPressed);
                     move.x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);
                     move.y = (keyboard.wKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed ? 1 : 0);
-                    if (allowSprint && keyboard.leftShiftKey.isPressed) speed = sprintSpeed;
+                    speed=crouched?crouchedSpeed:allowSprint&&keyboard.leftShiftKey.isPressed?sprintSpeed:walkingSpeed;
                 }
                 if (mouse != null && !justCaptured)
                 {
@@ -81,6 +115,19 @@ namespace MotelGame
                     playerCamera.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
                 }
             }
+            MovePlayer(move, speed);
+        }
+
+        void UpdatePosture(bool held)
+        {
+            // Local headroom checks do not send rejected requests every frame.
+            if(held!=crouched && Time.unscaledTime>=nextPostureCheck)
+            {nextPostureCheck=Time.unscaledTime+.1f;RequestCrouch(held);}
+        }
+
+        // Shared by normal input and the development collision test; no scripted traversal.
+        void MovePlayer(Vector2 move, float speed)
+        {
             move = Vector2.ClampMagnitude(move, 1); // No faster diagonal movement.
             Vector3 velocity = (transform.right * move.x + transform.forward * move.y) * speed;
             if (controller.isGrounded && verticalSpeed < 0) verticalSpeed = -2f;

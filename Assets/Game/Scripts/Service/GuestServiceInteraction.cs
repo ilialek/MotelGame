@@ -32,7 +32,7 @@ namespace MotelGame.Service
             service.Room != deliveryRoom ? $"Room {deliveryRoom.RoomNumber} — no delivery requested" :
             service.Phase == GuestRequestPhase.Completed ? $"Room {deliveryRoom.RoomNumber} — request complete" :
             service.Phase != GuestRequestPhase.PendingDelivery ? $"Room {deliveryRoom.RoomNumber} — no delivery requested" :
-            LocalCarrier != null && LocalCarrier.HasTowel ? $"Deliver Towel — Room {deliveryRoom.RoomNumber}" : "Collect a clean towel in Utility";
+            LocalCarrier != null && LocalCarrier.HasTowel ? $"Deliver Towel — Room {deliveryRoom.RoomNumber}" : $"Collect a clean towel in {service.SupplyLocation}";
         public void Interact()
         {
             if (!CanInteract) return;

@@ -51,6 +51,14 @@ namespace MotelGame.Characters
             animator.applyRootMotion=false;
             SetVisible(visible);
         }
+        public void ApplyGuestAppearance(int index, Color color)
+        {
+            if(appearanceIndex!=index||animator==null){appearanceIndex=index;SelectAppearance();}
+            foreach(var renderer in Appearance.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                for(int i=0;i<renderer.sharedMaterials.Length;i++)
+                    if(renderer.sharedMaterials[i]!=null&&renderer.sharedMaterials[i].name.EndsWith("_Shirt"))
+                    {var block=new MaterialPropertyBlock();block.SetColor("_BaseColor",color);block.SetColor("_Color",color);renderer.SetPropertyBlock(block,i);}
+        }
         public void SetVisible(bool value)
         {
             visible=value;

@@ -61,6 +61,10 @@ namespace MotelGame.Service
         [SerializeField] TextMesh[] statusSigns;
         [SerializeField] GameObject guestInRoom;
         [SerializeField] NetworkDoor door;
+        [SerializeField] NetworkDoor courtyardDoor;
+        [SerializeField, Range(0,31)] int navigationArea;
+        public NetworkDoor CourtyardDoor => courtyardDoor;
+        public int NavigationArea => navigationArea;
         [SerializeField] Transform doorOutside;
         [SerializeField] Transform doorInside;
         [SerializeField] Transform guestIdle;
@@ -188,8 +192,10 @@ namespace MotelGame.Service
             Status = RoomStatus.Dirty, Cycle = State.Cycle + 1,
             Faulted = preserveFault && State.Faulted, FaultId = preserveFault ? State.FaultId : State.FaultId + 1
         };
-        internal void PrepareForHuntDebug()
-        { if(IsServer&&AcceptingWork&&State.Status!=RoomStatus.Occupied) snapshot.Value=new RoomSnapshot{Status=RoomStatus.Ready,Cycle=State.Cycle+1,BedMade=true,RemovedTrash=AllTrashMask,Bag=GarbagePhase.Disposed}; }
+        internal void PrepareForHuntDebug() => PrepareOnServer();
+        // Prepared-room handover and explicit debug fixtures share the same complete reset.
+        internal void PrepareOnServer()
+        { if(IsServer&&IsSpawned&&State.Status!=RoomStatus.Occupied) snapshot.Value=new RoomSnapshot{Status=RoomStatus.Ready,Cycle=State.Cycle+1,BedMade=true,RemovedTrash=AllTrashMask,Bag=GarbagePhase.Disposed}; }
         internal void ResetOnServer()
         {
             if (!IsServer || !IsSpawned) return;
@@ -242,7 +248,7 @@ namespace MotelGame.Service
             ulong sender = rpcParams.Receive.SenderClientId;
             string message;
             if (!AcceptingWork || !State.Faulted || State.FaultId != faultId) message = "This breaker is already OK or the fault changed.";
-            else if (!ServiceInteractionValidation.CanReach(NetworkManager, sender, breaker.TargetCollider)) message = "Approach the correct breaker in Utility.";
+            else if (!ServiceInteractionValidation.CanReach(NetworkManager, sender, breaker.TargetCollider)) message = "Approach this room’s breaker panel.";
             else
             {
                 var v = State; v.Faulted = false; snapshot.Value = v; shift?.RecordElectricalRepair();

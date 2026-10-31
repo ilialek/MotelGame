@@ -1,0 +1,45 @@
+PASS Six cases / three reports / workstations / identity data
+PASS 01_Wade_Mercer 
+PASS 02_Ellis_Boone 
+PASS 03_Jonah_Voss 
+PASS 05_Sam_Ortiz 
+PASS 06_Martin_Cole 
+PASS 07_Roy_Keller 
+PASS Seven reusable NPC vehicle/parking slots
+PASS Unique numbered parking slots
+PASS Guest_A configured journey
+PASS P01 driver -> reception route
+PASS P01 arrival collision sweep (other bays occupied): 
+PASS P01 reverse collision sweep (other bays occupied): 
+PASS P01 departure collision sweep (other bays occupied): 
+PASS Guest_B configured journey
+PASS P02 driver -> reception route
+PASS P02 arrival collision sweep (other bays occupied): 
+PASS P02 reverse collision sweep (other bays occupied): 
+PASS P02 departure collision sweep (other bays occupied): 
+PASS Guest_C configured journey
+PASS P03 driver -> reception route
+PASS P03 arrival collision sweep (other bays occupied): 
+PASS P03 reverse collision sweep (other bays occupied): 
+PASS P03 departure collision sweep (other bays occupied): 
+PASS Guest_D configured journey
+PASS P04 driver -> reception route
+PASS P04 arrival collision sweep (other bays occupied): 
+PASS P04 reverse collision sweep (other bays occupied): 
+PASS P04 departure collision sweep (other bays occupied): 
+PASS Guest_E configured journey
+PASS P05 driver -> reception route
+PASS P05 arrival collision sweep (other bays occupied): 
+PASS P05 reverse collision sweep (other bays occupied): 
+PASS P05 departure collision sweep (other bays occupied): 
+PASS Guest_F configured journey
+PASS P06 driver -> reception route
+PASS P06 arrival collision sweep (other bays occupied): 
+PASS P06 reverse collision sweep (other bays occupied): 
+PASS P06 departure collision sweep (other bays occupied): 
+PASS Guest_G configured journey
+PASS P07 driver -> reception route
+PASS P07 arrival collision sweep (other bays occupied): 
+PASS P07 reverse collision sweep (other bays occupied): 
+PASS P07 departure collision sweep (other bays occupied): 
+PASS No missing scripts

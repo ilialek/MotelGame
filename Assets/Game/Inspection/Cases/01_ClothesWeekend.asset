@@ -24,10 +24,12 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Clothes for the weekend and a wash bag. No equipment.
-  weightAnswer: About five or six kilos including the suitcase.
-  metalAnswer: Just the zip, handle and small toiletry fittings.
-  packingAnswer: Everything is folded tightly between straps.
-  responseAnswer: Nothing loose or powered. It should barely move.
-  authorReasoning: Low metal, 5.4 kg and fixed balance support all statements. Straightforward
-    innocent.
+  contentsAnswer: My sister is getting married. One suit, spare clothes, wash bag.
+    Please tell me the suit survived.
+  weightAnswer: Five or six kilos with the case. I had it on the airport scale.
+  metalAnswer: Buckles and zips. I left the wedding gift in the car.
+  packingAnswer: Clothes under the straps. Nothing switched on or loose.
+  responseAnswer: That little tap? The handle, probably. There is nothing inside
+    that should keep moving.
+  authorReasoning: 'Innocent baseline: 5.4 kg, low metal, almost no pulse movement.
+    A coherent everyday account.'

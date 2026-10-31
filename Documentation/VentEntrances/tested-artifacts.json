@@ -1,0 +1,34 @@
+{
+  "build": "Succeeded errors=0 warnings=1 2026-10-31T00:53:19.3110810+01:00",
+  "tests": {
+    "underground-routes": "Documentation/VentEntrances/Tests/underground-routes-20261031-005430",
+    "underground-hunt": "Documentation/VentEntrances/Tests/underground-hunt-20261031-004737",
+    "service": "Documentation/VentEntrances/Tests/service-20261031-001947",
+    "ui": "Documentation/VentEntrances/Tests/ui-20261031-005431"
+  },
+  "sha256": {
+    "Builds/UndergroundCandidate/MotelGame.app/Contents/MacOS/MotelGame": "252907b1c1b957ed529fbaf597d0df80911462be26dd46dc11b36e395ef9d602",
+    "Builds/UndergroundCandidate/MotelGame.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll": "4b513718ecb91794807962c3bcaab7a00d62a1df20b524641a02f3976566d866",
+    "Assets/Game/Scenes/Motel_Layout_V4.unity": "1fbdcc6aeb86f9160ef31871be29d3d0679ff5a5cb9b14979c7bbe6f0fc6e6e7"
+  },
+  "sources": {
+    "Assets/Game/Scripts/FirstPersonController.cs": "81f960429776c429ee07909c45fe1f836bd485fb4007a1bc4c2ef941686e3d8b",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.Exploration.cs": "78107b701994508e5830fb9e5a6f058dbddaf65e180d2f2a0971a6dc29038a7d",
+    "Assets/Game/Scripts/Horror/VentHatch.cs": "d4b65389b12c5d8b9ce17512e6abb9167ea8f2c09f401a967723850d26d749c5",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs": "2336c595f0045ae9326c2a0c104b966d781ebddaa9339bee24ddfe25524b4ff6",
+    "Assets/Game/Editor/UndergroundSetup.Geometry.cs": "56f65c036106a39cfd3c39806b1476b6a88e51bd99a7c28c0d7ff856dfdcc359",
+    "Assets/Game/Editor/UndergroundSetup.Validation.cs": "379ff2dbcbb9251aa9687efffc20c6daf2be55c2dfa9267429da3f1c93b0cd91",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Underground.cs": "f841d0d881da3cabad730b24b12c6a9dc4e0bfa8b08a97252f5bbe8e9e7d1157",
+    "Assets/Game/Editor/VentEntranceSetup.cs": "71e6bdfc325dd1437b002f48be8912ade051ef8bca3396c4008ec8abe58c3b7c",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs": "43d47898e31d0c5f6e1eeecfe178dc53b24e9c4cfb1b4afa14816c9c51058a9e",
+    "Assets/Game/Scripts/Service/ServiceInteractionValidation.cs": "629e24b08cfeec98169f315b67786d2681551468f8ad10551ec5e757bbc0bdc6"
+  },
+  "previous_working_build": "/Users/ilalekomtsev/MotelGame/Builds/UndergroundBeforeWallVents_20261031",
+  "backup": "/Users/ilalekomtsev/MotelGame/Backups/BeforeWallVents_20261031_000834",
+  "test_assembly_sha256": {
+    "underground-routes": "4b513718ecb91794807962c3bcaab7a00d62a1df20b524641a02f3976566d866",
+    "ui": "4b513718ecb91794807962c3bcaab7a00d62a1df20b524641a02f3976566d866",
+    "underground-hunt": "8f8e23f05f890e454a50e1f2b76357a7c6a768f947c1d14ef863e4610bcb678b",
+    "service": "021afedae134e34fc394caf79503819ff13bff9c233f5c3279ce213c296f412f"
+  }
+}

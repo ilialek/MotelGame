@@ -1,0 +1,22 @@
+{
+  "baseline_files_checked": 2360,
+  "changed": [
+    "Assets/Game/Scripts/FirstPersonController.cs",
+    "Assets/Game/Scripts/Networking/OnlineSessionController.cs",
+    "Assets/Game/Scripts/Networking/NetworkPlayer.Exploration.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.Underground.cs",
+    "Assets/Game/Scripts/Networking/Tests/MotelLayoutSmokeTest.cs",
+    "Assets/Game/Scripts/Horror/VentHatch.cs",
+    "Assets/Game/Scripts/Service/ServiceInteractionValidation.cs",
+    "Assets/Game/Editor/UndergroundSetup.Geometry.cs",
+    "Assets/Game/Editor/UndergroundSetup.Validation.cs",
+    "Assets/Game/Scenes/Motel_Layout_V4.unity"
+  ],
+  "protected_assets_builds_unchanged_before_promotion": true,
+  "unchanged_existing_light_and_renderer_components": true,
+  "scene_changed_document_types": {
+    "4": 62,
+    "114": 12,
+    "1": 16
+  }
+}

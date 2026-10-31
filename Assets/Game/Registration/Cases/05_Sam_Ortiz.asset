@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a9c6626d54581b735af5bcd872ed1, type: 3}
+  m_Name: 05_Sam_Ortiz
+  m_EditorClassIdentifier: Assembly-CSharp::MotelGame.Registration.GuestCase
+  guestName: Sam Ortiz
+  firstName: Sam
+  lastName: Ortiz
+  dateOfBirth: 02 FEB 1975
+  portrait: {fileID: 2800000, guid: 2fd510a71a4a14b7d82dff4c91de46b3, type: 3}
+  bookingFirstName: Samuel
+  bookingLastName: Ortiz
+  checkInDate: 27 OCT 2002
+  requestedRoom: 104
+  expectedGuests: 1
+  bookingNote: Hospital supply run. Late arrival after final delivery.
+  countQuestion: 
+  noteQuestion: Are you coming from the hospital delivery?
+  holderQuestion: The booking says Samuel Ortiz; your license says Sam. Is this yours?
+  countAnswer: 
+  noteAnswer: County Memorial. The final supply drop ran late. The gray van outside
+    still has the empty delivery crates.
+  holderAnswer: Yes. Dispatch books me as Samuel on the company account. My license
+    uses Sam. The last name and hospital job should match.
+  appearance: 1
+  clothing: {r: 0.20392157, g: 0.2901961, b: 0.40392157, a: 1}
+  vehicleKind: 1
+  vehicleColor: {r: 0.30980393, g: 0.33333334, b: 0.34117648, a: 1}
+  actualPlate: BRC-319
+  vehicleDescription: Gray van. My delivery gear is still in it.
+  hasReservation: 1
+  reservationEntry: Sam Ortiz / tonight / one room
+  nameAnswer: Sam Ortiz.
+  reservationAnswer: Yes. I have a booking for tonight.
+  drivingAnswer: Gray van. My delivery gear is still in it.
+  plateAnswer: BRC-319. It's parked outside.
+  originAnswer: County Memorial Hospital. The last supply drop took longer than planned.
+  purposeAnswer: Rest before the morning delivery run.
+  claimedPlate: BRC-319
+  hasReport: 0
+  report:
+    headline: 
+    location: 
+    eventTime: 
+    source: 
+    description: 
+    photograph: {fileID: 0}
+  followUpQuestion: 
+  followUpAnswer: 
+  disguisedMimic: 0
+  disguiseSeconds: 45
+  authorReasoning: 'Human, no report. Explained booking-name variant (Samuel/Sam)
+    agrees with surname and work note. A name mismatch alone is not a Mimic rule.
+    Admit: normal stay; refuse: lost stay.'

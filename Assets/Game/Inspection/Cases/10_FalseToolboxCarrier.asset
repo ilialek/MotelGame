@@ -32,11 +32,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: A full case of steel spanners and sockets.
-  weightAnswer: About eleven kilos, a normal tool kit.
-  metalAnswer: 'It should be mostly metal: steel tools fill almost all the case.'
-  packingAnswer: The trays are bolted down. The heavy part is on the left.
-  responseAnswer: Any sound is steel against steel. There is no spring or suspension.
-  authorReasoning: Mass is plausible but metal response around 9 percent is incompatible
-    with mostly steel. Elastic recovery also contradicts bolted trays. No need for
-    universal counter-motion cue.
+  contentsAnswer: Machine fitter. Replacement spanners and sockets for the morning
+    shift.
+  weightAnswer: Eleven kilos. The tool case is on my job sheet.
+  metalAnswer: Steel tools, almost the whole case. The handle is the only plastic
+    part.
+  packingAnswer: Individual slots, trays bolted down. I do not let tools bounce around.
+  responseAnswer: A latch can rattle. There are no springs or moving units in the
+    load.
+  authorReasoning: 'Carrier: 10.8 kg is plausible, but metal about 9/100 conflicts
+    with an almost entirely steel load. Clear delayed pulse further contradicts fixed
+    tool trays.'

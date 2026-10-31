@@ -33,7 +33,7 @@ namespace MotelGame.Service
             if(requests.Room==null)text.Append("No pending call");
             else text.Append(requests.Room.RoomNumber).Append(" — ").Append(requests.RequestName).Append('\n').Append(
                 requests.Phase==GuestRequestPhase.Ringing?"Answer Reception phone":requests.Phase==GuestRequestPhase.Completed?"Completed":
-                requests.State.Kind==GuestRequestKind.ElectricalMaintenance?"Utility breaker / Reception relocation":requests.State.Kind==GuestRequestKind.CleanTowel?"Collect / deliver towel":requests.State.RepairStep==0?"Connect cable → reset TV":"Reset TV tuning");
+                requests.State.Kind==GuestRequestKind.ElectricalMaintenance?$"{requests.MaintenanceLocation} breaker / Reception relocation":requests.State.Kind==GuestRequestKind.CleanTowel?"Collect / deliver towel":requests.State.RepairStep==0?"Connect cable → reset TV":"Reset TV tuning");
             label.text=text.ToString();
         }
         public bool ConfigurationValid()=>reception!=null&&requests!=null&&shift!=null&&label!=null;

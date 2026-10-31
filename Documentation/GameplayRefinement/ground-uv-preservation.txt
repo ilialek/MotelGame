@@ -1,0 +1,1 @@
+96 ground pieces retain the original slab UV projection. Geometry/collision unchanged.

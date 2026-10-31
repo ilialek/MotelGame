@@ -32,11 +32,12 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Workshop tools and padding. I am repairing a truck tomorrow.
-  weightAnswer: Nearly fifteen kilos with the hard case. Yes, it is heavy.
-  metalAnswer: Steel spanners, sockets and a hammer; a strong metal response is expected.
-  packingAnswer: The tray is not latched; it can slide a little downhill.
-  responseAnswer: A short metal rattle. Once the tray settles, it should stay on
-    that side.
-  authorReasoning: Heavy and metal-rich is legitimate. Tilt shifts downhill; leveling
-    preserves tray displacement. No active recovery.
+  contentsAnswer: Roadside mechanic. Sockets, spanners, a hammer. The truck outside
+    is my next problem.
+  weightAnswer: Just shy of fifteen kilos. I carry it every day.
+  metalAnswer: Mostly steel. If it barely registers, then we have a problem.
+  packingAnswer: The tray latch broke. It can knock against the case, but it is not
+    powered.
+  responseAnswer: One quick rattle, then quiet. That is the tray hitting the side.
+  authorReasoning: 'Innocent: 14.8 kg and strong metal match tools; immediate short
+    pulse agrees with the loose tray. Weight alone is not a threat.'

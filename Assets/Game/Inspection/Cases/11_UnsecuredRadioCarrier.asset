@@ -40,12 +40,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: Books and an old radio. I left the radio unsecured.
-  weightAnswer: About ten or eleven kilos with the backpack.
-  metalAnswer: The radio has a metal cover; the books are paper.
-  packingAnswer: The radio may slide. It is unplugged and the batteries are removed.
-  responseAnswer: Any movement is just the loose radio falling downhill. There is
-    no wound spring or motor.
-  authorReasoning: Initial mass/metal are plausible. Left and right tilts show motion
-    against the slope, followed by delayed pulse recovery. An unpowered loose radio
-    cannot explain the combination.
+  contentsAnswer: Some books and my uncle's old radio. He listens to the same station
+    every morning.
+  weightAnswer: Ten or eleven kilos. Most of the weight is books.
+  metalAnswer: The radio has a metal cover. The rest is paper and cloth.
+  packingAnswer: The radio is loose. Unplugged, batteries out. No motor or wound
+    mechanism.
+  responseAnswer: It can knock once against the books. There should not be another
+    movement after the first knock.
+  authorReasoning: 'Carrier with a plausible cover: 10.5 kg and modest metal fit.
+    The pulse produces delayed sustained corrective movement, contradicting a passive
+    loose radio with no powered/wound source. No tilt test required.'

@@ -1,0 +1,24 @@
+Computer screen containment fix — 2026-10-30
+
+Modified runtime files:
+Assets/Game/Scripts/Service/ReceptionComputer.cs
+Assets/Game/Scripts/Registration/RegistrationPanel.cs
+Project instructions: AGENTS.md (resolution-independent UI requirement for future work).
+
+Presentation: the existing BoxCollider defines the screen face. The local camera aligns perpendicular to it, frames it using the current aspect ratio, and restores the previous FOV on exit/disconnect. The 800 x 640 logical UI is uniformly fitted and clipped inside the projected physical glass surface, using the same GUI.matrix for drawing and input. Enlarged RoadWatch photos stay inside this surface too. No scene edits or networking/gameplay changes.
+
+Actual validation:
+- Native Unity Editor compilation and macOS development build: succeeded, errors=0, warnings=0.
+- Opt-in local-host graphical test exercised BOTH reception and CCTV workstations.
+- Requested and actual resolutions matched: 800x600, 1280x720, 1920x1080, 2560x1440, 1920x1200, 2560x1080, 720x960.
+- Changed resolution while the workstation remained open; at every size all four projected UI corners raycast into the actual screen collider and stay inside the game viewport.
+- Reservations, RoadWatch, Parking Camera, enlarged photo: captured at all seven sizes, both stations (56 PNGs in Run2).
+- Visually inspected reception 800x600 / 1280x720 reservations, 2560x1080 photo, 720x960 parking, CCTV 1280x720 RoadWatch. Text, controls and images remain within the monitor frame in these captures.
+- Guest view and workstation exit restore original camera FOV at both stations. Clean local-host shutdown. Runtime critical logs=0; see Run2/results.txt.
+- First run was stopped to move the test actor off the guest arrival route; the corrected fixture completed successfully.
+- Temporary verification actor removed from Assets after the test; source preserved only in the task workspace. Validation app retains the opt-in actor; regular Playtest app and launcher are unchanged.
+
+Limits:
+- Real mouse clicks, keyboard entry and visual Play Mode inspection inside the user's Unity Editor were not automated. Final Editor compilation was checked separately.
+- This is a presentation regression check, not a fresh two-instance multiplayer / Relay / Windows regression.
+- Existing unrelated HUDs are not rewritten; the new AGENTS.md requires resolution checks for future UI changes.

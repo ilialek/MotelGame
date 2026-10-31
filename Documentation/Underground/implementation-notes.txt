@@ -1,0 +1,47 @@
+UNDERGROUND VENTILATION & MIMIC HUNT — implementation notes
+Scene: Assets/Game/Scenes/Motel_Layout_V4.unity
+Engine: Unity 6000.3.19f1 / URP / NGO 2.13.3 / Unity Transport 2.7.4.
+Network build version: motel-underground-1 (all online participants need the same version).
+
+Controls and entry
+- Left Ctrl: toggle crouch. Standing 1.8m; crouched 0.9m; eye 0.78m; crouch speed 1.7m/s.
+- F: flashlight. It follows camera aim and is replicated to other players.
+- Crouch next to the small handle by the floor grate near a guest-room bed, then E to descend. Use the lower handle to return.
+- Hatch climbing uses the existing CharacterController along a continuous physical route; it never teleports a player. One network lease per hatch. E cancels a climb; an obstructed exit automatically reverses the route after 1.5 seconds. The grate waits until players clear its opening.
+- Existing pistol in Storage: E pick up, LMB shoot, G place. Works with flashlight and crouch. Carry-slot rules remain unchanged.
+- Reception / surveillance computer: Underground activity tab. Sector A=south, B=connecting tunnels, C=north. Signals include player movement and false positives; no exact monster position or underground camera feed. Parking cameras / Reservations / RoadWatch retained.
+
+Authored layout
+- Root: Motel_Layout_V4/05_Underground. Floor y=-3.1m, ceiling y=-1.8m; clear width 1.4m, height 1.3m.
+- Six room hatches; three cross corridors linked by west/east longitudinal passages form two loops. Six room attack nodes and four opaque upper elbows for hidden exits, 20 graph nodes in total.
+- The hidden network has no modelled corridors. The sphere climbs into an occluded elbow before changing to HiddenTransit. Hidden destination/time are server state.
+- Room floors are split around the six grates. Original floors and old ventilation are retained inactive. Handle placement and two trash spots per room were adjusted to keep hatch routes clear. Closed curtain placeholders added because no opaque curtains existed in the active scene. Both doors of each room now close safely after player use.
+- Existing room dimensions, lobby, parking, registration furniture and above-ground light settings were retained. Native scene saving also normalized NGO scene flags, added default URP AdditionalLightData metadata, and serialized the existing TextMesh font material; no existing light intensity/color/transform was changed. New underground materials/geometry and dim junction lights only; rendering layers keep above-ground lights out of ducts.
+
+Mimic implementation
+- Reuses the existing scene NetworkObject, server NetworkTransform, guest lifecycle/death handling, shift counters, equipment and pistol damage.
+- One visible sphere at a time. Active entity stays the same through hiding/escape. Dormant admitted Mimics remain ordinary guest NPCs, explicitly held from checkout until their turn. Queue entries include visit identity and reject duplicates.
+- Dormant -> Hidden -> PreparingExcursion -> Emerging -> ActiveHunt -> Retreating -> Submerging -> HiddenTransit -> Hidden; Defending and Dead are explicit states.
+- Random valid hidden exit, not distance-biased. Emergence waits while visible/occupied. Main movement uses graph routes and sphere collision sweeps; player capsules block it.
+- Nearest eligible living guest by graph distance. At the room attack point, the server rejects a kill if any player is in/entering the room, within interception range, or viewing the sphere with line of sight. Owner aim/eye/FOV/aspect are replicated at 20Hz; stale view data conservatively prevents killing/pop-in. A short 0.15s commit window rechecks safety before GuestLifecycle.KillOnServer. An unsafe attempt retreats immediately.
+- Damage aborts an attack. Escape routes avoid player capsules. If no route exists, defense warns, checks range/occlusion again, then uses the existing temporary stagger (there was no reusable player-health system). Retreat during the warning avoids the hit. No player instant death or new health framework.
+- Health 100; pistol damage 34. A killed sphere is permanently eliminated and leaves replicated remains. The next admitted Mimic activates only after death and a delay, never after hiding. Shift reset clears queue, threat, remains and equipment through existing reset paths.
+
+Inspector tuning
+MimicHunt: excursionInterval 45-75s; preparationSeconds 15-20s; excursionDuration 60-90s; hiddenTransitSeconds 3-6s; nextMimicDelay 10s; ductSpeed 1.1m/s; retreatSpeed 1m/s (current scene value; code default 1.5m/s); maximumHealth 100; interceptionRadius 3m; defenseRange 1.25m; defenseWindup 1.6s; defenseCooldown 5s; defenseStagger 1.2s.
+FirstPersonController: crouchedHeight .9; crouchedEyeHeight .78; crouchedSpeed 1.7. Standing/walk/sprint unchanged.
+HuntEquipment: damage 34; shot interval .45s. False-positive interval currently a small 45-90s constant in MimicHunt; no rat AI.
+
+Old active behavior disabled
+- Previous room/ceiling ventilation nodes and Ventilation root inactive.
+- Old monster visual and MimicPresentation inactive; old hitbox replaced by the sphere.
+- Old bait/thermal decoy inactive, GuestEvacuation components removed from active guests, legacy debug monster controls inactive.
+- First three vent camera objects disabled; only parking feeds still render.
+- Legacy enum/API entries remain solely for archived editor-tool compilation. No centipede, simultaneous monsters, new registration pipeline or defensive tools were added.
+
+Maintenance
+- Backup: Backups/BeforeUnderground_20261030_221635.
+- Editor menu Motel/Underground/Validate current scene validates graph connectivity, crouched capsules, sphere routes, floor support, all six hatch approaches, hidden elbows, NGO identities and the established V4 scene/reference/door checks.
+- Motel/Underground/Build validation candidate (Mac) builds to Builds/UndergroundCandidate, leaving the stable Builds/Playtest app and LaunchWindowed.command intact.
+- Install authored underground network is one-time authoring, refuses to overwrite an existing underground root. No procedural runtime generation.
+- Older whole-level migration/rebuild commands target historical milestones; do not use them to recreate the current revised scene. Current scene is the authoritative authored asset.

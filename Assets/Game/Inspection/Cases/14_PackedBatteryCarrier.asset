@@ -32,13 +32,14 @@ MonoBehaviour:
     response: 0
     delaySeconds: 0
     decaySeconds: 0.15
-  contentsAnswer: A small battery and hand tools, all fitted in solid foam.
-  weightAnswer: Eight kilos or so with the case.
-  metalAnswer: There is metal in the tools and battery, but lots of packing as well.
-  packingAnswer: No liquid containers. All the fitted pieces are clamped and cannot
-    slide.
-  responseAnswer: A slight rattle from a loose latch, nothing with a long moving
-    response.
-  authorReasoning: Mass/metal plausible. Large tilt displacement, level recovery
-    and delayed long pulse decay contradict both solid clamps and no liquid/moving
-    mechanism. Different combination from low-metal toolbox or quiet off-center case.
+  contentsAnswer: A spare battery and a few hand tools. Emergency kit. I like being
+    prepared.
+  weightAnswer: Roughly eight kilos in the hard case.
+  metalAnswer: Some metal in the tools and battery, with plenty of foam.
+  packingAnswer: Everything clamped into fitted foam. No liquid containers or moving
+    machinery.
+  responseAnswer: That must be a loose latch. It should make one little rattle and
+    stop.
+  authorReasoning: 'Carrier: 7.8 kg and moderate metal fit. Clear delayed movement
+    lasting several seconds conflicts with the rigid dry load and single-latch explanation.
+    Innocent water case 04 gives a matching explanation instead.'
