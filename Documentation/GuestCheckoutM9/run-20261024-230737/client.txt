@@ -1,7 +1,0 @@
-PASS client
-Three distinct physical guests occupy101/102/103; deadlines start only at InRoom.
-Arrival owns Reception while two stays expire. Both ready guests wait inside assigned Occupied rooms; pending103 is unaffected.
-Client checkout102: nonexistent guest, stale visit/cycle, remote reach and other occupied room rejected; only102 becomes Dirty; key return resets all cleaning. Late join covered all three checkout phases.
-Oldest expired stay wins, then103 returns independently. Its unfinished request and both towels cancel on return; stale service RPCs rejected. Concurrent Host/Client checkout resets103 once.
-Targeted final-build regression: physical returns/checkouts, exact late-join checkout label, three observer phases, request cancellation, independent rooms and concurrent checkout.
-Completed without critical runtime logs.

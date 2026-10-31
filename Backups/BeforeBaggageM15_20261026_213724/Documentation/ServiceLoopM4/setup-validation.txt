@@ -1,3 +1,0 @@
-PASS: Scene reopened in Unity 6000.3.19f1.
-Service rooms, trash spots, bed, status signs, guest visuals and Reception references validated; no missing scripts; original NetworkDoor present.
-Scene SHA256: c452840b0640f678b8f330723bc2414412356a273040af876e8108e849950718

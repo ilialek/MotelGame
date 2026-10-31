@@ -1,5 +1,0 @@
-FAIL client
-
-System.Exception: Waiting pose wrong
-  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Run>d__31.MoveNext () [0x009d7] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:148 
-  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Start>d__23.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:53 

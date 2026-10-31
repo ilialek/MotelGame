@@ -1,3 +1,0 @@
-PASS duplicate
-Second process with same explicit profile refused before authentication
-No critical runtime errors.

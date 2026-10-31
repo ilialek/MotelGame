@@ -1,5 +1,0 @@
-PASS client
-Player obstruction pauses/resumes NPC; client checkout midway through reserved doorway reverses safely; door closes and next guest arrives.
-Checkout during PendingDelivery clears request and both carried towel visuals, rejects stale RPCs, guest leaves physically and next arrival is consistent.
-Disconnect completed.
-Completed without critical runtime logs.

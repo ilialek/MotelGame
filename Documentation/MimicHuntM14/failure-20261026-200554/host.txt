@@ -1,8 +1,0 @@
-PASS host / failure
-Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
-Reception camera focus, occupancy, both CCTV targets and first-person return.
-Active creature physically crossed camera 2 field of view; captured actual RenderTexture.
-Mimic traversed connected ducts, warned/emerged and killed one eligible guest; carrier survives, source room and request cleaned up.
-Shift summary, threat/equipment/guest reset and next-shift counters verified.
-Completed; no critical runtime logs.
-Duct travel: 9.14483m

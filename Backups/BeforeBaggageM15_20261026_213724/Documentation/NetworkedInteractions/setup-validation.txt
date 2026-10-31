@@ -1,3 +1,0 @@
-PASS: Door/player prefabs and Room101 scene saved in Unity 6000.3.19f1.
-Scene SHA256: 8545a80907f37bb5e257e7c35dc19473f5bdfb2e7d7d15b069ee626805460fd1
-PASS: Door sweep 0..90 degrees, no environment penetrations; closed/open CharacterController clearance checked.

@@ -1,9 +1,0 @@
-PASS configuration checks
-local-player-animated-leg
-local-player-Idle
-local-player-Run
-local-player-Walk
-remote-player-animated-leg
-remote-player-Idle
-remote-player-Run
-remote-player-Walk

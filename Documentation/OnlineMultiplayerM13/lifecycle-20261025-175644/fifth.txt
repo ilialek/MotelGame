@@ -1,5 +1,0 @@
-FAIL fifth
-
-System.Exception: Could not sign in to Unity services. Check your internet and retry.
-  at MotelGame.Networking.Tests.OnlineMultiplayerSmokeTest+<Run>d__16.MoveNext () [0x01718] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs:183 
-  at MotelGame.Networking.Tests.OnlineMultiplayerSmokeTest+<Start>d__14.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs:51 

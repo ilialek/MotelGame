@@ -1,2 +1,0 @@
-PASS: Saved M10 scene reopened; shift/computer/queue/4 TVs/board references, one computer target, old counter target removed, no missing scripts. 10 NavMesh routes complete, 1.3m queue spacing, employee camera path clear; new primitive bounds do not intersect original active furniture/architecture.
-Defaults: 900 seconds, 6–8 arrivals, last arrival 80%, patience120.

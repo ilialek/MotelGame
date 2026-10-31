@@ -1,8 +1,0 @@
-FAIL solo / practice
-01_ClothesWeekend: kg=5.4 metal=3.2 balance=0.00 5 answers
-05_ForgottenTripod: kg=10.4 metal=34.1 balance=1.44 5 answers
-System.Exception: Player blocked (8.18, 0.02, 3.34) at (8.22, 0.03, 4.09)
-  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Walk>d__56.MoveNext () [0x001ba] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:489 
-  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:40 
-Infiltration travel: 0m; exploration seen: False
-Duct travel: 0m

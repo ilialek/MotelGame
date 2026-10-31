@@ -1,8 +1,0 @@
-PASS client
-Cycle 0: call delay, answer, shared Pending, rejection of idle/ringing/duplicate/distant actions.
-Cycle 0: client observes Completed, room remains Occupied; duplicate delivery harmless, towels consumed.
-Cycle 0: checkout restored Dirty bed/trash/guest, no request/carry; stale requests rejected.
-Cycle 1: call delay, answer, shared Pending, rejection of idle/ringing/duplicate/distant actions.
-Client answered; host picked up; remote carried towel visible before late replacement.
-Ownership isolation and disconnect verified.
-Completed without critical runtime logs.

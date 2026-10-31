@@ -1,4 +1,0 @@
-PASS observer
-Late join: four occupied rooms, five NPCs, exact assignments/poses, cleaning state, pending Room102 request and two carried towel visuals; remote agents disabled.
-Disconnect clean.
-Completed without critical runtime logs.

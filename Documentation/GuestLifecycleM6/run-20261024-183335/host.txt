@@ -1,7 +1,0 @@
-PASS host
-Cycle 0: physical arrival/check-in/door crossing/InRoom, 15s M5 call, cooperative delivery, checkout resets M4/M5, guest walks out before hiding.
-Cycle 1: physical arrival/check-in/door crossing/InRoom, 15s M5 call, cooperative delivery, checkout resets M4/M5, guest walks out before hiding.
-Client checkout while walking redirects guest to exit; no delayed phone, reset consistent, next guest waits normally.
-Physical NPC travel: 207.7 m, all six phases; sampled solid collisions and continuity without route teleports.
-Disconnect completed.
-Completed without critical runtime logs.

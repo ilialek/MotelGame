@@ -1,4 +1,0 @@
-PASS client
-Two real CharacterController exits from Room 101 TV/bag position after another owner opens the leaf; worker backs out of the sweep and closes it via normal raycast/RPC. No collision bypass or teleport.
-No critical runtime logs.
-NPC distance: 0m; max queue=0

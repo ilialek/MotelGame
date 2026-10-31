@@ -1,5 +1,0 @@
-FAIL host
-
-System.Exception: M4 guest state
-  at MotelGame.Networking.Tests.GuestServiceSmokeTest+<PrepareAndCheckIn>d__25.MoveNext () [0x005e5] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestServiceSmokeTest.cs:215 
-  at MotelGame.Networking.Tests.GuestServiceSmokeTest+<Start>d__15.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestServiceSmokeTest.cs:44 

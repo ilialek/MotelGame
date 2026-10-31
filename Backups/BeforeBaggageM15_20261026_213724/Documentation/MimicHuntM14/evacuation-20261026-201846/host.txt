@@ -1,8 +1,0 @@
-PASS host / evacuation
-Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
-Reception camera focus, occupancy, both CCTV targets and first-person return.
-Threatened guest exited through real door, reached lobby, vacated room and was counted once.
-Player bait, one valid hit, physical attack/stagger/equipment drop and continuous retreat preserving 66 HP.
-Shift summary, threat/equipment/guest reset and next-shift counters verified.
-Completed; no critical runtime logs.
-Duct travel: 0m

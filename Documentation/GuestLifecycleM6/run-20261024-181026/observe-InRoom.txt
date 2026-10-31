@@ -1,4 +1,0 @@
-PASS observe-InRoom
-Late join InRoom: one server-owned NPC, correct assigned room/pose, remote agent disabled, no old guest visuals.
-Disconnect completed.
-Completed without critical runtime logs.

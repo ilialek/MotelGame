@@ -1,8 +1,0 @@
-FAIL host / success
-Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
-Reception camera focus, occupancy, both CCTV targets and first-person return.
-Simultaneous pickup and repeated stale requests produced one owner; nonowner placement rejected, carry slots released.
-System.Exception: Timeout late observer at=(12.89, 0.03, 8.40) mimic=ApproachingTarget hp=100 shift=Running/1 feedback=
-  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Wait>d__24.MoveNext () [0x00256] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:32 
-  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
-Duct travel: 9.140105m

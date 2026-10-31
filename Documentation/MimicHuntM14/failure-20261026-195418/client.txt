@@ -1,7 +1,0 @@
-FAIL client / failure
-Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
-Mimic traversed connected ducts, warned/emerged and killed one eligible guest; carrier survives, source room and request cleaned up.
-System.Exception: Timeout new shift at=(5.54, 0.03, 6.91) mimic=Dormant hp=100 feedback=
-  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Wait>d__24.MoveNext () [0x001ba] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:32 
-  at MotelGame.Networking.Tests.MimicHuntSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MimicHuntSmokeTest.cs:39 
-Duct travel: 0m

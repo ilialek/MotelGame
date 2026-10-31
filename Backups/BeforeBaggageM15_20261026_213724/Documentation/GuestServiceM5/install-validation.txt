@@ -1,1 +1,0 @@
-Installed M5 on existing scene and player prefab.

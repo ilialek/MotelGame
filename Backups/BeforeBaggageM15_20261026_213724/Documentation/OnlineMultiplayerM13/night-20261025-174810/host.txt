@@ -1,5 +1,0 @@
-PASS host
-Night complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 8;Guests checked out: 8;Left without service: 0;Towels delivered: 5;TV repairs: 1;Missed / cancelled requests: 1;Rooms prepared: 13;Trash bags disposed: 13;Electrical repairs: 1/1;Guest relocations: 1;Occupied at closing: 0
-Second night, same connections: NIGHT 2 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 2;Left without service: 0;Towels delivered: 0;TV repairs: 0;Missed / cancelled requests: 2;Rooms prepared: 3;Trash bags disposed: 3;Electrical repairs: 0/0;Guest relocations: 0;Occupied at closing: 0
-No critical runtime logs.
-NPC distance: 816.0482m; max queue=0

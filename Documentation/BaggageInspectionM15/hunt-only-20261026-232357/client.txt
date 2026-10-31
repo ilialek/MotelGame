@@ -1,9 +1,0 @@
-FAIL client / hunt-only
-One-click hunt-only scenario produced three real walking guests, two eligible victims and protected carrier; no kill in initial 20s. Harmless fan complaint did not mutate threat.
-Reset Scenario cleared active hunt and equipment, then independently rebuilt another 3-guest hunt.
-Threatened guest physically exited through the door to safety; repeated requests counted once, room vacated, carrier protected.
-System.Exception: Timeout failed ambush retreat at=(5.54, 0.03, 6.92) mimic=Emerging hp=100 shift=Running/2 feedback=
-  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Wait>d__24.MoveNext () [0x00256] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:69 
-  at MotelGame.Networking.Tests.BaggageInspectionSmokeTest+<Start>d__26.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/BaggageInspectionSmokeTest.cs:90 
-Infiltration travel: 0m; exploration seen: False
-Duct travel: 0m

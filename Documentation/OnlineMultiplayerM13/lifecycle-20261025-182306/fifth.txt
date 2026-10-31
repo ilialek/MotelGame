@@ -1,4 +1,0 @@
-PASS fifth
-Anonymous authentication / persistent separate profile lifecycle-fifth
-Fifth identity rejected with full-lobby message
-No critical runtime errors.

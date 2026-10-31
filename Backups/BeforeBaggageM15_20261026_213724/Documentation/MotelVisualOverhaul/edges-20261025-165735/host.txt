@@ -1,5 +1,0 @@
-PASS host
-Computer owner's disconnect released the lease; host reopened it and client reconnected with normal owner camera/input.
-Both clients in validated range: 20 competing pickup RPCs produce one carrier; 20 competing disposal RPCs produce one disposal; 20 competing breaker RPCs produce one repair. Closing clears carried bag + live fault; next shift rejects stale pickup/disposal/breaker IDs.
-No critical runtime logs.
-NPC distance: 15.91477m; max queue=0

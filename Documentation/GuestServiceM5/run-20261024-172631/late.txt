@@ -1,9 +1,0 @@
-PASS late
-Late join: Pending Delivery + Occupied cycle 1, remote carried towel visible, own hands empty.
-Cycle 1: checkout restored Dirty bed/trash/guest, no request/carry; stale requests rejected.
-Cycle 2: call delay, answer, shared Pending, rejection of idle/ringing/duplicate/distant actions.
-Simultaneous answer/pickup; one towel each; checkout cancels Pending, clears both carry visuals and rejects stale RPCs.
-Cycle 3: checkout restored Dirty bed/trash/guest, no request/carry; stale requests rejected.
-New check-in after cancellation rings normally; checkout cancels ringing and stops audio.
-Ownership isolation and disconnect verified.
-Completed without critical runtime logs.

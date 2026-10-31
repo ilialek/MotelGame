@@ -1,7 +1,0 @@
-FAIL client
-Towel/bag conflict; before-answer repair; duplicate relocation; destination check-in and checkout conflict; late join; original deadline expired during real walk; exactly one checkout.
-Night complete: NIGHT 1 COMPLETE — 06:00;;Guests checked in: 2;Guests checked out: 1;Left without service: 0;Towels delivered: 2;TV repairs: 0;Missed / cancelled requests: 0;Rooms prepared: 6;Trash bags disposed: 6;Electrical repairs: 3/3;Guest relocations: 1;Occupied at closing: 1
-System.Exception: Walk blocked toward (20.00, 0.00, 12.65) at (20.00, 0.03, 13.51)
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__69.MoveNext () [0x003ff] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:571 
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__39.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:66 
-NPC distance: 0m; max queue=0

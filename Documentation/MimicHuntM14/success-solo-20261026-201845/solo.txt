@@ -1,9 +1,0 @@
-PASS solo / success
-Normal arrival/check-in/NavMesh/door routes produced two occupied rooms.
-Reception camera focus, occupancy, both CCTV targets and first-person return.
-Server raycast rejected a shot through solid ceiling toward the duct creature.
-Local-range decoy, visible emergence, 3 server hits, permanent death and one shared elimination; both guests survive.
-After elimination: surviving guest returned through real door, checked out at leased Reception computer, physically left and reset room for cleaning.
-Shift summary, threat/equipment/guest reset and next-shift counters verified.
-Completed; no critical runtime logs.
-Duct travel: 9.13724m

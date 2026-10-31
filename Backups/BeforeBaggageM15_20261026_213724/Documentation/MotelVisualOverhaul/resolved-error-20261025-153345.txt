@@ -1,3 +1,0 @@
-System.Exception: Missing material/shader Motel/PlayerScale/Room101Player_1.8m/RoomGuestLabel
-  at MotelGame.Editor.MotelVisualOverhaul.Validate () [0x000a1] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelVisualOverhaul.Validation.cs:47 
-  at MotelGame.Editor.MotelVisualOverhaul.Poll () [0x000d2] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelVisualOverhaul.cs:50 

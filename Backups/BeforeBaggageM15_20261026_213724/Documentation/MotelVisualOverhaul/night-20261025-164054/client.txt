@@ -1,6 +1,0 @@
-FAIL client
-
-System.Exception: Walk blocked toward (19.00, 0.00, 13.65) at (19.46, 0.03, 13.83)
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Walk>d__72.MoveNext () [0x00705] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:637 
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__41.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:67 
-NPC distance: 0m; max queue=0

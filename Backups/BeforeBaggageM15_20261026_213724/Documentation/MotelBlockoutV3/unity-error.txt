@@ -1,2 +1,0 @@
-System.InvalidOperationException: Scene already exists; refusing to overwrite: Assets/Game/Scenes/Motel_Blockout_V3.unity
-  at MotelBlockoutV3Tools.MotelBlockoutV3Builder.Build () [0x00025] in /Users/ilalekomtsev/MotelGame/Assets/Game/Editor/MotelBlockoutV3/MotelBlockoutV3Builder.cs:73 

@@ -1,6 +1,0 @@
-FAIL client
-
-System.Exception: Repair before answer did not resolve call
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<FocusedScenario>d__45.MoveNext () [0x01b95] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:275 
-  at MotelGame.Networking.Tests.MotelOperationsSmokeTest+<Start>d__37.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/MotelOperationsSmokeTest.cs:65 
-NPC distance: 0m; max queue=0

@@ -1,1 +1,0 @@
-Intentionally stopped before gameplay coverage: move optional clock HUD away from existing request and connection panels at 800x600. Not a completed or failed gameplay acceptance run. Superseded by next 900s run.

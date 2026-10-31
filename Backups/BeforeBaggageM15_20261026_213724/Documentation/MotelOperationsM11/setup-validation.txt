@@ -1,1 +1,0 @@
-PASS: saved scene reopened, 4 bags / 4 breakers / dumpster, player visuals and room lights assigned, no missing scripts; 12 inter-room routes plus dumpster and Utility approaches complete. Existing NavMesh reused. New mesh bounds do not overlap original active architecture/furniture.

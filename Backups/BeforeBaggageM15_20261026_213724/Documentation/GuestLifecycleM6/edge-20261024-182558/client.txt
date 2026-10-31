@@ -1,5 +1,0 @@
-FAIL client
-
-System.Exception: Blocked guest moved through player or changed phase
-  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<EdgeCases>d__35.MoveNext () [0x00b46] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:261 
-  at MotelGame.Networking.Tests.GuestLifecycleSmokeTest+<Start>d__24.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/GuestLifecycleSmokeTest.cs:55 

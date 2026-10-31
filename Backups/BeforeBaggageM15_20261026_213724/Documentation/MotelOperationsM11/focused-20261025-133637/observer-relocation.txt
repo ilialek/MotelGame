@@ -1,4 +1,0 @@
-PASS observer-relocation
-Late join synchronized observer-relocation; remote NPC agents disabled.
-No critical runtime logs.
-NPC distance: 0m; max queue=0

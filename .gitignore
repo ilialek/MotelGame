@@ -74,3 +74,17 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 .DS_Store
+
+# Local rollback snapshots
+/Backups/
+/Documentation/MotelBlockoutV3/Backups/
+/Documentation/LocalMultiplayer/BeforeMilestone1/
+
+# Generated test runs; preserve test source scripts
+/Documentation/*/Tests/*-20??????-??????/
+/Documentation/*/*-20??????-??????/
+/Documentation/ComputerScreenUI/Run2/
+
+# Generated IDE files and crash dumps
+/*.slnx
+/mono_crash.*

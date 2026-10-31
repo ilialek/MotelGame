@@ -1,5 +1,0 @@
-FAIL duplicate
-
-System.Exception: A duplicate local profile was allowed to authenticate
-  at MotelGame.Networking.Tests.OnlineMultiplayerSmokeTest+<Run>d__16.MoveNext () [0x018bf] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs:195 
-  at MotelGame.Networking.Tests.OnlineMultiplayerSmokeTest+<Start>d__14.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/OnlineMultiplayerSmokeTest.cs:51 

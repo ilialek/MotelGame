@@ -1,8 +1,0 @@
-ParkingArrival -> ReceptionWaiting: Complete, 16.04 m; corners (8.00, 0.02, -10.00); (8.16, 0.02, 0.00); (8.80, 0.02, 6.00)
-ReceptionWaiting -> RoomDoorOutside: Complete, 16.53 m; corners (8.80, 0.02, 6.00); (10.04, 0.02, 7.60); (10.24, 0.02, 7.72); (20.84, 0.02, 9.44); (21.04, 0.02, 9.56); (22.20, 0.02, 12.65)
-RoomDoorOutside -> RoomDoorInside: Complete, 3.10 m; corners (22.20, 0.02, 12.65); (19.10, 0.02, 12.65)
-RoomDoorInside -> RoomIdle: Complete, 1.02 m; corners (19.10, 0.02, 12.65); (18.90, 0.02, 13.65)
-RoomIdle -> RoomDoorInside: Complete, 1.02 m; corners (18.90, 0.02, 13.65); (19.10, 0.02, 12.65)
-RoomDoorInside -> RoomDoorOutside: Complete, 3.10 m; corners (19.10, 0.02, 12.65); (22.20, 0.02, 12.65)
-RoomDoorOutside -> ParkingDeparture: Complete, 35.69 m; corners (22.20, 0.02, 12.65); (21.04, 0.02, 9.56); (20.84, 0.02, 9.44); (10.24, 0.02, 7.72); (10.04, 0.02, 7.60); (9.96, 0.02, 7.44); (2.00, 0.02, -12.00)
-ReceptionWaiting -> ParkingDeparture: Complete, 19.24 m; corners (8.80, 0.02, 6.00); (2.00, 0.02, -12.00)

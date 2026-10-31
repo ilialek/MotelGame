@@ -1,7 +1,0 @@
-FAIL client
-Host/Client connected; ownership, camera and remote raycast isolation verified.
-System.Exception: Interaction ray missed Counter_Main_3.4m (MotelGame.Service.ReceptionInteraction) from (9.48, 0.03, 6.34)
-  at MotelGame.Networking.Tests.ServiceLoopSmokeTest.Use (MotelGame.Interactions.IInteractable expected, UnityEngine.Vector3 point) [0x0007d] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:189 
-  at MotelGame.Networking.Tests.ServiceLoopSmokeTest.OpenReception () [0x00012] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:181 
-  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Run>d__20.MoveNext () [0x00489] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:80 
-  at MotelGame.Networking.Tests.ServiceLoopSmokeTest+<Start>d__13.MoveNext () [0x00061] in /Users/ilalekomtsev/MotelGame/Assets/Game/Scripts/Networking/Tests/ServiceLoopSmokeTest.cs:42 
