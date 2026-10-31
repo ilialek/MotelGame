@@ -89,6 +89,7 @@ namespace MotelGame.Horror
         GameObject creature;
         [SerializeField]
         Collider body;
+        [SerializeField] MimicSlug slug;
         [SerializeField]
         AudioClip scratch, warning, attack, pain, death;
         [SerializeField, Min(1)]
@@ -180,6 +181,7 @@ namespace MotelGame.Horror
                     Vector3.Distance(transform.position, nodes[State.Node].hiddenAnchor.position) < 2.5f;
             creature.SetActive(show);
             body.enabled = show;
+            if (slug != null) return; // Slug owns its procedural presentation and recoverable corpse shapes.
             if (Remains.Count < remainsVisuals.Count)
                 ClearRemains();
             while (remainsVisuals.Count < Remains.Count)
@@ -636,6 +638,7 @@ namespace MotelGame.Horror
                     verticalStep = 0;
                     abortOnEmergence = false;
                     Phase(MimicPhase.Emerging);
+                    if (slug != null) slug.BeginEmergence(nodes[hole].hiddenAnchor.position, nodes[hole].hiddenBend.position);
                     break;
                 case MimicPhase.Emerging:
                     var emerge = verticalStep == 0 ? nodes[hole].hiddenBend.position : nodes[hole].transform.position;
@@ -764,7 +767,9 @@ namespace MotelGame.Horror
                             break;
                         }
 
-                        if (!PlayerSees(transform.position))
+                        if (slug != null && !slug.FinishEntering(nodes[hole], Time.deltaTime))
+                            break;
+                        if (!PlayerSees(slug != null ? slug.TailPosition : transform.position, slug != null ? .05f : .3f))
                         {
                             var h = State;
                             h.HiddenDestination = nodes.Where(n => n.hiddenAnchor != null && n.index != hole).OrderBy(_ => UnityEngine.Random.value).First().index;
@@ -796,6 +801,7 @@ namespace MotelGame.Horror
             s.Hits++;
             if (s.Health == 0)
             {
+                if (slug != null) slug.CaptureRemains();
                 s.Active = false;
                 s.Phase = MimicPhase.Dead;
                 s.Since = Now;
@@ -865,6 +871,6 @@ namespace MotelGame.Horror
         {
         }
 
-        public bool ConfigurationValid() => shift != null && firearm != null && creature != null && body is SphereCollider && nodes != null && nodes.Length > 6 && nodes.All(n => n.underground && n.index >= 0 && n.index < nodes.Length && n.neighbours.All(x => x.neighbours.Contains(n))) && nodes.Count(n => n.room != null && n.roomVolume != null) == 6 && nodes.Count(n => n.hiddenAnchor != null) >= 3;
+        public bool ConfigurationValid() => shift != null && firearm != null && creature != null && (body is SphereCollider || body is CapsuleCollider) && nodes != null && nodes.Length > 6 && nodes.All(n => n.underground && n.index >= 0 && n.index < nodes.Length && n.neighbours.All(x => x.neighbours.Contains(n))) && nodes.Count(n => n.room != null && n.roomVolume != null) == 6 && nodes.Count(n => n.hiddenAnchor != null) >= 3;
     }
 }

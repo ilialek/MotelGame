@@ -55,7 +55,7 @@ namespace MotelGame.Networking.Tests
         }
         // Observe after movement and network interpolation; Update order otherwise compares
         // the previous frame's large movement with this frame's short elapsed time after a hitch.
-        void LateUpdate(){if(mode!=null&&mode.StartsWith("underground"))ObserveUnderground();}
+        void LateUpdate(){if(mode!=null&&mode.StartsWith("underground"))ObserveUnderground();ObserveSlug();}
         float nextState;
         void Update()
         {
@@ -527,7 +527,7 @@ namespace MotelGame.Networking.Tests
             }
             yield return new WaitForSecondsRealtime(.2f);
         }
-        void Finish(bool pass,string why){File.WriteAllText(Path.Combine(dir,role+".txt"),(pass?"PASS ":"FAIL ")+role+" / "+mode+"\n"+string.Join("\n",checks)+"\n"+why+"\n"+string.Join("\n",errors));Application.Quit(pass?0:1);}
+        void Finish(bool pass,string why){ReportSlug();pass=pass&&errors.Count==0;File.WriteAllText(Path.Combine(dir,role+".txt"),(pass?"PASS ":"FAIL ")+role+" / "+mode+"\n"+string.Join("\n",checks)+"\n"+why+"\n"+string.Join("\n",errors));Application.Quit(pass?0:1);}
         void OnDestroy()=>Application.logMessageReceived-=Log;
     }
 }

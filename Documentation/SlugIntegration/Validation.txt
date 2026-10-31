@@ -1,0 +1,57 @@
+Motel Game - Slug Mimic integration / verification 2026-10-31
+Base gameplay checkpoint: 04924b7b2581dbc511d48b1952b4e072cccb4b46
+Standalone prototype: 5cebc0bd3af01bf8a3468d712ec7d0c7b416eafa (46 files, Git archive recovery SHA256 verified).
+
+IMPLEMENTATION
+Adapted SlugLab SlugBody mesh construction, silhouette, UVs, normal welding and undulation. Preserved its .meta GUID.
+Copied without content changes: Mimic mottled skin.mat, Skin mottling.png, and their .meta files.
+Reused the small parallel-transport calculation; did not import SlugRoute, laboratory scene, cameras, controls or duct meshes.
+New visual prefab: Assets/Game/Prefabs/SlugMimic.prefab.
+MimicSlug records bounded authoritative path history (96 knots); clients reconstruct one continuous mesh locally with a 100ms presentation delay.
+Frozen path snapshots preserve corpse shapes across subsequent activations and late join.
+A single CapsuleCollider covers the front body; the tail is visual, without per-segment physics.
+Existing AI root, graph, speeds, excursion timers, targeting, offscreen guest-death safeguards, firearm damage and defensive attack rules remain authoritative.
+During hidden ingress the root stops at the existing pocket. The visual trail feeds through its occluded continuation until the tail clears the end wall; only then can HiddenTransit start.
+The disappearance visibility check uses the tail, not the stationary root. No new tunnels, openings, gameplay phases or attacks were added.
+Existing sphere scene objects remain disabled; no old assets were deleted.
+
+SCENE SCOPE
+16774 existing V4 YAML records: only 3 changed, 7 added, no records removed.
+Existing changed records are the Mimic parent transform, MimicHunt references, and the former collider record replaced by MimicSlug.
+Room geometry, ventilation architecture, registration, RoadWatch, parking, service, shift and multiplayer source outside this integration remain byte-identical to the checkpoint.
+
+EXECUTED VALIDATION
+Unity 6000.3.19f1 / macOS Development Player / local NGO Host, Client and late-joining Client.
+Editor compilation, V4 load and 71 existing scene/reference/navigation/network-identity checks passed.
+Procedural body: PASS continuous capped mesh / finite vertices / welded seam / straight, turn, vertical, reversal
+poses=1291 vertices=398 triangles=720 maxCenterGap=0.1119847
+2400 Render calls with full 96-knot trail: mean_us=230.902125 managed_bytes=0
+PASS underground-hunt: Host/Client/late, 185.3 seconds, zero critical runtime logs.
+PASS underground-routes: Host/Client/late, 155.2 seconds, zero critical runtime logs.
+PASS registration: Host/Client/late, 319.8 seconds, zero critical runtime logs.
+PASS service: Host/Client/late, 688.6 seconds, zero critical runtime logs.
+Hunt: nearest room, actual offscreen kill, room-entry race, occupancy/nearby-player/remote-view cancellation, real client firearm RPCs, 34 damage and retreat, warned stagger, three-hit death, next queued Mimic, corpse and reset.
+Slug: movement on actual dynamic routes; bounded connected body on every peer; visible late-join reconstruction; physical vertical ingress watched by a client; tail fully behind the end wall before transit.
+Routes: six ramps/rooms, CharacterController doors and grilles, safe occupied closure, client 106 -> 105, ownership and late join.
+Registration: six cases, three RoadWatch reports, authored dialogue, vehicle parking/departure, shared results, refusal authorization and late join.
+Service: seven check-ins, seven checkouts and cleaning/disposal cycles, towel/TV requests, electrical fault and breaker, repeat room cycle and next-shift reset.
+Unity-rendered geometry and in-scene ingress images were visually inspected. The final hidden pose contains no visible body in the opening.
+Earlier candidate geometry failures and a defense-test isolation issue were corrected; failed-run artifacts are retained alongside passing runs.
+
+REPRODUCING
+Build: Unity -batchmode -nographics -projectPath <project> -executeMethod MotelGame.Editor.SlugIntegrationSetup.Build -quit -logFile <new-log>
+Run: python3 Documentation/SlugIntegration/run-tests.py underground-hunt <unique-run-name>
+Other modes: underground-routes, registration, service. Each runner starts isolated profiles and loopback sessions and launches late join on the scenario signal.
+Builds and detailed reports remain ignored under Builds/SlugIntegration; latest-build-path.txt identifies the candidate app.
+
+LIMITS
+CPU/managed-allocation numbers measure mesh deformation in Editor with a full trail, not total frame/GPU/network cost.
+Real network processes were tested over loopback; internet Relay, packet loss, other operating systems and a manual human multiplayer session were not tested.
+The hidden extension is a presentation path behind the existing opaque pocket, not new navigable level geometry.
+
+PRESERVATION
+No push, history rewrite, branch deletion or worktree removal.
+Original GameplayRefinement and UndergroundCandidate builds retained and SHA256 checked separately.
+Existing complete verified safety snapshot retained; no new full-project backup was created.
+SlugLab Backups, Builds, Recordings and logs additionally preserved under main-project Backups/SlugLabArtifacts-20261031; 12815 files SHA256 verified.
+Keep feature/mimic-slug-lab and feature/integrate-slug-mimic. Worktree removal requires the final explicit user confirmation.

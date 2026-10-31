@@ -516,10 +516,12 @@ namespace MotelGame.Networking.Tests
             testHome = own.transform.position;
             if (role == "late")
             {
+                if (SlugValidation) yield return SlugLateVisible();
                 yield return Wait(() => hunt.IsSpawned && hunt.State.Active && hunt.Remains.Count == 1, "late sequential threat");
                 Need(reception.Guests.Count(g => g.Phase == GuestPhase.Revealed) == 2, "Late duplicate disguised representation");
                 Need(FindObjectsByType<MimicHunt>(FindObjectsSortMode.None).Length == 1, "Late multiple monsters");
                 Need(!hunt.Visible, "Late hidden monster rendered");
+                if (SlugValidation) { yield return null; Need(hunt.GetComponent<MimicSlug>().PresentedCorpses == 1, "Late Slug corpse mesh missing"); }
                 checks.Add("Late join restored active hidden threat, two revealed NPCs, one eliminated sphere and authoritative room states.");
                 Mark("late-checked");
                 yield break;
@@ -587,10 +589,24 @@ namespace MotelGame.Networking.Tests
             checks.Add("Physical emergence sends one general activity alert; speeds .75/.9m/s below crouch 1.7m/s.");
             var nearest = reception.Guests.Where(g => g.Phase == GuestPhase.InRoom && g.GetComponent<RegisteredGuest>().IsMimicOnServer == false).OrderBy(g => hunt.GraphDistance(hunt.State.Node, hunt.Nodes.Single(n => n.room == g.Room).index)).First();
             Need(hunt.DebugTarget == nearest.GuestName, "Nearest graph target selection");
+            if (SlugValidation) { Mark("late"); yield return Wait(() => Has("slug-late-visible"), "visible Slug late join"); }
             Field(hunt, "excursionInterval", new Vector2(1000, 1000));
             yield return Wait(() => shift.State.GuestDeaths == 1, "unobserved physical attack", 90);
             Need(reception.Guests.Count(g => g.Phase == GuestPhase.Dead) == 1, "Duplicate death");
+            if (SlugValidation)
+            {
+                yield return Wait(() => hunt.State.Phase == MimicPhase.Submerging, "watched physical hidden entry", 100);
+                var exit = hunt.Nodes[hunt.State.Node];
+                var away = exit.neighbours[0].transform.position - exit.transform.position;
+                var observer = exit.transform.position + away.normalized * Mathf.Min(2.2f, away.magnitude * .7f) - Vector3.up * .425f;
+                yield return Command("pose", observer, exit.hiddenBend.position, true);
+            }
             yield return Wait(() => hunt.State.Phase == MimicPhase.Hidden, "physical escape and hidden transit", 100);
+            if (SlugValidation)
+            {
+                checks.Add("Client watched the real vertical opening throughout ingress; the entire tail cleared the opaque end before hidden transit.");
+                yield return Command("pose", new Vector3(27, 0, -1), Vector3.zero, false);
+            }
             Need(totalUndergroundTravel > 2 && !hunt.Visible && !hunt.Body.enabled && hunt.State.Health == 100, "Hidden retreat or movement");
             Need(second.Phase == GuestPhase.InRoom && hunt.State.Revision == firstRevision, "Escape activated another Mimic");
             checks.Add("Real admission routes; two eligible Mimics queued. Warning -> physical emergence -> nearest room -> one offscreen death -> physical hidden retreat. No second activation on escape.");
@@ -634,11 +650,16 @@ namespace MotelGame.Networking.Tests
             yield return new WaitForSecondsRealtime(1.9f);
             Need(!own.GetComponent<TowelCarrier>().Incapacitated, "Retreat during warning still hit player");
             checks.Add("Backing away during defensive warning avoids the stagger.");
+            // Either nearby player may be selected. Do not mistake the first victim's remaining
+            // stagger for an immediate second attack when testing the next windup.
+            yield return Wait(() => session.Manager.ConnectedClientsList.All(c => c.PlayerObject == null ||
+                !c.PlayerObject.GetComponent<TowelCarrier>().Incapacitated), "previous defensive stagger expires");
             FixturePlace(floorAt + axis * .85f, at);
             Field(hunt, "nextDefense", 0d);
             FixtureAttempt(protectedGuest, MimicPhase.Retreating);
             yield return Wait(() => hunt.State.Phase == MimicPhase.Defending, "second defensive windup", 20);
-            double defendedAt = session.Manager.ServerTime.Time;
+            double defendedAt = hunt.State.Since;
+            Need(hunt.State.Until - hunt.State.Since >= 1.59, "Defensive windup tuning changed");
             Need(!own.GetComponent<TowelCarrier>().Incapacitated, "Instant defensive attack");
             yield return Wait(() => own.GetComponent<TowelCarrier>().Incapacitated || session.Manager.ConnectedClientsList.Any(c => c.PlayerObject != null && c.PlayerObject.GetComponent<TowelCarrier>().Incapacitated), "defensive stagger", 10);
             Need(session.Manager.ServerTime.Time - defendedAt >= 1.4, "Defensive warning too short");
